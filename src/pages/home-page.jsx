@@ -1,16 +1,11 @@
-// import React from 'react'
-// // import {connect} from 'react-redux'
-
-
-
-// import { Link } from 'react-router-dom'
-// import logo from '../assets/img/bst-logo.jpg'
+import React from 'react'
+// import {connect} from 'react-redux'
+import { Link } from 'react-router-dom'
+import logo from '../assets/img/bst-logo.jpg'
 
 export class HomePage extends React.Component {
     state = {
     }
-
-
 
     render() {
         return (
@@ -23,9 +18,7 @@ export class HomePage extends React.Component {
                         <button className="btn-start-here ">Start Here</button>
                     </Link>
                 </div>
-
-                <LoginSignup />
-
+                {/* <LoginSignup /> */}
             </section>
         )
     }

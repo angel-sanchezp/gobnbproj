@@ -1,45 +1,41 @@
 {
   "name": "sprint4",
   "version": "1.0.0",
-  "description": "",
-  "main": "data-Airbnb.js",
+  "private": true,
   "dependencies": {
-    "anymatch": "^3.1.2",
-    "binary-extensions": "^2.2.0",
-    "braces": "^3.0.2",
-    "chokidar": "^3.5.3",
-    "fill-range": "^7.0.1",
-    "glob-parent": "^5.1.2",
-    "immutable": "^4.0.0",
-    "is-binary-path": "^2.1.0",
-    "is-extglob": "^2.1.1",
-    "is-glob": "^4.0.3",
-    "is-number": "^7.0.0",
-    "normalize-path": "^3.0.0",
-    "picomatch": "^2.3.1",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^5.3.0",
-    "react-scripts": "^5.0.0",
-    "readdirp": "^3.6.0",
+    "react-scripts": "5.0.0",
     "sass": "^1.48.0",
-    "source-map-js": "^1.0.2",
-    "to-regex-range": "^5.0.1"
+    "web-vitals": "^0.2.4",
+    "workbox-background-sync": "^5.1.4",
+    "workbox-broadcast-update": "^5.1.4",
+    "workbox-cacheable-response": "^5.1.4",
+    "workbox-core": "^5.1.4",
+    "workbox-expiration": "^5.1.4",
+    "workbox-google-analytics": "^5.1.4",
+    "workbox-navigation-preload": "^5.1.4",
+    "workbox-precaching": "^5.1.4",
+    "workbox-range-requests": "^5.1.4",
+    "workbox-routing": "^5.1.4",
+    "workbox-strategies": "^5.1.4",
+    "workbox-streams": "^5.1.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LiatBiton/sprint4.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LiatBiton/sprint4/issues"
-  },
-  "homepage": "https://github.com/LiatBiton/sprint4#readme",
   "browserslist": {
     "production": [
       ">0.2%",
