@@ -14,13 +14,13 @@ export const stayService = {
 }
 
 
-_createStays()
+// _createStays()
 
 // In progress : copying information
 function _createStays() {
     let stays = _loadStaysFromStorage(STORAGE_KEY);
     if(!stays || !stays.length) {
-        stays = [];
+        stays = []
 
         // Tokyo
         stays.push(_createStay("200001", "Shinjuku place", "Apartment", ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'], 50, 'Information about the place', 2, 2, 1, 1, ['6.jpg'], ['Wifi', 'Dryer' , 'Kitchen', 'Parking'], 'Japan', 'JPN', 'Shinjuku', 35.698796, 139.708853));
@@ -49,6 +49,7 @@ function _createStays() {
 
 
 function query() {
+    _createStays()
     return storageService.query(STORAGE_KEY)
 }
 function getById(stayId) {

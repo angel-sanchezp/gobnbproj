@@ -6,22 +6,20 @@ export function loadStays() {
             .then(stays => {
                 console.log('stays from DB:', stays)
                 dispatch({
-                    type: 'SET_STAYS',
-                    stays
-                })
+                    type: 'SET_STAYS',stays})
             })
             .catch(err => {
                 // showErrorMsg('Cannot load stays')
                 console.log('Cannot load stays', err)
             })
 
-        stayService.subscribe((stays) => {
-            console.log('Got notified');
-            dispatch({
-                type: 'SET_STAYS',
-                stays
-            })
-        })
+        // stayService.subscribe((stays) => {
+        //     console.log('Got notified');
+        //     dispatch({
+        //         type: 'SET_STAYS',
+        //         stays
+        //     })
+        // })
     }
 }
 
