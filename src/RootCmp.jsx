@@ -1,12 +1,21 @@
 import React from 'react'
-import { stayService } from './services/stay.services.js'
+import { Switch, Route } from 'react-router' 
+
+import { AppHeader } from './cmps/Stay Layout/AppHeader.jsx'
+import routes from './routes.js'
 
 
-export default class App extends React.Component {
+export class RootCmp extends  React.Component {
     render() {
         return (
             <div>
-                Hello world
+                <AppHeader />
+                <main>
+                    <Switch>
+                        {routes.map(route => <Route key={route.path}  component={route.component} path={route.path} />)}
+                    </Switch>
+                </main>
+
             </div>
         )
     }
