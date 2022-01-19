@@ -5,7 +5,7 @@ import _ from 'lodash'
 import { loadStays } from '../store/stay/stay.actions.js'
 
 
-function _Explore({ loadStays, stays  }) {
+function _Explore({ stays  }) {
 
     // useEffect(() => {
     //     loadStays()
