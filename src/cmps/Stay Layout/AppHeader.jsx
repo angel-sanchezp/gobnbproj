@@ -10,9 +10,7 @@ function _AppHeader() {
     return (
         <header className="app-header" >
 
-            <div className="img-container ">
-            </div>
-
+          
             <h1 onClick={() => this.props.history.push('/')}>Airbnb App</h1>
 
             <nav className="main-nav">
@@ -20,6 +18,10 @@ function _AppHeader() {
                 <NavLink to="/BecomeHost">Become Host</NavLink>
 
             </nav>
+
+            <section>
+                
+            </section>
         </header>
     )
 }

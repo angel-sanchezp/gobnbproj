@@ -15,13 +15,13 @@ export function loadStays() {
                 console.log('Cannot load stays', err)
             })
 
-        stayService.subscribe((stays) => {
-            console.log('Got notified');
-            dispatch({
-                type: 'SET_STAYS',
-                stays
-            })
-        })
+        // stayService.subscribe((stays) => {
+        //     console.log('Got notified');
+        //     dispatch({
+        //         type: 'SET_STAYS',
+        //         stays
+        //     })
+        // })
     }
 }
 
