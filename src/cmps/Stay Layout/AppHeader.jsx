@@ -10,9 +10,8 @@ function _AppHeader() {
     return (
         <header className="app-header" >
 
-            {/* <div className="img-container ">
-                <img src={logo} alt="logo" className="logo" />
-            </div> */}
+            <div className="img-container ">
+            </div>
 
             <h1 onClick={() => this.props.history.push('/')}>Airbnb App</h1>
 

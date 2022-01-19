@@ -3,14 +3,14 @@ import {Explore} from './pages/Explore.jsx'
 
 
 const routes = [
- 
-    {
-        path:'/',
-        component: HomePage
-    },
+    
     {
         path: '/explore',
         component: Explore
+    },
+    {
+        path:'/',
+        component: HomePage
     },
  
 ]
