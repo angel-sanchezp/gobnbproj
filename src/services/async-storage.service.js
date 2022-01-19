@@ -5,11 +5,12 @@ export const storageService = {
     post,
     put,
     remove,
-    postMany
+    save
 }
 
 function query(entityType, delay = 500) {
     var entities = JSON.parse(localStorage.getItem(entityType)) || []
+    console.log(' entity in query ',entities)
 
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
@@ -20,15 +21,15 @@ function query(entityType, delay = 500) {
     // return Promise.resolve(entities)
 }
 
- function postMany(entityType, newEntities) {
-    return query(entityType)
-        .then(entities => {
-            newEntities = newEntities.map(entity => ({...entity, _id: _makeId()}))
-            entities.push(...newEntities)
-            _save(entityType, entities)
-            return entities
-        })
-}
+//  function postMany(entityType, newEntities) {
+//     return query(entityType)
+//         .then(entities => {
+//             newEntities = newEntities.map(entity => ({...entity, _id: _makeId()}))
+//             entities.push(...newEntities)
+//             _save(entityType, entities)
+//             return entities
+//         })
+// }
 
 
 
@@ -41,7 +42,7 @@ function post(entityType, newEntity) {
     return query(entityType)
         .then(entities => {
             entities.push(newEntity)
-            _save(entityType, entities)
+            save(entityType, entities)
             return newEntity
         })
 }
@@ -53,7 +54,7 @@ function put(entityType, updatedEntity) {
         .then(entities => {
             const idx = entities.findIndex(entity => entity._id === updatedEntity._id)
             entities.splice(idx, 1, updatedEntity)
-            _save(entityType, entities)
+            save(entityType, entities)
             return updatedEntity
         })
 }
@@ -63,12 +64,12 @@ function remove(entityType, entityId) {
         .then(entities => {
             const idx = entities.findIndex(entity => entity._id === entityId)
             entities.splice(idx, 1)
-            _save(entityType, entities)
+            save(entityType, entities)
         })
 }
 
 
-function _save(entityType, entities) {
+function save(entityType, entities) {
     console.log('entityType FROM SAVE!', entityType)
     localStorage.setItem(entityType, JSON.stringify(entities))
 }
