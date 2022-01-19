@@ -39,7 +39,7 @@
 
     },
     {
-        "_id": "200001",
+        "_id": "200002",
         "name": "Asakusa",
         "type": "House",
         "imgUrls": [
@@ -66,7 +66,7 @@
             "lng":139.793300
         },
         "reviews": [{
-            "id": "00001",
+            "id": "00004",
             "txt": "Wow!",
             "rate": 5,
             "by": {
@@ -79,18 +79,18 @@
 
     },
     {
-        "_id": "200001",
-        "name": "Asakusa",
-        "type": "House",
+        "_id": "200003",
+        "name": "Shibuya",
+        "type": "Apartment",
         "imgUrls": [
             "https://res.cloudinary.com/di0utpbop/image/upload/v1638353769/airdnd/55a0ef5e-d637-48b5-ace1-c7674a125315_eipvdi.jpg"
         ],
-        "price": 300,
+        "price": 120,
         "summery": "Information",
-        "capacity": 5,
-        "bedrooms": 4,
-        "beds": 3,
-        "bathrooms": 2,
+        "capacity": 3,
+        "bedrooms": 2,
+        "beds": 2,
+        "bathrooms": 1,
         "sleep": ["https://res.cloudinary.com/di0utpbop/image/upload/v1638353774/airdnd/48633eb8-6610-44bb-a7ea-6f3e0ab5580e_asacpm.jpg"],
         "amenities": ["Wifi", "Wash disher" , "Kitchen", "Parking", "Working space"],
         "host": {
@@ -101,12 +101,12 @@
         "location": {
             "country": "Japan",
             "countryCode": "JPN",
-            "address": "Asakusa",
-            "lat": 35.719782, 
-            "lng":139.793300
+            "address": "Shibuya",
+            "lat": 35.664252, 
+            "lng":139.702251
         },
         "reviews": [{
-            "id": "00001",
+            "id": "00005",
             "txt": "Wow!",
             "rate": 5,
             "by": {
