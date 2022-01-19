@@ -6,7 +6,11 @@ const routes = [
  
     {
         path:'/',
-        component: HomePage,
+        component: HomePage
+    },
+    {
+        path: '/explore',
+        component: Explore
     },
  
 ]
