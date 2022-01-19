@@ -18,7 +18,7 @@ class _StayDetails extends React.Component {
     }
 
     loadStay = () => {
-        const stayId = '200001';
+        const { stayId } = this.props.match.params;
         stayService.getById(stayId).then((stay) => {
             this.setState({stay});
         });
