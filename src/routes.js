@@ -8,11 +8,7 @@ const routes = [
         path:'/',
         component: HomePage,
     },
-    // {
-    //     path: 'explore',
-    //     component: <Explore />,
-    //     label: 'explore'
-    // },
+ 
 ]
 
 export default routes;

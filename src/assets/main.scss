@@ -1,0 +1,19 @@
+// SETUPS
+@import '../assets/styles/setup/functions.scss';
+@import '../assets/styles/setup/mixins.scss';
+@import '../assets/styles/setup/typography.scss';
+@import '../assets/styles/setup/variables.scss';
+
+//HELPERS
+@import '../assets/styles/basics/helpers.scss';
+
+// BASIC
+@import '../assets/styles/basics/base.scss';
+@import '../assets/styles/basics/buttons.scss';
+@import '../assets/styles/basics/layout.scss';
+
+//CMPS
+@import '../assets/styles/cmps/_appHeader.scss';
+
+
+
