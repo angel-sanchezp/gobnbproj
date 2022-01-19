@@ -6,7 +6,7 @@ import { StayDetails } from './pages/StayDetails.jsx'
 const routes = [
     
     {
-        path: '/stayDetails',
+        path: '/details/:stayId',
         component: StayDetails
     },
     {

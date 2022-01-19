@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import _ from 'lodash'
 
 import { loadStays } from '../store/stay/stay.actions.js'
+import { Link } from 'react-router-dom'
 
 
 function _Explore({ stays  }) {
@@ -28,6 +29,9 @@ function _Explore({ stays  }) {
                         <h4>{stay.name}</h4>
                         <p>Price: <span>${stay.price.toLocaleString()}</span></p>
                         <p>Type: <span>{stay.type}</span></p>
+                        <Link to={`/details/${stay._id}`}>
+                            <button>Pick me</button>
+                        </Link>
                     </li>
                 )}    
 
