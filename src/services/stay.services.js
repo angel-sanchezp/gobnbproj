@@ -1,15 +1,15 @@
 import { utilService } from "./utils.service.js";
-import { storageService } from "./storage.service.js"
+import { storageService } from "./async-storage.service.js"
 
 // export const stayService = {
     
 // }
 
-const STAY_KEY = 'stayDB';
+const STORAGE_KEY = 'stayDB';
 
 // In progress : copying information
 function _createStays() {
-    let stays = _loadStaysFromStorage(STAY_KEY);
+    let stays = _loadStaysFromStorage(STORAGE_KEY);
     if(!stays || !stays.length) {
         stays = [];
 
@@ -17,6 +17,45 @@ function _createStays() {
 
     }
 }
+
+
+// import { userService } from './user.service.js'
+
+
+export const carService = {
+    query,
+    getById,
+    save,
+    remove,
+    
+}
+
+
+function query() {
+    return storageService.query(STORAGE_KEY)
+}
+function getById(stayId) {
+    return storageService.get(STORAGE_KEY, stayId)
+}
+function remove(stayId) {
+    // return Promise.reject('Not now!');
+    return storageService.remove(STORAGE_KEY, stayId)
+}
+function save(stay) {
+    if (car._id) {
+        return storageService.put(STORAGE_KEY, stayId)
+    } else {
+        car.owner = userService.getLoggedinUser()
+        return storageService.post(STORAGE_KEY, stay)
+    }
+}
+
+
+// TEST DATA
+// storageService.post(STORAGE_KEY, {vendor: 'Subali Rahok 2', price: 980}).then(x => console.log(x))
+
+
+
 
 
 // Dynamic function
