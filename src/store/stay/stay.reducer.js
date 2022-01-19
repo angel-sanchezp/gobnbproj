@@ -1,5 +1,5 @@
 const initialState = {
-    stays: [],
+    stays: [{_id:"200001",name:"Shinjuku place",type:"Apartment",imgUrls:["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"],price:50,summary:"Information about the place",type:"Apartment"}],
     lastRemovedStay: null
 }
 export function stayReducer(state = initialState, action) {
@@ -7,7 +7,7 @@ export function stayReducer(state = initialState, action) {
     var stays
     switch (action.type) {
         case 'SET_STAYS':
-            newState = { ...state, stays: action.stays }
+            newState = { ...state, stays: action }
             break
         // case 'REMOVE_STAY':
         //     const lastRemovedStay = state.stays.find(STAY => STAY._id === action.carId)
