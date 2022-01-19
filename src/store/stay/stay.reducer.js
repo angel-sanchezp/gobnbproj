@@ -9,11 +9,11 @@ export function stayReducer(state = initialState, action) {
         case 'SET_STAYS':
             newState = { ...state, stays: action.stays }
             break
-        case 'REMOVE_STAY':
-            const lastRemovedStay = state.stays.find(STAY => STAY._id === action.carId)
-            stays = state.stays.filter(STAY => STAY._id !== action.carId)
-            newState = { ...state, stays, lastRemovedStay}
-            break
+        // case 'REMOVE_STAY':
+        //     const lastRemovedStay = state.stays.find(STAY => STAY._id === action.carId)
+        //     stays = state.stays.filter(STAY => STAY._id !== action.carId)
+        //     newState = { ...state, stays, lastRemovedStay}
+        //     break
         case 'ADD_STAY':
             newState = { ...state, stays:[...state.stays, action.stay]}
             break
@@ -24,7 +24,7 @@ export function stayReducer(state = initialState, action) {
         default:
     }
     // For debug:
-    window.carState = newState
+    window.stayState = newState
     // console.log('Prev State:', state)
     // console.log('Action:', action)
     // console.log('New State:', newState)

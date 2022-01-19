@@ -1,5 +1,4 @@
-// const { createStore, applyMiddleware, combineReducers, compose } = Redux
-// const thunk = ReduxThunk.default
+
 
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux'
 import thunk from 'redux-thunk'

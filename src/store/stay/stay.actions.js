@@ -11,7 +11,7 @@ export function loadStays() {
                 })
             })
             .catch(err => {
-                showErrorMsg('Cannot load stays')
+                // showErrorMsg('Cannot load stays')
                 console.log('Cannot load stays', err)
             })
 
@@ -34,10 +34,10 @@ export function onRemoveStay(stayId) {
                     type: 'REMOVE_STAY',
                     stayId
                 })
-                showSuccessMsg('Stay removed')
+                // showSuccessMsg('Stay removed')
             })
             .catch(err => {
-                showErrorMsg('Cannot remove stay')
+                // showErrorMsg('Cannot remove stay')
                 console.log('Cannot remove stay', err)
             })
     }
@@ -53,10 +53,10 @@ export function onAddStay() {
                     type: 'ADD_STAY',
                     stay: savedStay
                 })
-                showSuccessMsg('Stay added')
+                // showSuccessMsg('Stay added')
             })
             .catch(err => {
-                showErrorMsg('Cannot add stay')
+                // showErrorMsg('Cannot add stay')
                 console.log('Cannot add stay', err)
             })
     }
