@@ -14,7 +14,7 @@ export const stayService = {
 }
 
 
-// _createStays()
+_createStays()
 
 // In progress : copying information
 function _createStays() {
