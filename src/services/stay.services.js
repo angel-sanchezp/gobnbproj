@@ -1,14 +1,17 @@
-import { utilService } from "./utils.service.js";
+// import { utilService } from "./utils.service.js";
 import { storageService } from "./async-storage.service.js"
 
 const STORAGE_KEY = 'stayDB';
 export const stayService = {
-    query,
+
+        query,
+        getById,
+        save,
+        remove,
+        
+
 }
 
-function query(){
-    _createStays();
-}
 
 _createStays()
 
@@ -43,14 +46,6 @@ function _createStays() {
 // import { userService } from './user.service.js'
 
 
-export const carService = {
-    query,
-    getById,
-    save,
-    remove,
-    
-}
-
 
 function query() {
     return storageService.query(STORAGE_KEY)
@@ -63,10 +58,10 @@ function remove(stayId) {
     return storageService.remove(STORAGE_KEY, stayId)
 }
 function save(stay) {
-    if (car._id) {
-        return storageService.put(STORAGE_KEY, stayId)
+    if (stay._id) {
+        return storageService.put(STORAGE_KEY, stay)
     } else {
-        car.owner = userService.getLoggedinUser()
+        // stay.owner = userService.getLoggedinUser()
         return storageService.post(STORAGE_KEY, stay)
     }
 }
@@ -109,10 +104,12 @@ function _createStay(id, name, type, imgUrls, price, summary, capacity, bedrooms
     }
 }
 
+
+
 function _saveStaysToStorage(stays) {
-    storageService.save(STAY_KEY, stays);
+    storageService.postMany(STORAGE_KEY, stays);
 }
 
 function _loadStaysFromStorage() {
-    storageService.load(STAY_KEY);
+    storageService.query(STORAGE_KEY);
 }

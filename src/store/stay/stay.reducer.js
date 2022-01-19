@@ -1,33 +1,25 @@
 const initialState = {
     stays: [],
-    cart:[],
     lastRemovedStay: null
 }
-export function carReducer(state = initialState, action) {
+export function stayReducer(state = initialState, action) {
     var newState = state
     var stays
-    var cart
     switch (action.type) {
-        case 'SET_CARS':
+        case 'SET_STAYS':
             newState = { ...state, stays: action.stays }
             break
-        case 'REMOVE_CAR':
-            const lastRemovedStay = state.stays.find(car => car._id === action.carId)
-            stays = state.stays.filter(car => car._id !== action.carId)
+        case 'REMOVE_STAY':
+            const lastRemovedStay = state.stays.find(STAY => STAY._id === action.carId)
+            stays = state.stays.filter(STAY => STAY._id !== action.carId)
             newState = { ...state, stays, lastRemovedStay}
             break
-        case 'ADD_CAR':
-            newState = { ...state, stays:[...state.stays, action.car]}
+        case 'ADD_STAY':
+            newState = { ...state, stays:[...state.stays, action.stay]}
             break
-        case 'UPDATE_CAR':
-            stays = state.stays.map(car => (car._id === action.car._id)? action.car : car)
+        case 'UPDATE_STAY':
+            stays = state.stays.map(STAY => (STAY._id === action.STAY._id)? action.STAY : STAY)
             newState = { ...state, stays}
-            break
-
-        case 'UNDO_REMOVE_CAR':
-            if (state.lastRemovedStay) {
-                newState = { ...state, stays: [...state.stays, state.lastRemovedStay], lastRemovedStay: null}
-            }
             break
         default:
     }
