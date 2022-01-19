@@ -1,9 +1,14 @@
 import {HomePage} from './pages/Home.jsx'
 import {Explore} from './pages/Explore.jsx'
+import { StayDetails } from './pages/StayDetails.jsx'
 
 
 const routes = [
     
+    {
+        path: '/stayDetails',
+        component: StayDetails
+    },
     {
         path: '/explore',
         component: Explore

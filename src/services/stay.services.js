@@ -2,6 +2,7 @@
 import { storageService } from "./async-storage.service.js"
 
 const STORAGE_KEY = 'stayDB';
+
 export const stayService = {
 
         query,
