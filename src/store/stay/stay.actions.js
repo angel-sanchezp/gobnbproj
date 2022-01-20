@@ -1,8 +1,10 @@
 import { stayService } from "../../services/stay.services.js";
 
 export function loadStays() {
-    return (dispatch) => {
-        stayService.query()
+    return (dispatch , getState) => {
+        const {filterBy} = getState().stayModule;
+        console.log(filterBy)
+        stayService.query(filterBy)
             .then(stays => {
                 console.log('stays from DB:', stays)
                 dispatch({
@@ -58,6 +60,14 @@ export function onAddStay() {
                 console.log('Cannot add stay', err)
             })
     }
+}
+
+export function setFilter(filterBy) {
+    console.log(filterBy)
+    return (dispatch) => {
+        const action = { type: 'SET_FILTER', filterBy };
+        dispatch(action);
+    };
 }
 
 // export function onEditStay(stayToSave) {

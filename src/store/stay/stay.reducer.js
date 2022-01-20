@@ -1,5 +1,12 @@
 const initialState = {
     stays: [],
+    filterBy: {
+        location: "",
+        dateIn: "",
+        dateOut: "",
+        guests: "",
+
+    },
     lastRemovedStay: null
 }
 export function stayReducer(state = initialState, action) {
@@ -8,7 +15,7 @@ export function stayReducer(state = initialState, action) {
     switch (action.type) {
         case 'SET_STAYS':
             newState = { ...state, stays: action.stays }
-            console.log('reducer',action.stays)
+            console.log('reducer', action.stays)
             break
         // case 'REMOVE_STAY':
         //     const lastRemovedStay = state.stays.find(STAY => STAY._id === action.carId)
@@ -16,12 +23,15 @@ export function stayReducer(state = initialState, action) {
         //     newState = { ...state, stays, lastRemovedStay}
         //     break
         case 'ADD_STAY':
-            newState = { ...state, stays:[...state.stays, action.stay]}
+            newState = { ...state, stays: [...state.stays, action.stay] }
             break
         case 'UPDATE_STAY':
-            stays = state.stays.map(STAY => (STAY._id === action.STAY._id)? action.STAY : STAY)
-            newState = { ...state, stays}
+            stays = state.stays.map(STAY => (STAY._id === action.STAY._id) ? action.STAY : STAY)
+            newState = { ...state, stays }
             break
+        case 'SET_FILTER':
+            newState = { ...state, filterBy: { ...action.filterBy } };
+
         default:
     }
     // For debug:
