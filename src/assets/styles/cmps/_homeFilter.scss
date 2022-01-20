@@ -1,0 +1,90 @@
+.main-filter-container{
+    position: relative;
+
+    input {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .max-filter {
+        position: absolute;
+        left: 48%;
+        transform: translate(-50%, -75%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        background-color: rgb(255, 255, 255);
+        opacity: 1;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(161, 161, 161, 0.22);
+        border-image: initial;
+        border-radius: 40px;
+        padding: 0px 10px 0px 0px;
+        margin: 40px;
+    }
+
+    .max-filter label:first-child {
+        padding-inline-start: 30px;
+    }
+
+    .max-filter label {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        cursor: pointer;
+        padding: 14px 24px;
+        border-radius: 40px;
+        transition: background-color 0.3s ease 0s, box-shadow 0.3s ease 0s;
+    }
+
+    .max-filter label:hover {
+        border-radius: 40px;
+        background-color: #ebebeb;
+    }
+
+    .max-filter label input {
+        font-size: 14px;
+        line-height: 15px;
+        height: 15px;
+        background-color: transparent;
+        cursor: pointer;
+        color: rgb(113, 113, 113);
+        font-family: airbnb-book, sans-serif;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        outline: none;
+    }
+
+    .max-filter label span {
+        color: rgb(0, 0, 0);
+        font-family: airbnb-bold;
+        font-size: 0.6875rem;
+        line-height: 0.875rem;
+        cursor: pointer;
+        padding-bottom: 5px;
+        text-align: start;
+    }
+
+    .max-filter button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(255, 56, 92);
+        height: 47px;
+        width: 47px;
+        color: rgb(255, 255, 255);
+        font-size: 0.875rem;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+ 
+
+
+}
