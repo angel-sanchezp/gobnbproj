@@ -7,9 +7,11 @@ const initialState = {
         guests: "",
 
     },
-    lastRemovedStay: null
+    lastRemovedStay: null,
+    classHeader: 'home-page',
 }
 export function stayReducer(state = initialState, action) {
+    console.log(action)
     var newState = state
     var stays
     switch (action.type) {
@@ -31,6 +33,8 @@ export function stayReducer(state = initialState, action) {
             break
         case 'SET_FILTER':
             newState = { ...state, filterBy: { ...action.filterBy } };
+        case 'SET_CLASS_HEADER':
+            newState = { ...state, classHeader: action.newClass };
 
         default:
     }

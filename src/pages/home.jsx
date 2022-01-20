@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { loadStays, setFilter } from '../store/stay/stay.actions.js'
+import { loadStays, setFilter, changeHeaderClass  } from '../store/stay/stay.actions.js'
 import { Link, NavLink } from 'react-router-dom'
 import { HomeFilter } from '../cmps/Stay Layout/HomeFilter.jsx'
 
@@ -14,10 +14,13 @@ import img from '../assets/img/2.jpg'
 
 class _HomePage extends React.Component {
     state = {
+        class: 'home-header'
     }
 
     componentDidMount() {
+        this.props.changeHeaderClass(this.state.class)
         this.props.loadStays()
+
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -102,7 +105,8 @@ class _HomePage extends React.Component {
 function mapStateToProps(state) {
     return {
         stays: state.stayModule.stays,
-        filterBy: state.stayModule.filterBy
+        filterBy: state.stayModule.filterBy,
+        classHeader: state.stayModule.classHeader
 
 
     }
@@ -111,6 +115,7 @@ function mapStateToProps(state) {
 const mapDispatchToProps = {
     loadStays,
     setFilter,
+    changeHeaderClass
 
 }
 

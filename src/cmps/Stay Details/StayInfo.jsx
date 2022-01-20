@@ -6,9 +6,9 @@ export function StayInfo({stay}){
         <section className="stay-info-container">
             <h2>I will be the info</h2>
             <section className="summery">
-                <h3>
+                <p>
                     {stay.summery}
-                </h3>
+                </p>
                 <StayReserve/>
             </section>
             
