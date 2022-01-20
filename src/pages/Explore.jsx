@@ -20,7 +20,7 @@ function _Explore({ stays  }) {
     // }
 
     return (
-        <div>
+        <section>
             <h1>Explore Page</h1>
                 <ul className="stay-list">
 
@@ -39,7 +39,7 @@ function _Explore({ stays  }) {
                 
             
             
-        </div>
+        </section>
     )
 
 }
