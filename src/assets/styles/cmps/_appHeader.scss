@@ -1,4 +1,4 @@
-.app-header {
+.home-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,6 +12,46 @@
     .main-nav a {
         text-decoration: none;
         color: inherit;
+    }
+    .main-nav > *:not(:last-child) {
+        margin-inline-end: 1rem;
+    }
+}
+
+.explor-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: pink;
+    color: $clr6;
+    height: 10vh;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    margin: 0px;
+
+    .main-nav a {
+        text-decoration: none;
+        color: black;
+    }
+    .main-nav > *:not(:last-child) {
+        margin-inline-end: 1rem;
+    }
+}
+
+.details-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(231, 180, 85);
+    color: $clr6;
+    height: 10vh;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    margin: 0px;
+
+    .main-nav a {
+        text-decoration: none;
+        color: black;
     }
     .main-nav > *:not(:last-child) {
         margin-inline-end: 1rem;

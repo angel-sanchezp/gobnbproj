@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 // import { Link, NavLink } from 'react-router-dom';
 // import { Route } from 'react-router-dom';
-
+import { loadStays, changeHeaderClass } from '../store/stay/stay.actions.js'
 import { stayService } from '../services/stay.services.js';
 import { StayGallery } from '../cmps/Stay Details/StayGallery.jsx';
 import { StayInfo } from '../cmps/Stay Details/StayInfo.jsx';
@@ -11,11 +11,14 @@ import { StayInfo } from '../cmps/Stay Details/StayInfo.jsx';
 
 class _StayDetails extends React.Component {
     state = {
-        stay: null
+        stay: null,
+        class: 'details-header'
     }
 
     componentDidMount() {
+        this.props.changeHeaderClass(this.state.class)
         this.loadStay();
+        
     }
 
     loadStay = () => {
@@ -58,4 +61,9 @@ function mapStateToProps(state) {
     }
 }
 
-export const StayDetails = connect(mapStateToProps)(_StayDetails)
+const mapDispatchToProps = {
+    changeHeaderClass
+    
+}
+
+export const StayDetails = connect(mapStateToProps, mapDispatchToProps)(_StayDetails)

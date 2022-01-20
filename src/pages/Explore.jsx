@@ -2,7 +2,7 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import _ from 'lodash'
 
-import { loadStays } from '../store/stay/stay.actions.js'
+import { loadStays, changeHeaderClass } from '../store/stay/stay.actions.js'
 import { utilService } from '../services/utils.service'
 import { Link } from 'react-router-dom'
 
@@ -10,9 +10,13 @@ import { Link } from 'react-router-dom'
 
 class _Explore extends Component {
     state = {
-        
+        class: 'explor-header'
     }
 
+    componentDidMount() {
+        this.props.changeHeaderClass(this.state.class)
+
+    }
   
 
     
@@ -116,11 +120,13 @@ class _Explore extends Component {
 function mapStateToProps(state) {
     return {
         stays: state.stayModule.stays,
-        filterBy: state.stayModule.filterBy
+        filterBy: state.stayModule.filterBy,
+        class: state.stayModule.classHeader
     }
 }
 const mapDispatchToProps = {
-    loadStays
+    loadStays,
+    changeHeaderClass
     
 }
 
