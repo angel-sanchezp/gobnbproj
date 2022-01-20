@@ -6,22 +6,103 @@
     justify-items: center;
     align-content: center;
 
-
     > * {
         grid-column: 2;
+        
     }
 
     > *.full {
         grid-column: 1 / -1;
     }
 
-    .pic{
+    .pic {
         border-radius: 10px;
+        margin-top: 85px;
+        position: relative;
     }
 
-    h1{
-        color: white;
+    h1 {
         font-size: rem(38px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $clr6;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+        z-index: 1;
     }
 
+    .btn-flexible {
+        padding: 16px 32px;
+        cursor: pointer;
+        width: auto;
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 1000px;
+        border: 1px solid #000;
+        background: #fff;
+    }
+
+    .btn-flexible span {
+        -webkit-text-fill-color: transparent !important;
+        background: linear-gradient(90deg, #6F019C 0%, #C6017E 135.12%) !important;
+        -webkit-background-clip: text !important;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+        font-size: rem(15px);
+        font-weight: 600 !important;
+        padding: 0 2px !important;
+        line-height: inherit !important;
+        max-height: 120px !important
+    }
+}
+
+.card-container {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+
+    > * {
+        position: relative;
+        overflow: hidden;
+        &::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: (1 / 1) * 100%;
+        }
+        > * {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        > img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.card-stay {
+    position: relative;
+
+    .cat-tag {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $clr6;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+        font-size: rem(40px);
+        z-index: 1;
+    }
+
+    .cat-image {
+        // mix-blend-mode: multiply;
+        // filter: grayscale(1);
+    }
 }

@@ -3,8 +3,12 @@ import { connect } from 'react-redux'
 import _ from 'lodash'
 
 import { loadStays } from '../store/stay/stay.actions.js'
+<<<<<<< HEAD
 import { utilService } from '../services/utils.service'
 import { Link } from 'react-router-dom'
+=======
+import { Link, NavLink } from 'react-router-dom'
+>>>>>>> d606cb84659dc92f3c4240cdf196db438f22f172
 
 
 function _Explore({ stays  }) {
@@ -21,7 +25,11 @@ function _Explore({ stays  }) {
     // }
 
     return (
+<<<<<<< HEAD
         <section className="explore-page">
+=======
+        <section>
+>>>>>>> d606cb84659dc92f3c4240cdf196db438f22f172
             <h1>Explore Page</h1>
                 
                 <ul className="stay-list">

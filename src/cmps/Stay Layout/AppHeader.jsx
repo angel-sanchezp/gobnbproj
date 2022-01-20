@@ -11,11 +11,14 @@ function _AppHeader() {
         <header className="app-header" >
 
           
-            <h1 onClick={() => this.props.history.push('/')}>Airbnb App</h1>
+            {/* <h1 onClick={() => this.props.history.push('/')}>Airbnb App</h1> */}
+            <a aria-current="page" className="logo-link active">
+                <h1 className="logo">Pl<i className="fab fa-airbnb" aria-hidden="true"></i>
+                Ce</h1></a>
 
             <nav className="main-nav">
                 <NavLink activeClassName="my-active" exact to="/explore">Explore</NavLink>
-                <NavLink to="/stayDetails">Stay Details</NavLink>
+                {/* <NavLink to="/stayDetails">Stay Details</NavLink> */}
                 <NavLink to="/BecomeHost">Become Host</NavLink>
 
             </nav>
