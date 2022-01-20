@@ -22,22 +22,26 @@ class _HomePage extends React.Component {
 
     componentDidUpdate(prevProps, prevState) {
         // console.log(prevProps.filterBy)
-        // console.log(this.props.filterBy)
+        console.log('props in home upadte ',this.props.filterBy)
         if (prevProps.filterBy !== this.props.filterBy) {
             this.props.loadStays();
         }
     }
 
     onSetFilter = (filterBy) => {
-        // console.log(filterBy)
+        console.log('home filterby ',filterBy)
         this.props.setFilter(filterBy);
+        setTimeout(()=>{
+            this.props.history.push(`/explore?location=${filterBy.location}&dateIn=${filterBy.dateIn}&dateOut=${filterBy.dateOut}&guests=${filterBy.guests}`)
+
+        },1000)
     }
 
 
 
     render() {
         const { stays } = this.props
-        console.log('stays from homepage', stays)
+        // console.log('stays from homepage', stays)
         return (
             <section className='home-container'>
                 <HomeFilter onSetFilter={this.onSetFilter} />
@@ -95,7 +99,9 @@ class _HomePage extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        stays: state.stayModule.stays
+        stays: state.stayModule.stays,
+        filterBy: state.stayModule.filterBy
+
 
     }
 }

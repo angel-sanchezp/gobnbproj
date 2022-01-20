@@ -15,7 +15,7 @@ export function stayReducer(state = initialState, action) {
     switch (action.type) {
         case 'SET_STAYS':
             newState = { ...state, stays: action.stays }
-            console.log('reducer', action.stays)
+            // console.log('reducer', action.stays)
             break
         // case 'REMOVE_STAY':
         //     const lastRemovedStay = state.stays.find(STAY => STAY._id === action.carId)
@@ -38,7 +38,7 @@ export function stayReducer(state = initialState, action) {
     window.stayState = newState
     // console.log('Prev State:', state)
     // console.log('Action:', action)
-    // console.log('New State:', newState)
+    console.log('New State:', newState)
     return newState
 
 }
