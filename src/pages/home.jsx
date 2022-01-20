@@ -43,9 +43,8 @@ class _HomePage extends React.Component {
         const { stays } = this.props
         // console.log('stays from homepage', stays)
         return (
-            <section className='home-container'>
+            <section>
                 <HomeFilter onSetFilter={this.onSetFilter} />
-
 
 
                 <div className='main-container'>
@@ -58,6 +57,8 @@ class _HomePage extends React.Component {
                     </Link>
 
                 </div>
+
+                <section className='home-container'>
 
                 <h1>Inspiration for your next trip</h1>
                 <section className='card-container'>
@@ -93,6 +94,7 @@ class _HomePage extends React.Component {
 
                 </section>
             </section >
+            </section>
         )
     }
 }

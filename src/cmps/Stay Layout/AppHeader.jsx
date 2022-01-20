@@ -11,7 +11,6 @@ function _AppHeader() {
         <header className="app-header" >
 
           
-            {/* <h1 onClick={() => this.props.history.push('/')}>Airbnb App</h1> */}
             <a aria-current="page" className="logo-link active">
                 <h1 className="logo">Pl<i className="fab fa-airbnb" aria-hidden="true"></i>
                 Ce</h1></a>
