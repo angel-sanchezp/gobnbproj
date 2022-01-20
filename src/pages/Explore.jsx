@@ -61,7 +61,8 @@ class _Explore extends Component {
     // }
     render() {
         const { stays } = this.props
-        console.log(this.props.match.params)
+        const { location } = this.props.match.params;
+        console.log(this.props.filterBy)
         return (
             <section className="explore-page">
                 <div className="filter-sort-line">
@@ -77,7 +78,7 @@ class _Explore extends Component {
                     </div>
                 </div>
                 <div className="txt-explore-page">
-                    <div className="small-txt-exp-page">100+ stays in Paris</div>
+                    <div className="small-txt-exp-page">{stays.length} stays in {this.props.filterBy.location}</div>
                     <div className="small-txt-exp-page">Review COVID-19 travel restrictions before you book</div>
                 </div>
                 
@@ -114,7 +115,8 @@ class _Explore extends Component {
 
 function mapStateToProps(state) {
     return {
-        stays: state.stayModule.stays
+        stays: state.stayModule.stays,
+        filterBy: state.stayModule.filterBy
     }
 }
 const mapDispatchToProps = {
