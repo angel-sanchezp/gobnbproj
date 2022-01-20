@@ -406,9 +406,35 @@ function  _createStays(){
 
 }
 
-function query() {
-    return storageService.query(STORAGE_KEY)
+ async function query(filterBy) {
+    console.log('filterby in service',filterBy)
+   const stays= await storageService.query(STORAGE_KEY)
+
+   const filteredStays = _getFilteredStays(stays, filterBy)
+   console.log('filteredStays in service',filteredStays)
+
+   return filteredStays
 }
+
+
+function _getFilteredStays(stays, filterBy) {
+    console.log(filterBy)
+    if (filterBy.location) {
+        let { location} = filterBy
+    // console.log('location in filtereed stays',location)
+        const locations = stays.filter((stay) => {
+            return stay.location.country.toLowerCase() === location.toLowerCase()
+        })
+        // console.log('locations in service',location)
+        return locations
+    }else{
+        return stays
+    }
+}
+
+
+
+
 function getById(stayId) {
     return storageService.get(STORAGE_KEY, stayId)
 }
