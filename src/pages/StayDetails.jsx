@@ -29,25 +29,28 @@ class _StayDetails extends React.Component {
         const { stay } = this.state;
         if (!stay) return <h1>Loading...</h1>
         return (
-            <div className="stay-details">
-                <section className="stay-header">
-                    <div>
-                        <h1>{stay.name}</h1>
-                    </div>
-                    <div className="general-info">
-                        {/* <span>{stay.rate}</span> */}
-                        <button>Reviews</button>
-                        <span>Superhost</span>
-                        <span>{stay.location.address}</span>
-                        <button>Share</button>
-                        <button>Save</button>
-                    </div>
-                </section>
-                <StayGallery stay = {stay}/>
-                <StayInfo stay = {stay}/>
-                
-            </div>
+            <section className="details-container">
+                <div className="stay-details">
+                    <section className="stay-header">
+                        <div>
+                            <h1>{stay.name}</h1>
+                        </div>
+                        <div className="general-info">
+                            {/* <span>{stay.rate}</span> */}
+                            <button>Reviews</button>
+                            <span>Superhost</span>
+                            <span>{stay.location.address}</span>
+                            <button>Share</button>
+                            <button>Save</button>
+                        </div>
+                    </section>
+                    <StayGallery stay = {stay}/>
+                    <StayInfo stay = {stay}/>
+                    
+                </div>
             
+
+            </section>
         )
     }
 }

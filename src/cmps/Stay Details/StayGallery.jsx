@@ -10,6 +10,7 @@ export function StayGallery({stay}){
                 {<img className="img4" src={stay.imgUrls}/>}
                 {<img className="img5" src={stay.imgUrls}/>} */}
             </div>
+            <h6>Pictures from Airbnb</h6>
 
         </section>
     )

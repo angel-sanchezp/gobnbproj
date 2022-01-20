@@ -18,7 +18,7 @@ function _AppHeader() {
 
             <nav className="main-nav">
                 <NavLink activeClassName="my-active" exact to="/explore">Explore</NavLink>
-                <NavLink to="/stayDetails">Stay Details</NavLink>
+                {/* <NavLink to="/stayDetails">Stay Details</NavLink> */}
                 <NavLink to="/BecomeHost">Become Host</NavLink>
 
             </nav>
