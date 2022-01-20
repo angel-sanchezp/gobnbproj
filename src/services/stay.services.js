@@ -392,10 +392,6 @@ const gStays = [   {
 }
 ]
 
-
-
-
-
 _createStays()
 
 function  _createStays(){
@@ -406,14 +402,9 @@ function  _createStays(){
            }
 
            return stays 
-     })
-
-
-    
+     })    
 
 }
-
-
 
 function query() {
     return storageService.query(STORAGE_KEY)
