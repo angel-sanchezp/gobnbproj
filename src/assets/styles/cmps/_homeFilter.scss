@@ -88,3 +88,91 @@
 
 
 }
+
+.dynamic-modal {
+    position: absolute;
+    z-index: 5;
+    top: 56px;
+    left: 690px;
+
+    .filter-guest-modal {
+        z-index: 5;
+        position: absolute;
+        -webkit-transform: translateX(-12.5%);
+        transform: translateX(-12.5%);
+        padding: 0;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        color: #484848;
+        background-color: #fff;
+        border-radius: 13px;
+        width: 400px;
+        font-size: 16px;
+        text-transform: capitalize;
+        box-shadow: 0 3px 8px 0 rgb(0 0 0 / 18%);
+    }
+
+    .modal-label:not(:last-of-type) {
+        border-bottom: 1px solid #c7c7c7;
+    }
+
+    .modal-label {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        width: 100%;
+        grid-gap: 10px;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .modal-label div:first-of-type {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+    }
+    .dynamic-modal .filter-guest-modal .modal-label div {
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    .modal-label span {
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        font-weight: unset;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .modal-label div:last-of-type button {
+        margin: 0;
+        padding: 0;
+        color: #484848;
+        font-size: 1.125rem;
+        border: 1px solid #717171;
+        // display: -webkit-flex;
+        // display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        background-color: transparent;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+    }
+
+
+
+
+}

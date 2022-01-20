@@ -6,7 +6,7 @@ export function loadStays() {
         console.log(filterBy)
         stayService.query(filterBy)
             .then(stays => {
-                console.log('stays from DB:', stays)
+                // console.log('stays from DB:', stays)
                 dispatch({
                     type: 'SET_STAYS',stays})
             })

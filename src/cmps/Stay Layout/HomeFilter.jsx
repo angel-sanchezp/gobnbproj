@@ -10,10 +10,13 @@ export class HomeFilter extends React.Component {
             guests: ''
 
         },
+        isModalShown: false,
+        num: 0,
+        span: 0
     }
 
     handleChange = ({ target }) => {
-        // console.log(target)
+        console.log('target',target)
         const field = target.name
         const value = target.type === 'number' ? +target.value : target.value
         this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, [field]: value } }))
@@ -21,13 +24,26 @@ export class HomeFilter extends React.Component {
 
     onSubmitFilter = (ev) => {
         ev.preventDefault()
-        // console.log(this.state.filterBy)
+        // console.log('filter state',this.state.filterBy)
         this.props.onSetFilter(this.state.filterBy)
         this.cleanForm()
     }
 
     cleanForm = () => {
-        this.setState({ filterBy: { location: '' , dateIn:'',dateOut:'',guests:'' } })
+        this.setState({ filterBy: { location: '', dateIn: '', dateOut: ''} })
+    }
+
+    toggleModal = () => {
+        this.setState(prev => ({ ...prev, isModalShown: !prev.isModalShown }))
+    }
+
+    onChangeNum(indicator) {
+        this.setState(prevState => ({ ...prevState, span: prevState.span + indicator , filterBy: {...prevState.filterBy.guests, adults: prevState.span + indicator} }))
+
+    }
+    onChangeValue(indicator) {
+        this.setState(prevState => ({ ...prevState, num: prevState.span + indicator , filterBy: {...prevState.filterBy.guests ,  children: prevState.num + indicator} }))
+
     }
 
 
@@ -36,9 +52,11 @@ export class HomeFilter extends React.Component {
 
 
     render() {
-        const { location, dateIn, dateOut, guests } = this.state.filterBy
+        const { location, dateIn, dateOut, guests} = this.state.filterBy
+        // console.log(this.state.filterBy)
+        const { isModalShown, span , num  } = this.state
         return <section className="main-filter-container">
-            <form className="max-filter">
+            <form className="max-filter" onSubmit={this.onSubmitFilter}>
                 <label>
                     <span>Location</span>
                     <input name="location"
@@ -47,6 +65,7 @@ export class HomeFilter extends React.Component {
                         type="search"
                         placeholder="Where are you going?"
                         onChange={this.handleChange}
+                        onClick={this.toggleModal}
                         value={location} />
                 </label>
                 <label htmlFor="check-in">
@@ -56,6 +75,8 @@ export class HomeFilter extends React.Component {
                         autoComplete="off"
                         placeholder="Add dates"
                         onChange={this.handleChange}
+                        onClick={this.toggleModal}
+
                         value={dateIn} />
                 </label>
                 <label htmlFor="check-out">
@@ -65,6 +86,8 @@ export class HomeFilter extends React.Component {
                         autoComplete="off"
                         placeholder="Add dates"
                         onChange={this.handleChange}
+                        onClick={this.toggleModal}
+
                         value={dateOut} />
                 </label>
                 <label className="guests" htmlFor="guests">
@@ -72,31 +95,38 @@ export class HomeFilter extends React.Component {
                         <span>Guests</span>
                         <input name="guests"
                             id="guests"
-                            placeholder="Add guests"
+                            placeholder={`${span} guests`}
                             onChange={this.handleChange}
-                            value={guests} />
+                            onClick={this.toggleModal}
+                            value={ guests} />
                     </div>
                 </label>
                 <button>
                     <i className="fas fa-search" aria-hidden="true"> </i>
                 </button>
             </form>
-            {/* <form className="filter-close">
-                <span>Hong Kong</span>
-                <button>
-                    <a href="#/explore">
-                        <i className="fas fa-search" aria-hidden="true"></i>
-                    </a></button>
-            </form> */}
+            {isModalShown && <div className="dynamic-modal">
+                <div className="dynamic-modal-child filter-guest-modal">
+                    <div className="modal-label"><div><span>Adults</span><span>Ages 13 or above</span></div>
+                        <div><button type="button" onClick={() => this.onChangeNum(-1)}>-</button><span>{span}</span><button type="button" onClick={() => this.onChangeNum(1)}>+</button></div></div>
+                    <div className="modal-label"><div><span>Kids</span><span>Ages 0–12</span></div><div>
+                        <button type="button" onClick={() => this.onChangeValue(-1)}>-</button><span>{num}</span><button type="button" onClick={() => this.onChangeValue(1)}>+</button>
+                    </div></div>
+                </div>
+            </div>}
+
+
         </section>
 
 
     }
 }
 
+// style={top: 149px; {left: 915px}}
 
 
-{/* <label htmlFor="address" classNameName='main-search-label'>
+
+{/* <label htmlFor="address" classNameNameName='main-search-label'>
     <span>Location</span>
 <input  classNameName="input-search-toy"  type="search" name="address" onChange={this.handleChange} placeholder="Where are you going?" value={filterBy.address} />
 </label>
