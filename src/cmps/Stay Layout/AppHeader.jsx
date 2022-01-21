@@ -17,7 +17,6 @@ class _AppHeader extends Component {
     }
     
     render() {
-        console.log('render',this.props.class)
         return (
             <header className={this.props.class} >
 
@@ -26,8 +25,27 @@ class _AppHeader extends Component {
                     <h1 className="logo" onClick={()=>this.onLogoClicked()}>Pl<i className="fab fa-airbnb" aria-hidden="true"></i>
                     Ce</h1></a>
 
+                {
+                    this.props.class !== 'home-header' &&
+                    <form className="form-container">
+                        <div className="input container first-container">
+                            <label>Location
+                                <input type="search" list="destination" placeholder="Where are you going?"></input>
+                                <datalist id="destination">
+                                    <option value="Tel Aviv"></option>
+                                    <option value="Japan"></option>
+                                    <option value="Paris"></option>
+                                    <option value="New York"></option>
+                                </datalist>
+                            </label>
+                           
+
+                        </div>
+                    </form>
+                }
+
                 <nav className="main-nav">
-                    <NavLink activeClassName="my-active" exact to="/explore">Explore</NavLink>
+                    {/* <NavLink activeClassName="my-active" exact to="/explore">Explore</NavLink> */}
                     <NavLink to="/BecomeHost">Become Host</NavLink>
 
                 </nav>
@@ -42,7 +60,6 @@ class _AppHeader extends Component {
 
 
 function mapStateToProps(state) {
-    console.log('state from home' , state)
     return {
         class: state.stayModule.classHeader
     }

@@ -18,12 +18,13 @@
     }
 }
 
-.explor-header{
+.explore-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: pink;
-    color: $clr6;
+    background-color: white;
+    // color: $clr6;
+    color: rgb(246, 56, 92);
     height: 10vh;
     padding: 0 2rem;
     margin-bottom: 2rem;

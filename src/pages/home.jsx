@@ -36,7 +36,6 @@ class _HomePage extends React.Component {
         this.props.setFilter(filterBy);
         setTimeout(()=>{
             this.props.history.push(`/explore?location=${filterBy.location}&dateIn=${filterBy.dateIn}&dateOut=${filterBy.dateOut}&guests=${filterBy.guests}`)
-
         },1000)
     }
 
@@ -48,7 +47,6 @@ class _HomePage extends React.Component {
         return (
             <section>
                 <HomeFilter onSetFilter={this.onSetFilter} />
-
 
                 <div className='main-container'>
                     <img className='pic' src={house} alt="house" style={{ maxWidth: '900px' }} />
@@ -78,10 +76,6 @@ class _HomePage extends React.Component {
                         <img className="ins-image" alt="cat" src="https://a0.muscache.com/im/pictures/aff9e173-b551-44e4-80f3-bd9b9d632f8b.jpg?im_q=highq&im_w=720" />
                     </div>
                 </section>
-
-
-
-
 
                 <h1>Most Popular</h1>
                 <section className="card-container">
