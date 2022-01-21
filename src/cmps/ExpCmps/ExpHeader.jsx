@@ -37,33 +37,34 @@ class _ExpHeader extends Component {
     render() {
         const { enterInputsMode } = this.state
         return (
-            <section className='main-nav'>
-                <Logo/>
-                <nav className="main-nav">
-                    {/* <NavLink activeClassName="my-active" exact to="/explore">Explore</NavLink> */}
-                    <NavLink to="/BecomeHost" className="nav-txt-header">Become Host</NavLink>
-                </nav>
-                {!enterInputsMode ? (
-                    <form className="exp-mini-form">
-                        <div className="input first-container" onClick={this.openModal}>
-                                <input type="text" placeholder="Add location"></input>
-                        </div>
-                        <div className="input second-container" onClick={this.openModal}>
-                            <input type="text" placeholder="Add dates"></input>
-                        </div>
-                        <div className="input third-container" onClick={this.openModal}>
-                            <input type="text" placeholder="Add guests"></input>
-                        </div>
-                        
-                        <button className="mini-form-btn">
-                            <i className="fas fa-search" aria-hidden="true"></i> 
-                        </button>
-                    </form>
-                ) : (
-                    <SearchModal onCloseModal={this.closeModal}/> 
-                )}
-            </section>
-            
+            <div className="explore-header">
+                <section className='main-nav'>
+                    <Logo/>
+                    <nav className="main-nav">
+                        {/* <NavLink activeClassName="my-active" exact to="/explore">Explore</NavLink> */}
+                        <NavLink to="/BecomeHost" className="nav-txt-header">Become Host</NavLink>
+                    </nav>
+                    {!enterInputsMode ? (
+                        <form className="exp-mini-form">
+                            <div className="input first-container" onClick={this.openModal}>
+                                    <input type="text" placeholder="Add location"></input>
+                            </div>
+                            <div className="input second-container" onClick={this.openModal}>
+                                <input type="text" placeholder="Add dates"></input>
+                            </div>
+                            <div className="input third-container" onClick={this.openModal}>
+                                <input type="text" placeholder="Add guests"></input>
+                            </div>
+                            
+                            <button className="mini-form-btn">
+                                <i className="fas fa-search" aria-hidden="true"></i> 
+                            </button>
+                        </form>
+                    ) : (
+                        <SearchModal onCloseModal={this.closeModal}/> 
+                    )}
+                </section>
+            </div>
         )
     }
 
@@ -75,7 +76,5 @@ function mapStateToProps(state) {
         isMinFilter: state.stayModule.isMinFilter
     }
 }
-
-
 
 export const ExpHeader = connect(mapStateToProps)(_ExpHeader)

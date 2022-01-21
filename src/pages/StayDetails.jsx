@@ -15,13 +15,15 @@ import { HostInfo } from '../cmps/Stay Details/HostInfo.jsx';
 class _StayDetails extends React.Component {
     state = {
         stay: null,
-        // class: 'explore-header'
+        class: 'details-header'
+    }
+
+    componentWillMount() {
+        this.props.changeHeaderClass(this.state.class)
     }
 
     componentDidMount() {
-        // this.props.changeHeaderClass(this.state.class)
         this.loadStay();
-        
     }
 
     loadStay = () => {
@@ -75,7 +77,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-    // changeHeaderClass
+    changeHeaderClass
     
 }
 

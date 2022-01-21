@@ -64,7 +64,6 @@ export function onAddStay() {
 }
 
 export function setFilter(filterBy) {
-    console.log(filterBy)
     return (dispatch) => {
         const action = { type: 'SET_FILTER', filterBy };
         dispatch(action);
