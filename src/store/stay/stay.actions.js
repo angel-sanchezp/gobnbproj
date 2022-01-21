@@ -70,6 +70,15 @@ export function setFilter(filterBy) {
     };
 }
 
+export function changeHeaderClass(classHeader) {
+        return (dispatch) => {
+            var newClass = classHeader.toString()
+            console.log(newClass)
+            const action = { type: 'SET_CLASS_HEADER', newClass };
+            dispatch(action);
+    }
+}
+
 // export function onEditStay(stayToSave) {
 //     return (dispatch) => {
 //         stayService.save(stayToSave)

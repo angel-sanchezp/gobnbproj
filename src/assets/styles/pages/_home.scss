@@ -1,19 +1,31 @@
+.home-container{
+   padding-left: 80px;
+   padding-right: 80px;
+
+
+}
+
+
+
+
+
 .main-container {
     display: grid;
-    grid-template-columns: 20px 1fr 20px;
+    grid-template-columns: 80px 1fr 80px;
     min-height: 80vh;
     background-color: black;
     justify-items: center;
     align-content: center;
+    // position: relative;
 
     > * {
         grid-column: 2;
         
     }
 
-    > *.full {
-        grid-column: 1 / -1;
-    }
+    // > *.full {
+    //     grid-column: 1 / -1;
+    // }
 
     .pic {
         border-radius: 10px;
@@ -23,9 +35,8 @@
 
     h1 {
         font-size: rem(38px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: absolute;
+        top: 50%;
         color: $clr6;
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
         z-index: 1;
@@ -33,13 +44,17 @@
 
     .btn-flexible {
         padding: 16px 32px;
+        position: absolute;
+        top: 60%;
+        left: 45%;
         cursor: pointer;
         width: auto;
         font-size: 16px;
-        line-height: 20px;
         border-radius: 1000px;
         border: 1px solid #000;
         background: #fff;
+        z-index: 5;
+
     }
 
     .btn-flexible span {
