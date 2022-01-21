@@ -8,7 +8,8 @@ const initialState = {
 
     },
     lastRemovedStay: null,
-    classHeader: 'home-header-expanded',
+    // classHeader: 'home-header-expanded',
+    classHeader: 'explore-header',
     isMinFilter:false
 }
 export function stayReducer(state = initialState, action) {
@@ -37,7 +38,6 @@ export function stayReducer(state = initialState, action) {
         case 'SET_CLASS_HEADER':
             console.log(action.newClass)
             newState = { ...state, classHeader: action.newClass };
-            console.log(newState)
             break
         case 'SET_MIN_FILTER':
             newState = { ...state, isMinFilter: action.isMinFilter };

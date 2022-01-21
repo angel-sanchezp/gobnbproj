@@ -28,7 +28,7 @@
     .secondary-search-bar {
         cursor: pointer;
         grid-row: 2;
-        margin-top: 85px;
+        margin-top: 25px;
         left: 45%;
         transform: translate(-50%, -50%);
         position: absolute;
@@ -84,12 +84,14 @@
     }
 }
 
+
 .explor-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: pink;
-    color: $clr6;
+    background-color: white;
+    // color: $clr6;
+    color: rgb(246, 56, 92);
     height: 10vh;
     padding: 0 2rem;
     margin-bottom: 2rem;
@@ -128,11 +130,35 @@
 .app-header {
     display: grid;
     z-index: 200;
-    grid-template-columns: 150px auto 150px;
-    grid-template-rows: 80px;
+    grid-template-columns: 80px auto 80px;
+    grid-template-rows: 88px 8px;
     transition: background-color .5s ease-out,height .4s ease-out,box-shadow .3s ease-out;
     box-shadow: 0 1px 1px rgb(0 0 0 / 8%);
     background-color: white;
     position: fixed;
     width: 100%;
+
+    .main-nav {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-nav a {
+        text-decoration: none;
+        color: black;
+    }
+    .main-nav > *:not(:last-child) {
+        margin-inline-end: 1rem;
+    }
+
+    .logo {
+        transition: 0.5s;
+        -o-object-fit: contain;
+        object-fit: contain;
+        cursor: pointer;
+        width: 123px;
+    }
 }

@@ -2,6 +2,8 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
+import { HomeHeader } from '../HomeCmps/HomeHeader.jsx';
+import { ExpHeader } from '../ExpCmps/ExpHeader.jsx';
 
 
 // import { user } from '../../assets/icon/user-icon.png'
@@ -12,42 +14,33 @@ import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
 class _AppHeader extends Component {
 
 
-
-
     onLogoClicked() {
         window.location.href = `/`
     }
 
     render() {
-        console.log('render', this.props.class)
         return (
             <header className={this.props.class} >
+                {
+                    this.props.class !== 'explore-header' && this.props.class !== 'details-header' &&
+                        <HomeHeader />
 
-                <section className='main-nav'>
-                    <div className='logo'>
-                        <a aria-current="page" className="logo-link active">
-                            <h1 className="logo" onClick={() => this.onLogoClicked()}>Pl<i className="fab fa-airbnb" aria-hidden="true"></i>
-                                Ce</h1></a>
-                    </div>
+                }
+
+                
+
+                {
+                    this.props.class ==='explore-header' &&
+                        <ExpHeader />
+                }
+
+                {
+                    this.props.class === 'details-header' &&
+                        <ExpHeader />
+                }
 
 
-                <div className='secondary-search-bar'>
-                    <HomeFilter onSetFilter={this.onSetFilter} isMinFilter={this.props.isMinFilter}/>
-                </div>
 
-                <section className="right-nav">
-                    <div className="host-options">
-                        <NavLink className="become" activeClassName="my-active" exact to="/explore">Explore</NavLink>
-                        <NavLink className="become" to="/BecomeHost">Become Host</NavLink>
-                    </div>
-                    <section className="login-container">
-                        <div className="user-options">
-                            <div className="burger">☰</div>
-                            {/* <img src={user} className="avatar" /> */}
-                        </div>
-                    </section>
-                </section>
-            </section>
             </header >
         )
     }
@@ -55,7 +48,6 @@ class _AppHeader extends Component {
 
 
 function mapStateToProps(state) {
-    // console.log('state from home', state)
     return {
         class: state.stayModule.classHeader,
         isMinFilter: state.stayModule.isMinFilter
@@ -65,3 +57,5 @@ function mapStateToProps(state) {
 
 
 export const AppHeader = connect(mapStateToProps)(_AppHeader)
+
+

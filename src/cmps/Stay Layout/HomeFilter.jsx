@@ -111,12 +111,12 @@ export class HomeFilter extends React.Component {
             </section>
             }
 
-            {this.props.isMinFilter && <div class="initial-search-bar">
-                <p>Start your search</p>
-                <div class="circle">
-                    <img src="/img/search-circle.12c9366c.png" class="search-icon"/>
-                </div>
-            </div>}
+            {this.props.isMinFilter && <form class="min-filter" onSubmit={this.onSubmitFilter}>
+                <span>Search Pleace</span>
+                <button>
+                    <i class="fas fa-search" aria-hidden="true"></i> 
+              </button>
+              </form>}
 
 
             {isModalShown && <div className="dynamic-modal">
