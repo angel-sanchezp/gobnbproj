@@ -81,7 +81,6 @@ export function changeHeaderClass(newClass) {
 }
 export function changeFilter(isMinFilter) {
         return (dispatch) => {
-            console.log(isMinFilter)
             const action = { type: 'SET_MIN_FILTER', isMinFilter };
             dispatch(action);
     }

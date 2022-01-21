@@ -89,7 +89,10 @@ class _Explore extends Component {
                         <button className="filter-btn">Free cancellation</button>
                         <button className="filter-btn">Wifi</button>
                         <button className="filter-btn">Kitchen</button>
-                        <button className="filter-btn">Hot tub</button>
+                        <button className="filter-btn">Air conditioning</button>
+                        <button className="filter-btn">Washer</button>
+                        <button className="filter-btn">Iron</button>
+                        <button className="filter-btn">Free parking</button>
                     </div>
                 </div>
                 <section className="explore-page">
@@ -128,7 +131,6 @@ class _Explore extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log('state from explore',state)
     return {
         stays: state.stayModule.stays,
         filterBy: state.stayModule.filterBy,

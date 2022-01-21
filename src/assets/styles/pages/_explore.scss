@@ -54,6 +54,16 @@
     display: flex;
     justify-content: space-between;
     margin: 15px;
+    align-items: center;
+
+    .sort{
+        width:20%;
+        display: flex;
+    }
+    .filters{
+        width:80%;
+        display: flex;
+    }
 
     .filter-btn{
         cursor: pointer !important;
@@ -68,17 +78,17 @@
         color: #222222 !important;
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
         position: relative !important;
-        padding-top: 10px !important;
-        padding-bottom: 10px !important;
-        // padding-left: 40px !important;
-        padding-right: 40px !important;
-        font-size: 12px !important;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+        font-size: 14px !important;
+        font-weight: 300;
         line-height: 16px !important;
+        width: 100%;
 
     }
     span{
-        color: #ddd;
-        font-size:30px;
+        color: #ddddddba;
+        font-size:20px;
         font-weight: 200;
     }
 }

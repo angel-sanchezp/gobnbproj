@@ -49,7 +49,7 @@ export function stayReducer(state = initialState, action) {
     window.stayState = newState
     // console.log('Prev State:', state)
     // console.log('Action:', action)
-    console.log('New State:', newState)
+    // console.log('New State:', newState)
     return newState
 
 }

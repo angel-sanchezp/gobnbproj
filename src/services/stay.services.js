@@ -33,7 +33,7 @@ const gStays = [   {
     "host": {
         "_id": "h0001",
         "fullname": "Matsuda",
-        "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+        "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
     },
     "location": {
         "country": "Japan",
@@ -49,7 +49,7 @@ const gStays = [   {
         "by": {
             "_id": "u0001",
             "fullname": "Kerolyne",
-            "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+            "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         }
     }],
     "likedByUsers" : ["mini-user"],
@@ -78,7 +78,7 @@ const gStays = [   {
     "host": {
         "_id": "h0002",
         "fullname": "Kako & Keiko",
-        "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+        "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
     },
     "location": {
         "country": "Japan",
@@ -94,7 +94,7 @@ const gStays = [   {
         "by": {
             "_id": "u0002",
             "fullname": "Lisa",
-            "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+            "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         }
     }],
     "likedByUsers" : ["mini-user"],
@@ -123,7 +123,7 @@ const gStays = [   {
     "host": {
         "_id": "h0003",
         "fullname": "Otera",
-        "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+        "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
     },
     "location": {
         "country": "Japan",
@@ -139,7 +139,7 @@ const gStays = [   {
         "by": {
             "_id": "u0003",
             "fullname": "Osunlade",
-            "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+            "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
         }
     }],
     "likedByUsers" : ["mini-user"],
@@ -171,7 +171,7 @@ const gStays = [   {
     "host": {
         "_id": "h0004",
         "fullname": "Chris",
-        "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+        "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
     },
     "location": {
         "country": "France",
@@ -187,7 +187,7 @@ const gStays = [   {
         "by": {
             "_id": "u0004",
             "fullname": "George",
-            "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+            "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
         }
     }],
     "likedByUsers" : ["mini-user"],

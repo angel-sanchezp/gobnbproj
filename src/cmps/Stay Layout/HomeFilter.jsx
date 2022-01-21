@@ -16,7 +16,7 @@ export class HomeFilter extends React.Component {
     }
 
     handleChange = ({ target }) => {
-        console.log('target', target)
+        // console.log('target', target)
         const field = target.name
         const value = target.type === 'number' ? +target.value : target.value
         this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, [field]: value } }))
