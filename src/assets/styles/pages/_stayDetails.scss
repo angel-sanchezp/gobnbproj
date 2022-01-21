@@ -1,9 +1,9 @@
 .details-container{
-    padding: rem(80px);
+    padding: 0 rem(80px);
     background-color: #ffffff;
     display: grid;
     grid-column: 2;
-    background-color: antiquewhite;
+    margin-top: rem(10px);
 }
 
 
@@ -16,6 +16,8 @@
 
 
 .details-gallery{
+    align-content: center;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4,minmax(180px,1fr));
     grid-template-rows: 160px 160px;
@@ -30,11 +32,11 @@
     border-bottom-left-radius: 13px;
 }
 
-.stay-gallery :nth-child(3) {
+.details-gallery :nth-child(3) {
     border-top-right-radius: 13px;
 }
 
-.stay-gallery :nth-child(5) {
+.details-gallery :nth-child(5) {
     border-bottom-right-radius: 13px;
 }
 
