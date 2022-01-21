@@ -78,6 +78,13 @@ export function changeHeaderClass(classHeader) {
             dispatch(action);
     }
 }
+export function changeFilter(isMinFilter) {
+        return (dispatch) => {
+            console.log(isMinFilter)
+            const action = { type: 'SET_MIN_FILTER', isMinFilter };
+            dispatch(action);
+    }
+}
 
 // export function onEditStay(stayToSave) {
 //     return (dispatch) => {
