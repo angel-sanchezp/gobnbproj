@@ -2,36 +2,56 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
-
-
+import { SearchModal } from './SearchModel.jsx'
+import { Logo } from '../shared/logo.jsx'
 
 class _ExpHeader extends Component {
 
-    onLogoClicked() {
-        window.location.href = `/`
+    state = {
+        enterInputsMode: null
     }
 
+    closeModal = () => {
+        this.setState(prevState=>({ 
+            ...prevState, 
+            enterInputsMode: null
+        }))
+    }
+
+    openModal = () => {
+        console.log('openModal')
+        this.setState(prevState=>({ 
+            ...prevState, 
+            enterInputsMode: true
+        }))
+    }
+
+    
+    // onSearch = (inputs) => {
+    //     notesService.updateNote(note).then(()=>{
+    //         this.closeModal()
+    //         this.loadNotes()
+    //     })
+    // }
+
     render() {
+        const { enterInputsMode } = this.state
         return (
             <section className='main-nav'>
-                    <div className='logo'>
-                        <a aria-current="page" className="logo-link active">
-                            <h1 className="logo" onClick={() => this.onLogoClicked()}>Pl<i className="fab fa-airbnb" aria-hidden="true"></i>
-                                Ce</h1></a>
-                    </div>
-                    <nav className="main-nav">
-                        {/* <NavLink activeClassName="my-active" exact to="/explore">Explore</NavLink> */}
-                        <NavLink to="/BecomeHost" className="nav-txt-header">Become Host</NavLink>
-                    </nav>
-
+                <Logo/>
+                <nav className="main-nav">
+                    {/* <NavLink activeClassName="my-active" exact to="/explore">Explore</NavLink> */}
+                    <NavLink to="/BecomeHost" className="nav-txt-header">Become Host</NavLink>
+                </nav>
+                {!enterInputsMode ? (
                     <form className="exp-mini-form">
-                        <div className="input first-container">
+                        <div className="input first-container" onClick={this.openModal}>
                                 <input type="text" placeholder="Add location"></input>
                         </div>
-                        <div className="input second-container">
+                        <div className="input second-container" onClick={this.openModal}>
                             <input type="text" placeholder="Add dates"></input>
                         </div>
-                        <div className="input third-container">
+                        <div className="input third-container" onClick={this.openModal}>
                             <input type="text" placeholder="Add guests"></input>
                         </div>
                         
@@ -39,7 +59,11 @@ class _ExpHeader extends Component {
                             <i className="fas fa-search" aria-hidden="true"></i> 
                         </button>
                     </form>
+                ) : (
+                    <SearchModal onCloseModal={this.closeModal}/> 
+                )}
             </section>
+            
         )
     }
 
