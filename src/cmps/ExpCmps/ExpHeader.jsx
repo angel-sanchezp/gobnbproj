@@ -21,23 +21,23 @@ class _ExpHeader extends Component {
                     </div>
                     <nav className="main-nav">
                         {/* <NavLink activeClassName="my-active" exact to="/explore">Explore</NavLink> */}
-                        <NavLink to="/BecomeHost">Become Host</NavLink>
+                        <NavLink to="/BecomeHost" className="nav-txt-header">Become Host</NavLink>
                     </nav>
 
-                    <form className="form-container">
-                        <div className="input container first-container">
-                            <label>Location
-                                <input type="search" list="destination" placeholder="Where are you going?"></input>
-                                <datalist id="destination">
-                                    <option value="Tel Aviv"></option>
-                                    <option value="Japan"></option>
-                                    <option value="Paris"></option>
-                                    <option value="New York"></option>
-                                </datalist>
-                            </label>
-                           
-
+                    <form className="exp-mini-form">
+                        <div className="input first-container">
+                                <input type="text" placeholder="Add location"></input>
                         </div>
+                        <div className="input second-container">
+                            <input type="text" placeholder="Add dates"></input>
+                        </div>
+                        <div className="input third-container">
+                            <input type="text" placeholder="Add guests"></input>
+                        </div>
+                        
+                        <button className="mini-form-btn">
+                            <i className="fas fa-search" aria-hidden="true"></i> 
+                        </button>
                     </form>
             </section>
         )
