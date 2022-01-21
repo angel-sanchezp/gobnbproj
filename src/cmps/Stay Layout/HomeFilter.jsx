@@ -111,10 +111,10 @@ export class HomeFilter extends React.Component {
             </section>
             }
 
-            {this.props.isMinFilter && <form class="min-filter" onSubmit={this.onSubmitFilter}>
-                <span>Search Pleace</span>
-                <button>
-                    <i class="fas fa-search" aria-hidden="true"></i> 
+            {this.props.isMinFilter && <form className="min-filter" onSubmit={this.onSubmitFilter}>
+                <span className='min-filter-title'>Search Pleace</span>
+                <button className="min-filter-btn">
+                    <i className="fas fa-search" aria-hidden="true"></i> 
               </button>
               </form>}
 

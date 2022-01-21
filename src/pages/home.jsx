@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { loadStays, setFilter, changeHeaderClass , changeFilter } from '../store/stay/stay.actions.js'
+
+import { loadStays,  changeHeaderClass , changeFilter } from '../store/stay/stay.actions.js'
 import { Link, NavLink } from 'react-router-dom'
 
 
@@ -51,13 +52,7 @@ class _HomePage extends React.Component {
         }
     }
 
-    onSetFilter = (filterBy) => {
-        console.log('home filterby ', filterBy)
-        this.props.setFilter(filterBy);
-        setTimeout(() => {
-            this.props.history.push(`/explore?location=${filterBy.location}&dateIn=${filterBy.dateIn}&dateOut=${filterBy.dateOut}&guests=${filterBy.guests}`)
-        }, 1000)
-    }
+   
 
 
 
@@ -135,7 +130,6 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = {
     loadStays,
-    setFilter,
     changeHeaderClass,
     changeFilter
 
