@@ -1,3 +1,13 @@
+html{
+    scroll-behavior: smooth;
+}
+
+a:link, a:visited,  a:hover, a:active
+{
+    color: #717171;
+    text-decoration: none;
+}
+
 .details-container{
     padding: 0 rem(80px);
     background-color: #ffffff;
