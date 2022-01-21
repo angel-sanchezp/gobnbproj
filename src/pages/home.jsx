@@ -1,10 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+
 import { loadStays,  changeHeaderClass , changeFilter } from '../store/stay/stay.actions.js'
 import { Link, NavLink } from 'react-router-dom'
 
-import{AppFooter} from '../cmps/Stay Layout/AppFooter.jsx'
 
 import house from '../assets/img/top.jpg'
 import host from '../assets/img/become-user.jpg'
@@ -26,13 +26,9 @@ class _HomePage extends React.Component {
 
     }
 
-<<<<<<< HEAD
-    
-=======
     componentWillUnmount(){
         window.removeEventListener('scroll', this.listenScrollEvent)
     }
->>>>>>> 081b93c83af4eba1710719003f7079cbb14eed60
 
 
     listenScrollEvent = e => {
@@ -102,20 +98,7 @@ class _HomePage extends React.Component {
 
                     <h1>Most Popular</h1>
                     <section className="card-container">
-                        {stays.slice(0, 4).map(stay =>
-                            <div className='card-stay card' key={stay._id}>
-                                <img className="explore-card-image" alt="cat" src={stay.imgUrls[0]} />
-                                <div className="cat-tag">
-                                    <h4>{stay.type}</h4>
-                                    {/* <p>Price: <span>${stay.price.toLocaleString()}</span></p> */}
-                                </div>
-                            </div>)
-                        }
-
-                    </section>
-                    <h1>Top Rated</h1>
-                    <section className="card-container">
-                        {stays.slice(4, 8).map(stay =>
+                        {stays.map(stay =>
                             <div className='card-stay card' key={stay._id}>
                                 <img className="explore-card-image" alt="cat" src={stay.imgUrls[0]} />
                                 <div className="cat-tag">
@@ -129,13 +112,10 @@ class _HomePage extends React.Component {
                 </section >
 
                 <div className='banner'>
-                    <h1 className="title-become-host">Become a host</h1>
+                    <h1>Become a host</h1>
                     <h4 className="sub-header">Unlock new opportunities by sharing your space.</h4>
                     <button className='learn-btn'>Become Host</button>
-                    <img  className='host-img'src={host}  alt="host" />
-                    </div>
-
-                    <AppFooter/>
+                    <img  className='host-img'src={host}  alt="host" /></div>
 
             </section>
         )
