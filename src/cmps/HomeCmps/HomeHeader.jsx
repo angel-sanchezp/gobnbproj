@@ -2,11 +2,26 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
+import { withRouter } from "react-router-dom"
+
 // import { user } from '../../assets/icon/user-icon.png'
+
+import { setFilter } from '../../store/stay/stay.actions.js'
+
 class _HomeHeader extends Component {
     onLogoClicked() {
         window.location.href = `/`
     }
+
+    onSetFilter = (filterBy) => {
+        console.log('home filterby ', filterBy)
+        this.props.setFilter(filterBy);
+        setTimeout(() => {
+            this.props.history.push(`/explore?location=${filterBy.location}&dateIn=${filterBy.dateIn}&dateOut=${filterBy.dateOut}&guests=${filterBy.guests}`)
+        }, 1000)
+    }
+
+
     render() {
         console.log('render', this.props.class)
         return (
@@ -42,4 +57,8 @@ function mapStateToProps(state) {
         isMinFilter: state.stayModule.isMinFilter
     }
 }
-export const HomeHeader = connect(mapStateToProps)(_HomeHeader)
+const mapDispatchToProps = {
+    setFilter,
+
+}
+export const HomeHeader = connect(mapStateToProps, mapDispatchToProps)(withRouter(_HomeHeader))

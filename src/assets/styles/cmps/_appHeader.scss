@@ -161,4 +161,32 @@
         cursor: pointer;
         width: 123px;
     }
+
+    .right-nav {
+        display: flex;
+        align-items: center;
+
+        .host-options {
+            display: flex;
+            cursor: pointer;
+        }
+
+        .host-options .become {
+            letter-spacing: 0.1px;
+            -webkit-margin-end: 30px;
+            margin-inline-end: 30px;
+            font-family: airbnb-medium;
+            font-size: 14px;
+        }
+
+        .user-options {
+            background-color: #fff;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 0 0.1em 0.04em rgb(46 47 48 / 27%), 0 0.25em 1em rgb(90 125 188 / 5%);
+            width: 75px;
+            height: 40px;
+            border-radius: 40px;
+        }
+    }
 }

@@ -86,6 +86,9 @@
     .min-filter {
         position: absolute;
         left: 50%;
+        padding: 0px 10px 0px 0px;
+        margin-top: 45px;
+        height: 47px;
         width: 300px;
         display: -webkit-flex;
         display: flex;
@@ -101,13 +104,31 @@
         -webkit-transform: translate(-50%,-140%);
         transform: translate(-50%,-140%);
         opacity: 1;
+
+        .min-filter-title{
+            padding-inline-start: 25px;
+
+        }
+
+        .min-filter-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(255, 56, 92);
+            height: 38px;
+            width: 38px;
+            color: rgb(255, 255, 255);
+            font-size: 0.875rem;
+            border-radius: 50%;
+            cursor: pointer;
+        }
     }
 }
 
 .dynamic-modal {
     position: absolute;
     z-index: 5;
-    top: 56px;
+    top: 81px;
     left: 134px;
 
     .filter-guest-modal {
