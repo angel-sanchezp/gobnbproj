@@ -20,9 +20,9 @@ class _AppFooter extends Component {
 
     render() {
         return (
-            <footer class="main-footer full">
+            <footer className="main-footer full">
                 <section className='footer-section'>
-                    <section class="footer-links-container">
+                    <section className="footer-links-container">
                     <h3>Inspiration for future getaways</h3>
                     <div>
                         <div className='div-link'>
@@ -85,14 +85,14 @@ class _AppFooter extends Component {
                                 </div>
                                 </div>
                                 </section>
-                    <section class="footer-nav-container"><div><p>© 2021 Place&amp; Go,
+                    <section className="footer-nav-container"><div><p>© 2021 Place&amp; Go,
                         <span>Inc.</span></p><span>·</span><a href="#/about">About</a><span>·</span>
                         <a href="#/login">Login</a><span>·</span><a href="#/host">Become a host</a>
-                    </div><div><p><i class="fas fa-globe" aria-hidden="true">
+                    </div><div><p><i className="fas fa-globe" aria-hidden="true">
                     </i><span>English (US)</span><span>$ US</span></p><p>
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                <i class="fab fa-twitter" aria-hidden="true"></i>
-                                <i class="fab fa-instagram" aria-hidden="true"></i></p></div>
+                                <i className="fab fa-facebook-f" aria-hidden="true"></i>
+                                <i className="fab fa-twitter" aria-hidden="true"></i>
+                                <i className="fab fa-instagram" aria-hidden="true"></i></p></div>
                     </section>
                 </section>
             </footer>

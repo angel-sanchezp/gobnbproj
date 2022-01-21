@@ -1,5 +1,9 @@
 
 import React from 'react'
+import {Guests} from '../FilterCmps/Guests.jsx'
+import {Calendar} from '../FilterCmps/Calendar.jsx'
+
+
 export class HomeFilter extends React.Component {
 
     state = {
@@ -12,7 +16,9 @@ export class HomeFilter extends React.Component {
         },
         isModalShown: false,
         num: 0,
-        span: 0
+        span: 0,
+        value: [null, null],
+        cmp: null
     }
 
     handleChange = ({ target }) => {
@@ -46,15 +52,27 @@ export class HomeFilter extends React.Component {
 
     }
 
+    OpenModal = (indicator) => {
+        if (indicator === 'guests') {
+            console.log('here guests')
+            this.setState(prev => ({ ...prev, cmp: <Guests /> }))
+            this.setState(prev => ({ ...prev, isModalShown: true}))
+
+        } else {
+            console.log('here calendar')
+            this.setState(prev => ({ ...prev, cmp: <Calendar /> }))
+            this.setState(prev => ({ ...prev, isModalShown: true }))
 
 
+        }
 
+    }
 
 
     render() {
         const { location, dateIn, dateOut, guests } = this.state.filterBy
-        console.log(this.props.isMinFilter)
-        const { isModalShown, span, num } = this.state
+        // console.log(this.props.isMinFilter)
+        const { isModalShown, span, cmp } = this.state
 
         return <section className="main-filter-container">
             {!this.props.isMinFilter && <section className='secondary-search-bar'>
@@ -78,7 +96,7 @@ export class HomeFilter extends React.Component {
                             autoComplete="off"
                             placeholder="Add dates"
                             onChange={this.handleChange}
-                            onClick={this.toggleModal}
+                            onClick={() => this.OpenModal('calendar')}
 
                             value={dateIn} />
                     </label>
@@ -89,7 +107,7 @@ export class HomeFilter extends React.Component {
                             autoComplete="off"
                             placeholder="Add dates"
                             onChange={this.handleChange}
-                            onClick={this.toggleModal}
+                            onClick={() => this.OpenModal('calendar')}
 
                             value={dateOut} />
                     </label>
@@ -100,7 +118,7 @@ export class HomeFilter extends React.Component {
                                 id="guests"
                                 placeholder={`Add gusts`}
                                 onChange={this.handleChange}
-                                onClick={this.toggleModal}
+                                onClick={() => this.OpenModal('guests')}
                                 value={guests} />
                         </div>
                     </label>
@@ -114,21 +132,13 @@ export class HomeFilter extends React.Component {
             {this.props.isMinFilter && <form className="min-filter" onSubmit={this.onSubmitFilter}>
                 <span className='min-filter-title'>Search Pleace</span>
                 <button className="min-filter-btn">
-                    <i className="fas fa-search" aria-hidden="true"></i> 
-              </button>
-              </form>}
-
+                    <i className="fas fa-search" aria-hidden="true"></i>
+                </button>
+            </form>}
 
             {isModalShown && <div className="dynamic-modal">
-                <div className="dynamic-modal-child filter-guest-modal">
-                    <div className="modal-label"><div><span>Adults</span><span>Ages 13 or above</span></div>
-                        <div><button type="button" onClick={() => this.onChangeNum(-1)}>-</button><span>{span}</span><button type="button" onClick={() => this.onChangeNum(1)}>+</button></div></div>
-                    <div className="modal-label"><div><span>Kids</span><span>Ages 0–12</span></div><div>
-                        <button type="button" onClick={() => this.onChangeValue(-1)}>-</button><span>{num}</span><button type="button" onClick={() => this.onChangeValue(1)}>+</button>
-                    </div></div>
-                </div>
+            {cmp}
             </div>}
-
 
         </section>
 
@@ -136,23 +146,4 @@ export class HomeFilter extends React.Component {
     }
 }
 
-// style={top: 149px; {left: 915px}}
 
-
-
-{/* <label htmlFor="address" classNameNameName='main-search-label'>
-    <span>Location</span>
-<input  classNameName="input-search-toy"  type="search" name="address" onChange={this.handleChange} placeholder="Where are you going?" value={filterBy.address} />
-</label>
-<label htmlFor="checkin" classNameName='main-search-label'>
-<span>Check in</span>
-<input  className="input-search-toy"  name="checkin" onChange={this.handleChange} placeholder="add dates" value={filterBy.checkin} />
-</label>
-<label htmlFor="checkout" className='main-search-label'>
-<span>Check out</span>
-<input  className="input-search-toy"   name="checkout" onChange={this.handleChange} placeholder="add dates" value={filterBy.checkout} />
-</label>
-<label htmlFor="guest" className='main-search-label'>
-<span>Guests</span>
-<input  className="input-search-toy" name="guests" onChange={this.handleChange} placeholder="add guests" value={filterBy.guests} />
-</label> */}
