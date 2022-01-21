@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import {store} from './store/store'
 import {RootCmp} from './RootCmp';
 import './assets/main.scss';
+import './assets/styles/styles.scss'
 // import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 // const history = History.createBrowserHistory()
