@@ -26,6 +26,8 @@ class _HomePage extends React.Component {
 
     }
 
+    
+
 
     listenScrollEvent = e => {
         if (window.scrollY > 40) {
