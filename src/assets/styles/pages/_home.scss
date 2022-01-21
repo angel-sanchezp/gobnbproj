@@ -125,9 +125,13 @@
 
 
 .banner {
-    position: relative;
-        padding-left: 20px;
-    padding-right: 20px;
+    // position: relative;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 70px;
+
+
+
     .banner h1 {
         font-family: airbnb-book;
         font-size: 50px;
@@ -136,18 +140,33 @@
         position: absolute;
     }
 
-    .sub-header {
-        font-family: airbnb;
-        color: #fff;
+    .title-become-host{
+        font-family: circular;
+        font-size: 50px;
+        letter-spacing: -.02em;
+        color: $clr7;
         position: absolute;
+    }
+    
+    .sub-header {
+        font-family: circular;
+        color:$clr7;
+        position: absolute;
+        font-family: circular;
+        font-size: 27px;
+        margin-top: 106px;
+        
     }
 
     .learn-btn {
         cursor: pointer;
         position: absolute;
         color: #222;
-        font-size: 15px;
-        font-family: airbnb-medium;
+        margin-top: 155px;
+        font-size: 20px;
+        font-family: circular;
+        box-shadow: 0 2px 2px rgb(0 0 0 / 6%);
+        border: 1px solid rgba(88, 88, 88, 0.2196078431);
         background-color: #fff;
         padding-top: 16px;
         padding-right: 18px;
@@ -162,6 +181,7 @@
         height: 550px;
         -o-object-fit: cover;
         object-fit: cover;
+        width: 100%;
     }
 
 }
