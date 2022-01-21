@@ -6,6 +6,8 @@ import { loadStays, changeHeaderClass } from '../store/stay/stay.actions.js'
 import { stayService } from '../services/stay.services.js';
 import { StayGallery } from '../cmps/Stay Details/StayGallery.jsx';
 import { StayInfo } from '../cmps/Stay Details/StayInfo.jsx';
+import { StayMap } from '../cmps/Stay Details/StayMap.jsx';
+import { StayAmenities } from '../cmps/Stay Details/StayAmenities.jsx';
 
 
 
@@ -30,6 +32,7 @@ class _StayDetails extends React.Component {
 
     render() {
         const { stay } = this.state;
+        // const { location } = this.state.location
         if (!stay) return <h1>Loading...</h1>
         return (
             <section className="details-container">
@@ -49,6 +52,8 @@ class _StayDetails extends React.Component {
                 </section>
                 <StayGallery stay = {stay}/>
                 <StayInfo stay = {stay}/>
+                <StayAmenities stay = {stay}/>
+                <StayMap stay = {stay}/>
                     
             </section>
         )
