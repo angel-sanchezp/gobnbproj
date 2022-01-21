@@ -13,6 +13,7 @@
         align-items: center;
         justify-content: space-between;
         font-size: 0.75rem;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
         background-color: rgb(255, 255, 255);
         opacity: 1;
         border-width: 1px;
@@ -33,6 +34,8 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
         height: 100%;
         cursor: pointer;
         padding: 14px 24px;
@@ -43,6 +46,8 @@
     .max-filter label:hover {
         border-radius: 40px;
         background-color: #ebebeb;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
     }
 
     .max-filter label input {
@@ -58,6 +63,8 @@
         border-color: initial;
         border-image: initial;
         outline: none;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
     }
 
     .max-filter label span {
@@ -68,6 +75,8 @@
         cursor: pointer;
         padding-bottom: 5px;
         text-align: start;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
     }
 
     .max-filter button {
@@ -81,6 +90,8 @@
         font-size: 0.875rem;
         border-radius: 50%;
         cursor: pointer;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
     }
 
     .min-filter {
@@ -103,10 +114,14 @@
         box-shadow: 0 2px 2px rgb(0 0 0 / 6%);
         -webkit-transform: translate(-50%,-140%);
         transform: translate(-50%,-140%);
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
         opacity: 1;
 
         .min-filter-title{
             padding-inline-start: 25px;
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
 
         }
 
@@ -121,6 +136,8 @@
             font-size: 0.875rem;
             border-radius: 50%;
             cursor: pointer;
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
         }
     }
 }
