@@ -3,6 +3,7 @@ export function StayGallery({stay}){
     return (
         <section className="gallery">
             {/* <h2>I will be a gallery</h2> */}
+            {/* TODO: Change to map later  */}
             <div className="imgs-layout">
                 {<img className="img1" src={stay.imgUrls[0]}/>}
                 {<img className="img2" src={stay.imgUrls[1]}/>}
