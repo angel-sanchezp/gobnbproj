@@ -4,15 +4,25 @@
     display: grid;
     grid-column: 2;
     margin-top: rem(10px);
+    line-break: strict;
 }
 
-
+.stay-header{
+    padding: rem(24px) 0px 0px;
+}
 
 .stay-name{
-    color: #222;
-    font-family: CerealBook, sans-serif;
+    color: inherit;
+    font-family: CerealMedium, sans-serif;
+    font-size: 1.5em;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
 }
 
+.mainName-info{
+    margin: rem(4px) 0px 0px;
+}
 
 
 .details-gallery{
@@ -23,6 +33,7 @@
     grid-template-rows: 160px 160px;
     grid-gap: 8px;
     gap: 8px;
+    padding: rem(24px) 0px 0px;
 }
 
 .details-gallery :first-child {

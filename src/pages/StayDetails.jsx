@@ -39,14 +39,16 @@ class _StayDetails extends React.Component {
             <section className="details-container">
                 
                 <section className="stay-header">
-                    <div className="stay-name">
+                    <h1 className="stay-name">
                         {stay.name}
-                    </div>
-                        <div className="general-info">
+                    </h1>
+                    <div className="general-info">
+                        <span className="mainName-info">
                         {/* <span>{stay.rate}</span> */}
                         <button>Reviews</button>
                         <span>Superhost</span>
                         <span>{stay.location.address}</span>
+                        </span>
                         <button>Share</button>
                         <button>Save</button>
                     </div>
