@@ -1,3 +1,13 @@
+html{
+    scroll-behavior: smooth;
+}
+
+a:link, a:visited,  a:hover, a:active
+{
+    color: #717171;
+    text-decoration: none;
+}
+
 .details-container{
     padding: 0 rem(80px);
     background-color: #ffffff;
@@ -11,6 +21,27 @@
     padding: rem(24px) 0px 0px;
 }
 
+.details-btn{
+    cursor:pointer;
+    font-family: CerealBook;
+    position: relative;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    border-radius: 0px;
+    outline: none;
+    transition: box-shadow 0.2s ease 0s;
+    background: transparent;
+    color: inherit;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: underline;
+    text-align: inherit;
+    height: 100%;
+    width: 100%;
+}
+
 .stay-name{
     color: inherit;
     font-family: CerealMedium, sans-serif;
@@ -20,11 +51,29 @@
     margin: 0;
 }
 
-.mainName-info{
-    margin: rem(4px) 0px 0px;
+.general-info{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-family: CerealBook;
+    font-size: rem(14px);
 }
 
+.mainName-info{
+    
+    margin: rem(4px) 0px 0px;
+    display: flex;
+    flex-wrap:wrap;
+}
 
+.dot {
+    vertical-align: top;
+    color: rgb(113, 113, 113);
+    font-family: circular;
+    font-weight: 400;
+    // margin: 8px 8px 0px;
+    margin: 8px 8px;
+}
 .details-gallery{
     align-content: center;
     width: 100%;
@@ -68,4 +117,8 @@
 .stay-info-container{
     border-bottom: 1px solid #ddd;
 
+}
+
+.g{
+    color: #717171;
 }
