@@ -52,7 +52,8 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         }
     }],
-    "likedByUsers" : ["mini-user"]
+    "likedByUsers" : ["mini-user"],
+    "isPopular": "true"
 
 },
 {
@@ -96,7 +97,8 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         }
     }],
-    "likedByUsers" : ["mini-user"]
+    "likedByUsers" : ["mini-user"],
+    "isPopular": "true"
 
 },
 {
@@ -140,7 +142,8 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         }
     }],
-    "likedByUsers" : ["mini-user"]
+    "likedByUsers" : ["mini-user"],
+    "isPopular": "false"
 
 },
 {
@@ -187,7 +190,8 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         }
     }],
-    "likedByUsers" : ["mini-user"]
+    "likedByUsers" : ["mini-user"],
+    "isPopular": "true"
 
 },
 {
@@ -227,7 +231,8 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         }
     }],
-    "likedByUsers" : ["mini-user"]
+    "likedByUsers" : ["mini-user"],
+    "isPopular": "false"
 
 },
 {
@@ -267,7 +272,8 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         }
     }],
-    "likedByUsers" : ["mini-user"]
+    "likedByUsers" : ["mini-user"],
+    "isPopular": "false"
 
 },
 {
@@ -307,7 +313,8 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         }
     }],
-    "likedByUsers" : ["mini-user"]
+    "likedByUsers" : ["mini-user"],
+    "isPopular": "false"
 
 },
 {
@@ -347,7 +354,8 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         }
     }],
-    "likedByUsers" : ["mini-user"]
+    "likedByUsers" : ["mini-user"],
+    "isPopular": "false"
 
 },
 {
@@ -387,7 +395,8 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         }
     }],
-    "likedByUsers" : ["mini-user"]
+    "likedByUsers" : ["mini-user"],
+    "isPopular": "true"
 
 }
 ]
