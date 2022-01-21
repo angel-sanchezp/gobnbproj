@@ -26,6 +26,10 @@ class _HomePage extends React.Component {
 
     }
 
+    componentWillUnmount(){
+        window.removeEventListener('scroll', this.listenScrollEvent)
+    }
+
 
     listenScrollEvent = e => {
         if (window.scrollY > 40) {

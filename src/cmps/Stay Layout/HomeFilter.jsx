@@ -98,7 +98,7 @@ export class HomeFilter extends React.Component {
                             <span>Guests</span>
                             <input name="guests"
                                 id="guests"
-                                placeholder={`${span} guests`}
+                                placeholder={`Add gusts`}
                                 onChange={this.handleChange}
                                 onClick={this.toggleModal}
                                 value={guests} />
