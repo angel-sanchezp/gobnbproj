@@ -8,6 +8,7 @@ import { StayGallery } from '../cmps/Stay Details/StayGallery.jsx';
 import { StayInfo } from '../cmps/Stay Details/StayInfo.jsx';
 import { StayMap } from '../cmps/Stay Details/StayMap.jsx';
 import { StayAmenities } from '../cmps/Stay Details/StayAmenities.jsx';
+import { HostInfo } from '../cmps/Stay Details/HostInfo.jsx';
 
 
 
@@ -54,6 +55,7 @@ class _StayDetails extends React.Component {
                 <StayInfo stay = {stay}/>
                 <StayAmenities stay = {stay}/>
                 <StayMap stay = {stay}/>
+                <HostInfo stay = {stay}/>
                     
             </section>
         )

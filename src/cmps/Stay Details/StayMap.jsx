@@ -19,7 +19,7 @@ export function StayMap({stay}) {
             <div><h2>Where you'll be</h2></div>
             <div>
                 <LoadScript googleMapsApiKey='AIzaSyDRSjfskUcII98LZQXzMblQX_hnBhcX26k'>
-                    <GoogleMap mapContainerStyle={containerStyle} center={loc} zoom={14}>
+                    <GoogleMap mapContainerStyle={containerStyle} center={loc} zoom={16}>
                         <Marker name={'Current location'} position={loc} />
                         <InfoWindow position={loc}>
                             <h1>Exact location provided after booking</h1>
