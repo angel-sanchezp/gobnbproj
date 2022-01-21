@@ -1,8 +1,9 @@
+import _ from "lodash";
 import { stayService } from "../../services/stay.services.js";
 
-export function loadStays() {
+export function loadStays(predefinedFilterBy) {
     return (dispatch , getState) => {
-        const {filterBy} = getState().stayModule;
+        const filterBy = _.merge(getState().stayModule.filterBy, predefinedFilterBy);
         console.log(filterBy)
         stayService.query(filterBy)
             .then(stays => {
@@ -70,9 +71,9 @@ export function setFilter(filterBy) {
     };
 }
 
-export function changeHeaderClass(classHeader) {
+export function changeHeaderClass(newClass) {
         return (dispatch) => {
-            var newClass = classHeader.toString()
+            // var newClass = classHeader.toString()
             console.log(newClass)
             const action = { type: 'SET_CLASS_HEADER', newClass };
             dispatch(action);
