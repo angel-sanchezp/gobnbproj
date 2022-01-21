@@ -1,5 +1,34 @@
-.exp-header {
-    &.main-nav {
+.explore-header {
+        position: sticky;
+        top: 0px;
+        z-index: 10;
+        background: white;
+    
+    
+
+    &:after {
+        content: "";
+        position: sticky;
+        top: 0px;
+        z-index: 10;
+        background: white;
+        // box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px;
+        box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px !important;
+
+        /* box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px; */
+        // box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px !important;
+        /* background: #FFFFFF !important; */
+        // content: "" !important;
+        // height: 100% !important;
+        /* left: 0px !important; */
+        // position: absolute;
+        /* top: 0px !important; */
+        // width: 100% !important;
+        /* z-index: 0 !important; */
+        /* opacity: 1 !important; */
+    }
+
+    .main-nav {
         grid-column: 2;
         grid-row: 1;
         display: flex;
