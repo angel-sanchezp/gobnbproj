@@ -16,7 +16,7 @@ export class HomeFilter extends React.Component {
     }
 
     handleChange = ({ target }) => {
-        console.log('target',target)
+        console.log('target', target)
         const field = target.name
         const value = target.type === 'number' ? +target.value : target.value
         this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, [field]: value } }))
@@ -30,7 +30,7 @@ export class HomeFilter extends React.Component {
     }
 
     cleanForm = () => {
-        this.setState({ filterBy: { location: '', dateIn: '', dateOut: ''} })
+        this.setState({ filterBy: { location: '', dateIn: '', dateOut: '' } })
     }
 
     toggleModal = () => {
@@ -38,11 +38,11 @@ export class HomeFilter extends React.Component {
     }
 
     onChangeNum(indicator) {
-        this.setState(prevState => ({ ...prevState, span: prevState.span + indicator , filterBy: {...prevState.filterBy.guests, adults: prevState.span + indicator} }))
+        this.setState(prevState => ({ ...prevState, span: prevState.span + indicator, filterBy: { ...prevState.filterBy.guests, adults: prevState.span + indicator } }))
 
     }
     onChangeValue(indicator) {
-        this.setState(prevState => ({ ...prevState, num: prevState.span + indicator , filterBy: {...prevState.filterBy.guests ,  children: prevState.num + indicator} }))
+        this.setState(prevState => ({ ...prevState, num: prevState.span + indicator, filterBy: { ...prevState.filterBy.guests, children: prevState.num + indicator } }))
 
     }
 
@@ -52,59 +52,73 @@ export class HomeFilter extends React.Component {
 
 
     render() {
-        const { location, dateIn, dateOut, guests} = this.state.filterBy
-        // console.log(this.state.filterBy)
-        const { isModalShown, span , num  } = this.state
+        const { location, dateIn, dateOut, guests } = this.state.filterBy
+        console.log(this.props.isMinFilter)
+        const { isModalShown, span, num } = this.state
+
         return <section className="main-filter-container">
-            <form className="max-filter" onSubmit={this.onSubmitFilter}>
-                <label>
-                    <span>Location</span>
-                    <input name="location"
-                        autoComplete="off"
-                        id="location"
-                        type="search"
-                        placeholder="Where are you going?"
-                        onChange={this.handleChange}
-                        onClick={this.toggleModal}
-                        value={location} />
-                </label>
-                <label htmlFor="check-in">
-                    <span>Check in</span>
-                    <input name="dateIn"
-                        id="check-in"
-                        autoComplete="off"
-                        placeholder="Add dates"
-                        onChange={this.handleChange}
-                        onClick={this.toggleModal}
+            {!this.props.isMinFilter && <section className='secondary-search-bar'>
 
-                        value={dateIn} />
-                </label>
-                <label htmlFor="check-out">
-                    <span>Check out</span>
-                    <input name="dateOut"
-                        id="check-out"
-                        autoComplete="off"
-                        placeholder="Add dates"
-                        onChange={this.handleChange}
-                        onClick={this.toggleModal}
-
-                        value={dateOut} />
-                </label>
-                <label className="guests" htmlFor="guests">
-                    <div>
-                        <span>Guests</span>
-                        <input name="guests"
-                            id="guests"
-                            placeholder={`${span} guests`}
+                <form className="max-filter" onSubmit={this.onSubmitFilter}>
+                    <label>
+                        <span>Location</span>
+                        <input name="location"
+                            autoComplete="off"
+                            id="location"
+                            type="search"
+                            placeholder="Where are you going?"
                             onChange={this.handleChange}
                             onClick={this.toggleModal}
-                            value={ guests} />
-                    </div>
-                </label>
-                <button>
-                    <i className="fas fa-search" aria-hidden="true"> </i>
-                </button>
-            </form>
+                            value={location} />
+                    </label>
+                    <label htmlFor="check-in">
+                        <span>Check in</span>
+                        <input name="dateIn"
+                            id="check-in"
+                            autoComplete="off"
+                            placeholder="Add dates"
+                            onChange={this.handleChange}
+                            onClick={this.toggleModal}
+
+                            value={dateIn} />
+                    </label>
+                    <label htmlFor="check-out">
+                        <span>Check out</span>
+                        <input name="dateOut"
+                            id="check-out"
+                            autoComplete="off"
+                            placeholder="Add dates"
+                            onChange={this.handleChange}
+                            onClick={this.toggleModal}
+
+                            value={dateOut} />
+                    </label>
+                    <label className="guests" htmlFor="guests">
+                        <div>
+                            <span>Guests</span>
+                            <input name="guests"
+                                id="guests"
+                                placeholder={`${span} guests`}
+                                onChange={this.handleChange}
+                                onClick={this.toggleModal}
+                                value={guests} />
+                        </div>
+                    </label>
+                    <button>
+                        <i className="fas fa-search" aria-hidden="true"> </i>
+                    </button>
+                </form>
+            </section>
+            }
+
+            {this.props.isMinFilter && <div class="initial-search-bar">
+                <p>Start your search</p>
+                <div class="circle">
+                    <img src="/img/search-circle.12c9366c.png" class="search-icon"/>
+                </div>
+            </div>}
+
+
             {isModalShown && <div className="dynamic-modal">
                 <div className="dynamic-modal-child filter-guest-modal">
                     <div className="modal-label"><div><span>Adults</span><span>Ages 13 or above</span></div>

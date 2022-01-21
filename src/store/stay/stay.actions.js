@@ -4,7 +4,6 @@ import { stayService } from "../../services/stay.services.js";
 export function loadStays(predefinedFilterBy) {
     return (dispatch , getState) => {
         const filterBy = _.merge(getState().stayModule.filterBy, predefinedFilterBy);
-        debugger
         console.log(filterBy)
         stayService.query(filterBy)
             .then(stays => {
@@ -77,6 +76,13 @@ export function changeHeaderClass(newClass) {
             // var newClass = classHeader.toString()
             console.log(newClass)
             const action = { type: 'SET_CLASS_HEADER', newClass };
+            dispatch(action);
+    }
+}
+export function changeFilter(isMinFilter) {
+        return (dispatch) => {
+            console.log(isMinFilter)
+            const action = { type: 'SET_MIN_FILTER', isMinFilter };
             dispatch(action);
     }
 }

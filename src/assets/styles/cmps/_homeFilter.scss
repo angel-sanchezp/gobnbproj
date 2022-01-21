@@ -1,5 +1,4 @@
-.main-filter-container{
-    position: relative;
+.main-filter-container {
 
     input {
         margin: 0px;
@@ -84,16 +83,32 @@
         cursor: pointer;
     }
 
- 
-
-
+    .min-filter {
+        position: absolute;
+        left: 50%;
+        width: 300px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        border: 1px solid rgba(88,88,88,.2196078431372549);
+        font-size: .75rem;
+        border-radius: 40px;
+        background-color: #fff;
+        box-shadow: 0 2px 2px rgb(0 0 0 / 6%);
+        -webkit-transform: translate(-50%,-140%);
+        transform: translate(-50%,-140%);
+        opacity: 1;
+    }
 }
 
 .dynamic-modal {
     position: absolute;
     z-index: 5;
     top: 56px;
-    left: 690px;
+    left: 134px;
 
     .filter-guest-modal {
         z-index: 5;
@@ -171,8 +186,4 @@
         height: 40px;
         width: 40px;
     }
-
-
-
-
 }
