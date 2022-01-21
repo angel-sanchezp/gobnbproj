@@ -26,9 +26,13 @@ class _HomePage extends React.Component {
 
     }
 
+<<<<<<< HEAD
+    
+=======
     componentWillUnmount(){
         window.removeEventListener('scroll', this.listenScrollEvent)
     }
+>>>>>>> 081b93c83af4eba1710719003f7079cbb14eed60
 
 
     listenScrollEvent = e => {
