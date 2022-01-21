@@ -4,7 +4,7 @@ export function HostInfo({stay}) {
         <section className="host-info-container">
             <div className="host">
                 <h2>Hosted by {host.fullname} </h2>
-                <img src={host.imgUrl} alt="" />
+                <img src={host.imgUrl} className="host-img"alt="" />
             </div>
             <div className="host-rating">
                 Reviews, superhost etc.
