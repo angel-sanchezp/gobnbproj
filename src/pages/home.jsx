@@ -120,7 +120,7 @@ class _HomePage extends React.Component {
                     <div className="banner-header">Unlock new opportunities by sharing your space.</div>
                     <div className="banner-txt-botton">Maria <span>Host in Paris</span></div>
                     <button className='learn-btn'>Become Host</button>
-                    <div className='host-img' style={{ "--image-url" : "url(https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/96ca588b00a846596f43a0576cd7aa4d-1590415939014/Banners_LIHP_Book_eBook_Store.jpg);"}}/>
+                    <div className='banner-host-img' style={{ "--image-url" : "url(https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/96ca588b00a846596f43a0576cd7aa4d-1590415939014/Banners_LIHP_Book_eBook_Store.jpg);"}}/>
                     { /** style={{ '--image-url': "url(https://res.cloudinary.com/kitsunex3/image/upload/v1642652059/Airbnb%20clone/104ca552-d981-4e74-b9cf-0ee2e7b37d6d_vuzbvm.jpg)" }}  */}
                     {/* <img  className='host-img'src={BecomeHost}  alt="host" /> */}
                 </div>
