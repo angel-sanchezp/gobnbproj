@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
 import { withRouter } from "react-router-dom"
+import { ReactComponent as UserAvatar } from '../../assets/svg/user-avatar.svg'
 
 // import { user } from '../../assets/icon/user-icon.png'
 
@@ -42,7 +43,7 @@ class _HomeHeader extends Component {
                     <section className="login-container">
                         <div className="user-options">
                             <div className="burger">☰</div>
-                            {/* <img src={user} className="avatar" /> */}
+                            <div className="user-avatar"><UserAvatar/></div>
                         </div>
                     </section>
                 </section>

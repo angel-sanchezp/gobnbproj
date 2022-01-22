@@ -1,6 +1,12 @@
 .home-container{
    padding-left: 80px;
    padding-right: 80px;
+   h1{
+       font-size: 33px
+   }
+   .ins-image{
+       border-radius: 13px;
+   }
 
 
 }
@@ -12,10 +18,11 @@
 .main-container {
     display: grid;
     grid-template-columns: 80px 1fr 80px;
-    min-height: 90vh;
+    min-height: 100vh;
     background-color: black;
     justify-items: center;
     align-content: center;
+    margin-bottom: 100px;
     // position: relative;
 
     > * {
@@ -29,14 +36,15 @@
 
     .pic {
         border-radius: 10px;
-        margin-top: 113px;
+        margin-top: 170px;
         position: relative;
+        padding-bottom: 93px;
     }
 
-    h1 {
+    .header-txt-on-banner {
         font-size: rem(38px);
         position: absolute;
-        top: 50%;
+        top: 80vh;
         color: $clr6;
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
         z-index: 1;
@@ -45,7 +53,7 @@
     .btn-flexible {
         padding: 16px 32px;
         position: absolute;
-        top: 60%;
+        top: 97vh;
         left: 45%;
         cursor: pointer;
         width: auto;
@@ -75,30 +83,34 @@
     grid-auto-flow: dense;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     margin-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
     gap: 20px;
+    h2{
+        font-size: 1.17em;
+    }
 
     > * {
         position: relative;
         overflow: hidden;
-        &::before {
-            display: block;
-            content: "";
-            width: 100%;
-            padding-top: (1 / 1) * 100%;
-        }
-        > * {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
+        // &::before {
+        //     display: block;
+        //     content: "";
+        //     width: 100%;
+        //     padding-top: (1 / 1) * 100%;
+        // }
+        // > * {
+        //     // position: absolute;
+        //     // top: 0;
+        //     // left: 0;
+        //     // right: 0;
+        //     // bottom: 0;
+        // }
 
         > img {
-            height: 100%;
+            height: 300px;
+            width: 100%;
             object-fit: cover;
+            border-radius: 13px;
+
         }
     }
 }
@@ -126,18 +138,16 @@
 
 .banner {
     // position: relative;
-    padding-left: 80px;
-    padding-right: 80px;
     margin-top: 70px;
 
 
 
     .banner h1 {
-        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
-        font-size: 50px;
-        letter-spacing: -.02em;
-        color: #fff;
-        position: absolute;
+        font-family: CerealBook, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+        font-size: 33px;
+        // letter-spacing: -.02em;
+        // color: #fff;
+        // position: absolute;
     }
 
     .title-become-host{
