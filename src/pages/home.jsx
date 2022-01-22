@@ -6,15 +6,11 @@ import { Link, NavLink } from 'react-router-dom'
 import { loadStays,  changeHeaderClass , changeFilter } from '../store/stay/stay.actions.js'
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 
-
-import house from '../assets/img/top.jpg'
-import host from '../assets/img/become-user.jpg'
-
 import tokyo from '../assets/img/tokyo.jpeg'
 import santorini from '../assets/img/santorini.jpeg'
 import paris from '../assets/img/paris.jpeg'
 import cancun from '../assets/img/cancun.jpeg'
-import BecomeHost from '../assets/img/become a host.jpeg'
+import BecomeHost from '../assets/img/become_a_host.jpeg'
 
 
 class _HomePage extends React.Component {
@@ -120,11 +116,13 @@ class _HomePage extends React.Component {
                 </section >
 
                 <div className='banner'>
-                    <h1>Become a host</h1>
-                    <h3 className="sub-header">Unlock new opportunities by sharing your space.</h3>
-                    <h4>Maria<span>Host in Paris</span></h4>
+                    {/* <h1>Become a host</h1> */}
+                    <div className="banner-header">Unlock new opportunities by sharing your space.</div>
+                    <div className="banner-txt-botton">Maria <span>Host in Paris</span></div>
                     <button className='learn-btn'>Become Host</button>
-                    <img  className='host-img'src={BecomeHost}  alt="host" />
+                    <div className='banner-host-img' style={{ "--image-url" : "url(https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/96ca588b00a846596f43a0576cd7aa4d-1590415939014/Banners_LIHP_Book_eBook_Store.jpg);"}}/>
+                    { /** style={{ '--image-url': "url(https://res.cloudinary.com/kitsunex3/image/upload/v1642652059/Airbnb%20clone/104ca552-d981-4e74-b9cf-0ee2e7b37d6d_vuzbvm.jpg)" }}  */}
+                    {/* <img  className='host-img'src={BecomeHost}  alt="host" /> */}
                 </div>
                
 

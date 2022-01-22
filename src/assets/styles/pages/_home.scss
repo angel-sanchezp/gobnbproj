@@ -2,7 +2,8 @@
    padding-left: 80px;
    padding-right: 80px;
    h1{
-       font-size: 33px
+       font-size: 33px;
+       margin-top: 100px;
    }
    .ins-image{
        border-radius: 13px;
@@ -44,7 +45,7 @@
     .header-txt-on-banner {
         font-size: rem(38px);
         position: absolute;
-        top: 80vh;
+        top: 87vh;
         color: $clr6;
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
         z-index: 1;
@@ -81,7 +82,7 @@
 .card-container {
     display: grid;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
     margin-top: 20px;
     gap: 20px;
     h2{
@@ -158,23 +159,40 @@
         position: absolute;
     }
     
-    .sub-header {
+    .banner-header {
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+        color:white;
+        position: absolute;
+        font-family: circular;
+        font-size: 40px;
+        margin-top: 50px;
+        margin-left: 30px;
+        max-width: 500px;
+    }
+
+    .banner-txt-botton {
+        font-family: cursive !important;
         color:$clr7;
         position: absolute;
         font-family: circular;
-        font-size: 27px;
-        margin-top: 106px;
-        
+        font-size: 35px;
+        margin-top: 480px;
+        font-weight: 100;
+        margin-left: 30px;
+        color: white;
+        span{
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+            font-size: 20px;
+        }
     }
 
     .learn-btn {
         cursor: pointer;
         position: absolute;
         color: #222;
-        margin-top: 155px;
+        margin-top: 200px;
         font-size: 20px;
-        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
         box-shadow: 0 2px 2px rgb(0 0 0 / 6%);
         border: 1px solid rgba(88, 88, 88, 0.2196078431);
         background-color: #fff;
@@ -184,14 +202,17 @@
         padding-left: 18px;
         border-radius: 8px;
         border: none;
+        margin-left: 120px;
     }
 
-     .host-img {
-        border-radius: 10px;
+     .banner-host-img {
         height: 550px;
         -o-object-fit: cover;
         object-fit: cover;
         width: 100%;
+        background-image: linear-gradient(to bottom, rgba(black, .8) 0%, rgba(black, 0) 100%), url(../../img/become_a_host.jpeg);
+        background-position: center;
+        background-size: cover;
     }
 
 }
