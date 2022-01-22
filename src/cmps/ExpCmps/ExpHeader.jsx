@@ -51,7 +51,7 @@ class _ExpHeader extends Component {
                                     <input type="text" placeholder="Add location"></input>
                             </div>
                             <div className="input second-container" onClick={this.openModal}>
-                                <input type="text" placeholder="Add dates"></input>
+                                <input type="text" placeholder="Add dates" ></input>
                             </div>
                             <div className="input third-container" onClick={this.openModal}>
                                 <input type="text" placeholder="Add guests"></input>

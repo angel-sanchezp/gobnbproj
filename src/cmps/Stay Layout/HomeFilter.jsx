@@ -1,5 +1,6 @@
 
 import React from 'react'
+import moment from 'moment';
 import { Guests } from '../FilterCmps/Guests.jsx'
 import { Calendar } from '../FilterCmps/Calendar.jsx'
 
@@ -31,6 +32,7 @@ export class HomeFilter extends React.Component {
         // console.log('filter state',this.state.filterBy)
         this.props.onSetFilter(this.state.filterBy)
         this.cleanForm()
+        this.closeModal()
     }
 
     cleanForm = () => {
@@ -80,11 +82,23 @@ export class HomeFilter extends React.Component {
 
     }
 
+    closeModal = () => {
+        this.setState(prev => ({ ...prev, isModalShown: false }))
+    }
+
+    getInputValue = (date) => {
+        if (!date) { return '' }
+        return moment(date).format("MMM d")
+    }
+    
+
 
     render() {
         const { location, dateIn, dateOut, guests } = this.state.filterBy
         // console.log(this.props.isMinFilter)
         const { isModalShown, span, cmp } = this.state
+        const formattedDateIn = this.getInputValue(dateIn)
+        const formattedDateOut = this.getInputValue(dateOut)
 
         return <section className="main-filter-container">
             {!this.props.isMinFilter && <section className='secondary-search-bar'>
@@ -110,7 +124,7 @@ export class HomeFilter extends React.Component {
                             onChange={this.handleChange}
                             onClick={() => this.OpenModal('calendar')}
 
-                            value={dateIn} />
+                            value={formattedDateIn} />
                     </label>
                     <label htmlFor="check-out">
                         <span>Check out</span>
@@ -120,8 +134,8 @@ export class HomeFilter extends React.Component {
                             placeholder="Add dates"
                             onChange={this.handleChange}
                             onClick={() => this.OpenModal('calendar')}
-
-                            value={dateOut} />
+                            value={formattedDateOut}/>
+                            {/* value={dateOut.getDay(),monthNames[dateOut.getMonth()]} /> */}
                     </label>
                     <label className="guests" htmlFor="guests">
                         <div>
