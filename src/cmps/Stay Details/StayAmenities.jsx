@@ -88,9 +88,9 @@ export function StayAmenities({stay}) {
                         </div>
                     ))}
                 </div>
-                <div className="more-amenities">
-                    <div onClick={() => amenityModal(true)}>Show all {amenities.length} amenities</div>
-                </div>
+                <button className="more-amenities">
+                    <div className="cb"onClick={() => amenityModal(true)}>Show all {amenities.length} amenities</div>
+                </button>
             </section>
             <section>
                 <div className="amenities-modal hidden">
