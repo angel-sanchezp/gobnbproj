@@ -21,19 +21,20 @@ export class Guests extends React.Component {
     changeAdults(indicator) {
         const { adults } = this.state
         if (!adults && indicator === -1) return
-        this.setState(prevState => ({ ...prevState, adults:prevState.adults + indicator }))
-        const value = this.state.adults
-        console.log('adults value in guests', value)
-        this.props.onChangeAdults(value)
+
+        const newValue = this.state.adults + indicator
+        this.setState({ adults: newValue })
+        console.log('adults value in guests', newValue)
+        this.props.onChangeAdults(newValue)
     }
     changeChildren(indicator) {
         const { children } = this.state
         if (!children && indicator === -1) return
-        this.setState(prevState => ({ ...prevState, children: children + indicator }))
-        const value = this.state.children
-        console.log('num value in guests', value)
-        this.props.onChangeChildren(value)
 
+        const newValue = this.state.children + indicator
+        this.setState({ children: newValue })
+        console.log('children value in guests', newValue)
+        this.props.onChangeChildren(newValue)
     }
 
     render() {

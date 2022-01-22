@@ -17,8 +17,11 @@ class _HomeHeader extends Component {
     onSetFilter = (filterBy) => {
         console.log('home filterby ', filterBy)
         this.props.setFilter(filterBy);
+
+        const { location, dateIn, dateOut, guests = 1 } = filterBy 
+
         setTimeout(() => {
-            this.props.history.push(`/explore?location=${filterBy.location}&dateIn=${filterBy.dateIn}&dateOut=${filterBy.dateOut}&guests=${filterBy.guests}`)
+            this.props.history.push(`/explore?location=${location}&dateIn=${dateIn.valueOf()}&dateOut=${dateOut.valueOf()}&guests=${guests}`)
         }, 1000)
     }
 

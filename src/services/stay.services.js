@@ -1,5 +1,10 @@
 
 import { storageService } from './async-storage.service.js'
+import Moment from 'moment';
+import { extendMoment } from 'moment-range';
+import { isEmpty } from 'lodash';
+
+const moment = extendMoment(Moment);
 
 
 const STORAGE_KEY = 'STAYDB'
@@ -36,10 +41,10 @@ const gStays = [
             "fullname": "Matsuda",
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         },
-        "aviable":{
-            "dateIn":"1642846357573",
-            "dateOut":"1643771045000"
-        },
+        "inavialabilites":[{
+            "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
+            "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
+        }],
         "location": {
             "country": "Japan",
             "countryCode": "JPN",
@@ -85,6 +90,10 @@ const gStays = [
             "fullname": "Kako & Keiko",
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         },
+        "inavialabilites":[{
+            "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
+            "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
+        }],
         "location": {
             "country": "Japan",
             "countryCode": "JPN",
@@ -130,6 +139,10 @@ const gStays = [
             "fullname": "Otera",
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         },
+        "inavialabilites":[{
+            "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
+            "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
+        }],
         "location": {
             "country": "Japan",
             "countryCode": "JPN",
@@ -178,6 +191,10 @@ const gStays = [
             "fullname": "Chris",
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         },
+        "inavialabilites":[{
+            "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
+            "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
+        }],
         "location": {
             "country": "France",
             "countryCode": "FR",
@@ -223,6 +240,10 @@ const gStays = [
             "fullname": "Helene",
             "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
+        "inavialabilites":[{
+            "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
+            "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
+        }],
         "location": {
             "country": "France",
             "countryCode": "FR",
@@ -268,6 +289,10 @@ const gStays = [
             "fullname": "Sagire",
             "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
+        "inavialabilites":[{
+            "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
+            "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
+        }],
         "location": {
             "country": "France",
             "countryCode": "FR",
@@ -313,6 +338,10 @@ const gStays = [
             "fullname": "Patricia",
             "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
+        "inavialabilites":[{
+            "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
+            "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
+        }],
         "location": {
             "country": "Mexico",
             "countryCode": "MX",
@@ -358,6 +387,10 @@ const gStays = [
             "fullname": "Michelle",
             "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
+        "inavialabilites":[{
+            "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
+            "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
+        }],
         "location": {
             "country": "Mexico",
             "countryCode": "MX",
@@ -415,6 +448,10 @@ const gStays = [
             "fullname": "Bathany",
             "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
+        "inavialabilites":[{
+            "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
+            "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
+        }],
         "location": {
             "country": "Mexico",
             "countryCode": "MX",
@@ -460,6 +497,10 @@ const gStays = [
             "fullname": "Wayan",
             "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
         },
+        "inavialabilites":[{
+            "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
+            "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
+        }],
         "location": {
             "country": "Indonesia",
             "countryCode": "IDN",
@@ -505,6 +546,10 @@ const gStays = [
             "fullname": "Candra",
             "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
         },
+        "inavialabilites":[{
+            "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
+            "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
+        }],
         "location": {
             "country": "Indonesia",
             "countryCode": "IDN",
@@ -550,6 +595,10 @@ const gStays = [
             "fullname": "Bukit Vista",
             "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
         },
+        "inavialabilites":[{
+            "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
+            "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
+        }],
         "location": {
             "country": "Indonesia",
             "countryCode": "IDN",
@@ -616,6 +665,10 @@ const gStays = [
             "fullname": "Alfred",
             "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
         },
+        "inavialabilites":[{
+            "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
+            "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
+        }],
         "location": {
             "country": "Indonesia",
             "countryCode": "IDN",
@@ -682,6 +735,10 @@ const gStays = [
             "fullname": "Veluvana",
             "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
         },
+        "inavialabilites":[{
+            "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
+            "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
+        }],
         "location": {
             "country": "Indonesia",
             "countryCode": "IDN",
@@ -830,15 +887,22 @@ function _getFilteredStays(stays, filterBy) {
     } else if (filterBy.dateIn && filterBy.dateOut) {
         let { dateIn } = filterBy
         let { dateOut } = filterBy
-        console.log('dateIn', dateIn.valueOf())
-        console.log('dateOut', dateOut.valueOf())
-        console.log('stays',stays)
-        const aviables = stays.filter((stay) => {
-            console.log('aviableIn', stay.aviable.dateIn.valueOf())
-            console.log('aviableOut', stay.aviable.dateOut.valueOf())
-            return stay.aviable.dateIn>dateIn.valueOf() 
-        })
-        return aviables
+        
+        const availables = stays.filter((stay) => {
+            if (isEmpty(stay.inavialabilites)) {
+                return true
+            }
+            const searchedDate = moment.range(dateIn, dateOut);
+
+            const isNotAvailable = stay.inavialabilites.some((constraint) => {
+                const inavailableDate = moment.range(new Date(constraint.dateIn), new Date(constraint.dateOut));
+                return searchedDate.overlaps(inavailableDate, { adjacent: true })
+            })
+            
+            return !isNotAvailable
+        });
+
+        return availables
     } else if (filterBy.adults && filterBy.children) {
         let { adults } = filterBy
         let { children } = filterBy
