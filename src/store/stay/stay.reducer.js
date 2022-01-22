@@ -36,7 +36,7 @@ export function stayReducer(state = initialState, action) {
             newState = { ...state, filterBy: { ...action.filterBy } };
             break
         case 'SET_CLASS_HEADER':
-            console.log(action.newClass)
+            // console.log(action.newClass)
             newState = { ...state, classHeader: action.newClass };
             break
         case 'SET_MIN_FILTER':

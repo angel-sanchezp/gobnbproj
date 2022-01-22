@@ -1,7 +1,7 @@
 
 import React from 'react'
-import {Guests} from '../FilterCmps/Guests.jsx'
-import {Calendar} from '../FilterCmps/Calendar.jsx'
+import { Guests } from '../FilterCmps/Guests.jsx'
+import { Calendar } from '../FilterCmps/Calendar.jsx'
 
 
 export class HomeFilter extends React.Component {
@@ -43,24 +43,31 @@ export class HomeFilter extends React.Component {
         this.setState(prev => ({ ...prev, isModalShown: !prev.isModalShown }))
     }
 
-    onChangeNum(indicator) {
-        this.setState(prevState => ({ ...prevState, span: prevState.span + indicator, filterBy: { ...prevState.filterBy.guests, adults: prevState.span + indicator } }))
+    onChangeAdults(adultsNum) {
+        console.log(adultsNum)
+        this.setState(prev => ({ filterBy: { ...prev.filterBy, guests: adultsNum } }))
+    }
+    onChangeChildren(childrenNum) {
+        console.log(childrenNum)
+        this.setState(prev => ({ ...prev, span: prev.span + childrenNum, filterBy: { ...prev.filterBy.guests, children: childrenNum } }))
 
     }
-    onChangeValue(indicator) {
-        this.setState(prevState => ({ ...prevState, num: prevState.span + indicator, filterBy: { ...prevState.filterBy.guests, children: prevState.num + indicator } }))
+
+    onSetDate(date){
+        console.log('dateIn',date[0])
+        console.log('dateOn',date[1])
 
     }
 
     OpenModal = (indicator) => {
         if (indicator === 'guests') {
-            console.log('here guests')
-            this.setState(prev => ({ ...prev, cmp: <Guests /> }))
-            this.setState(prev => ({ ...prev, isModalShown: true}))
+            // console.log('here guests')
+            this.setState(prev => ({ ...prev, cmp: <Guests onChangeAdults={this.onChangeAdults} onChangeChildren={this.onChangeChildren} /> }))
+            this.setState(prev => ({ ...prev, isModalShown: true }))
 
         } else {
-            console.log('here calendar')
-            this.setState(prev => ({ ...prev, cmp: <Calendar /> }))
+            // console.log('here calendar')
+            this.setState(prev => ({ ...prev, cmp: <Calendar onSetDate={this.onSetDate} /> }))
             this.setState(prev => ({ ...prev, isModalShown: true }))
 
 
@@ -119,7 +126,7 @@ export class HomeFilter extends React.Component {
                                 placeholder={`Add gusts`}
                                 onChange={this.handleChange}
                                 onClick={() => this.OpenModal('guests')}
-                                value={guests} />
+                                value={guests.adults} />
                         </div>
                     </label>
                     <button>
@@ -130,14 +137,14 @@ export class HomeFilter extends React.Component {
             }
 
             {this.props.isMinFilter && <form className="min-filter" onSubmit={this.onSubmitFilter}>
-                <span className='min-filter-title'>Search Pleace</span>
+                <span className='min-filter-title' onChange={this.handleChange} name='location' value={location}>Search Pleace</span>
                 <button className="min-filter-btn">
                     <i className="fas fa-search" aria-hidden="true"></i>
                 </button>
             </form>}
 
             {isModalShown && <div className="dynamic-modal">
-            {cmp}
+                {cmp}
             </div>}
 
         </section>

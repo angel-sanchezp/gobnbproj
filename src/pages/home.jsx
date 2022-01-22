@@ -1,9 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link, NavLink } from 'react-router-dom'
 
 
 import { loadStays,  changeHeaderClass , changeFilter } from '../store/stay/stay.actions.js'
-import { Link, NavLink } from 'react-router-dom'
+import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 
 
 import house from '../assets/img/top.jpg'
@@ -98,7 +99,7 @@ class _HomePage extends React.Component {
 
                     <h1>Most Popular</h1>
                     <section className="card-container">
-                        {stays.map(stay =>
+                        {stays.slice(0,4).map(stay =>
                             <div className='card-stay card' key={stay._id}>
                                 <img className="explore-card-image" alt="cat" src={stay.imgUrls[0]} />
                                 <div className="cat-tag">
@@ -112,10 +113,13 @@ class _HomePage extends React.Component {
                 </section >
 
                 <div className='banner'>
-                    <h1>Become a host</h1>
+                    <h1  className='title-become-host'>Become a Host</h1>
                     <h4 className="sub-header">Unlock new opportunities by sharing your space.</h4>
                     <button className='learn-btn'>Become Host</button>
                     <img  className='host-img'src={host}  alt="host" /></div>
+
+
+                    <AppFooter/>
 
             </section>
         )
