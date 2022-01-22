@@ -5,6 +5,8 @@ const initialState = {
         dateIn: "",
         dateOut: "",
         guests: "",
+        amenities:[],
+        sortBy:""
 
     },
     lastRemovedStay: null,
@@ -33,6 +35,7 @@ export function stayReducer(state = initialState, action) {
             newState = { ...state, stays }
             break
         case 'SET_FILTER':
+            console.log('action,filterby',action.filterBy)
             newState = { ...state, filterBy: { ...action.filterBy } };
             break
         case 'SET_CLASS_HEADER':

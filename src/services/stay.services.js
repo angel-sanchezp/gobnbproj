@@ -16,7 +16,7 @@ export const stayService = {
     remove,
 }
 
-const gStays = [   
+const gStays = [
     {
         "_id": "s0001",
         "name": "Reversible Destiny Lofts/for4people",
@@ -35,13 +35,13 @@ const gStays = [
         "beds": 4,
         "bathrooms": 1,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642653312/Airbnb%20clone/e3c77364_original_ryeibc.jpg"],
-        "amenities": ["Kitchen", "Parking" , "Washer", "Air conditioning", "Wifi", "Elevator", "Dryer", "Indoor fireplace", "Stove"],
+        "amenities": ["Kitchen", "Parking", "Washer", "Air conditioning", "Wifi", "Elevator", "Dryer", "Indoor fireplace", "Stove"],
         "host": {
             "_id": "h0001",
             "fullname": "Matsuda",
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         },
-        "inavialabilites":[{
+        "inavialabilites": [{
             "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
             "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
         }],
@@ -49,8 +49,8 @@ const gStays = [
             "country": "Japan",
             "countryCode": "JPN",
             "address": "Reversible Destiny Lofts",
-            "lat":35.680984, 
-            "lng":139.538030
+            "lat": 35.680984,
+            "lng": 139.538030
         },
         "reviews": [{
             "id": "r0001",
@@ -62,7 +62,7 @@ const gStays = [
                 "imgUrl": "https://source.unsplash.com/random/100x100/?face"
             }
         }],
-        "likedByUsers" : ["mini-user"],
+        "likedByUsers": ["mini-user"],
         "isPopular": "true"
 
     },
@@ -84,13 +84,13 @@ const gStays = [
         "beds": 4,
         "bathrooms": 2,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642654286/Airbnb%20clone/5b2e7a69_original_tywgk8.jpg"],
-        "amenities": ["Kitchen", "TV" , "Dryer", "Bckyard", "Wifi", "Washer", "Air conditioning", "Indoor fireplace"],
+        "amenities": ["Kitchen", "TV", "Dryer", "Bckyard", "Wifi", "Washer", "Air conditioning", "Indoor fireplace"],
         "host": {
             "_id": "h0002",
             "fullname": "Kako & Keiko",
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         },
-        "inavialabilites":[{
+        "inavialabilites": [{
             "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
             "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
         }],
@@ -98,8 +98,8 @@ const gStays = [
             "country": "Japan",
             "countryCode": "JPN",
             "address": "Shibuya, Tokyo",
-            "lat": 35.671625, 
-            "lng":139.683750
+            "lat": 35.671625,
+            "lng": 139.683750
         },
         "reviews": [{
             "id": "r0002",
@@ -111,7 +111,7 @@ const gStays = [
                 "imgUrl": "https://source.unsplash.com/random/100x100/?face"
             }
         }],
-        "likedByUsers" : ["mini-user"],
+        "likedByUsers": ["mini-user"],
         "isPopular": "true"
 
     },
@@ -133,13 +133,13 @@ const gStays = [
         "beds": 2,
         "bathrooms": 1,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642655147/Airbnb%20clone/f4b99146-5efe-4138-b9a3-ba3895c6e949_za5tlt.jpg"],
-        "amenities": ["Kitchen", "Washing machine" , "Air conditioning", "Refrigerator", "Wifi", "Dryer"],
+        "amenities": ["Kitchen", "Washing machine", "Air conditioning", "Refrigerator", "Wifi", "Dryer"],
         "host": {
             "_id": "h0003",
             "fullname": "Otera",
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         },
-        "inavialabilites":[{
+        "inavialabilites": [{
             "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
             "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
         }],
@@ -147,8 +147,8 @@ const gStays = [
             "country": "Japan",
             "countryCode": "JPN",
             "address": "TEMPLE HOTEL SHODENJI",
-            "lat": 35.650278, 
-            "lng":139.754737
+            "lat": 35.650278,
+            "lng": 139.754737
         },
         "reviews": [{
             "id": "r0003",
@@ -160,7 +160,7 @@ const gStays = [
                 "imgUrl": "https://source.unsplash.com/random/100x100/?face"
             }
         }],
-        "likedByUsers" : ["mini-user"],
+        "likedByUsers": ["mini-user"],
         "isPopular": "false"
 
     },
@@ -185,13 +185,13 @@ const gStays = [
             "https://res.cloudinary.com/kitsunex3/image/upload/v1642652059/Airbnb%20clone/1ff8fe45-19d2-41cc-8053-f6156a113f4c_dvxobz.jpg",
             "https://res.cloudinary.com/kitsunex3/image/upload/v1642652059/Airbnb%20clone/275411d2-2ca7-4148-8ab9-82bff0c5bc79_uu1gkz.jpg"
         ],
-        "amenities": ["City skyline view", "Wifi", "TV" , "Washer", "Private balcony", "Kitchen", "Parking", "Elevator", "Dryer", "Indoor fireplace"],
+        "amenities": ["City skyline view", "Wifi", "TV", "Washer", "Private balcony", "Kitchen", "Parking", "Elevator", "Dryer", "Indoor fireplace"],
         "host": {
             "_id": "h0004",
             "fullname": "Chris",
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         },
-        "inavialabilites":[{
+        "inavialabilites": [{
             "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
             "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
         }],
@@ -199,8 +199,8 @@ const gStays = [
             "country": "France",
             "countryCode": "FR",
             "address": "Paris, Île-de-France, France",
-            "lat": 48.882233, 
-            "lng":2.343122
+            "lat": 48.882233,
+            "lng": 2.343122
         },
         "reviews": [{
             "id": "r0004",
@@ -212,7 +212,7 @@ const gStays = [
                 "imgUrl": "https://source.unsplash.com/random/100x100/?face"
             }
         }],
-        "likedByUsers" : ["mini-user"],
+        "likedByUsers": ["mini-user"],
         "isPopular": "true"
 
     },
@@ -234,13 +234,13 @@ const gStays = [
         "beds": 2,
         "bathrooms": 2,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642842881/Airbnb%20clone/ab5a02f8_original_vr3bly.jpg"],
-        "amenities": ["Kitchen", "TV" , "Washer", "Bath", "Wifi", "Elevator", "Dryer", "Balcony"],
+        "amenities": ["Kitchen", "TV", "Washer", "Bath", "Wifi", "Elevator", "Dryer", "Balcony"],
         "host": {
             "_id": "h0005",
             "fullname": "Helene",
             "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
-        "inavialabilites":[{
+        "inavialabilites": [{
             "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
             "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
         }],
@@ -248,7 +248,7 @@ const gStays = [
             "country": "France",
             "countryCode": "FR",
             "address": "Paris, Île-de-France, France",
-            "lat": 48.856486, 
+            "lat": 48.856486,
             "lng": 2.286383
         },
         "reviews": [{
@@ -261,7 +261,7 @@ const gStays = [
                 "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
             }
         }],
-        "likedByUsers" : ["mini-user"],
+        "likedByUsers": ["mini-user"],
         "isPopular": "false"
 
     },
@@ -283,13 +283,13 @@ const gStays = [
         "beds": 9,
         "bathrooms": 2.5,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642843330/Airbnb%20clone/0fccce7e-a98c-46b0-9eaf-fb69887f98fc_sw7mud.jpg"],
-        "amenities": ["Wifi", "Washer" , "Kitchen", "TV", "Dryer", "Bath"],
+        "amenities": ["Wifi", "Washer", "Kitchen", "TV", "Dryer", "Bath"],
         "host": {
             "_id": "h0006",
             "fullname": "Sagire",
             "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
-        "inavialabilites":[{
+        "inavialabilites": [{
             "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
             "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
         }],
@@ -297,7 +297,7 @@ const gStays = [
             "country": "France",
             "countryCode": "FR",
             "address": "Paris, Île-de-France, France",
-            "lat": 48.874011, 
+            "lat": 48.874011,
             "lng": 2.363604
         },
         "reviews": [{
@@ -310,7 +310,7 @@ const gStays = [
                 "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
             }
         }],
-        "likedByUsers" : ["mini-user"],
+        "likedByUsers": ["mini-user"],
         "isPopular": "false"
 
     },
@@ -332,13 +332,13 @@ const gStays = [
         "beds": 5,
         "bathrooms": 3.5,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642840810/Airbnb%20clone/371b3955-c358-4b49-bb9c-1fb9dd108988_rodfy4.jpg"],
-        "amenities": ["Kitchen", "Parking" , "Washer", "Backyard", "Wifi", "TV", "Dryer"],
+        "amenities": ["Kitchen", "Parking", "Washer", "Backyard", "Wifi", "TV", "Dryer"],
         "host": {
             "_id": "h0007",
             "fullname": "Patricia",
             "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
-        "inavialabilites":[{
+        "inavialabilites": [{
             "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
             "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
         }],
@@ -346,7 +346,7 @@ const gStays = [
             "country": "Mexico",
             "countryCode": "MX",
             "address": "Naucalpan de Juárez, Estado de México, Mexico",
-            "lat": 19.478524, 
+            "lat": 19.478524,
             "lng": -99.279029
         },
         "reviews": [{
@@ -359,7 +359,7 @@ const gStays = [
                 "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
             }
         }],
-        "likedByUsers" : ["mini-user"],
+        "likedByUsers": ["mini-user"],
         "isPopular": "true"
 
     },
@@ -381,13 +381,13 @@ const gStays = [
         "beds": 2,
         "bathrooms": 2.5,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642841396/Airbnb%20clone/61ebbbab-3562-4d35-b73d-1e9bd2ce3c69_u62kut.jpg"],
-        "amenities": ["Wifi", "Beach access" , "Pool", "Air conditioning", "Kitchen", "Parking", "TV", "Balcony"],
+        "amenities": ["Wifi", "Beach access", "Pool", "Air conditioning", "Kitchen", "Parking", "TV", "Balcony"],
         "host": {
             "_id": "h0008",
             "fullname": "Michelle",
             "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
-        "inavialabilites":[{
+        "inavialabilites": [{
             "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
             "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
         }],
@@ -395,7 +395,7 @@ const gStays = [
             "country": "Mexico",
             "countryCode": "MX",
             "address": "Isla Mujeres, Mexico",
-            "lat": 21.210964, 
+            "lat": 21.210964,
             "lng": -86.718987
         },
         "reviews": [
@@ -419,8 +419,8 @@ const gStays = [
                     "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
                 }
             }
-    ],
-        "likedByUsers" : ["mini-user"],
+        ],
+        "likedByUsers": ["mini-user"],
         "isPopular": "false"
 
     },
@@ -442,13 +442,13 @@ const gStays = [
         "beds": 1,
         "bathrooms": 1,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642842177/Airbnb%20clone/a3ee018f-6db3-4bac-a75a-eaa15fa699f9_lj3u6a.jpg"],
-        "amenities": ["Beach access", "Wifi" , "Pool", "Tv", "Washer", "Kitchen", "Parking", "Elevator", "Dryer"],
+        "amenities": ["Beach access", "Wifi", "Pool", "Tv", "Washer", "Kitchen", "Parking", "Elevator", "Dryer"],
         "host": {
             "_id": "h0009",
             "fullname": "Bathany",
             "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
-        "inavialabilites":[{
+        "inavialabilites": [{
             "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
             "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
         }],
@@ -456,7 +456,7 @@ const gStays = [
             "country": "Mexico",
             "countryCode": "MX",
             "address": "Cancún, Quintana Roo, Mexico",
-            "lat": 21.131314, 
+            "lat": 21.131314,
             "lng": -86.748434
         },
         "reviews": [{
@@ -469,7 +469,7 @@ const gStays = [
                 "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
             }
         }],
-        "likedByUsers" : ["mini-user"],
+        "likedByUsers": ["mini-user"],
         "isPopular": "false"
 
     },
@@ -491,13 +491,13 @@ const gStays = [
         "beds": 2,
         "bathrooms": 2,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642828522/Airbnb%20clone/dd721325-c2b0-47f8-b669-c01631c7a4ae_g1xi5y.jpg"],
-        "amenities": ["Kitchen", "Parking" , "Air conditioning", "Wifi", "Pool", "Backyard"],
+        "amenities": ["Kitchen", "Parking", "Air conditioning", "Wifi", "Pool", "Backyard"],
         "host": {
             "_id": "h0010",
             "fullname": "Wayan",
             "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
         },
-        "inavialabilites":[{
+        "inavialabilites": [{
             "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
             "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
         }],
@@ -505,7 +505,7 @@ const gStays = [
             "country": "Indonesia",
             "countryCode": "IDN",
             "address": "Abiansemal, Bali, Indonesia",
-            "lat": -8.573603, 
+            "lat": -8.573603,
             "lng": 115.214408
         },
         "reviews": [{
@@ -518,7 +518,7 @@ const gStays = [
                 "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
             }
         }],
-        "likedByUsers" : ["mini-user"],
+        "likedByUsers": ["mini-user"],
         "isPopular": "true"
 
     },
@@ -540,13 +540,13 @@ const gStays = [
         "beds": 1,
         "bathrooms": 1,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642829391/Airbnb%20clone/772ba654-23ad-494d-b736-fc14539da2bb_bfg2aw.jpg"],
-        "amenities": ["Wifi", "Pool" , "Bathing", "Parking", "Washer"],
+        "amenities": ["Wifi", "Pool", "Bathing", "Parking", "Washer"],
         "host": {
             "_id": "h0011",
             "fullname": "Candra",
             "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
         },
-        "inavialabilites":[{
+        "inavialabilites": [{
             "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
             "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
         }],
@@ -554,7 +554,7 @@ const gStays = [
             "country": "Indonesia",
             "countryCode": "IDN",
             "address": "Ubud, Bali, Indonesia",
-            "lat": -8.518078, 
+            "lat": -8.518078,
             "lng": 115.274158
         },
         "reviews": [{
@@ -567,7 +567,7 @@ const gStays = [
                 "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
             }
         }],
-        "likedByUsers" : ["mini-user"],
+        "likedByUsers": ["mini-user"],
         "isPopular": "true"
 
     },
@@ -589,13 +589,13 @@ const gStays = [
         "beds": 1,
         "bathrooms": 1,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642829875/Airbnb%20clone/b7f614e9-77e4-412e-b37c-b741c2bb6dfb_ew6c5n.jpg"],
-        "amenities": ["Wifi", "Pool" , "Balcony", "Parking", "Air conditioning", "Backyard"],
+        "amenities": ["Wifi", "Pool", "Balcony", "Parking", "Air conditioning", "Backyard"],
         "host": {
             "_id": "h0012",
             "fullname": "Bukit Vista",
             "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
         },
-        "inavialabilites":[{
+        "inavialabilites": [{
             "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
             "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
         }],
@@ -603,7 +603,7 @@ const gStays = [
             "country": "Indonesia",
             "countryCode": "IDN",
             "address": "South Kuta, Bali, Indonesia",
-            "lat": -8.799448, 
+            "lat": -8.799448,
             "lng": 115.135857
         },
         "reviews": [
@@ -638,7 +638,7 @@ const gStays = [
                 }
             }
         ],
-        "likedByUsers" : ["mini-user"],
+        "likedByUsers": ["mini-user"],
         "isPopular": "true"
     },
     {
@@ -659,13 +659,13 @@ const gStays = [
         "beds": 4,
         "bathrooms": 4,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642833310/Airbnb%20clone/f4a0e043-b03a-4444-8d71-2f4a66b85c82_ppa8pq.jpg"],
-        "amenities": ["Kitchen", "Parking" , "TV", "Balcony", "Wifi", "Pool", "Air conditioning", "Backyard"],
+        "amenities": ["Kitchen", "Parking", "TV", "Balcony", "Wifi", "Pool", "Air conditioning", "Backyard"],
         "host": {
             "_id": "h0013",
             "fullname": "Alfred",
             "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
         },
-        "inavialabilites":[{
+        "inavialabilites": [{
             "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
             "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
         }],
@@ -673,7 +673,7 @@ const gStays = [
             "country": "Indonesia",
             "countryCode": "IDN",
             "address": "Kecamatan Ubud, Bali, Indonesia",
-            "lat": -8.529778, 
+            "lat": -8.529778,
             "lng": 115.268513
         },
         "reviews": [
@@ -708,7 +708,7 @@ const gStays = [
                 }
             }
         ],
-        "likedByUsers" : ["mini-user"],
+        "likedByUsers": ["mini-user"],
         "isPopular": "false"
     },
     {
@@ -729,13 +729,13 @@ const gStays = [
         "beds": 1,
         "bathrooms": 1.5,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/45a3aa2b-ce00-4068-9ebe-9f83ca281fe4_cwdwza.jpg"],
-        "amenities": ["Kitchen", "Parking" , "Mountain view", "Balcony", "Wifi", "Pool", "Dryer"],
+        "amenities": ["Kitchen", "Parking", "Mountain view", "Balcony", "Wifi", "Pool", "Dryer"],
         "host": {
             "_id": "h0014",
             "fullname": "Veluvana",
             "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
         },
-        "inavialabilites":[{
+        "inavialabilites": [{
             "dateIn": 1643320800000, // Sat Jan 28 2022 00:00:00 GMT+0200
             "dateOut": 1643493600000, // Sat Jan 30 2022 00:00:00 GMT+0200
         }],
@@ -743,7 +743,7 @@ const gStays = [
             "country": "Indonesia",
             "countryCode": "IDN",
             "address": "Sidemen, Bali, Indonesia",
-            "lat": -8.473195, 
+            "lat": -8.473195,
             "lng": 115.441776
         },
         "reviews": [
@@ -778,7 +778,7 @@ const gStays = [
                 }
             }
         ],
-        "likedByUsers" : ["mini-user"],
+        "likedByUsers": ["mini-user"],
         "isPopular": "false"
     },
     {
@@ -799,7 +799,7 @@ const gStays = [
         "beds": 1,
         "bathrooms": 1.5,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/45a3aa2b-ce00-4068-9ebe-9f83ca281fe4_cwdwza.jpg"],
-        "amenities": ["Kitchen", "Parking" , "Mountain view", "Balcony", "Wifi", "Pool", "Dryer"],
+        "amenities": ["Kitchen", "Parking", "Mountain view", "Balcony", "Wifi", "Pool", "Dryer"],
         "host": {
             "_id": "h0014",
             "fullname": "Veluvana",
@@ -809,7 +809,7 @@ const gStays = [
             "country": "Indonesia",
             "countryCode": "IDN",
             "address": "Sidemen, Bali, Indonesia",
-            "lat": -8.473195, 
+            "lat": -8.473195,
             "lng": 115.441776
         },
         "reviews": [
@@ -844,7 +844,7 @@ const gStays = [
                 }
             }
         ],
-        "likedByUsers" : ["mini-user"],
+        "likedByUsers": ["mini-user"],
         "isPopular": "false"
     }
 ]
@@ -867,6 +867,12 @@ async function query(filterBy) {
     console.log('filterby in service', filterBy)
     const stays = await storageService.query(STORAGE_KEY)
 
+    if(filterBy.sortBy){
+        const sorted= _sortBy(filterBy.sortBy,stays)
+        console.log('sorted',sorted)
+        return sorted
+    }
+
     const filteredStays = _getFilteredStays(stays, filterBy)
     console.log('filteredStays in service', filteredStays)
 
@@ -887,7 +893,7 @@ function _getFilteredStays(stays, filterBy) {
     } else if (filterBy.dateIn && filterBy.dateOut) {
         let { dateIn } = filterBy
         let { dateOut } = filterBy
-        
+
         const availables = stays.filter((stay) => {
             if (isEmpty(stay.inavialabilites)) {
                 return true
@@ -898,26 +904,71 @@ function _getFilteredStays(stays, filterBy) {
                 const inavailableDate = moment.range(new Date(constraint.dateIn), new Date(constraint.dateOut));
                 return searchedDate.overlaps(inavailableDate, { adjacent: true })
             })
-            
+
             return !isNotAvailable
         });
-         console.log(availables)
+        console.log(availables)
         return availables
     } else if (filterBy.adults && filterBy.children) {
         let { adults } = filterBy
         let { children } = filterBy
         let capacity = adults + children
         const capacities = stays.filter((stay) => {
-            console.log(stay.capacity)
+            // console.log(stay.capacity)
             return stay.capacity === +capacity
         })
         return capacities
 
 
+    } else if (filterBy.amenities) {
+        const allAmenities = stays.filter((stay) => {
+            return filterBy.amenities.every(amenity => {
+                console.log('amenities', amenity)
+                return stay.amenities.some(a => {
+                    console.log('a', a)
+                    return a.toLowerCase() === amenity.toLowerCase()
+                })
+            })
+
+        })
+        return allAmenities
+        // return labels.every(label => {
+        //         return toyLabels.includes(label)
+        //     })
+
     } else {
         return stays
-
     }
+}
+
+ async function _sortBy(sortBy , stays) {
+
+    if (sortBy === 'price') {
+        console.log(sortBy)
+        stays.sort(function (a, b) {
+            return a.price - b.price;
+        });
+        return stays
+
+
+    } else if (sortBy === 'type') {
+        console.log(sortBy)
+        stays.sort(function (a, b) {
+            var fromA = a.from.toUpperCase(); // ignore upper and lowercase
+            var fromB = b.from.toUpperCase(); // ignore upper and lowercase
+            if (fromA < fromB) {
+                return -1;
+            }
+            if (fromA > fromB) {
+                return 1;
+            }
+            // names must be equal
+            return 0;
+        });
+        return stays
+    }
+
+
 }
 
 

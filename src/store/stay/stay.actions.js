@@ -86,6 +86,8 @@ export function changeFilter(isMinFilter) {
     }
 }
 
+
+
 // export function onEditStay(stayToSave) {
 //     return (dispatch) => {
 //         stayService.save(stayToSave)
