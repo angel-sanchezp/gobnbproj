@@ -7,8 +7,8 @@ export function StayReserve({stay}){
             <div className="reserve-position">
             <div className="reserve-box">
                 <div className="reserve-info">
-                    <div className="reserve-price">${stay.price}</div> 
-                    <div className="per-night">/night</div>
+                    <div className="reserve-price">${stay.price} <span>/night</span></div> 
+                    {/* <div className="per-night">/night</div> */}
                     <div className="reserve-reviews"><a className="ab" href="#stayreview">{ReviewsAmount}</a></div>              
                 </div>
 

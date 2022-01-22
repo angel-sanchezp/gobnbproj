@@ -29,8 +29,8 @@
     margin-right: 3px;
 }
 
-.per-night{
-    width: 43.5%;
+.reserve-price span{
+    // width: 60.5%;
     margin-top: 7px;
     font-size: 14px;
     font-family: CerealLight;
@@ -38,6 +38,8 @@
 
 .reserve-reviews{
     color: #717171;
-    margin-top: 9px;
+    margin-top: rem(9px);
+    font-size: rem(14px);
     text-decoration: underline;
+    font-family: CerealLight;
 }
