@@ -9,6 +9,7 @@ import { StayInfo } from '../cmps/Stay Details/StayInfo.jsx';
 import { StayReview } from '../cmps/Stay Details/StayReview.jsx';
 import { StayMap } from '../cmps/Stay Details/StayMap.jsx';
 import { HostInfo } from '../cmps/Stay Details/HostInfo.jsx';
+import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 
 
 
@@ -40,33 +41,36 @@ class _StayDetails extends React.Component {
         const headerReviews = (reviews.length === 1 ) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
 
         return (
-            <section className="details-container">
+            <section>
+                <section className="details-container">
                 
-                <section className="stay-header">
-                    <h1 className="stay-name">
-                        {stay.name}
-                    </h1>
-                    <div className="general-info">
-                        <span className="mainName-info">
-                        {/* <span>{stay.rate}</span> */}
-                        <span><button className="details-btn" type="button"><a className="ab" href="#stayreview">{headerReviews}</a></button></span>
-                        {/* <span className='dot'>.</span> */}
-                        {/* <span className="g">Superhost</span> */}
-                        <span className='dot'> · </span>
-                        <span><button className="details-btn g" type="button"><a className="ag" href="#staymap">{stay.location.address}</a></button></span>
-                        </span>
-                        <div>
-                        <span className="g"><button >Share</button></span>
-                        <span className="g"><button >Save</button></span>
+                    <section className="stay-header">
+                        <h1 className="stay-name">
+                            {stay.name}
+                        </h1>
+                        <div className="general-info">
+                            <span className="mainName-info">
+                            {/* <span>{stay.rate}</span> */}
+                            <span><button className="details-btn" type="button"><a className="ab" href="#stayreview">{headerReviews}</a></button></span>
+                            {/* <span className='dot'>.</span> */}
+                            {/* <span className="g">Superhost</span> */}
+                            <span className='dot'> · </span>
+                            <span><button className="details-btn g" type="button"><a className="ag" href="#staymap">{stay.location.address}</a></button></span>
+                            </span>
+                            <div>
+                            <span className="g"><button >Share</button></span>
+                            <span className="g"><button >Save</button></span>
+                            </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
                 <StayGallery stay = {stay}/>
                 <StayInfo stay = {stay}/>
 
                 <StayReview stay = {stay}/>
                 <StayMap stay = {stay}/>
                 <HostInfo stay = {stay}/>
+            </section>
+                <AppFooter/>
                     
             </section>
         )
