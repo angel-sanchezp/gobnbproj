@@ -77,6 +77,11 @@ class _Explore extends Component {
     render() {
         const { stays } = this.props
         const { location } = this.state
+        const {dateIn} =this.state
+        const {dateOut}= this.state
+        if(!stays){
+            return <h1>Not Found Places...</h1>
+        } 
 
         return (
             <section>
@@ -100,7 +105,8 @@ class _Explore extends Component {
                                     </div>
                                     <div className="line2">
                                         <div className="gray-txt">{utilService.getRandomIntInclusive(1000, 3000)} kilometers away</div>
-                                        <div className="gray-small-txt">Jan 21 - 28</div>
+                                      {dateOut && dateIn &&  <div className="gray-small-txt">{dateIn} to {dateOut}</div>}
+                                      {!dateIn && !dateOut && <div className="gray-small-txt">Jan 21 -28</div>}
                                     </div>   
                                 </div>
                             </li>
