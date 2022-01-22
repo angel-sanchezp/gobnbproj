@@ -1,9 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link, NavLink } from 'react-router-dom'
 
 
 import { loadStays,  changeHeaderClass , changeFilter } from '../store/stay/stay.actions.js'
-import { Link, NavLink } from 'react-router-dom'
+import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 
 
 import house from '../assets/img/top.jpg'
@@ -126,6 +127,9 @@ class _HomePage extends React.Component {
                     <img  className='host-img'src={BecomeHost}  alt="host" />
                 </div>
                
+
+
+                    <AppFooter/>
 
             </section>
         )

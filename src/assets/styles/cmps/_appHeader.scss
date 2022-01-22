@@ -23,6 +23,8 @@
         object-fit: contain;
         cursor: pointer;
         width: 123px;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
     }
 
     .secondary-search-bar {
@@ -40,6 +42,8 @@
     .right-nav {
         display: flex;
         align-items: center;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
 
         .host-options {
             display: flex;
@@ -51,7 +55,7 @@
             letter-spacing: 0.1px;
             -webkit-margin-end: 30px;
             margin-inline-end: 30px;
-            font-family: airbnb-medium;
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
             font-size: 14px;
         }
 
@@ -91,6 +95,8 @@
     .main-nav a {
         text-decoration: none;
         color: white;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
     }
     .main-nav > *:not(:last-child) {
         margin-inline-end: 1rem;
@@ -143,6 +149,7 @@
 .app-header {
     display: grid;
     z-index: 200;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
     grid-template-columns: 80px auto 80px;
     grid-template-rows: 88px 8px;
     transition: background-color .5s ease-out,height .4s ease-out,box-shadow .3s ease-out;
@@ -162,6 +169,8 @@
     .main-nav a {
         text-decoration: none;
         color: black;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
     }
     .main-nav > *:not(:last-child) {
         margin-inline-end: 1rem;
@@ -179,6 +188,8 @@
     .right-nav {
         display: flex;
         align-items: center;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
 
         .host-options {
             display: flex;
@@ -190,7 +201,7 @@
             letter-spacing: 0.1px;
             -webkit-margin-end: 30px;
             margin-inline-end: 30px;
-            font-family: airbnb-medium;
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
             font-size: 14px;
             font-weight: 500;
             

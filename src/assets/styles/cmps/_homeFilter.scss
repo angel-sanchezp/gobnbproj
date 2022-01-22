@@ -165,6 +165,7 @@
         border-radius: 13px;
         width: 400px;
         font-size: 16px;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
         text-transform: capitalize;
         box-shadow: 0 3px 8px 0 rgb(0 0 0 / 18%);
     }
@@ -191,6 +192,7 @@
         flex-direction: column;
         -webkit-align-items: flex-start;
         align-items: flex-start;
+
     }
     .dynamic-modal .filter-guest-modal .modal-label div {
         display: -webkit-flex;
@@ -203,6 +205,8 @@
         padding: 0;
         color: inherit;
         font-weight: unset;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
         margin-left: 5px;
         margin-right: 5px;
     }
@@ -213,6 +217,8 @@
         color: #484848;
         font-size: 1.125rem;
         border: 1px solid #717171;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
         // display: -webkit-flex;
         // display: flex;
         -webkit-align-items: center;

@@ -7,7 +7,7 @@ export function loadStays(predefinedFilterBy) {
         console.log(filterBy)
         stayService.query(filterBy)
             .then(stays => {
-                // console.log('stays from DB:', stays)
+                console.log('stays from DB:', stays)
                 dispatch({
                     type: 'SET_STAYS',stays})
             })
@@ -73,7 +73,7 @@ export function setFilter(filterBy) {
 export function changeHeaderClass(newClass) {
         return (dispatch) => {
             // var newClass = classHeader.toString()
-            console.log(newClass)
+            // console.log(newClass)
             const action = { type: 'SET_CLASS_HEADER', newClass };
             dispatch(action);
     }
