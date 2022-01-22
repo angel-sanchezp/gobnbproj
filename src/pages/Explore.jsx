@@ -80,7 +80,7 @@ class _Explore extends Component {
         const {dateIn} =this.state
         const {dateOut}= this.state
         if(!stays){
-            return <h1>Not Found Places...</h1>
+            return <h1>No results</h1>
         } 
 
         return (
