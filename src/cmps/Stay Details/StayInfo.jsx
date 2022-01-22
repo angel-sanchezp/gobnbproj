@@ -34,7 +34,7 @@ export function StayInfo({stay}){
                 </section>
             </section>
             <section className="reserve">
-                <StayReserve/>
+                <StayReserve stay = {stay}/>
 
             </section>
             
