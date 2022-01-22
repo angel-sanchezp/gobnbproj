@@ -16,7 +16,7 @@ html{
 }
 
 .details-container{
-    padding: 0 rem(80px);
+    padding: 0 rem(90px);
     background-color: #ffffff;
     display: grid;
     grid-column: 2;
@@ -47,6 +47,10 @@ html{
     text-align: inherit;
     height: 100%;
     width: 100%;
+}
+
+.details-container h2{
+    font-family: CerealLight;
 }
 
 .stay-name{

@@ -35,7 +35,11 @@ const gStays = [
         "beds": 4,
         "bathrooms": 1,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642653312/Airbnb%20clone/e3c77364_original_ryeibc.jpg"],
+<<<<<<< HEAD
         "amenities": ["Kitchen", "Parking", "Washer", "Air conditioning", "Wifi", "Elevator", "Dryer", "Indoor fireplace", "Stove"],
+=======
+        "amenities": ["Kitchen", "Parking" , "Washing machine", "Air conditioning", "Wifi", "Elevator", "Dryer", "Indoor fireplace", "Stove"],
+>>>>>>> 084d3002437f2f3f4cdb69f8952d5427cf9846b6
         "host": {
             "_id": "h0001",
             "fullname": "Matsuda",
@@ -84,7 +88,11 @@ const gStays = [
         "beds": 4,
         "bathrooms": 2,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642654286/Airbnb%20clone/5b2e7a69_original_tywgk8.jpg"],
+<<<<<<< HEAD
         "amenities": ["Kitchen", "TV", "Dryer", "Bckyard", "Wifi", "Washer", "Air conditioning", "Indoor fireplace"],
+=======
+        "amenities": ["Kitchen", "TV" , "Dryer", "Backyard", "Wifi", "Washing machine", "Air conditioning", "Indoor fireplace"],
+>>>>>>> 084d3002437f2f3f4cdb69f8952d5427cf9846b6
         "host": {
             "_id": "h0002",
             "fullname": "Kako & Keiko",
@@ -185,7 +193,11 @@ const gStays = [
             "https://res.cloudinary.com/kitsunex3/image/upload/v1642652059/Airbnb%20clone/1ff8fe45-19d2-41cc-8053-f6156a113f4c_dvxobz.jpg",
             "https://res.cloudinary.com/kitsunex3/image/upload/v1642652059/Airbnb%20clone/275411d2-2ca7-4148-8ab9-82bff0c5bc79_uu1gkz.jpg"
         ],
+<<<<<<< HEAD
         "amenities": ["City skyline view", "Wifi", "TV", "Washer", "Private balcony", "Kitchen", "Parking", "Elevator", "Dryer", "Indoor fireplace"],
+=======
+        "amenities": ["Wifi", "TV" , "Washing machine", "Balcony", "Kitchen", "Parking", "Elevator", "Dryer", "Indoor fireplace"],
+>>>>>>> 084d3002437f2f3f4cdb69f8952d5427cf9846b6
         "host": {
             "_id": "h0004",
             "fullname": "Chris",
@@ -234,7 +246,11 @@ const gStays = [
         "beds": 2,
         "bathrooms": 2,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642842881/Airbnb%20clone/ab5a02f8_original_vr3bly.jpg"],
+<<<<<<< HEAD
         "amenities": ["Kitchen", "TV", "Washer", "Bath", "Wifi", "Elevator", "Dryer", "Balcony"],
+=======
+        "amenities": ["Kitchen", "TV" , "Washing machine", "Bath", "Wifi", "Elevator", "Dryer", "Balcony"],
+>>>>>>> 084d3002437f2f3f4cdb69f8952d5427cf9846b6
         "host": {
             "_id": "h0005",
             "fullname": "Helene",
@@ -283,7 +299,11 @@ const gStays = [
         "beds": 9,
         "bathrooms": 2.5,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642843330/Airbnb%20clone/0fccce7e-a98c-46b0-9eaf-fb69887f98fc_sw7mud.jpg"],
+<<<<<<< HEAD
         "amenities": ["Wifi", "Washer", "Kitchen", "TV", "Dryer", "Bath"],
+=======
+        "amenities": ["Wifi", "Washing machine" , "Kitchen", "TV", "Dryer", "Bath"],
+>>>>>>> 084d3002437f2f3f4cdb69f8952d5427cf9846b6
         "host": {
             "_id": "h0006",
             "fullname": "Sagire",
@@ -332,7 +352,11 @@ const gStays = [
         "beds": 5,
         "bathrooms": 3.5,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642840810/Airbnb%20clone/371b3955-c358-4b49-bb9c-1fb9dd108988_rodfy4.jpg"],
+<<<<<<< HEAD
         "amenities": ["Kitchen", "Parking", "Washer", "Backyard", "Wifi", "TV", "Dryer"],
+=======
+        "amenities": ["Kitchen", "Parking" , "Washing machine", "Backyard", "Wifi", "TV", "Dryer"],
+>>>>>>> 084d3002437f2f3f4cdb69f8952d5427cf9846b6
         "host": {
             "_id": "h0007",
             "fullname": "Patricia",
@@ -442,7 +466,11 @@ const gStays = [
         "beds": 1,
         "bathrooms": 1,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642842177/Airbnb%20clone/a3ee018f-6db3-4bac-a75a-eaa15fa699f9_lj3u6a.jpg"],
+<<<<<<< HEAD
         "amenities": ["Beach access", "Wifi", "Pool", "Tv", "Washer", "Kitchen", "Parking", "Elevator", "Dryer"],
+=======
+        "amenities": ["Beach access", "Wifi" , "Pool", "TV", "Washing machine", "Kitchen", "Parking", "Elevator", "Dryer"],
+>>>>>>> 084d3002437f2f3f4cdb69f8952d5427cf9846b6
         "host": {
             "_id": "h0009",
             "fullname": "Bathany",
@@ -540,7 +568,11 @@ const gStays = [
         "beds": 1,
         "bathrooms": 1,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642829391/Airbnb%20clone/772ba654-23ad-494d-b736-fc14539da2bb_bfg2aw.jpg"],
+<<<<<<< HEAD
         "amenities": ["Wifi", "Pool", "Bathing", "Parking", "Washer"],
+=======
+        "amenities": ["Wifi", "Pool" , "Bath", "Parking", "Washing machine"],
+>>>>>>> 084d3002437f2f3f4cdb69f8952d5427cf9846b6
         "host": {
             "_id": "h0011",
             "fullname": "Candra",
@@ -729,7 +761,11 @@ const gStays = [
         "beds": 1,
         "bathrooms": 1.5,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/45a3aa2b-ce00-4068-9ebe-9f83ca281fe4_cwdwza.jpg"],
+<<<<<<< HEAD
         "amenities": ["Kitchen", "Parking", "Mountain view", "Balcony", "Wifi", "Pool", "Dryer"],
+=======
+        "amenities": ["Kitchen", "Parking", "Balcony", "Wifi", "Pool", "Dryer"],
+>>>>>>> 084d3002437f2f3f4cdb69f8952d5427cf9846b6
         "host": {
             "_id": "h0014",
             "fullname": "Veluvana",
@@ -799,7 +835,11 @@ const gStays = [
         "beds": 1,
         "bathrooms": 1.5,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/45a3aa2b-ce00-4068-9ebe-9f83ca281fe4_cwdwza.jpg"],
+<<<<<<< HEAD
         "amenities": ["Kitchen", "Parking", "Mountain view", "Balcony", "Wifi", "Pool", "Dryer"],
+=======
+        "amenities": ["Kitchen", "Parking" , "Balcony", "Wifi", "Pool", "Dryer"],
+>>>>>>> 084d3002437f2f3f4cdb69f8952d5427cf9846b6
         "host": {
             "_id": "h0014",
             "fullname": "Veluvana",
