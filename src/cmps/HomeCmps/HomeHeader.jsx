@@ -20,10 +20,16 @@ class _HomeHeader extends Component {
         const { location, dateIn, dateOut, guests = 1 } = filterBy 
 
         var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
-
-        let checkIn = (dateIn.getDay())  
-        let checkOut =(dateOut.getDay())  
-        let month=(monthNames[dateOut.getMonth()])
+        let checkIn =  (dateIn)? dateIn.getDay() : ''
+        let checkOut
+        let month
+        if(dateOut){
+        checkOut =dateOut.getDay()
+        month=(monthNames[dateOut.getMonth()])
+        }else{
+            checkOut=''
+            month=''
+        }
 
 
         setTimeout(() => {
