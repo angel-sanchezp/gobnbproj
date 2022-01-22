@@ -28,6 +28,14 @@ export function StayInfo({stay}){
                     {stay.summery}
                 </p>
                 </div>
+                <section className="sleep-general">
+                    <div className="sleep-title">
+                        <h2>Where you'll sleep</h2>
+                    </div>
+                    <div className="stay-sleep">
+                        <img src={stay.sleep} className="sleep"alt="" />
+                    </div>
+                </section>
                 <StayAmenities stay = {stay}/>
                 <section className="selected-dates">
                     <StayDates/>

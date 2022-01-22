@@ -58,6 +58,30 @@
     border-bottom: 1px solid #ddd;
 }
 
+.sleep-general {
+    border-bottom: 1px solid #ddd;
+    padding: rem(35px) 0px;
+}
+
+.sleep-general h2 {
+    margin: 0;
+}
+
+.sleep-title {
+    padding: 0px 0px 24px;
+}
+
+.stay-sleep {
+    width: 45%;
+}
+
+.sleep {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 .amenities-container {
     border-bottom: 1px solid #ddd;
+    padding: rem(35px) 0px;
 }
