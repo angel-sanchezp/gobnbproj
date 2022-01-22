@@ -392,7 +392,7 @@
         "beds": 1,
         "bathrooms": 1,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642842177/Airbnb%20clone/a3ee018f-6db3-4bac-a75a-eaa15fa699f9_lj3u6a.jpg"],
-        "amenities": ["Beach access", "Wifi" , "Pool", "Tv", "Washing machine", "Kitchen", "Parking", "Elevator", "Dryer"],
+        "amenities": ["Beach access", "Wifi" , "Pool", "TV", "Washing machine", "Kitchen", "Parking", "Elevator", "Dryer"],
         "host": {
             "_id": "h0009",
             "fullname": "Bathany",

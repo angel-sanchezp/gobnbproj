@@ -63,21 +63,35 @@ export function StayAmenities({stay}) {
         return (<img src={logo} alt="Not found" />);
     }
 
-    const openAmenityModal = () => {
-        console.log('hi')
+    const amenityModal = (isOpen) => {
+        if(isOpen){
+            document.querySelector(".amenities-modal").classList.remove("hidden");
+            document.querySelector("body").classList.add("modal-open");
+        } else if(!isOpen){
+            document.querySelector(".amenities-modal").classList.add("hidden");
+            document.querySelector("body").classList.remove("modal-open");
+        }
     }
 
     return (
-        <section className="amenities-container">
-            <div className="amenities">
-                <h2>What this place offer</h2>
-                {showAmenities.map((amenity, idx) => (
-                    <div className="amenity" key={idx}>{setAmenity(amenity)}{amenity}</div>
-                ))}
-            </div>
-            <div className="more-amenities">
-                <div onClick={() => openAmenityModal()}>Show all {amenities.length} amenities</div>
-            </div>
+        <section>
+            <section className="amenities-container">
+                <div className="amenities">
+                    <h2>What this place offer</h2>
+                    {showAmenities.map((amenity, idx) => (
+                        <div className="amenity" key={idx}>{setAmenity(amenity)}{amenity}</div>
+                    ))}
+                </div>
+                <div className="more-amenities">
+                    <div onClick={() => amenityModal(true)}>Show all {amenities.length} amenities</div>
+                </div>
+            </section>
+            <section>
+                <div className="amenities-modal hidden">HI
+                <button onClick={() => amenityModal(false)}>X</button>
+                </div>
+            </section>
         </section>
+
     )
 }

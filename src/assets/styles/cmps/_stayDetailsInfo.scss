@@ -95,3 +95,24 @@
 .more-amenities{
     cursor: pointer;
 }
+
+.amenities-modal {
+    transition: 1000s ease-in;
+    background-color: pink;
+    z-index: 2000;
+    inset: 250px;
+    position: fixed;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
