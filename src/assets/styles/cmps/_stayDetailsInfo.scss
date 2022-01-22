@@ -97,13 +97,17 @@
 }
 
 .amenities-modal {
-    transition: 1000s ease-in;
-    background-color: pink;
-    z-index: 2000;
-    inset: 250px;
+    transition:all .5s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    border: 1px solid rgb(202, 198, 198);
+    box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
     position: fixed;
-    height: 300px;
-    width: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 400px;
     display: flex;
     flex-direction: row;
     justify-content: center;

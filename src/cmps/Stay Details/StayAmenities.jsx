@@ -8,7 +8,7 @@ export function StayAmenities({stay}) {
 
     const setAmenity = (amenity) => {
         let logo;
-        console.log(amenity)
+        // console.log(amenity)
         switch (amenity) {
             case "Kitchen":
                 logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/kitchen_n1j0n3.png"];
@@ -87,8 +87,12 @@ export function StayAmenities({stay}) {
                 </div>
             </section>
             <section>
-                <div className="amenities-modal hidden">HI
-                <button onClick={() => amenityModal(false)}>X</button>
+                <div className="amenities-modal hidden">
+                    <div><button onClick={() => amenityModal(false)}>X</button></div>
+                    <div><h2>What this place offer</h2>
+                    {amenities.map((amenity, idx) => (
+                        <div className="amenity" key={idx}>{setAmenity(amenity)}{amenity}</div>
+                    ))}</div>
                 </div>
             </section>
         </section>
