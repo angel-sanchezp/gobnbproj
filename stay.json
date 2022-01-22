@@ -1,4 +1,5 @@
-[   {
+[   
+    {
         "_id": "s0001",
         "name": "Reversible Destiny Lofts/for4people",
         "type": "loft",
@@ -331,16 +332,28 @@
             "lat": 35.664252, 
             "lng":139.702251
         },
-        "reviews": [{
-            "id": "r0008",
-            "txt": "Wow!",
-            "rate": 5,
-            "by": {
-                "_id": "u0008",
-                "fullname": "user8",
-                "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+        "reviews": [
+            {
+                "id": "r0008",
+                "txt": "Wow!",
+                "rate": 5,
+                "by": {
+                    "_id": "u0008",
+                    "fullname": "user8",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+                }
+            },
+            {
+                "id": "r00081",
+                "txt": "Wow!",
+                "rate": 5,
+                "by": {
+                    "_id": "u0008",
+                    "fullname": "user8",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+                }
             }
-        }],
+    ],
         "likedByUsers" : ["mini-user"],
         "isPopular": "false"
 
@@ -507,19 +520,237 @@
             "lat": -8.799448, 
             "lng": 115.135857
         },
-        "reviews": [{
-            "id": "r0012",
-            "txt": "Amazing Airbnb. Super charming, beautiful pool, and very kind staff.",
-            "rate": 5,
-            "by": {
-                "_id": "u0012",
-                "fullname": "Annelise",
-                "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+        "reviews": [
+            {
+                "id": "r0012",
+                "txt": "Amazing Airbnb. Super charming, beautiful pool, and very kind staff.",
+                "rate": 5,
+                "by": {
+                    "_id": "u0012",
+                    "fullname": "Annelise",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+                }
+            },
+            {
+                "id": "r00121",
+                "txt": "We stayed in the treehouse and it was amazing! So cute and unique our only regret is not being able to spend some more time there!! We had lunch at the restaurant and hung out by the trendy and cute pool. The staff served us drinks by the pool too which was awesome! They even offer a shuttle to the beach where we hung out late watching the servers and listening to live music! Would definitely come back again!",
+                "rate": 4.5,
+                "by": {
+                    "_id": "u00121",
+                    "fullname": "Nicole",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+                }
+            },
+            {
+                "id": "r00122",
+                "txt": "The treehouse was perfect—truly felt magical to be staying in a treehouse and have such a nice pool and restaurant right downstairs. Made for a very relaxing final 2 days of our trip in Bali.",
+                "rate": 4.5,
+                "by": {
+                    "_id": "u00122",
+                    "fullname": "Matthew",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
+                }
             }
-        }],
+        ],
         "likedByUsers" : ["mini-user"],
         "isPopular": "true"
-
+    },
+    {
+        "_id": "s0013",
+        "name": "New! Majestic 4 BR Pool Villa with ricefields view",
+        "type": "Villa",
+        "imgUrls": [
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642833309/Airbnb%20clone/a4eeecf4-2f99-4c70-8fc6-1de731c5a49d_iq3e5l.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642833310/Airbnb%20clone/57b3363b-f638-45c2-b7cf-db6575ba89bc_qtoh2r.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642833310/Airbnb%20clone/dc674812-d0b4-46be-ae98-87ee7be8b00a_m9gewy.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642833310/Airbnb%20clone/847c4231-4b43-49d0-9072-fd6ab5ecce8a_fywd94.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642833310/Airbnb%20clone/4fd4722a-7622-4df1-b660-8ddb5ed66667_rhsz4i.jpg"
+        ],
+        "price": 146,
+        "summery": "Step foot in this magical place and forget about all your worries! This amazing 4 bedroom villa is surrounded by nature, yet just a stone throw away from the famous Ubud centre.",
+        "capacity": 10,
+        "bedrooms": 4,
+        "beds": 4,
+        "bathrooms": 4,
+        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642833310/Airbnb%20clone/f4a0e043-b03a-4444-8d71-2f4a66b85c82_ppa8pq.jpg"],
+        "amenities": ["Kitchen", "Parking" , "TV", "Balcony", "Wifi", "Pool", "Air conditioning", "Backyard"],
+        "host": {
+            "_id": "h0013",
+            "fullname": "Alfred",
+            "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
+        },
+        "location": {
+            "country": "Indonesia",
+            "countryCode": "IDN",
+            "address": "Kecamatan Ubud, Bali, Indonesia",
+            "lat": -8.529778, 
+            "lng": 115.268513
+        },
+        "reviews": [
+            {
+                "id": "r0013",
+                "txt": "Amazing place good vibe!",
+                "rate": 5,
+                "by": {
+                    "_id": "u0013",
+                    "fullname": "Josh",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
+                }
+            },
+            {
+                "id": "r00131",
+                "txt": "Fabulous place. Felt like royalty. Layout of villa is amazing",
+                "rate": 4.5,
+                "by": {
+                    "_id": "u00131",
+                    "fullname": "Sophia",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+                }
+            },
+            {
+                "id": "r00132",
+                "txt": "Nice stay! But the access to get to the villa is hard and the road is small. But overall it’s good, nice room and pool",
+                "rate": 3.5,
+                "by": {
+                    "_id": "u00132",
+                    "fullname": "Francisco",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
+                }
+            }
+        ],
+        "likedByUsers" : ["mini-user"],
+        "isPopular": "false"
+    },
+    {
+        "_id": "s0014",
+        "name": "Veluvana Bali - Owl Bamboo House",
+        "type": "Treehouse",
+        "imgUrls": [
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/4f70b681-a792-4530-8c52-f2a8d262942d_yv0nhz.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/8ddb35f5-ae3b-4cf4-869b-bb484e82675a_r9ezwf.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/24825c95-303b-47c3-9649-2fb74fc86acb_ngsdhv.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/ec85ccc0-281c-44fc-a061-bc1e87ea0081_wvlkf3.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834304/Airbnb%20clone/f474dfbe-557a-4d07-8d6e-76aba506b5a6_fmnuvv.jpg"
+        ],
+        "price": 130,
+        "summery": "Veluvana is a unique bamboo house with a wonderful view of Sidemen Valley, a genuine tropical landscape with Mount Agung peak on its back. This getaway spot is a great place to bring into reality the dream adventure of the true wanderer. We invite you to feel the magnificent vibes of the entire house to escape the life that is full of drama into a journey with ultimate joy.",
+        "capacity": 2,
+        "bedrooms": 1,
+        "beds": 1,
+        "bathrooms": 1.5,
+        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/45a3aa2b-ce00-4068-9ebe-9f83ca281fe4_cwdwza.jpg"],
+        "amenities": ["Kitchen", "Parking" , "Mountain view", "Balcony", "Wifi", "Pool", "Dryer"],
+        "host": {
+            "_id": "h0014",
+            "fullname": "Veluvana",
+            "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
+        },
+        "location": {
+            "country": "Indonesia",
+            "countryCode": "IDN",
+            "address": "Sidemen, Bali, Indonesia",
+            "lat": -8.473195, 
+            "lng": 115.441776
+        },
+        "reviews": [
+            {
+                "id": "r0014",
+                "txt": "Wonderful place with an amazing view. Comfortable, romantic, and beautiful. Great staff as well. Thanks for the amazing stay!",
+                "rate": 5,
+                "by": {
+                    "_id": "u0014",
+                    "fullname": "Ryan",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
+                }
+            },
+            {
+                "id": "r00141",
+                "txt": "I enjoyed everything about this Bamboo House! Perfect 1-2 night stay connecting with nature.",
+                "rate": 4.5,
+                "by": {
+                    "_id": "u00141",
+                    "fullname": "Katya",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+                }
+            },
+            {
+                "id": "r00142",
+                "txt": "Increase place to stay! Be aware of 2 dogs sleeping downstairs in both sofas and fighting with each other really bothered us during our stay",
+                "rate": 3.5,
+                "by": {
+                    "_id": "u00142",
+                    "fullname": "Galina",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+                }
+            }
+        ],
+        "likedByUsers" : ["mini-user"],
+        "isPopular": "false"
+    },
+    {
+        "_id": "s0015",
+        "name": "Veluvana Bali - Owl Bamboo House",
+        "type": "Treehouse",
+        "imgUrls": [
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/4f70b681-a792-4530-8c52-f2a8d262942d_yv0nhz.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/8ddb35f5-ae3b-4cf4-869b-bb484e82675a_r9ezwf.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/24825c95-303b-47c3-9649-2fb74fc86acb_ngsdhv.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/ec85ccc0-281c-44fc-a061-bc1e87ea0081_wvlkf3.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834304/Airbnb%20clone/f474dfbe-557a-4d07-8d6e-76aba506b5a6_fmnuvv.jpg"
+        ],
+        "price": 130,
+        "summery": "Veluvana is a unique bamboo house with a wonderful view of Sidemen Valley, a genuine tropical landscape with Mount Agung peak on its back. This getaway spot is a great place to bring into reality the dream adventure of the true wanderer. We invite you to feel the magnificent vibes of the entire house to escape the life that is full of drama into a journey with ultimate joy.",
+        "capacity": 2,
+        "bedrooms": 1,
+        "beds": 1,
+        "bathrooms": 1.5,
+        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/45a3aa2b-ce00-4068-9ebe-9f83ca281fe4_cwdwza.jpg"],
+        "amenities": ["Kitchen", "Parking" , "Mountain view", "Balcony", "Wifi", "Pool", "Dryer"],
+        "host": {
+            "_id": "h0014",
+            "fullname": "Veluvana",
+            "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
+        },
+        "location": {
+            "country": "Indonesia",
+            "countryCode": "IDN",
+            "address": "Sidemen, Bali, Indonesia",
+            "lat": -8.473195, 
+            "lng": 115.441776
+        },
+        "reviews": [
+            {
+                "id": "r0014",
+                "txt": "Wonderful place with an amazing view. Comfortable, romantic, and beautiful. Great staff as well. Thanks for the amazing stay!",
+                "rate": 5,
+                "by": {
+                    "_id": "u0014",
+                    "fullname": "Ryan",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
+                }
+            },
+            {
+                "id": "r00141",
+                "txt": "I enjoyed everything about this Bamboo House! Perfect 1-2 night stay connecting with nature.",
+                "rate": 4.5,
+                "by": {
+                    "_id": "u00141",
+                    "fullname": "Katya",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+                }
+            },
+            {
+                "id": "r00142",
+                "txt": "Increase place to stay! Be aware of 2 dogs sleeping downstairs in both sofas and fighting with each other really bothered us during our stay",
+                "rate": 3.5,
+                "by": {
+                    "_id": "u00142",
+                    "fullname": "Galina",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+                }
+            }
+        ],
+        "likedByUsers" : ["mini-user"],
+        "isPopular": "false"
     }
 ]
-

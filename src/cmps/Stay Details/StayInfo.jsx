@@ -8,7 +8,7 @@ export function StayInfo({stay}){
             <section className="summary-info">
                 <div className="top-info">
                     <div>
-                    <h2>I will be the info</h2>
+                    <h2>{stay.type} Hosted by {stay.host.fullname}</h2>
                     </div>
                     <div className="place-info">
                         <span>{stay.capacity} guests  </span>

@@ -36,8 +36,10 @@ class _StayDetails extends React.Component {
 
     render() {
         const { stay } = this.state;
-        // const { location } = this.state.location
         if (!stay) return <h1>Loading...</h1>
+        const  {reviews}  = stay;
+        const headerReviews = (reviews.length === 1 ) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
+
         return (
             <section className="details-container">
                 
@@ -48,7 +50,7 @@ class _StayDetails extends React.Component {
                     <div className="general-info">
                         <span className="mainName-info">
                         {/* <span>{stay.rate}</span> */}
-                        <span><button className="details-btn" type="button"><a className="ab" href="#stayreview">Reviews</a></button></span>
+                        <span><button className="details-btn" type="button"><a className="ab" href="#stayreview">{headerReviews}</a></button></span>
                         {/* <span className='dot'>.</span> */}
                         {/* <span className="g">Superhost</span> */}
                         <span className='dot'>.</span>
