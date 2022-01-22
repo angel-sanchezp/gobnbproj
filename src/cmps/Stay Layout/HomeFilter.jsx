@@ -6,18 +6,16 @@ import { Calendar } from '../FilterCmps/Calendar.jsx'
 
 export class HomeFilter extends React.Component {
 
-    state = {
+    state ={
         filterBy: {
             location: '',
             dateIn: '',
             dateOut: '',
-            guests: ''
+            adults: '',
+            children:''
 
         },
         isModalShown: false,
-        num: 0,
-        span: 0,
-        value: [null, null],
         cmp: null
     }
 
@@ -43,19 +41,26 @@ export class HomeFilter extends React.Component {
         this.setState(prev => ({ ...prev, isModalShown: !prev.isModalShown }))
     }
 
-    onChangeAdults(adultsNum) {
-        console.log(adultsNum)
-        this.setState(prev => ({ filterBy: { ...prev.filterBy, guests: adultsNum } }))
+    onChangeAdults=(adultsNum)=> {
+        var {filterBy} =this.state
+        filterBy.adults =adultsNum
+        this.setState({ filterBy });
+  
     }
-    onChangeChildren(childrenNum) {
-        console.log(childrenNum)
-        this.setState(prev => ({ ...prev, span: prev.span + childrenNum, filterBy: { ...prev.filterBy.guests, children: childrenNum } }))
-
+    onChangeChildren=(childrenNum)=> {
+        var {filterBy} =this.state
+        filterBy.children =childrenNum
+        this.setState({ filterBy });
     }
 
-    onSetDate(date){
-        console.log('dateIn',date[0])
-        console.log('dateOn',date[1])
+    onSetDate=(date)=>{
+        var {filterBy} =this.state
+        filterBy.dateIn =date[0]
+        filterBy.dateOut=date[1]
+        console.log('dateIn',  filterBy.dateIn)
+        console.log('dateOn'  ,filterBy.dateIn)
+        this.setState({ filterBy });
+
 
     }
 
@@ -126,7 +131,7 @@ export class HomeFilter extends React.Component {
                                 placeholder={`Add gusts`}
                                 onChange={this.handleChange}
                                 onClick={() => this.OpenModal('guests')}
-                                value={guests.adults} />
+                                value={guests} />
                         </div>
                     </label>
                     <button>
