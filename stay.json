@@ -385,5 +385,141 @@
         "likedByUsers" : ["mini-user"],
         "isPopular": "true"
 
+    },
+    {
+        "_id": "s0010",
+        "name": "Aura House 2bds Eco Bamboo House, Pool, River View",
+        "type": "Villa",
+        "imgUrls": [
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642828523/Airbnb%20clone/e25a9b25-fa98-4160-bfd1-039287bf38b6_xqjgrs.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642828523/Airbnb%20clone/f4f7b242-db33-46fc-9080-c3d6a6fd55ec_wdld1s.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642828523/Airbnb%20clone/372e7d6f-7fb9-4668-92f0-25bb9a346814_pkonld.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642828522/Airbnb%20clone/4756e699-f474-4ca7-8b77-06b12715a6cb_xbr1bv.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642828523/Airbnb%20clone/97108083-280f-4e0e-9f1b-7a4b0dd34c44_koovrk.jpg"
+        ],
+        "price": 244,
+        "summery": "Aura house is a beautiful & unique eco bamboo house built on the west bank of the River Ayung facing east to catch sunrise. Aura House is situated 25min away from Ubud, and 35min away from Canggu.",
+        "capacity": 4,
+        "bedrooms": 2,
+        "beds": 2,
+        "bathrooms": 2,
+        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642828522/Airbnb%20clone/dd721325-c2b0-47f8-b669-c01631c7a4ae_g1xi5y.jpg"],
+        "amenities": ["Kitchen", "Parking" , "Air conditioning", "Wifi", "Pool", "Backyard"],
+        "host": {
+            "_id": "h0010",
+            "fullname": "Wayan",
+            "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
+        },
+        "location": {
+            "country": "Indonesia",
+            "countryCode": "IDN",
+            "address": "Abiansemal, Bali, Indonesia",
+            "lat": -8.573603, 
+            "lng": 115.214408
+        },
+        "reviews": [{
+            "id": "r0010",
+            "txt": "Absolutely amazing. Much better than the photos. I am so so glad I was able to stay here. The entire village is so beautiful and relaxing and the Aura House is simply stunning. The house is incredible, clean, and has so many beautiful touches and the staff is super helpful. My favorite stay in Bali. I highly highly recommend.",
+            "rate": 5,
+            "by": {
+                "_id": "u0010",
+                "fullname": "Jessica",
+                "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+            }
+        }],
+        "likedByUsers" : ["mini-user"],
+        "isPopular": "true"
+
+    },
+    {
+        "_id": "s0011",
+        "name": "Bali Bamboo House | Rescape Ubud - Resound Villa",
+        "type": "Villa",
+        "imgUrls": [
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642829391/Airbnb%20clone/a8277635-638c-4a8f-a472-a1ce6a6dd301_qmzvhd.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642829391/Airbnb%20clone/bd681dc6-6e25-4406-bc99-e1ed554b9cfe_rl5foi.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642829390/Airbnb%20clone/0e752aaf-b10c-4f65-a881-29481005f58a_bfk5v9.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642829390/Airbnb%20clone/8e9245ab-d219-43be-88e6-7f1f608df929_tqknrp.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642829391/Airbnb%20clone/0f92e33e-0923-473f-ba24-87c5037e4d27_tk1mvd.jpg"
+        ],
+        "price": 59,
+        "summery": "Rescape (retreat/ escape) Ubud is an uniquely designed villa built by bamboo, allowing guests to unwind and escape from all the daily hassle. This stay is perfect for couples, young families, artists, musicians and everyone who loves to fully embrace the nature. The place feels secluded and yet only 5 minutes away by bike from central Ubud!",
+        "capacity": 2,
+        "bedrooms": 1,
+        "beds": 1,
+        "bathrooms": 1,
+        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642829391/Airbnb%20clone/772ba654-23ad-494d-b736-fc14539da2bb_bfg2aw.jpg"],
+        "amenities": ["Wifi", "Pool" , "Bathing", "Parking", "Washer"],
+        "host": {
+            "_id": "h0011",
+            "fullname": "Candra",
+            "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
+        },
+        "location": {
+            "country": "Indonesia",
+            "countryCode": "IDN",
+            "address": "Ubud, Bali, Indonesia",
+            "lat": -8.518078, 
+            "lng": 115.274158
+        },
+        "reviews": [{
+            "id": "r0011",
+            "txt": "Stunning place with magic atmosphere. Definitely a place you`d come back to!",
+            "rate": 5,
+            "by": {
+                "_id": "u0011",
+                "fullname": "Maria",
+                "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+            }
+        }],
+        "likedByUsers" : ["mini-user"],
+        "isPopular": "true"
+
+    },
+    {
+        "_id": "s0012",
+        "name": "Magical Vintage Treehouse",
+        "type": "Treehouse",
+        "imgUrls": [
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642829876/Airbnb%20clone/b678240d-5704-4ae9-9de3-16dac435f5c0_dlyooi.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642829875/Airbnb%20clone/1503df80-49ce-42d0-97a7-c19b0686f55e_ogc4xv.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642829876/Airbnb%20clone/bc0107f5-29b6-4ac8-90ac-e7f062af2e48_eonwpd.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642829875/Airbnb%20clone/a115c022-f888-4bd6-bedc-7039133d625a_xorvun.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642829875/Airbnb%20clone/b92fc6ed-6a70-4403-88a1-6d0cfa66a1b8_yrwe5g.jpg"
+        ],
+        "price": 52,
+        "summery": "Perfect Bali holiday experience starts here. A magical mango treehouse in an eco-vintage village just a 5 minute drive to the beach. Living structures built from shipwreck timber and with jungle mango trees growing through walls. Have yourself a unique stay experience in a fairytale forest with modern comfort and amenities.",
+        "capacity": 2,
+        "bedrooms": 1,
+        "beds": 1,
+        "bathrooms": 1,
+        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642829875/Airbnb%20clone/b7f614e9-77e4-412e-b37c-b741c2bb6dfb_ew6c5n.jpg"],
+        "amenities": ["Wifi", "Pool" , "Balcony", "Parking", "Air conditioning", "Backyard"],
+        "host": {
+            "_id": "h0012",
+            "fullname": "Bukit Vista",
+            "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
+        },
+        "location": {
+            "country": "Indonesia",
+            "countryCode": "IDN",
+            "address": "South Kuta, Bali, Indonesia",
+            "lat": -8.799448, 
+            "lng": 115.135857
+        },
+        "reviews": [{
+            "id": "r0012",
+            "txt": "Amazing Airbnb. Super charming, beautiful pool, and very kind staff.",
+            "rate": 5,
+            "by": {
+                "_id": "u0012",
+                "fullname": "Annelise",
+                "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+            }
+        }],
+        "likedByUsers" : ["mini-user"],
+        "isPopular": "true"
+
     }
 ]
+
