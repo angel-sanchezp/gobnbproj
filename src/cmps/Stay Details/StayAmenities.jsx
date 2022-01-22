@@ -76,10 +76,16 @@ export function StayAmenities({stay}) {
     return (
         <section>
             <section className="amenities-container">
+                <h2>What this place offer</h2>
                 <div className="amenities">
-                    <h2>What this place offer</h2>
                     {showAmenities.map((amenity, idx) => (
-                        <div className="amenity" key={idx}>{setAmenity(amenity)}{amenity}</div>
+                        <div className="amenity" key={idx}>
+                            {setAmenity(amenity)}
+                            <span>
+                            {amenity}
+                            </span>
+                            
+                        </div>
                     ))}
                 </div>
                 <div className="more-amenities">
@@ -88,11 +94,23 @@ export function StayAmenities({stay}) {
             </section>
             <section>
                 <div className="amenities-modal hidden">
-                    <div><button onClick={() => amenityModal(false)}>X</button></div>
-                    <div><h2>What this place offer</h2>
-                    {amenities.map((amenity, idx) => (
-                        <div className="amenity" key={idx}>{setAmenity(amenity)}{amenity}</div>
-                    ))}</div>
+                    <div className="modal-btn">
+                        <button  onClick={() => amenityModal(false)}>X</button>
+                    </div>
+                    <div>
+                        <h2>What this place offer</h2>
+                        <div className="amenities-area">
+                        {amenities.map((amenity, idx) => (
+                            <div className="amenity" key={idx}>
+                                <div className="amenity-img">
+                                    {setAmenity(amenity)}
+                                </div>
+                                {amenity}
+                            </div>
+                        ))}
+
+                    </div>
+                    </div>
                 </div>
             </section>
         </section>
