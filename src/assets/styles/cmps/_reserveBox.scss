@@ -1,19 +1,19 @@
 .reserve{
-    flex-basis: 30%;
-    display: block;
-    margin-left: 80px;
+    width: 33%;
+    
 }
 .reserve-box{
     // height: 300px;
+    position: relative;
     // width: 300px;
-    margin-top: rem(20px);
     border: 1px solid rgb(221, 221, 221);
     border-radius: 12px;
-    padding: 24px;
+    // padding: 24px;
     box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
 }
 
 .reserve-info {
+    // margin-top: rem(20px);
     height: rem(270px);
     width: rem(270px);
 }

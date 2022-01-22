@@ -28,6 +28,7 @@ export class Guests extends React.Component {
     }
     changeChildren(indicator) {
         const { children } = this.state
+        console.log(children)
         if (!children && indicator === -1) return
         this.setState(prevState => ({ ...prevState, children: children + indicator }))
         const value = this.state.children

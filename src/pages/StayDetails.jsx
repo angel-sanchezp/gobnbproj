@@ -52,7 +52,7 @@ class _StayDetails extends React.Component {
                         <span><button className="details-btn" type="button"><a className="ab" href="#stayreview">{headerReviews}</a></button></span>
                         {/* <span className='dot'>.</span> */}
                         {/* <span className="g">Superhost</span> */}
-                        <span className='dot'>.</span>
+                        <span className='dot'> · </span>
                         <span><button className="details-btn g" type="button"><a className="ag" href="#staymap">{stay.location.address}</a></button></span>
                         </span>
                         <div>
