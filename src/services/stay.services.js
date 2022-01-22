@@ -36,6 +36,10 @@ const gStays = [
             "fullname": "Matsuda",
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         },
+        "aviable":{
+            "dateIn":"1642846357573",
+            "dateOut":"1643771045000"
+        },
         "location": {
             "country": "Japan",
             "countryCode": "JPN",
@@ -826,12 +830,13 @@ function _getFilteredStays(stays, filterBy) {
     } else if (filterBy.dateIn && filterBy.dateOut) {
         let { dateIn } = filterBy
         let { dateOut } = filterBy
-        console.log('dateIn', dateIn)
-        console.log('dateOut', dateOut)
+        console.log('dateIn', dateIn.valueOf())
+        console.log('dateOut', dateOut.valueOf())
+        console.log('stays',stays)
         const aviables = stays.filter((stay) => {
-            console.log('aviableIn', stay.aviable.dateIn)
-            console.log('aviableOut', stay.aviable.dateOut)
-            return stay.aviable.dateIn === dateIn
+            console.log('aviableIn', stay.aviable.dateIn.valueOf())
+            console.log('aviableOut', stay.aviable.dateOut.valueOf())
+            return stay.aviable.dateIn>dateIn.valueOf() 
         })
         return aviables
     } else if (filterBy.adults && filterBy.children) {
