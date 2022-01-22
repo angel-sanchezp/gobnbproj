@@ -20,6 +20,7 @@ class _AppFooter extends Component {
 
     render() {
         return (
+            <section>
             <footer className="main-footer full">
                 <section className='footer-section'>
                     <section className="footer-links-container">
@@ -85,17 +86,26 @@ class _AppFooter extends Component {
                                 </div>
                                 </div>
                                 </section>
-                    <section className="footer-nav-container"><div><p>© 2021 Place&amp; Go,
-                        <span>Inc.</span></p><span>·</span><a href="#/about">About</a><span>·</span>
-                        <a href="#/login">Login</a><span>·</span><a href="#/host">Become a host</a>
-                    </div><div><p><i className="fas fa-globe" aria-hidden="true">
-                    </i><span>English (US)</span><span>$ US</span></p><p>
-                                <i className="fab fa-facebook-f" aria-hidden="true"></i>
-                                <i className="fab fa-twitter" aria-hidden="true"></i>
-                                <i className="fab fa-instagram" aria-hidden="true"></i></p></div>
-                    </section>
+
                 </section>
             </footer>
+             <section className="footer-nav-container">
+             <div className="copyrights"><p>© 2021 Place&amp; Go,
+             <span>Inc.</span></p><span>·</span><a href="#/about">About</a><span>·</span>
+             <a href="#/login">Login</a><span>·</span><a href="#/host">Become a host</a>
+         </div>
+         
+         <div className="footer-secont-container">
+             <p className="language"><i className="fas fa-globe" aria-hidden="true">
+             </i><span className="currancy">English (US)</span><span>$ US</span></p>
+             <p className="social-nav-bar">
+                 <i className="fab fa-facebook-f" aria-hidden="true"></i>
+                 <i className="fab fa-twitter" aria-hidden="true"></i>
+                 <i className="fab fa-instagram" aria-hidden="true"></i>
+             </p>
+         </div>
+         </section>
+         </section>
         )
     }
 }

@@ -2,6 +2,7 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import _ from 'lodash'
+import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 
 import { loadStays, changeHeaderClass } from '../store/stay/stay.actions.js'
 import { utilService } from '../services/utils.service'
@@ -117,6 +118,7 @@ class _Explore extends Component {
 
                     </ul>
                 </section>
+                <AppFooter/>
             </section>
         )
 
