@@ -184,39 +184,43 @@
     },
     {
         "_id": "s0005",
-        "name": "Cool Place",
+        "name": "Magnificent view on Eiffel Tower",
         "type": "Apartment",
         "imgUrls": [
-            "https://res.cloudinary.com/di0utpbop/image/upload/v1638353769/airdnd/55a0ef5e-d637-48b5-ace1-c7674a125315_eipvdi.jpg"
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642842882/Airbnb%20clone/c949b056_original_yajdmi.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642842883/Airbnb%20clone/73f3f0a1_original_dorzfp.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642842882/Airbnb%20clone/429819be_original_nzan2y.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642842883/Airbnb%20clone/abed101f_original_v9l0my.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642842881/Airbnb%20clone/79d1e16f_original_ryzczz.jpg"
         ],
-        "price": 200,
-        "summery": "Information",
+        "price": 160,
+        "summery": "Outstanding two floors apartment of 120 sqm with terraces overlooking the Seine and facing south. Art déco style. Modern furnitures.",
         "capacity": 4,
-        "bedrooms": 3,
+        "bedrooms": 2,
         "beds": 2,
-        "bathrooms": 1,
-        "sleep": ["https://res.cloudinary.com/di0utpbop/image/upload/v1638353774/airdnd/48633eb8-6610-44bb-a7ea-6f3e0ab5580e_asacpm.jpg"],
-        "amenities": ["Wifi", "Wash disher" , "Kitchen", "Parking", "Working space"],
+        "bathrooms": 2,
+        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642842881/Airbnb%20clone/ab5a02f8_original_vr3bly.jpg"],
+        "amenities": ["Kitchen", "TV" , "Washer", "Bath", "Wifi", "Elevator", "Dryer", "Balcony"],
         "host": {
             "_id": "h0005",
-            "fullname": "Puki Muki",
-            "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+            "fullname": "Helene",
+            "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
         "location": {
             "country": "France",
             "countryCode": "FR",
-            "address": "Paris",
-            "lat": 35.664252, 
-            "lng":139.702251
+            "address": "Paris, Île-de-France, France",
+            "lat": 48.856486, 
+            "lng": 2.286383
         },
         "reviews": [{
             "id": "r0005",
-            "txt": "Wow!",
+            "txt": "Just brilliant. You can almost touch the Eiffel Tower! Absolutely the highest standard. Can't fault it.",
             "rate": 4,
             "by": {
                 "_id": "u0005",
-                "fullname": "user5",
-                "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+                "fullname": "Neil",
+                "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
             }
         }],
         "likedByUsers" : ["mini-user"],
@@ -225,39 +229,43 @@
     },
     {
         "_id": "s0006",
-        "name": "Quiet place",
-        "type": "Apartment",
+        "name": "Loft on Canal St-Martin/15' walk to Le Marais/4bdr",
+        "type": "Loft",
         "imgUrls": [
-            "https://res.cloudinary.com/di0utpbop/image/upload/v1638353769/airdnd/55a0ef5e-d637-48b5-ace1-c7674a125315_eipvdi.jpg"
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642843330/Airbnb%20clone/174db9b0-52f1-4611-a49e-50c160b80534_ptqzh7.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642843331/Airbnb%20clone/a59fa4ad-61b9-4f2c-8a25-9cb00de48ea9_g2hbwu.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642843330/Airbnb%20clone/2c51d2e6-27da-4fe2-a8a5-c1c314d35c9c_pwye4d.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642843331/Airbnb%20clone/d8a726e9-5075-42cd-929a-d73181ddbedf_gbvhr6.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642843330/Airbnb%20clone/218c324c-4d5a-4755-a875-151ce1a618e3_t6c4bb.jpg"
         ],
-        "price": 80,
-        "summery": "Information",
-        "capacity": 2,
-        "bedrooms": 2,
-        "beds": 1,
-        "bathrooms": 1,
-        "sleep": ["https://res.cloudinary.com/di0utpbop/image/upload/v1638353774/airdnd/48633eb8-6610-44bb-a7ea-6f3e0ab5580e_asacpm.jpg"],
-        "amenities": ["Wifi", "Wash disher" , "Kitchen", "Parking", "Working space"],
+        "price": 708,
+        "summery": "Ancient industrial building, converted into a charming loft, perfect for trips with family, friends or colleagues. Located on the Canal Saint-Martin, one of the most lively and trendy area of Paris center(design shops, bars, restaurants...), only 15min walk from Le Marais area, and with train and metro's stations offering direct access to all main sight seing of Paris. Still, the loft is extraordinarily safe and quiet as located inside a private condo's courtyard (hidden from the street).",
+        "capacity": 11,
+        "bedrooms": 4,
+        "beds": 9,
+        "bathrooms": 2.5,
+        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642843330/Airbnb%20clone/0fccce7e-a98c-46b0-9eaf-fb69887f98fc_sw7mud.jpg"],
+        "amenities": ["Wifi", "Washer" , "Kitchen", "TV", "Dryer", "Bath"],
         "host": {
             "_id": "h0006",
-            "fullname": "Puki Muki",
-            "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+            "fullname": "Sagire",
+            "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
         "location": {
             "country": "France",
             "countryCode": "FR",
-            "address": "Paris",
-            "lat": 35.664252, 
-            "lng":139.702251
+            "address": "Paris, Île-de-France, France",
+            "lat": 48.874011, 
+            "lng": 2.363604
         },
         "reviews": [{
             "id": "r0006",
-            "txt": "Wow!",
-            "rate": 3,
+            "txt": "Great house for a group, really stylish. Sweet record player. Highly recommended for a group.",
+            "rate": 4,
             "by": {
                 "_id": "u0006",
-                "fullname": "user6",
-                "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+                "fullname": "Rong",
+                "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
             }
         }],
         "likedByUsers" : ["mini-user"],
@@ -266,91 +274,99 @@
     },
     {
         "_id": "s0007",
-        "name": "Beach place",
-        "type": "House",
+        "name": "Come & Dream in Quetzalcoatl`s Nest",
+        "type": "Condo",
         "imgUrls": [
-            "https://res.cloudinary.com/di0utpbop/image/upload/v1638353769/airdnd/55a0ef5e-d637-48b5-ace1-c7674a125315_eipvdi.jpg"
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642840810/Airbnb%20clone/3bd5a6f7-4dca-431f-b732-a40a3e3a9a32_kjb56q.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642840811/Airbnb%20clone/b28b6174-8d5b-4da3-8394-6b69827a1678_qiygt0.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642840810/Airbnb%20clone/389f9f94-1ab5-49b1-ba65-b43c393a3d3a_rfsj0f.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642840810/Airbnb%20clone/36c19df5-9825-470f-8b7c-2050501fa5fb_daqp73.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642840810/Airbnb%20clone/493cccd8-ebac-4f1d-af60-2043b5a8c863_soog3z.jpg"
         ],
-        "price": 220,
-        "summery": "Information",
-        "capacity": 3,
-        "bedrooms": 2,
-        "beds": 2,
-        "bathrooms": 1,
-        "sleep": ["https://res.cloudinary.com/di0utpbop/image/upload/v1638353774/airdnd/48633eb8-6610-44bb-a7ea-6f3e0ab5580e_asacpm.jpg"],
-        "amenities": ["Wifi", "Wash disher" , "Kitchen", "Parking", "Working space"],
+        "price": 349,
+        "summery": "InforStay in an awesome place. Famous by it´s organic architecture. Sleep inside Quetzalcoatl and enjoy it´s marvelous gardens and creative spaces. Fully equipped. 4 bedroom, plus 1 additional. 10 persons. Laundry room. Bread, fruit & coffee included.mation",
+        "capacity": 6,
+        "bedrooms": 4,
+        "beds": 5,
+        "bathrooms": 3.5,
+        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642840810/Airbnb%20clone/371b3955-c358-4b49-bb9c-1fb9dd108988_rodfy4.jpg"],
+        "amenities": ["Kitchen", "Parking" , "Washer", "Backyard", "Wifi", "TV", "Dryer"],
         "host": {
             "_id": "h0007",
-            "fullname": "Puki Muki",
-            "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+            "fullname": "Patricia",
+            "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
         "location": {
             "country": "Mexico",
             "countryCode": "MX",
-            "address": "Cancun",
-            "lat": 35.664252, 
-            "lng":139.702251
+            "address": "Naucalpan de Juárez, Estado de México, Mexico",
+            "lat": 19.478524, 
+            "lng": -99.279029
         },
         "reviews": [{
             "id": "r0007",
-            "txt": "Wow!",
+            "txt": "This home is even more beautiful in person - it was an absolute dream to stay here. Loved the guided tour and meditation. Patricia was such a lovely host. Hope to stay again in the future!",
             "rate": 5,
             "by": {
                 "_id": "u0007",
-                "fullname": "user7",
-                "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+                "fullname": "Alexis",
+                "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
             }
         }],
         "likedByUsers" : ["mini-user"],
-        "isPopular": "false"
+        "isPopular": "true"
 
     },
     {
         "_id": "s0008",
-        "name": "Beach",
+        "name": "The Seashell House",
         "type": "House",
         "imgUrls": [
-            "https://res.cloudinary.com/di0utpbop/image/upload/v1638353769/airdnd/55a0ef5e-d637-48b5-ace1-c7674a125315_eipvdi.jpg"
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642841396/Airbnb%20clone/b4bc6418_original_mkxjmm.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642841540/Airbnb%20clone/64728570-5673-4d6f-9a45-a332db33069e_ahl5bc.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642841398/Airbnb%20clone/e55fbcd6-15c1-41a1-a56e-7c7c291afa63_nf0xfp.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642841396/Airbnb%20clone/85987a21-8cc6-4c96-bc66-dad2e629172f_mo7nc4.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642841396/Airbnb%20clone/7870c2ef-10ae-4fba-9e65-6c088ae2b749_ppab1c.jpg"
         ],
-        "price": 220,
+        "price": 299,
         "summery": "Information",
-        "capacity": 3,
+        "capacity": 4,
         "bedrooms": 2,
         "beds": 2,
-        "bathrooms": 1,
-        "sleep": ["https://res.cloudinary.com/di0utpbop/image/upload/v1638353774/airdnd/48633eb8-6610-44bb-a7ea-6f3e0ab5580e_asacpm.jpg"],
-        "amenities": ["Wifi", "Wash disher" , "Kitchen", "Parking", "Working space"],
+        "bathrooms": 2.5,
+        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642841396/Airbnb%20clone/61ebbbab-3562-4d35-b73d-1e9bd2ce3c69_u62kut.jpg"],
+        "amenities": ["Wifi", "Beach access" , "Pool", "Air conditioning", "Kitchen", "Parking", "TV", "Balcony"],
         "host": {
             "_id": "h0008",
-            "fullname": "Puki Muki",
-            "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+            "fullname": "Michelle",
+            "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
         "location": {
             "country": "Mexico",
             "countryCode": "MX",
-            "address": "Cancun",
-            "lat": 35.664252, 
-            "lng":139.702251
+            "address": "Isla Mujeres, Mexico",
+            "lat": 21.210964, 
+            "lng": -86.718987
         },
         "reviews": [
             {
                 "id": "r0008",
-                "txt": "Wow!",
+                "txt": "Casa Caracol is stunning inside and out and Vanessa is wonderful - quick to respond with helpful tips and suggestions. The location is nice and quiet so you can get some great rest and relaxation by the pool. The air conditioning provides a nice retreat from the gorgeous afternoon sun, and the stars are gorgeous to gaze upon at night. 10/10 definitely would book again and recommend to all travelers.",
                 "rate": 5,
                 "by": {
                     "_id": "u0008",
-                    "fullname": "user8",
-                    "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+                    "fullname": "Kristen",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
                 }
             },
             {
                 "id": "r00081",
-                "txt": "Wow!",
+                "txt": "Such a great place! Thanks so much Michelle.",
                 "rate": 5,
                 "by": {
-                    "_id": "u0008",
-                    "fullname": "user8",
-                    "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+                    "_id": "u00081",
+                    "fullname": "Laura",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
                 }
             }
     ],
@@ -360,43 +376,47 @@
     },
     {
         "_id": "s0009",
-        "name": "Place",
-        "type": "House",
+        "name": "The Quarry, Beachfront sub penthouse 150m to clubs",
+        "type": "Condo",
         "imgUrls": [
-            "https://res.cloudinary.com/di0utpbop/image/upload/v1638353769/airdnd/55a0ef5e-d637-48b5-ace1-c7674a125315_eipvdi.jpg"
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642842179/Airbnb%20clone/f34fd198-05d2-4f33-b716-807f9a4615b6_b2lzkr.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642842177/Airbnb%20clone/471d112d-d0e6-4220-bba6-9c40090be815_aup7sf.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642842178/Airbnb%20clone/5e829b85-6fd7-43cf-abf1-3803dcacdc0c_ausisc.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642842178/Airbnb%20clone/779622bf-6472-4e6c-9a86-0536ea525d09_kz6cs0.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642842221/Airbnb%20clone/a960c349-50ab-452b-89d8-669b021276ed_rvzq8t.jpg"
         ],
-        "price": 220,
-        "summery": "Information",
-        "capacity": 3,
-        "bedrooms": 2,
-        "beds": 2,
+        "price": 403,
+        "summery": "From the moment you enter the property you will realize why you came to Cancun; the powder soft white sand beach, and the most beautiful turquoise water. Because, that is all you can see from the 180° panoramic views the apartment offers.",
+        "capacity": 2,
+        "bedrooms": 1,
+        "beds": 1,
         "bathrooms": 1,
-        "sleep": ["https://res.cloudinary.com/di0utpbop/image/upload/v1638353774/airdnd/48633eb8-6610-44bb-a7ea-6f3e0ab5580e_asacpm.jpg"],
-        "amenities": ["Wifi", "Wash disher" , "Kitchen", "Parking", "Working space"],
+        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642842177/Airbnb%20clone/a3ee018f-6db3-4bac-a75a-eaa15fa699f9_lj3u6a.jpg"],
+        "amenities": ["Beach access", "Wifi" , "Pool", "Tv", "Washer", "Kitchen", "Parking", "Elevator", "Dryer"],
         "host": {
             "_id": "h0009",
-            "fullname": "Puki Muki",
-            "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+            "fullname": "Bathany",
+            "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         },
         "location": {
             "country": "Mexico",
             "countryCode": "MX",
-            "address": "Cancun",
-            "lat": 35.664252, 
-            "lng":139.702251
+            "address": "Cancún, Quintana Roo, Mexico",
+            "lat": 21.131314, 
+            "lng": -86.748434
         },
         "reviews": [{
             "id": "r0009",
-            "txt": "Wow!",
+            "txt": "Wow!! Worth every penny to live like a King and Queen for a few days. Bethany, Alex and team went above and beyond to ensure we had everything we needed and asked for. Highly recommend and will definitely be back!!",
             "rate": 5,
             "by": {
                 "_id": "u0009",
-                "fullname": "user9",
-                "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+                "fullname": "Duke",
+                "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
             }
         }],
         "likedByUsers" : ["mini-user"],
-        "isPopular": "true"
+        "isPopular": "false"
 
     },
     {

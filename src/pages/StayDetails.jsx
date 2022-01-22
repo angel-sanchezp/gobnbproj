@@ -6,7 +6,6 @@ import { loadStays, changeHeaderClass } from '../store/stay/stay.actions.js'
 import { stayService } from '../services/stay.services.js';
 import { StayGallery } from '../cmps/Stay Details/StayGallery.jsx';
 import { StayInfo } from '../cmps/Stay Details/StayInfo.jsx';
-import { StayAmenities } from '../cmps/Stay Details/StayAmenities.jsx';
 import { StayReview } from '../cmps/Stay Details/StayReview.jsx';
 import { StayMap } from '../cmps/Stay Details/StayMap.jsx';
 import { HostInfo } from '../cmps/Stay Details/HostInfo.jsx';
