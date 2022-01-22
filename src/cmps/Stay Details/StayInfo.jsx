@@ -10,7 +10,7 @@ export function StayInfo({stay}){
                     {stay.summery}
                 </p>
             </section>
-            <section className="reserve-info">
+            <section className="reserve">
                 <StayReserve/>
 
             </section>
