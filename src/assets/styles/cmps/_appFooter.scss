@@ -1,7 +1,6 @@
 
 .main-footer {
-    margin-top: 40px;
-    border-top: 1px solid #ddd;
+    // border-top: 1px solid #ddd;
     background-color: #f7f7f7;
     bottom: 0;
     display: grid;
@@ -25,13 +24,14 @@
         font-size: 1.75rem;
         font-family: airbnb-bold,sans-serif;
         color: #222;
+        text-align: center;
     }
 
     .footer-links-container>div {
         display: -webkit-flex;
         display: flex;
         -webkit-justify-content: flex-start;
-        justify-content: flex-start;
+        justify-content: space-evenly;
     }
 
     .div-link{
@@ -71,6 +71,7 @@
     .footer-links-container>div>*>*{
      display: flex;
      flex-direction: column;
+     justify-content: space-evenly;
     }
 
       
