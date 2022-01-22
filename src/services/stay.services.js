@@ -47,6 +47,7 @@ const gStays = [
         }],
         "location": {
             "country": "Japan",
+            "city":"Tokyo",
             "countryCode": "JPN",
             "address": "Reversible Destiny Lofts",
             "lat": 35.680984,
@@ -96,6 +97,7 @@ const gStays = [
         }],
         "location": {
             "country": "Japan",
+            "city":"Tokyo",
             "countryCode": "JPN",
             "address": "Shibuya, Tokyo",
             "lat": 35.671625,
@@ -145,6 +147,7 @@ const gStays = [
         }],
         "location": {
             "country": "Japan",
+            "city":"Kyoto",
             "countryCode": "JPN",
             "address": "TEMPLE HOTEL SHODENJI",
             "lat": 35.650278,
@@ -197,6 +200,7 @@ const gStays = [
         }],
         "location": {
             "country": "France",
+            "city":"Paris",
             "countryCode": "FR",
             "address": "Paris, Île-de-France, France",
             "lat": 48.882233,
@@ -246,6 +250,7 @@ const gStays = [
         }],
         "location": {
             "country": "France",
+            "city":"Paris",
             "countryCode": "FR",
             "address": "Paris, Île-de-France, France",
             "lat": 48.856486,
@@ -295,6 +300,7 @@ const gStays = [
         }],
         "location": {
             "country": "France",
+            "city":"Marsella",
             "countryCode": "FR",
             "address": "Paris, Île-de-France, France",
             "lat": 48.874011,
@@ -344,6 +350,7 @@ const gStays = [
         }],
         "location": {
             "country": "Mexico",
+            "city":"Cancun",
             "countryCode": "MX",
             "address": "Naucalpan de Juárez, Estado de México, Mexico",
             "lat": 19.478524,
@@ -393,6 +400,7 @@ const gStays = [
         }],
         "location": {
             "country": "Mexico",
+            "city":"Cancun",
             "countryCode": "MX",
             "address": "Isla Mujeres, Mexico",
             "lat": 21.210964,
@@ -454,6 +462,7 @@ const gStays = [
         }],
         "location": {
             "country": "Mexico",
+            "city":"Ciudad de Mexico",
             "countryCode": "MX",
             "address": "Cancún, Quintana Roo, Mexico",
             "lat": 21.131314,
@@ -503,6 +512,7 @@ const gStays = [
         }],
         "location": {
             "country": "Indonesia",
+
             "countryCode": "IDN",
             "address": "Abiansemal, Bali, Indonesia",
             "lat": -8.573603,
@@ -936,8 +946,17 @@ function _getFilteredStays(stays, filterBy) {
         //         return toyLabels.includes(label)
         //     })
 
-    } else {
+    } else  if(filterBy.city){
+        let { city } = filterBy
+        // console.log('location in filtereed stays',city)
+        const cities = stays.filter((stay) => {
+            return stay.location.city === city
+        })
+        // console.log('locations in service',location)
+        return cities
+    }else{
         return stays
+        
     }
 }
 

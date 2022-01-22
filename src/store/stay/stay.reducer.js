@@ -2,7 +2,8 @@ const initialState = {
     stays: [],
     filterBy: {
         location: "",
-        dateIn: "",
+        // city:"",
+        dateIn: '',
         dateOut: "",
         guests: "",
         amenities:[],

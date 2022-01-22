@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 
 
-import { loadStays,  changeHeaderClass , changeFilter } from '../store/stay/stay.actions.js'
+import { loadStays,  changeHeaderClass , changeFilter, setFilter} from '../store/stay/stay.actions.js'
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 
 import tokyo from '../assets/img/tokyo.jpeg'
@@ -16,6 +16,9 @@ import BecomeHost from '../assets/img/become_a_host.jpeg'
 class _HomePage extends React.Component {
     state = {
         class: 'home-header-expanded',
+        filterBy:{
+            city:''
+        }
     
     }
 
@@ -23,8 +26,16 @@ class _HomePage extends React.Component {
         window.addEventListener('scroll', this.listenScrollEvent)
         this.props.changeHeaderClass(this.state.class)
         this.props.loadStays()
-
+        
     }
+    
+        componentDidUpdate(prevProps, prevState) {
+            // console.log(prevProps.filterBy)
+            // console.log('props in home upadte ', this.props.filterBy)
+            if (prevProps.filterBy !== this.props.filterBy) {
+                this.props.loadStays();
+            }
+        }
 
     componentWillUnmount(){
         window.removeEventListener('scroll', this.listenScrollEvent)
@@ -48,12 +59,29 @@ class _HomePage extends React.Component {
 
 
 
-    componentDidUpdate(prevProps, prevState) {
-        // console.log(prevProps.filterBy)
-        // console.log('props in home upadte ', this.props.filterBy)
-        if (prevProps.filterBy !== this.props.filterBy) {
-            this.props.loadStays();
-        }
+    onStayClicked(stayId) {
+        window.location.href = `/details/${stayId}`;
+    }
+
+    onSetLocation=(city)=>{
+        const {filterBy}=this.state
+        filterBy.city = city
+        console.log(this.state.filterBy)
+        this.setState({ filterBy });
+        this.onSetFilter()
+
+
+    }
+
+    
+    onSetFilter = () => {
+        // console.log('home filterby ', this.state.filterBy)
+        const {filterBy}=this.state
+        console.log(filterBy)
+        this.props.setFilter(filterBy);
+        setTimeout(() => {
+            this.props.history.push(`/explore?location=${filterBy.city}`)
+        }, 1000)
     }
 
    
@@ -82,19 +110,19 @@ class _HomePage extends React.Component {
 
                     <h1>Inspiration for your next trip</h1>
                     <section className='card-container'>
-                        <div className="ins-image">
+                        <div className="ins-image" onClick={() => this.onSetLocation('Tokyo')}>
                             <img alt="cat" src={tokyo} />
                             <h2>Tokyo</h2>
                         </div>
-                        <div className="ins-image">
+                        <div className="ins-image" onClick={() => this.onSetLocation('Santorini')}>
                             <img  alt="cat" src={santorini} />
                             <h2>Santorini</h2>
                         </div>
-                        <div className="ins-image">
+                        <div className="ins-image" onClick={() => this.onSetLocation('Paris')}>
                             <img alt="cat" src={paris}/>
                             <h2>Paris</h2>
                         </div>
-                        <div className="ins-image">
+                        <div className="ins-image" onClick={() => this.onSetLocation('Cancun')}>
                             <img  alt="cat" src={cancun} />
                             <h2>Cancun</h2>
                         </div>
@@ -103,13 +131,14 @@ class _HomePage extends React.Component {
                     <h1>Most Popular</h1>
                     <section className="card-container">
                         {stays.slice(0,4).map(stay =>
-                            <div className='pop-stay' key={stay._id}>
+                            <div className='pop-stay' key={stay._id} onClick={() => this.onStayClicked(stay._id)}>
                                 <img className="pop-img" alt="cat" src={stay.imgUrls[0]} />
                                 <div className="pop-img">
                                     <h4>{stay.name}</h4>
                                     {/* <p>Price: <span>${stay.price.toLocaleString()}</span></p> */}
                                 </div>
                             </div>)
+                          
                         }
 
                     </section>
@@ -147,7 +176,8 @@ function mapStateToProps(state) {
 const mapDispatchToProps = {
     loadStays,
     changeHeaderClass,
-    changeFilter
+    changeFilter,
+    setFilter
 
 }
 
