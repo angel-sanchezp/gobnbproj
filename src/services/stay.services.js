@@ -875,7 +875,7 @@ async function query(filterBy) {
 
 
 function _getFilteredStays(stays, filterBy) {
-    // console.log(filterBy)
+    console.log(filterBy)
     if (filterBy.location) {
         let { location } = filterBy
         // console.log('location in filtereed stays',location)
@@ -901,7 +901,7 @@ function _getFilteredStays(stays, filterBy) {
             
             return !isNotAvailable
         });
-
+         console.log(availables)
         return availables
     } else if (filterBy.adults && filterBy.children) {
         let { adults } = filterBy

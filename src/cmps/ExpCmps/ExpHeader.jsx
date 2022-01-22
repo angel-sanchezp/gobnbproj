@@ -5,6 +5,7 @@ import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
 import { SearchModal } from './SearchModel.jsx'
 import { Logo } from '../shared/logo.jsx'
 
+
 class _ExpHeader extends Component {
 
     state = {
@@ -61,7 +62,7 @@ class _ExpHeader extends Component {
                             </button>
                         </form>
                     ) : (
-                        <SearchModal onCloseModal={this.closeModal}/> 
+                        <SearchModal onCloseModal={this.closeModal} onSetFilter={this.onSetFilter} isMinFilter={this.props.isMinFilter}/> 
                     )}
                 </section>
             </div>
@@ -76,5 +77,6 @@ function mapStateToProps(state) {
         isMinFilter: state.stayModule.isMinFilter
     }
 }
+
 
 export const ExpHeader = connect(mapStateToProps)(_ExpHeader)

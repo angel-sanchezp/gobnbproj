@@ -17,11 +17,17 @@ class _HomeHeader extends Component {
     onSetFilter = (filterBy) => {
         console.log('home filterby ', filterBy)
         this.props.setFilter(filterBy);
-
         const { location, dateIn, dateOut, guests = 1 } = filterBy 
 
+        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        let checkIn = (dateIn.getDay())  
+        let checkOut =(dateOut.getDay())  
+        let month=(monthNames[dateOut.getMonth()])
+
+
         setTimeout(() => {
-            this.props.history.push(`/explore?location=${location}&dateIn=${dateIn.valueOf()}&dateOut=${dateOut.valueOf()}&guests=${guests}`)
+            this.props.history.push(`/explore?location=${location}&dateIn=${checkIn}&dateOut=${checkOut}&month=${month}&guests=${guests}`)
         }, 1000)
     }
 
