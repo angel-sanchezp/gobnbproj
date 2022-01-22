@@ -1,5 +1,5 @@
 .explore-page{
-    padding: rem(80px);
+    padding: 0 rem(80px);
     border-top: 0.5px solid #ddddddba;
 }
 
@@ -12,7 +12,6 @@
     column-gap: 24px;
     // row-gap: 40px;
     padding-top: 16px;
-    padding-bottom: 250px;
     .explore-card-stay {
         position: relative;
         cursor: pointer;
@@ -32,22 +31,16 @@
     }
 }
 
-
-    
-
-
 .txt-explore-page{
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
-    border-top: 0.5px solid #ddddddba;
     border-bottom: 0.5px solid #ddddddba;
     font-size: 12px;
     font-weight: normal !important;
     .small-txt-exp-page{
         margin:15px
     }
-    
-    
 }
+
 .filter-sort-line{
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
     color: #393939;
