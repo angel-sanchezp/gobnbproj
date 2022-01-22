@@ -23,23 +23,27 @@
         object-fit: contain;
         cursor: pointer;
         width: 123px;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
     }
 
     .secondary-search-bar {
         cursor: pointer;
         grid-row: 2;
-        margin-top: 25px;
-        left: 45%;
+        margin-top: 45px;
+        left: 50%;
         transform: translate(-50%, -50%);
         position: absolute;
         box-shadow: 0 0 0.1em 0.04em rgb(46 47 48 / 27%), 0 0.25em 1em rgb(90 125 188 / 5%);
-        border-radius: 40px;
+        border-radius: 45px;
         background-color: #fff;
     }
 
     .right-nav {
         display: flex;
         align-items: center;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
 
         .host-options {
             display: flex;
@@ -47,10 +51,11 @@
         }
 
         .host-options .become {
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
             letter-spacing: 0.1px;
             -webkit-margin-end: 30px;
             margin-inline-end: 30px;
-            font-family: airbnb-medium;
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
             font-size: 14px;
         }
 
@@ -59,9 +64,21 @@
             cursor: pointer;
             position: relative;
             box-shadow: 0 0 0.1em 0.04em rgb(46 47 48 / 27%), 0 0.25em 1em rgb(90 125 188 / 5%);
-            width: 75px;
-            height: 40px;
+            width: 80px;
+            height: 42px;
             border-radius: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .burger{
+                font-size: 18px;
+                margin-top: 10px;
+                margin-left: 10px;
+                font-weight: 400;
+            }
+            .user-avatar{
+                margin-top: 2px;
+            }
         }
     }
 
@@ -78,6 +95,8 @@
     .main-nav a {
         text-decoration: none;
         color: white;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
     }
     .main-nav > *:not(:last-child) {
         margin-inline-end: 1rem;
@@ -130,6 +149,7 @@
 .app-header {
     display: grid;
     z-index: 200;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
     grid-template-columns: 80px auto 80px;
     grid-template-rows: 88px 8px;
     transition: background-color .5s ease-out,height .4s ease-out,box-shadow .3s ease-out;
@@ -149,6 +169,8 @@
     .main-nav a {
         text-decoration: none;
         color: black;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
     }
     .main-nav > *:not(:last-child) {
         margin-inline-end: 1rem;
@@ -166,6 +188,8 @@
     .right-nav {
         display: flex;
         align-items: center;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
 
         .host-options {
             display: flex;
@@ -173,11 +197,14 @@
         }
 
         .host-options .become {
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
             letter-spacing: 0.1px;
             -webkit-margin-end: 30px;
             margin-inline-end: 30px;
-            font-family: airbnb-medium;
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
             font-size: 14px;
+            font-weight: 500;
+            
         }
 
         .user-options {
@@ -185,9 +212,21 @@
             cursor: pointer;
             position: relative;
             box-shadow: 0 0 0.1em 0.04em rgb(46 47 48 / 27%), 0 0.25em 1em rgb(90 125 188 / 5%);
-            width: 75px;
-            height: 40px;
+            width: 80px;
+            height: 42px;
             border-radius: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .burger{
+                font-size: 18px;
+                margin-top: 10px;
+                margin-left: 10px;
+                font-weight: 400;
+            }
+            .user-avatar{
+                margin-top: 2px;
+            }
         }
     }
 }

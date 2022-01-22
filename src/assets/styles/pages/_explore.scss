@@ -1,5 +1,5 @@
 .explore-page{
-    padding: rem(80px);
+    padding: 0 rem(80px);
     border-top: 0.5px solid #ddddddba;
 }
 
@@ -12,10 +12,10 @@
     column-gap: 24px;
     // row-gap: 40px;
     padding-top: 16px;
-    padding-bottom: 250px;
     .explore-card-stay {
         position: relative;
         cursor: pointer;
+        margin-bottom: 20px;
     }
     .explore-card-image {
        border-radius: 12px;
@@ -32,22 +32,16 @@
     }
 }
 
-
-    
-
-
 .txt-explore-page{
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
-    border-top: 0.5px solid #ddddddba;
     border-bottom: 0.5px solid #ddddddba;
     font-size: 12px;
     font-weight: normal !important;
     .small-txt-exp-page{
         margin:15px
     }
-    
-    
 }
+
 .filter-sort-line{
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
     color: #393939;
@@ -101,17 +95,24 @@
         display: flex;
         color: #393939;
         justify-content: space-between;
+        margin-top:5px;
         .black-bold-txt{
             font-weight: 500;
+        }
+        .black-solid-txt{
+            font-weight: 300;
+
         }
        
     }
     .line2{
         display: flex;
-        color: silver;
+        color: #868686;
         justify-content: space-between;
+        font-size: 15px;
+        margin-top: 3px;
         .gray-small-txt{
-            font-size: 10px;
+            font-size: 13px;
         }
     }
 }

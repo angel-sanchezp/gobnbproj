@@ -1,47 +1,39 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link, NavLink } from 'react-router-dom'
-import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
 import { HomeHeader } from '../HomeCmps/HomeHeader.jsx';
 import { ExpHeader } from '../ExpCmps/ExpHeader.jsx';
-
-
+import { HeaderFilters } from '../Stay Layout/HeaderFilters.jsx';
 // import { user } from '../../assets/icon/user-icon.png'
 
+const ExploreHeader = () => (
+    <>
+        <ExpHeader />
+        <HeaderFilters/>
+    </>
+)
 
+const WrappedHomeHeader = ({ className }) => (
+    <header className={className}>
+        <HomeHeader/>
+    </header>
+)
 
+const HEADERS = {
+    "explore-header": ExploreHeader,
+    "details-header": ExpHeader
+}
 
 class _AppHeader extends Component {
-
 
     onLogoClicked() {
         window.location.href = `/`
     }
 
     render() {
+        const Header = HEADERS[this.props.class] || WrappedHomeHeader;
+
         return (
-            <header className={this.props.class} >
-                {
-                    this.props.class !== 'explore-header' && this.props.class !== 'details-header' &&
-                        <HomeHeader />
-
-                }
-
-                
-
-                {
-                    this.props.class ==='explore-header' &&
-                        <ExpHeader />
-                }
-
-                {
-                    this.props.class === 'details-header' &&
-                        <ExpHeader />
-                }
-
-
-
-            </header >
+            <Header className={this.props.class}/>
         )
     }
 }
@@ -53,8 +45,6 @@ function mapStateToProps(state) {
         isMinFilter: state.stayModule.isMinFilter
     }
 }
-
-
 
 export const AppHeader = connect(mapStateToProps)(_AppHeader)
 
