@@ -73,10 +73,12 @@
 
 .stay-sleep {
     width: 45%;
+    
 }
 
 .sleep {
     width: 100%;
+    height: 200px;;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -84,4 +86,12 @@
 .amenities-container {
     border-bottom: 1px solid #ddd;
     padding: rem(35px) 0px;
+}
+
+.amenity{
+    list-style: none;
+}
+
+.more-amenities{
+    cursor: pointer;
 }

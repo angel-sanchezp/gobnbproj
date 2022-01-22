@@ -1,12 +1,82 @@
+import { imageListClasses } from "@mui/material";
+import { isThisSecond } from "date-fns";
+
 export function StayAmenities({stay}) {
+    const { amenities } = stay;
+    const showAmenities = amenities.slice(0, 5);
+
+
+    const setAmenity = (amenity) => {
+        let logo;
+        console.log(amenity)
+        switch (amenity) {
+            case "Kitchen":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/kitchen_n1j0n3.png"];
+                break;
+            case "Wifi":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862381/Airbnb%20clone/wifi_la4k7v.png"];
+                break;
+            case "Bath":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862490/Airbnb%20clone/bathtub_h6kiwz.png"];
+                break;
+            case "Indoor fireplace":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/indoor_fireplace_ywjb0z.png"];
+                break;
+            case "Parking":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/parking_q8bdfj.png"];
+                break;
+            case "Stove":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/stove_ta63xx.png"];
+                break;
+            case "Pool":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/pool_z5m2b4.png"];
+                break;
+            case "TV":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/tv_qdldsn.png"];
+                break;
+            case "Washing machine":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/washer_lmfztp.png"];
+                break;
+            case "Dryer":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/dryer_giewr7.png"];
+                break;
+            case "Elevator":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/elevator_boepjl.png"];
+                break;
+            case "Beach access":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/beach_access_qlc0ou.png"];
+                break;
+            case "Balcony":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/balcony_raoqjb.png"];
+                break;
+            case "Backyard":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/backyard_vuijod.png"];
+                break;
+            case "Air conditioning":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/air_conditioning_fvm5mc.png"];
+                break;
+            case "Refrigerator":
+                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642864461/Airbnb%20clone/ref_rgdvrj.png"];
+                break;
+        }
+        
+        return (<img src={logo} alt="Not found" />);
+    }
+
+    const openAmenityModal = () => {
+        console.log('hi')
+    }
 
     return (
         <section className="amenities-container">
             <div className="amenities">
                 <h2>What this place offer</h2>
-                {stay.amenities.map((amenity, idx) => (
-                    <li key={idx}>{amenity} </li>
+                {showAmenities.map((amenity, idx) => (
+                    <div className="amenity" key={idx}>{setAmenity(amenity)}{amenity}</div>
                 ))}
+            </div>
+            <div className="more-amenities">
+                <div onClick={() => openAmenityModal()}>Show all {amenities.length} amenities</div>
             </div>
         </section>
     )
