@@ -1,8 +1,8 @@
 
-import {storageService} from './async-storage.service.js'
+import { storageService } from './async-storage.service.js'
 
 
-const STORAGE_KEY= 'STAYDB'
+const STORAGE_KEY = 'STAYDB'
 
 export const stayService = {
     query,
@@ -11,7 +11,7 @@ export const stayService = {
     remove,
 }
 
-const gStays = [   {
+const gStays = [{
     "_id": "s0001",
     "name": "Reversible Destiny Lofts/for4people",
     "type": "loft",
@@ -29,18 +29,22 @@ const gStays = [   {
     "beds": 4,
     "bathrooms": 1,
     "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642653312/Airbnb%20clone/e3c77364_original_ryeibc.jpg"],
-    "amenities": ["Kitchen", "Parking" , "Washer", "Air conditioning", "Wifi", "Elevator", "Dryer", "Indoor fireplace", "Stove"],
+    "amenities": ["Kitchen", "Parking", "Washer", "Air conditioning", "Wifi", "Elevator", "Dryer", "Indoor fireplace", "Stove"],
     "host": {
         "_id": "h0001",
         "fullname": "Matsuda",
         "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
     },
+    "aviable": {
+        "dateIn": "Mon Jan 24 2022 00:00:00 GMT+0200 (שעון ישראל (חורף))",
+        "dateOut": "Fri Jan 28 2022 00:00:00 GMT+0200 (שעון ישראל (חורף))",
+    },
     "location": {
         "country": "Japan",
         "countryCode": "JPN",
         "address": "Reversible Destiny Lofts",
-        "lat":35.680984, 
-        "lng":139.538030
+        "lat": 35.680984,
+        "lng": 139.538030
     },
     "reviews": [{
         "id": "r0001",
@@ -52,7 +56,7 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         }
     }],
-    "likedByUsers" : ["mini-user"],
+    "likedByUsers": ["mini-user"],
     "isPopular": "true"
 
 },
@@ -74,7 +78,7 @@ const gStays = [   {
     "beds": 4,
     "bathrooms": 2,
     "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642654286/Airbnb%20clone/5b2e7a69_original_tywgk8.jpg"],
-    "amenities": ["Kitchen", "TV" , "Dryer", "Bckyard", "Wifi", "Washer", "Air conditioning", "Indoor fireplace"],
+    "amenities": ["Kitchen", "TV", "Dryer", "Bckyard", "Wifi", "Washer", "Air conditioning", "Indoor fireplace"],
     "host": {
         "_id": "h0002",
         "fullname": "Kako & Keiko",
@@ -84,8 +88,8 @@ const gStays = [   {
         "country": "Japan",
         "countryCode": "JPN",
         "address": "Shibuya, Tokyo",
-        "lat": 35.671625, 
-        "lng":139.683750
+        "lat": 35.671625,
+        "lng": 139.683750
     },
     "reviews": [{
         "id": "r0002",
@@ -97,7 +101,7 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
         }
     }],
-    "likedByUsers" : ["mini-user"],
+    "likedByUsers": ["mini-user"],
     "isPopular": "true"
 
 },
@@ -119,7 +123,7 @@ const gStays = [   {
     "beds": 2,
     "bathrooms": 1,
     "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642655147/Airbnb%20clone/f4b99146-5efe-4138-b9a3-ba3895c6e949_za5tlt.jpg"],
-    "amenities": ["Kitchen", "Washing machine" , "Air conditioning", "Refrigerator", "Wifi", "Dryer"],
+    "amenities": ["Kitchen", "Washing machine", "Air conditioning", "Refrigerator", "Wifi", "Dryer"],
     "host": {
         "_id": "h0003",
         "fullname": "Otera",
@@ -129,8 +133,8 @@ const gStays = [   {
         "country": "Japan",
         "countryCode": "JPN",
         "address": "TEMPLE HOTEL SHODENJI",
-        "lat": 35.650278, 
-        "lng":139.754737
+        "lat": 35.650278,
+        "lng": 139.754737
     },
     "reviews": [{
         "id": "r0003",
@@ -142,7 +146,7 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
         }
     }],
-    "likedByUsers" : ["mini-user"],
+    "likedByUsers": ["mini-user"],
     "isPopular": "false"
 
 },
@@ -167,7 +171,7 @@ const gStays = [   {
         "https://res.cloudinary.com/kitsunex3/image/upload/v1642652059/Airbnb%20clone/1ff8fe45-19d2-41cc-8053-f6156a113f4c_dvxobz.jpg",
         "https://res.cloudinary.com/kitsunex3/image/upload/v1642652059/Airbnb%20clone/275411d2-2ca7-4148-8ab9-82bff0c5bc79_uu1gkz.jpg"
     ],
-    "amenities": ["City skyline view", "Wifi", "TV" , "Washer", "Private balcony", "Kitchen", "Parking", "Elevator", "Dryer", "Indoor fireplace"],
+    "amenities": ["City skyline view", "Wifi", "TV", "Washer", "Private balcony", "Kitchen", "Parking", "Elevator", "Dryer", "Indoor fireplace"],
     "host": {
         "_id": "h0004",
         "fullname": "Chris",
@@ -177,8 +181,8 @@ const gStays = [   {
         "country": "France",
         "countryCode": "FR",
         "address": "Paris, Île-de-France, France",
-        "lat": 48.882233, 
-        "lng":2.343122
+        "lat": 48.882233,
+        "lng": 2.343122
     },
     "reviews": [{
         "id": "r0004",
@@ -190,7 +194,7 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
         }
     }],
-    "likedByUsers" : ["mini-user"],
+    "likedByUsers": ["mini-user"],
     "isPopular": "true"
 
 },
@@ -208,7 +212,7 @@ const gStays = [   {
     "beds": 2,
     "bathrooms": 1,
     "sleep": ["https://res.cloudinary.com/di0utpbop/image/upload/v1638353774/airdnd/48633eb8-6610-44bb-a7ea-6f3e0ab5580e_asacpm.jpg"],
-    "amenities": ["Wifi", "Wash disher" , "Kitchen", "Parking", "Working space"],
+    "amenities": ["Wifi", "Wash disher", "Kitchen", "Parking", "Working space"],
     "host": {
         "_id": "h0005",
         "fullname": "Puki Muki",
@@ -218,8 +222,8 @@ const gStays = [   {
         "country": "France",
         "countryCode": "FR",
         "address": "Paris",
-        "lat": 35.664252, 
-        "lng":139.702251
+        "lat": 35.664252,
+        "lng": 139.702251
     },
     "reviews": [{
         "id": "r0005",
@@ -231,7 +235,7 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         }
     }],
-    "likedByUsers" : ["mini-user"],
+    "likedByUsers": ["mini-user"],
     "isPopular": "false"
 
 },
@@ -249,7 +253,7 @@ const gStays = [   {
     "beds": 1,
     "bathrooms": 1,
     "sleep": ["https://res.cloudinary.com/di0utpbop/image/upload/v1638353774/airdnd/48633eb8-6610-44bb-a7ea-6f3e0ab5580e_asacpm.jpg"],
-    "amenities": ["Wifi", "Wash disher" , "Kitchen", "Parking", "Working space"],
+    "amenities": ["Wifi", "Wash disher", "Kitchen", "Parking", "Working space"],
     "host": {
         "_id": "h0006",
         "fullname": "Puki Muki",
@@ -259,8 +263,8 @@ const gStays = [   {
         "country": "France",
         "countryCode": "FR",
         "address": "Paris",
-        "lat": 35.664252, 
-        "lng":139.702251
+        "lat": 35.664252,
+        "lng": 139.702251
     },
     "reviews": [{
         "id": "r0006",
@@ -272,7 +276,7 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         }
     }],
-    "likedByUsers" : ["mini-user"],
+    "likedByUsers": ["mini-user"],
     "isPopular": "false"
 
 },
@@ -290,7 +294,7 @@ const gStays = [   {
     "beds": 2,
     "bathrooms": 1,
     "sleep": ["https://res.cloudinary.com/di0utpbop/image/upload/v1638353774/airdnd/48633eb8-6610-44bb-a7ea-6f3e0ab5580e_asacpm.jpg"],
-    "amenities": ["Wifi", "Wash disher" , "Kitchen", "Parking", "Working space"],
+    "amenities": ["Wifi", "Wash disher", "Kitchen", "Parking", "Working space"],
     "host": {
         "_id": "h0007",
         "fullname": "Puki Muki",
@@ -300,8 +304,8 @@ const gStays = [   {
         "country": "Mexico",
         "countryCode": "MX",
         "address": "Cancun",
-        "lat": 35.664252, 
-        "lng":139.702251
+        "lat": 35.664252,
+        "lng": 139.702251
     },
     "reviews": [{
         "id": "r0007",
@@ -313,7 +317,7 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         }
     }],
-    "likedByUsers" : ["mini-user"],
+    "likedByUsers": ["mini-user"],
     "isPopular": "false"
 
 },
@@ -331,7 +335,7 @@ const gStays = [   {
     "beds": 2,
     "bathrooms": 1,
     "sleep": ["https://res.cloudinary.com/di0utpbop/image/upload/v1638353774/airdnd/48633eb8-6610-44bb-a7ea-6f3e0ab5580e_asacpm.jpg"],
-    "amenities": ["Wifi", "Wash disher" , "Kitchen", "Parking", "Working space"],
+    "amenities": ["Wifi", "Wash disher", "Kitchen", "Parking", "Working space"],
     "host": {
         "_id": "h0008",
         "fullname": "Puki Muki",
@@ -341,8 +345,8 @@ const gStays = [   {
         "country": "Mexico",
         "countryCode": "MX",
         "address": "Cancun",
-        "lat": 35.664252, 
-        "lng":139.702251
+        "lat": 35.664252,
+        "lng": 139.702251
     },
     "reviews": [{
         "id": "r0008",
@@ -354,7 +358,7 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         }
     }],
-    "likedByUsers" : ["mini-user"],
+    "likedByUsers": ["mini-user"],
     "isPopular": "false"
 
 },
@@ -372,7 +376,7 @@ const gStays = [   {
     "beds": 2,
     "bathrooms": 1,
     "sleep": ["https://res.cloudinary.com/di0utpbop/image/upload/v1638353774/airdnd/48633eb8-6610-44bb-a7ea-6f3e0ab5580e_asacpm.jpg"],
-    "amenities": ["Wifi", "Wash disher" , "Kitchen", "Parking", "Working space"],
+    "amenities": ["Wifi", "Wash disher", "Kitchen", "Parking", "Working space"],
     "host": {
         "_id": "h0009",
         "fullname": "Puki Muki",
@@ -382,8 +386,8 @@ const gStays = [   {
         "country": "Mexico",
         "countryCode": "MX",
         "address": "Cancun",
-        "lat": 35.664252, 
-        "lng":139.702251
+        "lat": 35.664252,
+        "lng": 139.702251
     },
     "reviews": [{
         "id": "r0009",
@@ -395,7 +399,7 @@ const gStays = [   {
             "imgUrl": "https://source.unsplash.com/random/100x100/?face"
         }
     }],
-    "likedByUsers" : ["mini-user"],
+    "likedByUsers": ["mini-user"],
     "isPopular": "true"
 
 }
@@ -403,41 +407,64 @@ const gStays = [   {
 
 _createStays()
 
-function  _createStays(){
-     storageService.query(STORAGE_KEY)
-     .then((stays)=>{
-           if(!stays || !stays.length) {
-            storageService.save(STORAGE_KEY,gStays)
-           }
+function _createStays() {
+    storageService.query(STORAGE_KEY)
+        .then((stays) => {
+            if (!stays || !stays.length) {
+                storageService.save(STORAGE_KEY, gStays)
+            }
 
-           return stays 
-     })    
+            return stays
+        })
 
 }
 
- async function query(filterBy) {
-    console.log('filterby in service',filterBy)
-   const stays= await storageService.query(STORAGE_KEY)
+async function query(filterBy) {
+    console.log('filterby in service', filterBy)
+    const stays = await storageService.query(STORAGE_KEY)
 
-   const filteredStays = _getFilteredStays(stays, filterBy)
-   console.log('filteredStays in service',filteredStays)
+    const filteredStays = _getFilteredStays(stays, filterBy)
+    console.log('filteredStays in service', filteredStays)
 
-   return filteredStays
+    return filteredStays
 }
 
 
 function _getFilteredStays(stays, filterBy) {
-    console.log(filterBy)
+    // console.log(filterBy)
     if (filterBy.location) {
-        let { location} = filterBy
-    // console.log('location in filtereed stays',location)
+        let { location } = filterBy
+        // console.log('location in filtereed stays',location)
         const locations = stays.filter((stay) => {
             return stay.location.country.toLowerCase() === location.toLowerCase()
         })
         // console.log('locations in service',location)
         return locations
-    }else{
+    } else if (filterBy.dateIn && filterBy.dateOut) {
+        let { dateIn } = filterBy
+        let { dateOut } = filterBy
+        console.log('dateIn', dateIn)
+        console.log('dateOut', dateOut)
+        const aviables = stays.filter((stay) => {
+            console.log('aviableIn', stay.aviable.dateIn)
+            console.log('aviableOut', stay.aviable.dateOut)
+            return stay.aviable.dateIn === dateIn
+        })
+        return aviables
+    } else if (filterBy.adults && filterBy.children) {
+        let { adults } = filterBy
+        let { children } = filterBy
+        let capacity = adults + children
+        const capacities = stays.filter((stay) => {
+            console.log(stay.capacity)
+            return stay.capacity === +capacity
+        })
+        return capacities
+
+
+    } else {
         return stays
+
     }
 }
 
