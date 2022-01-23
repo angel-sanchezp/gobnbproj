@@ -73,7 +73,7 @@ class _Explore extends Component {
     }
 
     formatDates = (dateIn, dateOut) => {
-        return `${moment(dateIn).format("MMM D")} - ${moment(dateOut).format("MMM D")}`
+        return `${moment(parseInt(dateIn)).format("MMM D")} - ${moment(parseInt(dateOut)).format("MMM D")}`
     }
 
     // const onSelectStay = (stayId) => {

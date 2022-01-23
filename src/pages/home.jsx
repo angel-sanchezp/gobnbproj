@@ -19,7 +19,6 @@ class _HomePage extends React.Component {
         filterBy:{
             city:''
         }
-    
     }
 
     componentDidMount() {
@@ -29,13 +28,13 @@ class _HomePage extends React.Component {
         
     }
     
-        componentDidUpdate(prevProps, prevState) {
-            // console.log(prevProps.filterBy)
-            // console.log('props in home upadte ', this.props.filterBy)
-            if (prevProps.filterBy !== this.props.filterBy) {
-                this.props.loadStays();
-            }
+    componentDidUpdate(prevProps, prevState) {
+        // console.log(prevProps.filterBy)
+        // console.log('props in home upadte ', this.props.filterBy)
+        if (prevProps.filterBy !== this.props.filterBy) {
+            this.props.loadStays();
         }
+    }
 
     componentWillUnmount(){
         window.removeEventListener('scroll', this.listenScrollEvent)
@@ -57,8 +56,6 @@ class _HomePage extends React.Component {
         }
     }
 
-
-
     onStayClicked(stayId) {
         window.location.href = `/details/${stayId}`;
     }
@@ -69,10 +66,7 @@ class _HomePage extends React.Component {
         console.log(this.state.filterBy)
         this.setState({ filterBy });
         this.onSetFilter()
-
-
     }
-
     
     onSetFilter = () => {
         // console.log('home filterby ', this.state.filterBy)
@@ -83,10 +77,6 @@ class _HomePage extends React.Component {
             this.props.history.push(`/explore?location=${filterBy.city}`)
         }, 1000)
     }
-
-   
-
-
 
     render() {
         const { stays } = this.props

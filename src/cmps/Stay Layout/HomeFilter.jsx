@@ -108,7 +108,6 @@ export class HomeFilter extends React.Component {
                             placeholder="Add dates"
                             onChange={this.handleChange}
                             onClick={() => this.OpenModal('calendar')}
-
                             value={formattedDateIn} />
                     </label>
                     <label htmlFor="check-out">

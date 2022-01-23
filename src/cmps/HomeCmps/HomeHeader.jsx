@@ -20,7 +20,7 @@ class _HomeHeader extends Component {
         const { location, dateIn, dateOut, guests = 1 } = filterBy 
 
         setTimeout(() => {
-            this.props.history.push(`/explore?location=${location}&dateIn=${dateIn}&dateOut=${dateOut}&guests=${guests}`)
+            this.props.history.push(`/explore?location=${location}&dateIn=${dateIn.valueOf()}&dateOut=${dateOut.valueOf()}&guests=${guests}`)
         }, 1000)
     }
 
