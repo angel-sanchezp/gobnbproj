@@ -16,7 +16,7 @@ export function StayMap({stay}) {
     const loc = { lat: stay.location.lat, lng: stay.location.lng }
     return (
         <section className='map-container' id="staymap">
-            <div><h2>Where you'll be</h2></div>
+            <div className="h2-general"><h2>Where you'll be</h2></div>
             <div>
                 <LoadScript googleMapsApiKey='AIzaSyDRSjfskUcII98LZQXzMblQX_hnBhcX26k'>
                     <GoogleMap mapContainerStyle={containerStyle} center={loc} zoom={16}>
@@ -28,7 +28,7 @@ export function StayMap({stay}) {
                 </LoadScript>
             </div>
             <div>
-                <h3>{loc.address}</h3>
+                <h4>{stay.location.address}</h4>
                 <div className="map-info">
                 <p>More information about location</p>
                 </div>

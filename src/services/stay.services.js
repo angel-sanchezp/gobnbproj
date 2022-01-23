@@ -98,6 +98,7 @@ const gStays = [
         },
         "reviews": [{
             "id": "r0002",
+            "created": Date.now(),
             "txt": "Great room in a perfect location! Keiko was the perfect host giving us wonderful tips and insider info.",
             "rate": 4,
             "by": {
@@ -148,6 +149,7 @@ const gStays = [
         },
         "reviews": [{
             "id": "r0003",
+            "created": Date.now(),
             "txt": "I wish Airbnb had ten stars for reviews.. this place was quite special for japan. The space was larger than expected. Very clean and everything one needs for the perfect stay. The staff were quick to respond and I simply had the best stay in years in Tokyo here!",
             "rate": 5,
             "by": {
@@ -201,6 +203,7 @@ const gStays = [
         },
         "reviews": [{
             "id": "r0004",
+            "created": Date.now(),
             "txt": "This is a one of a kind rental. An experience not to be missed.",
             "rate": 5,
             "by": {
@@ -251,6 +254,7 @@ const gStays = [
         },
         "reviews": [{
             "id": "r0005",
+            "created": Date.now(),
             "txt": "Just brilliant. You can almost touch the Eiffel Tower! Absolutely the highest standard. Can't fault it.",
             "rate": 4,
             "by": {
@@ -301,6 +305,7 @@ const gStays = [
         },
         "reviews": [{
             "id": "r0006",
+            "created": Date.now(),
             "txt": "Great house for a group, really stylish. Sweet record player. Highly recommended for a group.",
             "rate": 4,
             "by": {
@@ -351,6 +356,7 @@ const gStays = [
         },
         "reviews": [{
             "id": "r0007",
+            "created": Date.now(),
             "txt": "This home is even more beautiful in person - it was an absolute dream to stay here. Loved the guided tour and meditation. Patricia was such a lovely host. Hope to stay again in the future!",
             "rate": 5,
             "by": {
@@ -402,6 +408,7 @@ const gStays = [
         "reviews": [
             {
                 "id": "r0008",
+                "created": Date.now(),
                 "txt": "Casa Caracol is stunning inside and out and Vanessa is wonderful - quick to respond with helpful tips and suggestions. The location is nice and quiet so you can get some great rest and relaxation by the pool. The air conditioning provides a nice retreat from the gorgeous afternoon sun, and the stars are gorgeous to gaze upon at night. 10/10 definitely would book again and recommend to all travelers.",
                 "rate": 5,
                 "by": {
@@ -412,6 +419,7 @@ const gStays = [
             },
             {
                 "id": "r00081",
+                "created": Date.now(),
                 "txt": "Such a great place! Thanks so much Michelle.",
                 "rate": 5,
                 "by": {
@@ -463,6 +471,7 @@ const gStays = [
         },
         "reviews": [{
             "id": "r0009",
+            "created": Date.now(),
             "txt": "Wow!! Worth every penny to live like a King and Queen for a few days. Bethany, Alex and team went above and beyond to ensure we had everything we needed and asked for. Highly recommend and will definitely be back!!",
             "rate": 5,
             "by": {
@@ -513,6 +522,7 @@ const gStays = [
         },
         "reviews": [{
             "id": "r0010",
+            "created": Date.now(),
             "txt": "Absolutely amazing. Much better than the photos. I am so so glad I was able to stay here. The entire village is so beautiful and relaxing and the Aura House is simply stunning. The house is incredible, clean, and has so many beautiful touches and the staff is super helpful. My favorite stay in Bali. I highly highly recommend.",
             "rate": 5,
             "by": {
@@ -563,6 +573,7 @@ const gStays = [
         },
         "reviews": [{
             "id": "r0011",
+            "created": Date.now(),
             "txt": "Stunning place with magic atmosphere. Definitely a place you`d come back to!",
             "rate": 5,
             "by": {
@@ -614,6 +625,7 @@ const gStays = [
         "reviews": [
             {
                 "id": "r0012",
+                "created": Date.now(),
                 "txt": "Amazing Airbnb. Super charming, beautiful pool, and very kind staff.",
                 "rate": 5,
                 "by": {
@@ -624,6 +636,7 @@ const gStays = [
             },
             {
                 "id": "r00121",
+                "created": Date.now(),
                 "txt": "We stayed in the treehouse and it was amazing! So cute and unique our only regret is not being able to spend some more time there!! We had lunch at the restaurant and hung out by the trendy and cute pool. The staff served us drinks by the pool too which was awesome! They even offer a shuttle to the beach where we hung out late watching the servers and listening to live music! Would definitely come back again!",
                 "rate": 4.5,
                 "by": {
@@ -634,6 +647,7 @@ const gStays = [
             },
             {
                 "id": "r00122",
+                "created": Date.now(),
                 "txt": "The treehouse was perfect—truly felt magical to be staying in a treehouse and have such a nice pool and restaurant right downstairs. Made for a very relaxing final 2 days of our trip in Bali.",
                 "rate": 4.5,
                 "by": {
@@ -685,6 +699,7 @@ const gStays = [
         "reviews": [
             {
                 "id": "r0013",
+                "created": Date.now(),
                 "txt": "Amazing place good vibe!",
                 "rate": 5,
                 "by": {
@@ -695,6 +710,7 @@ const gStays = [
             },
             {
                 "id": "r00131",
+                "created": Date.now(),
                 "txt": "Fabulous place. Felt like royalty. Layout of villa is amazing",
                 "rate": 4.5,
                 "by": {
@@ -705,6 +721,7 @@ const gStays = [
             },
             {
                 "id": "r00132",
+                "created": Date.now(),
                 "txt": "Nice stay! But the access to get to the villa is hard and the road is small. But overall it’s good, nice room and pool",
                 "rate": 3.5,
                 "by": {
@@ -756,6 +773,7 @@ const gStays = [
         "reviews": [
             {
                 "id": "r0014",
+                "created": Date.now(),
                 "txt": "Wonderful place with an amazing view. Comfortable, romantic, and beautiful. Great staff as well. Thanks for the amazing stay!",
                 "rate": 5,
                 "by": {
@@ -766,6 +784,7 @@ const gStays = [
             },
             {
                 "id": "r00141",
+                "created": Date.now(),
                 "txt": "I enjoyed everything about this Bamboo House! Perfect 1-2 night stay connecting with nature.",
                 "rate": 4.5,
                 "by": {
@@ -776,6 +795,7 @@ const gStays = [
             },
             {
                 "id": "r00142",
+                "created": Date.now(),
                 "txt": "Increase place to stay! Be aware of 2 dogs sleeping downstairs in both sofas and fighting with each other really bothered us during our stay",
                 "rate": 3.5,
                 "by": {
@@ -823,6 +843,7 @@ const gStays = [
         "reviews": [
             {
                 "id": "r0014",
+                "created": Date.now(),
                 "txt": "Wonderful place with an amazing view. Comfortable, romantic, and beautiful. Great staff as well. Thanks for the amazing stay!",
                 "rate": 5,
                 "by": {
@@ -833,6 +854,7 @@ const gStays = [
             },
             {
                 "id": "r00141",
+                "created": Date.now(),
                 "txt": "I enjoyed everything about this Bamboo House! Perfect 1-2 night stay connecting with nature.",
                 "rate": 4.5,
                 "by": {
@@ -843,6 +865,7 @@ const gStays = [
             },
             {
                 "id": "r00142",
+                "created": Date.now(),
                 "txt": "Increase place to stay! Be aware of 2 dogs sleeping downstairs in both sofas and fighting with each other really bothered us during our stay",
                 "rate": 3.5,
                 "by": {
@@ -853,6 +876,7 @@ const gStays = [
             },
             {
                 "id": "r00142",
+                "created": Date.now(),
                 "txt": "Increase place to stay! Be aware of 2 dogs sleeping downstairs in both sofas and fighting with each other really bothered us during our stay",
                 "rate": 3.5,
                 "by": {
@@ -863,6 +887,7 @@ const gStays = [
             },
             {
                 "id": "r00142",
+                "created": Date.now(),
                 "txt": "Increase place to stay! Be aware of 2 dogs sleeping downstairs in both sofas and fighting with each other really bothered us during our stay",
                 "rate": 3.5,
                 "by": {

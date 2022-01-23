@@ -44,8 +44,8 @@ class _HomeHeader extends Component {
                 <section className='main-nav'>
                     <div className='logo'>
                         <a aria-current="page" className="logo-link active">
-                            <h1 className="logo" onClick={() => this.onLogoClicked()}>Pl<i className="fab fa-airbnb" aria-hidden="true"></i>
-                                Ce</h1></a>
+                            <h1 className="logo" onClick={() => this.onLogoClicked()}>Go<i className="fab fa-airbnb" aria-hidden="true"></i>
+                                bnb</h1></a>
                     </div>
                 <div className='secondary-search-bar'>
                     <HomeFilter onSetFilter={this.onSetFilter} isMinFilter={this.props.isMinFilter}/>

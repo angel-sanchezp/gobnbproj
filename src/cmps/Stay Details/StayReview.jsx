@@ -4,8 +4,8 @@ export function StayReview({stay}){
     let reviewBtn = (reviews.length === 1 ) ? `Show ${reviews.length} Review` : `Show all ${reviews.length} Reviews`;
     if(reviews.length === 0) reviewBtn = `No reviews`;
     // console.log(showReviews);
-
-
+    
+    
     const reviewModal = (isOpen) => {
         if(reviews.length === 0) return;
         if(isOpen){
@@ -16,7 +16,12 @@ export function StayReview({stay}){
             document.querySelector("body").classList.remove("modal-open");
         }
     }
-
+    
+    const getDate = (dateToString) => {
+        const options = {month: "long", year:"numeric"};
+        const longDate = new Intl.DateTimeFormat("en-US", options).format(dateToString);
+        return longDate;
+    }
 
 
     return (
@@ -35,7 +40,10 @@ export function StayReview({stay}){
                         <div className="review-preview" key={idx}>
                             <div className="review-info">
                                 <img className="review-user" src={review.by.imgUrl} alt="Not found" />
+                                <div>
                                 <h3>{review.by.fullname}</h3>
+                                <div className="review-date"><span>{getDate(review.created)}</span></div>
+                                </div>
                             </div>
                             <p>
                                 {review.txt}
@@ -61,6 +69,7 @@ export function StayReview({stay}){
                             <div className="review-info">
                                 <img className="review-user" src={review.by.imgUrl} alt="Not found" />
                                 <h3>{review.by.fullname}</h3>
+                                <div className="review-date"><span>created at</span></div>
                             </div>
                             <p>
                                 {review.txt}

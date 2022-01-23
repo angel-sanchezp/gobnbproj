@@ -1,5 +1,6 @@
 import { imageListClasses } from "@mui/material";
 import { isThisSecond } from "date-fns";
+import { eventBusService } from "../../services/event-bus.service";
 
 export function StayAmenities({stay}) {
     const { amenities } = stay;
@@ -63,20 +64,24 @@ export function StayAmenities({stay}) {
         return (<img src={logo} alt="Not found" />);
     }
 
+    
+
     const amenityModal = (isOpen) => {
+        console.log(isOpen)
         if(isOpen){
             document.querySelector(".amenities-modal").classList.remove("hidden");
             document.querySelector("body").classList.add("modal-open");
+            
         } else if(!isOpen){
             document.querySelector(".amenities-modal").classList.add("hidden");
             document.querySelector("body").classList.remove("modal-open");
-        }
+        } 
     }
 
     return (
         <section>
             <section className="amenities-container">
-                <h2>What this place offer</h2>
+                <div className="h2-general"><h2>What this place offer</h2></div>
                 <div className="amenities">
                     {showAmenities.map((amenity, idx) => (
                         <div className="amenity" key={idx}>
