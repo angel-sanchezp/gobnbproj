@@ -23,6 +23,8 @@ class _StayDetails extends React.Component {
     componentWillMount() {
         this.props.changeHeaderClass(this.state.class)
     }
+   
+  
 
     componentDidMount() {
         this.loadStay();
@@ -41,6 +43,8 @@ class _StayDetails extends React.Component {
 
     render() {
         const { stay } = this.state;
+        const {filterBy} =this.props
+        console.log(filterBy)
         if (!stay) return <h1>Loading...</h1>
         const  {reviews}  = stay;
         let headerReviews = (reviews.length === 1 ) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
@@ -70,7 +74,7 @@ class _StayDetails extends React.Component {
                         </div>
                     </section>
                 <StayGallery stay = {stay}/>
-                <StayInfo stay = {stay}/>
+                <StayInfo filterBy={filterBy} stay = {stay}/>
     
                 <StayReview stay = {stay}/>
                 <StayMap stay = {stay}/>
@@ -84,8 +88,10 @@ class _StayDetails extends React.Component {
 }
 
 function mapStateToProps(state) {
+    console.log(state)
     return {
-        
+        filterBy: state.stayModule.filterBy,
+
     }
 }
 

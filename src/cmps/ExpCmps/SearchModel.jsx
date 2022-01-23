@@ -26,13 +26,13 @@ class _SearchModal extends Component {
     }
 
     
-    componentDidUpdate(prevProps, prevState) {
-        // console.log(prevProps.filterBy)
-        // console.log('props in home upadte ', this.props.filterBy)
-        if (prevProps.filterBy !== this.props.filterBy) {
-            this.props.loadStays();
-        }
-    }
+    // componentDidUpdate(prevProps, prevState) {
+    //     // console.log(prevProps.filterBy)
+    //     // console.log('props in home upadte ', this.props.filterBy)
+    //     if (prevProps.filterBy !== this.props.filterBy) {
+    //         this.props.loadStays();
+    //     }
+    // }
 
     componentWillUnmount() {
         document.removeEventListener('mousedown', this.handleClickOutside);
@@ -63,6 +63,7 @@ class _SearchModal extends Component {
 
     render() {
         const { filterBy } = this.props;
+        // console.log('filterby in search modal',filterBy)
         // const PreviewComponent = PREVIEW_COMPONENTS[this.props.note.type] || defaultComponent
         return (
             <div className="modal-container">

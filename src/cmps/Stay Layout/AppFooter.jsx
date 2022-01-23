@@ -28,7 +28,7 @@ class _AppFooter extends Component {
                             <div className='first-footer-container'>
                             
                                             {/* <h4>Top Rated</h4> */}
-                                            <div classNAme="row"> 
+                                            <div className="row"> 
                                                 <a href="#/stay/60b6275805f90634a569de93">
                                                     <span>Villa con migo</span>
                                                     <span>Porto, Portugal</span>
@@ -44,7 +44,7 @@ class _AppFooter extends Component {
                                                     <span>London</span></a>
                                             </div>
                                             
-                                            <div classNAme="row"> 
+                                            <div className="row"> 
                                                 <a href="#/stay/60bc81944cc5b61980857ad6">
                                                     <span>Sukhumvit</span><span>Bangkok, Thailand</span></a>
                                                 <a href="#/stay/60bcee9fc6b50f49e080a1ec"><span>Luxurious Bauhaus Suite</span>
@@ -71,7 +71,7 @@ class _AppFooter extends Component {
                                             </div>
                                         
                                             
-                                            <div classNAme="row"> 
+                                            <div className="row"> 
                                                 <a href="#/stay/60bc81944cc5b61980857ad6">
                                                     <span>Sukhumvit</span><span>Bangkok, Thailand</span></a>
                                                 <a href="#/stay/60bcee9fc6b50f49e080a1ec"><span>Luxurious Bauhaus Suite</span>

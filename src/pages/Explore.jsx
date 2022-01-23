@@ -69,7 +69,7 @@ class _Explore extends Component {
     }
 
     onStayClicked(stayId) {
-        window.location.href = `/details/${stayId}`;
+    this.props.history.push(`/details/${stayId}`)
     }
 
     formatDates = (dateIn, dateOut) => {

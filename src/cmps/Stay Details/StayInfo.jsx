@@ -1,9 +1,10 @@
 import { StayReserve } from './StayReserve.jsx';
 import { StayAmenities } from './StayAmenities.jsx';
 import { StayDates } from './StayDates.jsx';
+// import { filter } from 'lodash';
 
-export function StayInfo({stay}){
-    // console.log(stay)
+export function StayInfo({stay , filterBy}){
+    console.log(filterBy)
     return (
         <section className="stay-info-container">
             <section className="summary-info">
@@ -37,12 +38,12 @@ export function StayInfo({stay}){
                     </div>
                 </section>
                 <StayAmenities stay = {stay}/>
-                {/* <section className="selected-dates">
-                    <StayDates/>
-                </section> */}
+                <section className="selected-dates">
+                    <StayDates filterBy={filterBy}/>
+                </section>
             </section>
             <section className="reserve">
-                <StayReserve stay = {stay}/>
+                <StayReserve  filterBy={filterBy} stay = {stay}/>
 
             </section>
             

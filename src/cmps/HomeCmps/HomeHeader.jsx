@@ -14,9 +14,9 @@ class _HomeHeader extends Component {
         window.location.href = `/`
     }
 
-    onSetFilter = (filterBy) => {
-        console.log('home filterby ', filterBy)
-        this.props.setFilter(filterBy);
+    onSetFilter = async (filterBy) => {
+        // console.log('home filterby ', filterBy)
+       await this.props.setFilter(filterBy);
         const { location, dateIn, dateOut, guests = 1 } = filterBy 
 
         setTimeout(() => {

@@ -8,17 +8,15 @@ import Box from '@mui/material/Box';
 
 
 
-export function Calendar({onSetDate}) {
+export function Calendar({onSetDate , filterBy}) {
+    console.log('filter by in deteils',filterBy)
 
-    const [value, setValue] = useState([null, null]);
+    const [value, setValue] = useState([filterBy.dateIn, filterBy.dateOut]);
     console.log(value)
 
     useEffect(() => {
         onSetDate(value); // using camelCase for variable name is recommended.
       }, [value]);
-
-
-
 
 return (
 

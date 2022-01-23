@@ -1,11 +1,13 @@
 
 import React from 'react'
 import moment from 'moment';
+import { connect } from 'react-redux'
+import { withRouter } from "react-router-dom"
 import { Guests } from '../FilterCmps/Guests.jsx'
 import { Calendar } from '../FilterCmps/Calendar.jsx'
 
 
-export class HomeFilter extends React.Component {
+ class _HomeFilter extends React.Component {
 
     state ={
         filterBy: (this.props.filterBy || {}),
@@ -20,17 +22,15 @@ export class HomeFilter extends React.Component {
         this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, [field]: value } }))
     }
 
-    onSubmitFilter = (ev) => {
+    onSubmitFilter = async (ev) => {
         ev.preventDefault()
         // console.log('filter state',this.state.filterBy)
-        this.props.onSetFilter(this.state.filterBy)
-        // this.cleanForm()
+      await  this.props.onSetFilter(this.state.filterBy)
+
         this.closeModal()
     }
 
-    cleanForm = () => {
-        this.setState({ filterBy: { location: '', dateIn: '', dateOut: '' } })
-    }
+    
 
     toggleModal = () => {
         this.setState(prev => ({ ...prev, isModalShown: !prev.isModalShown }))
@@ -64,7 +64,7 @@ export class HomeFilter extends React.Component {
             this.setState(prev => ({ ...prev, isModalShown: true }))
         } else {
             // console.log('here calendar')
-            this.setState(prev => ({ ...prev, cmp: <Calendar onSetDate={this.onSetDate} /> }))
+            this.setState(prev => ({ ...prev, cmp: <Calendar onSetDate={this.onSetDate} filterBy={this.props.filterBy} /> }))
             this.setState(prev => ({ ...prev, isModalShown: true }))
         }
     }
@@ -150,5 +150,17 @@ export class HomeFilter extends React.Component {
         </section>
     }
 }
+function mapStateToProps(state) {
+    // console.log('state from home', state)
+    return {
+        filterBy: state.stayModule.filterBy,
+
+    }
+}
+const mapDispatchToProps = {
+
+
+}
+export const HomeFilter = connect(mapStateToProps, mapDispatchToProps)(withRouter(_HomeFilter))
 
 
