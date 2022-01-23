@@ -58,6 +58,26 @@ class _ExpHeader extends Component {
             <div className="explore-header">
                 <section className='main-nav'>
                     <Logo/>
+                    {/* <nav>
+                        {/* <div className="reserve-nav">
+                            <div className="reserve-nav-details">
+                                <div className="nav-price">
+                                    <span>stay price</span><span>/night</span>
+                                </div>
+                                <div className="nav-rating">
+                                    <span>rate</span><span>reviews</span>
+                                </div>
+                            </div>
+                            <div className="reserve-btn">
+                                <form action="book/stay">
+                                    <input type="text" />
+                                    <button>
+                                        <span></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </nav> */} 
                     <nav className="main-nav">
                         {/* <NavLink activeClassName="my-active" exact to="/explore">Explore</NavLink> */}
                         <NavLink to="/BecomeHost" className="nav-txt-header">Become Host</NavLink>
