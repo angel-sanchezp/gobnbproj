@@ -1,7 +1,18 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
+import cn from 'classnames'
 import { stayService } from '../../services/stay.services.js'
 import { setFilter, loadStays } from '../../store/stay/stay.actions.js'
+
+const FILTERS = [
+    'Free cancellation',
+    'Wifi',
+    'Kitchen',
+    'Air conditioning',
+    'Washer',
+    'Iron',
+    'Parking'
+]
 
 class _HeaderFilters extends Component {
 
@@ -10,9 +21,8 @@ class _HeaderFilters extends Component {
             amenities: [],
             sortBy: ''
         },
-
-
     }
+
     componentDidUpdate(prevProps, prevState) {
         // console.log(prevProps.filterBy)
         // console.log('props in home upadte ', this.props.filterBy)
@@ -34,14 +44,12 @@ class _HeaderFilters extends Component {
         }
     }
 
-    onSetFilter = (value) => {
+    toggleFilter = (value) => {
         var { filterBy } = this.state
-        filterBy.amenities.push(value)
+        filterBy.amenities[value] = !filterBy.amenities[value]
         this.setState({ filterBy });
         this.send()
     }
-
-
 
     send = () => {
         this.props.setFilter(this.state.filterBy)
@@ -56,13 +64,14 @@ class _HeaderFilters extends Component {
                 </div>
                 <span>|</span>
                 <div className="filters">
-                    <button className="filter-btn" onClick={() => this.onSetFilter('Free cancellation')}>Free cancellation</button>
-                    <button className="filter-btn" onClick={() => this.onSetFilter('wifi')}>Wifi</button>
-                    <button className="filter-btn" onClick={() => this.onSetFilter('kitchen')}>Kitchen</button>
-                    <button className="filter-btn" onClick={() => this.onSetFilter('Air conditioning')}>Air conditioning</button>
-                    <button className="filter-btn" onClick={() => this.onSetFilter('washer')}>Washer</button>
-                    <button className="filter-btn" onClick={() => this.onSetFilter('iron')} >Iron</button>
-                    <button className="filter-btn" onClick={() => this.onSetFilter('parking')}>Free parking</button>
+                    {
+                        FILTERS.map((filter => (
+                            <button className={cn('filter-btn', { 'is-active': this.state.filterBy.amenities[filter] })} 
+                                onClick={() => this.toggleFilter(filter)}>
+                                    { filter }
+                            </button>
+                        )))
+                    }
                 </div>
             </div>
         );

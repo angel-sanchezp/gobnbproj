@@ -33,10 +33,10 @@
 }
 
 .txt-explore-page{
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif ;
     border-bottom: 0.5px solid #ddddddba;
     font-size: 12px;
-    font-weight: normal !important;
+    font-weight: normal ;
     .small-txt-exp-page{
         margin:15px
     }
@@ -60,25 +60,33 @@
     }
 
     .filter-btn{
-        cursor: pointer !important;
-        text-align: center !important;
-        border: 1px solid black !important;
-        background-color: #FFFFFF !important;
-        outline: none !important;
-        /* padding: 29px !important; */
-        margin: 0px 4px !important;
-        border-color: #DDDDDD !important;
-        border-radius: 30px !important;
-        color: #222222 !important;
-        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
-        position: relative !important;
-        padding-top: 8px !important;
-        padding-bottom: 8px !important;
-        font-size: 14px !important;
+        cursor: pointer ;
+        text-align: center ;
+        border: 1px solid black ;
+        background-color: #FFFFFF ;
+        outline: none ;
+        /* padding: 29px ; */
+        margin: 0px 4px ;
+        border-color: #DDDDDD ;
+        border-radius: 30px ;
+        color: #222222 ;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif ;
+        position: relative ;
+        padding-top: 8px ;
+        padding-bottom: 8px ;
+        font-size: 14px ;
         font-weight: 300;
-        line-height: 16px !important;
+        line-height: 16px ;
         width: 100%;
 
+        &.is-active {
+            border: 1px solid rgb(34, 34, 34) ;
+            transition-property: -ms-transform, -webkit-transform, transform, background-color, border-color ;
+            transition-duration: .05s ;
+            transition-timing-function: ease-in-out ;
+            background-color: rgb(247, 247, 247) ;
+            color: rgb(34, 34, 34) ;
+        }
     }
     span{
         color: #ddddddba;
@@ -88,7 +96,7 @@
 }
 
 .stay-details{
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif ;
     font-size: 16px;
     font-weight: 300;
     .line1{
