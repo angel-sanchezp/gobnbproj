@@ -4,7 +4,7 @@ import { useEffect} from 'react';
 export function StayReserve({stay}){
     // console.log(stay)
     const  {reviews}  = stay;
-    const ReviewsAmount = (reviews.length === 1 ) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
+    let ReviewsAmount = (reviews.length === 1 ) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
     if(reviews.length === 0) ReviewsAmount = `No reviews`;
 
 

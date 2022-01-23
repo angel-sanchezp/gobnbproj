@@ -153,5 +153,16 @@ html{
 
 .g{
     color: #717171;
+    align-items: center;
+    align-content: stretch;
+    font-family: CerealLight;
 }
 
+.share, .like{
+    height: 16px;
+    width: 16;
+}
+
+.like {
+    padding-top: 3px;
+}

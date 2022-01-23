@@ -30,7 +30,7 @@ export function StayMap({stay}) {
             <div>
                 <h4>{stay.location.address}</h4>
                 <div className="map-info">
-                <p>More information about location</p>
+                <p>More information about location after booking</p>
                 </div>
             </div>
         </section>

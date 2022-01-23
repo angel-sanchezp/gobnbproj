@@ -13,8 +13,11 @@ export const stayService = {
     query,
     getById,
     save,
-    remove,
+    remove
+    
 }
+
+
 
 const gStays = [
     {
@@ -180,9 +183,7 @@ const gStays = [
         "beds": 3,
         "bathrooms": 2,
         "sleep": [
-            "https://res.cloudinary.com/kitsunex3/image/upload/v1642652059/Airbnb%20clone/1ff8fe45-19d2-41cc-8053-f6156a113f4c_dvxobz.jpg",
-            "https://res.cloudinary.com/kitsunex3/image/upload/v1642652059/Airbnb%20clone/275411d2-2ca7-4148-8ab9-82bff0c5bc79_uu1gkz.jpg"
-        ],
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642652059/Airbnb%20clone/1ff8fe45-19d2-41cc-8053-f6156a113f4c_dvxobz.jpg"],
         "amenities": ["Wifi", "TV" , "Washing machine", "Balcony", "Kitchen", "Parking", "Elevator", "Dryer", "Indoor fireplace"],
         "host": {
             "_id": "h0004",
@@ -932,6 +933,11 @@ async function query(filterBy) {
     return filteredStays
 }
 
+// const copyLink = (stayId) => {
+//     const link = `http://localhost:3000/details/${stayId}`;
+//     return navigator.clipboard.writeText(link);
+// }
+
 
 function _getFilteredStays(stays, filterBy) {
     console.log(filterBy)
@@ -1031,6 +1037,7 @@ function _getFilteredStays(stays, filterBy) {
     }
 
 
+    
 }
 
 

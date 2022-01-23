@@ -37,9 +37,9 @@ export function StayInfo({stay}){
                     </div>
                 </section>
                 <StayAmenities stay = {stay}/>
-                <section className="selected-dates">
+                {/* <section className="selected-dates">
                     <StayDates/>
-                </section>
+                </section> */}
             </section>
             <section className="reserve">
                 <StayReserve stay = {stay}/>
