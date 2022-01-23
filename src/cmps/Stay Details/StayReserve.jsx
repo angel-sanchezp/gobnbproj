@@ -50,6 +50,7 @@ export class StayReserve extends React.Component {
             // console.log('here guests')
             this.setState(prev => ({ ...prev, cmp: <Guests onChangeAdults={this.onChangeAdults} onChangeChildren={this.onChangeChildren} /> }))
             this.setState(prev => ({ ...prev, isModalShown: true }))
+            this.toggleModal()
         } else {
             // console.log('here calendar')
             this.setState(prev => ({ ...prev, cmp: <Calendar onSetDate={this.onSetDate} filterBy={this.props.filterBy} /> }))
@@ -59,6 +60,10 @@ export class StayReserve extends React.Component {
 
     closeModal = () => {
         this.setState(prev => ({ ...prev, isModalShown: false }))
+    }
+
+    toggleModal = () => {
+        this.setState(prev => ({ ...prev, isModalShown: !prev.isModalShown }))
     }
 
 

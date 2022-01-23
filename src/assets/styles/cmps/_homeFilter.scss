@@ -46,7 +46,6 @@
         border-radius: 40px;
         background-color: #ebebeb;
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
-
     }
 
     .max-filter label input {
@@ -64,13 +63,10 @@
         outline: none;
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
         font-weight: 300;
-        
-
     }
-    
-    .max-filter label input#location{
-        width:153px;
-        
+
+    .max-filter label input#location {
+        width: 153px;
     }
 
     .max-filter label span {
@@ -83,7 +79,6 @@
         text-align: start;
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
         font-weight: 600;
-
     }
 
     .max-filter button {
@@ -98,7 +93,6 @@
         border-radius: 50%;
         cursor: pointer;
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
-
     }
 
     .min-filter {
@@ -114,22 +108,20 @@
         align-items: center;
         -webkit-justify-content: space-between;
         justify-content: space-between;
-        border: 1px solid rgba(88,88,88,.2196078431372549);
-        font-size: .75rem;
+        border: 1px solid rgba(88, 88, 88, 0.2196078431372549);
+        font-size: 0.75rem;
         border-radius: 40px;
         background-color: #fff;
         box-shadow: 0 2px 2px rgb(0 0 0 / 6%);
-        -webkit-transform: translate(-50%,-140%);
-        transform: translate(-50%,-140%);
+        -webkit-transform: translate(-50%, -140%);
+        transform: translate(-50%, -140%);
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
 
         opacity: 1;
 
-        .min-filter-title{
+        .min-filter-title {
             padding-inline-start: 25px;
             font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
-
-
         }
 
         .min-filter-btn {
@@ -137,14 +129,13 @@
             align-items: center;
             justify-content: center;
             background-color: rgb(255, 56, 92);
-            height: 38px;
-            width: 38px;
+            height: 31px;
+            width: 32px;
             color: rgb(255, 255, 255);
             font-size: 0.875rem;
             border-radius: 50%;
             cursor: pointer;
             font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
-
         }
     }
 }
@@ -199,7 +190,6 @@
         flex-direction: column;
         -webkit-align-items: flex-start;
         align-items: flex-start;
-
     }
     .dynamic-modal .filter-guest-modal .modal-label div {
         display: -webkit-flex;

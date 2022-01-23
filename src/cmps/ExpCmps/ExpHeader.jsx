@@ -52,7 +52,7 @@ class _ExpHeader extends Component {
 
     render() {
         const { enterInputsMode } = this.state
-        const { dateIn, dateOut }=this.props.filterBy
+        const { dateIn, dateOut ,location }=this.props.filterBy
         // console.log(dateIn,dateOut)
         return (
             <div className="explore-header">
@@ -85,7 +85,7 @@ class _ExpHeader extends Component {
                     {!enterInputsMode ? (
                         <form className="exp-mini-form">
                             <div className="input first-container" onClick={this.openModal}>
-                                    <input type="text" placeholder="Add location" readOnly></input>
+                                    <input value={location} type="text" placeholder="Add location" readOnly></input>
                             </div>
                             <div className="input second-container" onClick={this.openModal}>
                                 <input type="text" placeholder="Add dates" readOnly></input>
