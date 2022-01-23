@@ -811,88 +811,88 @@ const gStays = [
     },
     {
         "_id": "s0015",
-        "name": "Veluvana Bali - Owl Bamboo House",
-        "type": "Treehouse",
+        "name": "Sleeping under the stars in a dome!",
+        "type": "House",
         "imgUrls": [
-            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/4f70b681-a792-4530-8c52-f2a8d262942d_yv0nhz.jpg",
-            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/8ddb35f5-ae3b-4cf4-869b-bb484e82675a_r9ezwf.jpg",
-            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/24825c95-303b-47c3-9649-2fb74fc86acb_ngsdhv.jpg",
-            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/ec85ccc0-281c-44fc-a061-bc1e87ea0081_wvlkf3.jpg",
-            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834304/Airbnb%20clone/f474dfbe-557a-4d07-8d6e-76aba506b5a6_fmnuvv.jpg"
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642936160/Airbnb%20clone/262dfbe5-385a-465f-9ef2-903cd986b51f_vghoa1.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642936161/Airbnb%20clone/62243417-6dfa-4eb8-ab94-97fed1f91267_hx0oes.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642936160/Airbnb%20clone/91e9fd99-c85e-4375-b623-cc49b54054d4_ga5oxo.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642936160/Airbnb%20clone/e724ee18-852e-4cca-8fb6-c7e97c19416d_t5ek7q.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642936160/Airbnb%20clone/dc3551fd-e1dd-4c2e-a033-f10acf18b686_xympzz.jpg"
         ],
-        "price": 130,
-        "summery": "Veluvana is a unique bamboo house with a wonderful view of Sidemen Valley, a genuine tropical landscape with Mount Agung peak on its back. This getaway spot is a great place to bring into reality the dream adventure of the true wanderer. We invite you to feel the magnificent vibes of the entire house to escape the life that is full of drama into a journey with ultimate joy.",
+        "price": 268,
+        "summery": "We would love you to come and stay in one of our Frameless geodesic domes set in the heart of the Cornish countryside! This unique stay is like no other glamping experience. Each dome has its own ensuite and outdoor bath situated with 5 other domes in a 3.5 acre summer wildflower meadow.",
         "capacity": 2,
         "bedrooms": 1,
         "beds": 1,
-        "bathrooms": 1.5,
-        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/45a3aa2b-ce00-4068-9ebe-9f83ca281fe4_cwdwza.jpg"],
-        "amenities": ["Kitchen", "Parking" , "Balcony", "Wifi", "Pool", "Dryer"],
+        "bathrooms": 1,
+        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642936159/Airbnb%20clone/49a855d5-0793-481e-a118-2da7efceb7d5_r3hvea.jpg"],
+        "amenities": ["Backyard", "Parking", "Beach access", "Wifi", "Bath"],
         "host": {
-            "_id": "h0014",
+            "_id": "h0015",
             "fullname": "Veluvana",
             "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/18_na5npr.jpg"
         },
         "location": {
-            "country": "Indonesia",
-            "countryCode": "IDN",
-            "city": "Bali",
-            "address": "Sidemen, Bali, Indonesia",
-            "lat": -8.473195,
-            "lng": 115.441776
+            "country": "England",
+            "countryCode": "UK",
+            "city": "Underlane",
+            "address": "Underlane, England, United Kingdom",
+            "lat": 50.159203,
+            "lng": -5.193978
         },
         "reviews": [
             {
-                "id": "r0014",
+                "id": "r0015",
                 "created": Date.now(),
                 "txt": "Wonderful place with an amazing view. Comfortable, romantic, and beautiful. Great staff as well. Thanks for the amazing stay!",
                 "rate": 5,
                 "by": {
-                    "_id": "u0014",
+                    "_id": "u0015",
                     "fullname": "Ryan",
                     "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/15_liaeqo.jpg"
                 }
             },
             {
-                "id": "r00141",
+                "id": "r00151",
                 "created": Date.now(),
                 "txt": "I enjoyed everything about this Bamboo House! Perfect 1-2 night stay connecting with nature.",
                 "rate": 4.5,
                 "by": {
-                    "_id": "u00141",
+                    "_id": "u00151",
                     "fullname": "Katya",
                     "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/12_zmmmfq.jpg"
                 }
             },
             {
-                "id": "r00142",
+                "id": "r00152",
                 "created": Date.now(),
                 "txt": "Will stay again",
                 "rate": 3.5,
                 "by": {
-                    "_id": "u00142",
+                    "_id": "u00152",
                     "fullname": "Galina",
                     "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/10_wd9gc9.jpg"
                 }
             },
             {
-                "id": "r00142",
+                "id": "r00153",
                 "created": Date.now(),
                 "txt": "In the middle of nowhere",
                 "rate": 3.5,
                 "by": {
-                    "_id": "u00142",
+                    "_id": "u00153",
                     "fullname": "Michelle",
                     "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922845/Airbnb%20clone/Users/4_tkbgjo.jpg"
                 }
             },
             {
-                "id": "r00142",
+                "id": "r00154",
                 "created": Date.now(),
                 "txt": "Too pricey!",
                 "rate": 3.5,
                 "by": {
-                    "_id": "u00142",
+                    "_id": "u00154",
                     "fullname": "Josh",
                     "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/13_fsg2vd.jpg"
                 }
