@@ -71,7 +71,7 @@ class _StayDetails extends React.Component {
                     </section>
                 <StayGallery stay = {stay}/>
                 <StayInfo stay = {stay}/>
-
+    
                 <StayReview stay = {stay}/>
                 <StayMap stay = {stay}/>
                 <HostInfo stay = {stay}/>
