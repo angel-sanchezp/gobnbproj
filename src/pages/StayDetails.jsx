@@ -34,6 +34,10 @@ class _StayDetails extends React.Component {
         });
     }
 
+    
+    
+    
+
     render() {
         const { stay } = this.state;
         if (!stay) return <h1>Loading...</h1>
