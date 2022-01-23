@@ -97,7 +97,7 @@ class _HomePage extends React.Component {
 
                 <div className='main-container'>
                     <img className='pic' src='https://a0.muscache.com/im/pictures/53e51dcb-8fad-4ce8-b61c-8a7a369267bf.jpg?im_w=1200' alt="house" style={{ width: '100%' }} />
-                    <div className="header-txt-on-banner">Not Sure where to go?.Perfect</div>
+                    <div className="header-txt-on-banner">Not Sure where to go? Perfect.</div>
                     <Link to={`/explore`}>
                         <button className='btn-flexible'>
                             <span>I'm Flexible</span>
