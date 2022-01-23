@@ -88,7 +88,7 @@ export function StayAmenities({stay}) {
                         </div>
                     ))}
                 </div>
-                <button className="more-amenities">
+                <button className="more-modal">
                     <div className="cb"onClick={() => amenityModal(true)}>Show all {amenities.length} amenities</div>
                 </button>
             </section>
@@ -99,7 +99,7 @@ export function StayAmenities({stay}) {
                     </div>
                     <div>
                         <h2>What this place offer</h2>
-                        <div className="amenities-area">
+                        <div className="modal-area">
                         {amenities.map((amenity, idx) => (
                             <div className="amenity" key={idx}>
                                 <div className="amenity-img">

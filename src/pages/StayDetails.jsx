@@ -38,7 +38,8 @@ class _StayDetails extends React.Component {
         const { stay } = this.state;
         if (!stay) return <h1>Loading...</h1>
         const  {reviews}  = stay;
-        const headerReviews = (reviews.length === 1 ) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
+        let headerReviews = (reviews.length === 1 ) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
+        if(reviews.length === 0) headerReviews = `No reviews`;
 
         return (
             <section>

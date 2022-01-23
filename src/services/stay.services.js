@@ -53,16 +53,9 @@ const gStays = [
             "lat": 35.680984,
             "lng": 139.538030
         },
-        "reviews": [{
-            "id": "r0001",
-            "txt": "This place is amazing. You feel refreshed just being in your room! It's so unique and gorgeous. ",
-            "rate": 5,
-            "by": {
-                "_id": "u0001",
-                "fullname": "Kerolyne",
-                "imgUrl": "https://source.unsplash.com/random/100x100/?face"
-            }
-        }],
+        "reviews": [
+            
+        ],
         "likedByUsers": ["mini-user"],
         "isPopular": "true"
 
@@ -147,7 +140,7 @@ const gStays = [
         }],
         "location": {
             "country": "Japan",
-            "city":"Kyoto",
+            "city":"Tokyo",
             "countryCode": "JPN",
             "address": "TEMPLE HOTEL SHODENJI",
             "lat": 35.650278,
@@ -300,7 +293,7 @@ const gStays = [
         }],
         "location": {
             "country": "France",
-            "city":"Marsella",
+            "city":"Paris",
             "countryCode": "FR",
             "address": "Paris, Île-de-France, France",
             "lat": 48.874011,
@@ -350,7 +343,7 @@ const gStays = [
         }],
         "location": {
             "country": "Mexico",
-            "city":"Cancun",
+            "city":"Mexico city",
             "countryCode": "MX",
             "address": "Naucalpan de Juárez, Estado de México, Mexico",
             "lat": 19.478524,
@@ -462,7 +455,7 @@ const gStays = [
         }],
         "location": {
             "country": "Mexico",
-            "city":"Ciudad de Mexico",
+            "city":"Cancun",
             "countryCode": "MX",
             "address": "Cancún, Quintana Roo, Mexico",
             "lat": 21.131314,
@@ -512,8 +505,8 @@ const gStays = [
         }],
         "location": {
             "country": "Indonesia",
-
             "countryCode": "IDN",
+            "city": "Bali",
             "address": "Abiansemal, Bali, Indonesia",
             "lat": -8.573603,
             "lng": 115.214408
@@ -563,6 +556,7 @@ const gStays = [
         "location": {
             "country": "Indonesia",
             "countryCode": "IDN",
+            "city": "Bali",
             "address": "Ubud, Bali, Indonesia",
             "lat": -8.518078,
             "lng": 115.274158
@@ -612,6 +606,7 @@ const gStays = [
         "location": {
             "country": "Indonesia",
             "countryCode": "IDN",
+            "city": "Bali",
             "address": "South Kuta, Bali, Indonesia",
             "lat": -8.799448,
             "lng": 115.135857
@@ -682,6 +677,7 @@ const gStays = [
         "location": {
             "country": "Indonesia",
             "countryCode": "IDN",
+            "city": "Bali",
             "address": "Kecamatan Ubud, Bali, Indonesia",
             "lat": -8.529778,
             "lng": 115.268513
@@ -752,6 +748,7 @@ const gStays = [
         "location": {
             "country": "Indonesia",
             "countryCode": "IDN",
+            "city": "Bali",
             "address": "Sidemen, Bali, Indonesia",
             "lat": -8.473195,
             "lng": 115.441776
@@ -818,6 +815,7 @@ const gStays = [
         "location": {
             "country": "Indonesia",
             "countryCode": "IDN",
+            "city": "Bali",
             "address": "Sidemen, Bali, Indonesia",
             "lat": -8.473195,
             "lng": 115.441776
@@ -840,6 +838,26 @@ const gStays = [
                 "by": {
                     "_id": "u00141",
                     "fullname": "Katya",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+                }
+            },
+            {
+                "id": "r00142",
+                "txt": "Increase place to stay! Be aware of 2 dogs sleeping downstairs in both sofas and fighting with each other really bothered us during our stay",
+                "rate": 3.5,
+                "by": {
+                    "_id": "u00142",
+                    "fullname": "Galina",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+                }
+            },
+            {
+                "id": "r00142",
+                "txt": "Increase place to stay! Be aware of 2 dogs sleeping downstairs in both sofas and fighting with each other really bothered us during our stay",
+                "rate": 3.5,
+                "by": {
+                    "_id": "u00142",
+                    "fullname": "Galina",
                     "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
                 }
             },
