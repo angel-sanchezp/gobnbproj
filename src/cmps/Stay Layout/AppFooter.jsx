@@ -90,7 +90,7 @@ class _AppFooter extends Component {
                 </section>
             </footer>
              <section className="footer-nav-container">
-             <div className="copyrights"><p>© 2021 Place&amp; Go,
+             <div className="copyrights"><p>© 2021 Go<span className="fab fa-airbnb" aria-hidden="true"></span>bnb,
              <span>Inc.</span></p><span>·</span><a href="#/about">About</a><span>·</span>
              <a href="#/login">Login</a><span>·</span><a href="#/host">Become a host</a>
          </div>

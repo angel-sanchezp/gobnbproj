@@ -94,6 +94,7 @@ class _Explore extends Component {
 
         return (
             <section>
+
                 <section className="explore-page">
                     {location &&
                         <div className="txt-explore-page">

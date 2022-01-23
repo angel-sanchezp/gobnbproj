@@ -50,7 +50,13 @@ html{
 }
 
 .details-container h2{
-    font-family: CerealLight;
+    font-family: CerealLight; 
+    font-size: 22px;
+    margin: 0px;
+}
+
+.h2-general {
+    padding: 0px 0px 24px
 }
 
 .stay-name{
@@ -147,5 +153,16 @@ html{
 
 .g{
     color: #717171;
+    align-items: center;
+    align-content: stretch;
+    font-family: CerealLight;
 }
 
+.share, .like{
+    height: 16px;
+    width: 16;
+}
+
+.like {
+    padding-top: 3px;
+}

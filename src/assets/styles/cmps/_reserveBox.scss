@@ -15,6 +15,8 @@
     border-radius: 12px;
     border: 1px solid rgb(221, 221, 221);
     box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+    font-family: CerealBook;
+
 }
 
 .reserve-info {
@@ -43,4 +45,76 @@
     font-size: rem(14px);
     text-decoration: underline;
     font-family: CerealLight;
+}
+
+.reserve-date-picker {
+    display: flex;
+}
+
+.inout {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    margin: 0 auto;
+    height: 112px;
+    border: 1px solid #b0b0b0;
+    border-radius: 10px;
+    font-family: CerealBold;
+    font-size: .65rem;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.checkin, .checkout{
+    border-bottom: 1px solid #b0b0b0;
+}
+
+.checkin {
+    grid-column: 1;
+    border-right: 1px solid #b0b0b0;
+}
+
+.checkout {
+    grid-column: 2;
+}
+
+.add {
+    color: #b0b0b0;
+    font-size: 14px;
+    font-family: CerealLight;
+    
+}
+
+.guest{
+    color: black;
+}
+
+.reserve-guests {
+    grid-row: 2;
+    grid-column: span 2;
+}
+
+.stay-label {
+    color: #222;
+}
+
+.add, .stay-label {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.gradient {
+    margin: 15px 0 10px;
+    border-radius: 13px;
+    width: 100%;
+    position: relative;
+    height: 48px;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    cursor: pointer;
+    // background: radial-gradient(circle at 9.5px 2.01562px, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%);
 }

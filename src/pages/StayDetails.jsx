@@ -11,7 +11,8 @@ import { StayMap } from '../cmps/Stay Details/StayMap.jsx';
 import { HostInfo } from '../cmps/Stay Details/HostInfo.jsx';
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 
-
+import share from '../assets/svg/share.jpg';
+import like from '../assets/svg/like.png';
 
 class _StayDetails extends React.Component {
     state = {
@@ -34,11 +35,16 @@ class _StayDetails extends React.Component {
         });
     }
 
+    
+    
+    
+
     render() {
         const { stay } = this.state;
         if (!stay) return <h1>Loading...</h1>
         const  {reviews}  = stay;
-        const headerReviews = (reviews.length === 1 ) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
+        let headerReviews = (reviews.length === 1 ) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
+        if(reviews.length === 0) headerReviews = `No reviews`;
 
         return (
             <section>
@@ -52,14 +58,14 @@ class _StayDetails extends React.Component {
                             <span className="mainName-info">
                             {/* <span>{stay.rate}</span> */}
                             <span><button className="details-btn" type="button"><a className="ab" href="#stayreview">{headerReviews}</a></button></span>
-                            {/* <span className='dot'>.</span> */}
+                            {/* <span className='dot'> · </span> */}
                             {/* <span className="g">Superhost</span> */}
                             <span className='dot'> · </span>
                             <span><button className="details-btn g" type="button"><a className="ag" href="#staymap">{stay.location.address}</a></button></span>
                             </span>
                             <div>
-                            <span className="g"><button >Share</button></span>
-                            <span className="g"><button >Save</button></span>
+                            <span className="g"><button className="g"><span><img className="share"src={share} alt="" /></span> Share</button></span>
+                            <span className="g"><button className="g"><span><img className="like"src={like} alt="" /></span> Save</button></span>
                             </div>
                         </div>
                     </section>
