@@ -2,6 +2,7 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import _ from 'lodash'
+import moment from 'moment'
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 
 import { loadStays, changeHeaderClass } from '../store/stay/stay.actions.js'
@@ -71,11 +72,16 @@ class _Explore extends Component {
         window.location.href = `/details/${stayId}`;
     }
 
+    formatDates = (dateIn, dateOut) => {
+        return `${moment(dateIn).format("MMM D")} - ${moment(dateOut).format("MMM D")}`
+    }
+
     // const onSelectStay = (stayId) => {
     //     console.log(` ${stay.vendor} to Cart`)
     //     addToCart(car)
     //     showSuccessMsg('Added to Cart')
     // }
+
     render() {
         const { stays } = this.props
         const { location } = this.state
@@ -108,14 +114,12 @@ class _Explore extends Component {
                                     </div>
                                     <div className="line2">
                                         <div className="gray-txt">{utilService.getRandomIntInclusive(1000, 3000)} kilometers away</div>
-                                        {dateOut && dateIn && <div className="gray-small-txt">{dateIn} - {dateOut} - {month}</div>}
-                                        {!dateIn && !dateOut && <div className="gray-small-txt">Jan 21 -28</div>}
+                                        {dateOut && dateIn && <div className="gray-small-txt">{this.formatDates(dateIn, dateOut)}</div>}
+                                        {!dateIn && !dateOut && <div className="gray-small-txt">Jan 21 -28</div>} { /** TODO : Fix the random */}
                                     </div>
                                 </div>
                             </li>
                         )}
-
-
                     </ul>
                 </section>
                 <AppFooter/>

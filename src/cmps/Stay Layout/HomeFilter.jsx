@@ -8,14 +8,7 @@ import { Calendar } from '../FilterCmps/Calendar.jsx'
 export class HomeFilter extends React.Component {
 
     state ={
-        filterBy: {
-            location: '',
-            dateIn: '',
-            dateOut: '',
-            adults: '',
-            children:''
-
-        },
+        filterBy: (this.props.filterBy || {}),
         isModalShown: false,
         cmp: null
     }
@@ -31,7 +24,7 @@ export class HomeFilter extends React.Component {
         ev.preventDefault()
         // console.log('filter state',this.state.filterBy)
         this.props.onSetFilter(this.state.filterBy)
-        this.cleanForm()
+        // this.cleanForm()
         this.closeModal()
     }
 
@@ -45,25 +38,23 @@ export class HomeFilter extends React.Component {
 
     onChangeAdults=(adultsNum)=> {
         var {filterBy} =this.state
-        filterBy.adults =adultsNum
+        filterBy.adults = adultsNum
         this.setState({ filterBy });
-  
     }
+
     onChangeChildren=(childrenNum)=> {
         var {filterBy} =this.state
-        filterBy.children =childrenNum
+        filterBy.children = childrenNum
         this.setState({ filterBy });
     }
 
     onSetDate=(date)=>{
         var {filterBy} =this.state
-        filterBy.dateIn =date[0]
-        filterBy.dateOut=date[1]
+        filterBy.dateIn = date[0]
+        filterBy.dateOut = date[1]
         console.log('dateIn',  filterBy.dateIn)
         console.log('dateOn'  ,filterBy.dateIn)
         this.setState({ filterBy });
-
-
     }
 
     OpenModal = (indicator) => {
@@ -71,15 +62,11 @@ export class HomeFilter extends React.Component {
             // console.log('here guests')
             this.setState(prev => ({ ...prev, cmp: <Guests onChangeAdults={this.onChangeAdults} onChangeChildren={this.onChangeChildren} /> }))
             this.setState(prev => ({ ...prev, isModalShown: true }))
-
         } else {
             // console.log('here calendar')
             this.setState(prev => ({ ...prev, cmp: <Calendar onSetDate={this.onSetDate} /> }))
             this.setState(prev => ({ ...prev, isModalShown: true }))
-
-
         }
-
     }
 
     closeModal = () => {
@@ -88,13 +75,11 @@ export class HomeFilter extends React.Component {
 
     getInputValue = (date) => {
         if (!date) { return '' }
-        return moment(date).format("MMM d")
+        return moment(date).format("MMM D")
     }
-    
-
 
     render() {
-        const { location, dateIn, dateOut, guests } = this.state.filterBy
+        const { location = "", dateIn, dateOut, guests = 1 } = this.state.filterBy
         // console.log(this.props.isMinFilter)
         const { isModalShown, span, cmp } = this.state
         const formattedDateIn = this.getInputValue(dateIn)
@@ -115,7 +100,7 @@ export class HomeFilter extends React.Component {
                             onClick={this.toggleModal}
                             value={location} />
                     </label>
-                    <label htmlFor="check-in">
+                    <label htmlFor="check-in" className="label-check-in">
                         <span>Check in</span>
                         <input name="dateIn"
                             id="check-in"
@@ -138,7 +123,6 @@ export class HomeFilter extends React.Component {
                             {/* value={dateOut.getDay(),monthNames[dateOut.getMonth()]} /> */}
                     </label>
                     <label className="guests" htmlFor="guests">
-                        <div>
                             <span>Guests</span>
                             <input name="guests"
                                 id="guests"
@@ -146,7 +130,6 @@ export class HomeFilter extends React.Component {
                                 onChange={this.handleChange}
                                 onClick={() => this.OpenModal('guests')}
                                 value={guests} />
-                        </div>
                     </label>
                     <button>
                         <i className="fas fa-search" aria-hidden="true"> </i>
@@ -165,10 +148,7 @@ export class HomeFilter extends React.Component {
             {isModalShown && <div className="dynamic-modal">
                 {cmp}
             </div>}
-
         </section>
-
-
     }
 }
 

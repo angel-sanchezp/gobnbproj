@@ -1,8 +1,8 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from "react-router-dom"
 import { NavLink } from 'react-router-dom'
 import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
-import { withRouter } from "react-router-dom"
 import { ReactComponent as UserAvatar } from '../../assets/svg/user-avatar.svg'
 
 // import { user } from '../../assets/icon/user-icon.png'
@@ -19,21 +19,8 @@ class _HomeHeader extends Component {
         this.props.setFilter(filterBy);
         const { location, dateIn, dateOut, guests = 1 } = filterBy 
 
-        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
-        let checkIn =  (dateIn)? dateIn.getDay() : ''
-        let checkOut
-        let month
-        if(dateOut){
-        checkOut =dateOut.getDay()
-        month=(monthNames[dateOut.getMonth()])
-        }else{
-            checkOut=''
-            month=''
-        }
-
-
         setTimeout(() => {
-            this.props.history.push(`/explore?location=${location}&dateIn=${checkIn}&dateOut=${checkOut}&month=${month}&guests=${guests}`)
+            this.props.history.push(`/explore?location=${location}&dateIn=${dateIn}&dateOut=${dateOut}&guests=${guests}`)
         }, 1000)
     }
 

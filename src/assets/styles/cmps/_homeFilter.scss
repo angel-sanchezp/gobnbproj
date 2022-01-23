@@ -1,5 +1,4 @@
 .main-filter-container {
-
     input {
         margin: 0px;
         padding: 0px;
@@ -41,7 +40,6 @@
         padding: 14px 24px;
         border-radius: 40px;
         transition: background-color 0.3s ease 0s, box-shadow 0.3s ease 0s;
-        width: 115px;
     }
 
     .max-filter label:hover {
@@ -66,7 +64,13 @@
         outline: none;
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
         font-weight: 300;
+        
 
+    }
+    
+    .max-filter label input#location{
+        width:153px;
+        
     }
 
     .max-filter label span {
@@ -88,7 +92,7 @@
         justify-content: center;
         background-color: rgb(255, 56, 92);
         height: 47px;
-        width: 52px;
+        width: 47px;
         color: rgb(255, 255, 255);
         font-size: 0.875rem;
         border-radius: 50%;

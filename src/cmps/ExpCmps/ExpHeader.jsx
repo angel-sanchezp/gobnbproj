@@ -1,9 +1,11 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
+import moment from 'moment'
 import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
 import { SearchModal } from './SearchModel.jsx'
 import { Logo } from '../shared/logo.jsx'
+
 
 
 class _ExpHeader extends Component {
@@ -27,6 +29,19 @@ class _ExpHeader extends Component {
         }))
     }
 
+    // formatDates = (dateIn, dateOut) => {
+       
+    //     // if(dateIn !== null && dateOut!== null){
+    //         return `${moment(dateIn).format("MMM D")} - ${moment(dateOut).format("MMM D")}`
+    //     // }else{
+    //     //     return 'Jan 24 - Jan 25'
+    //     // }
+            
+        
+        
+        
+    // }
+
     
     // onSearch = (inputs) => {
     //     notesService.updateNote(note).then(()=>{
@@ -37,6 +52,8 @@ class _ExpHeader extends Component {
 
     render() {
         const { enterInputsMode } = this.state
+        const { dateIn, dateOut }=this.props.filterBy
+        // console.log(dateIn,dateOut)
         return (
             <div className="explore-header">
                 <section className='main-nav'>
@@ -48,13 +65,13 @@ class _ExpHeader extends Component {
                     {!enterInputsMode ? (
                         <form className="exp-mini-form">
                             <div className="input first-container" onClick={this.openModal}>
-                                    <input type="text" placeholder="Add location"></input>
+                                    <input type="text" placeholder="Add location" readOnly></input>
                             </div>
                             <div className="input second-container" onClick={this.openModal}>
-                                <input type="text" placeholder="Add dates" ></input>
+                                <input type="text" placeholder="Add dates" readOnly></input>
                             </div>
                             <div className="input third-container" onClick={this.openModal}>
-                                <input type="text" placeholder="Add guests"></input>
+                                <input type="text" placeholder="Add guests" readOnly></input>
                             </div>
                             
                             <button className="mini-form-btn">
@@ -74,7 +91,8 @@ class _ExpHeader extends Component {
 function mapStateToProps(state) {
     return {
         class: state.stayModule.classHeader,
-        isMinFilter: state.stayModule.isMinFilter
+        isMinFilter: state.stayModule.isMinFilter,
+        filterBy: state.stayModule.filterBy,
     }
 }
 
