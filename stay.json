@@ -32,6 +32,7 @@
         },
         "reviews": [{
             "id": "r0001",
+            "created": 1616501399,
             "txt": "This place is amazing. You feel refreshed just being in your room! It's so unique and gorgeous. ",
             "rate": 5,
             "by": {
@@ -660,6 +661,72 @@
         "bathrooms": 1.5,
         "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/45a3aa2b-ce00-4068-9ebe-9f83ca281fe4_cwdwza.jpg"],
         "amenities": ["Kitchen", "Parking", "Balcony", "Wifi", "Pool", "Dryer"],
+        "host": {
+            "_id": "h0014",
+            "fullname": "Veluvana",
+            "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
+        },
+        "location": {
+            "country": "Indonesia",
+            "countryCode": "IDN",
+            "address": "Sidemen, Bali, Indonesia",
+            "lat": -8.473195, 
+            "lng": 115.441776
+        },
+        "reviews": [
+            {
+                "id": "r0014",
+                "txt": "Wonderful place with an amazing view. Comfortable, romantic, and beautiful. Great staff as well. Thanks for the amazing stay!",
+                "rate": 5,
+                "by": {
+                    "_id": "u0014",
+                    "fullname": "Ryan",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?man-face"
+                }
+            },
+            {
+                "id": "r00141",
+                "txt": "I enjoyed everything about this Bamboo House! Perfect 1-2 night stay connecting with nature.",
+                "rate": 4.5,
+                "by": {
+                    "_id": "u00141",
+                    "fullname": "Katya",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+                }
+            },
+            {
+                "id": "r00142",
+                "txt": "Increase place to stay! Be aware of 2 dogs sleeping downstairs in both sofas and fighting with each other really bothered us during our stay",
+                "rate": 3.5,
+                "by": {
+                    "_id": "u00142",
+                    "fullname": "Galina",
+                    "imgUrl": "https://source.unsplash.com/random/100x100/?woman-face"
+                }
+            }
+        ],
+        "likedByUsers" : ["mini-user"],
+        "isPopular": "false"
+    },
+    {
+        "_id": "s0015",
+        "name": "Veluvana Bali - Owl Bamboo House",
+        "type": "Treehouse",
+        "imgUrls": [
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/4f70b681-a792-4530-8c52-f2a8d262942d_yv0nhz.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/8ddb35f5-ae3b-4cf4-869b-bb484e82675a_r9ezwf.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/24825c95-303b-47c3-9649-2fb74fc86acb_ngsdhv.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/ec85ccc0-281c-44fc-a061-bc1e87ea0081_wvlkf3.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1642834304/Airbnb%20clone/f474dfbe-557a-4d07-8d6e-76aba506b5a6_fmnuvv.jpg"
+        ],
+        "price": 130,
+        "summery": "Veluvana is a unique bamboo house with a wonderful view of Sidemen Valley, a genuine tropical landscape with Mount Agung peak on its back. This getaway spot is a great place to bring into reality the dream adventure of the true wanderer. We invite you to feel the magnificent vibes of the entire house to escape the life that is full of drama into a journey with ultimate joy.",
+        "capacity": 2,
+        "bedrooms": 1,
+        "beds": 1,
+        "bathrooms": 1.5,
+        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642834305/Airbnb%20clone/45a3aa2b-ce00-4068-9ebe-9f83ca281fe4_cwdwza.jpg"],
+        "amenities": ["Kitchen", "Parking" , "Balcony", "Wifi", "Pool", "Dryer"],
         "host": {
             "_id": "h0014",
             "fullname": "Veluvana",

@@ -2,6 +2,9 @@ import { imageListClasses } from "@mui/material";
 import { isThisSecond } from "date-fns";
 import { eventBusService } from "../../services/event-bus.service";
 
+import { ReactComponent as BeachAccess } from './BeachAccess.svg'
+
+
 export function StayAmenities({stay}) {
     const { amenities } = stay;
     const showAmenities = amenities.slice(0, 5);
@@ -45,7 +48,7 @@ export function StayAmenities({stay}) {
                 logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/elevator_boepjl.png"];
                 break;
             case "Beach access":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/beach_access_qlc0ou.png"];
+                logo = <BeachAccess/>
                 break;
             case "Balcony":
                 logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/balcony_raoqjb.png"];
@@ -60,8 +63,8 @@ export function StayAmenities({stay}) {
                 logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642864461/Airbnb%20clone/ref_rgdvrj.png"];
                 break;
         }
-        
-        return (<img src={logo} alt="Not found" />);
+        return (<div>{logo}</div>)
+        // return (<img src={logo} alt="Not found" />);
     }
 
     
@@ -85,7 +88,8 @@ export function StayAmenities({stay}) {
                 <div className="amenities">
                     {showAmenities.map((amenity, idx) => (
                         <div className="amenity" key={idx}>
-                            {setAmenity(amenity)}
+                            <BeachAccess/>
+                            {/* {setAmenity(amenity)} */}
                             <span>
                             {amenity}
                             </span>

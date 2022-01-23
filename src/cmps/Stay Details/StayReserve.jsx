@@ -25,7 +25,7 @@ export function StayReserve({stay}){
                                         CHECK-IN
                                     </div>
                                     <div className="add">
-                                        Add date
+                                        <input type="date" autoComplete="off" name placeholder="Add date"/>
                                     </div>
                                     <div  className="add"></div>
                                 </div>
@@ -34,7 +34,7 @@ export function StayReserve({stay}){
                                         CHECKOUT
                                     </div>
                                     <div className="add">
-                                        Add date
+                                        <input type="date" autoComplete="off" name placeholder="Add date"/>
                                     </div>
                                     <div  className="add"></div>
                                 </div>
@@ -43,7 +43,7 @@ export function StayReserve({stay}){
                                         GUESTS
                                     </div>
                                     <div className="add guest">
-                                        1 guest
+                                        <input type="number" autoComplete="off" name placeholder="1 guest"/>                                       
                                     </div>
                                 </div>
                             </div>
