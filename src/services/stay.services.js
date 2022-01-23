@@ -888,7 +888,7 @@ const gStays = [
             },
             {
                 "id": "r00154",
-                "created": Date.now(),
+                "created": 1616502526000,
                 "txt": "Too pricey!",
                 "rate": 3.5,
                 "by": {
