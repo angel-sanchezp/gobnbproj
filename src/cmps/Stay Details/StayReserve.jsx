@@ -6,13 +6,21 @@ import { Guests } from '../FilterCmps/Guests.jsx'
 import { Calendar } from '../FilterCmps/Calendar.jsx'
 // import { render } from '@testing-library/react';
 
-
+import { utilService } from '../../services/utils.service'
 
 export class StayReserve extends React.Component {
 
     state = {
         isModalShown: false,
-        cmp: null
+        cmp: null,
+        stay:null
+    }
+
+    componentDidMount() {
+        const { stay } = this.props
+        console.log(stay)
+        this.setState({ stay: { ...stay } })
+
     }
 
     getInputValue = (date) => {
@@ -50,7 +58,7 @@ export class StayReserve extends React.Component {
             // console.log('here guests')
             this.setState(prev => ({ ...prev, cmp: <Guests onChangeAdults={this.onChangeAdults} onChangeChildren={this.onChangeChildren} /> }))
             this.setState(prev => ({ ...prev, isModalShown: true }))
-            this.toggleModal()
+            // this.toggleModal()
         } else {
             // console.log('here calendar')
             this.setState(prev => ({ ...prev, cmp: <Calendar onSetDate={this.onSetDate} filterBy={this.props.filterBy} /> }))
@@ -66,6 +74,9 @@ export class StayReserve extends React.Component {
         this.setState(prev => ({ ...prev, isModalShown: !prev.isModalShown }))
     }
 
+    createOrder = ({order}) => {
+
+    }
 
 
 
@@ -76,12 +87,14 @@ export class StayReserve extends React.Component {
         if (reviews.length === 0) ReviewsAmount = `No reviews`;
 
         const formattedDateIn = this.getInputValue(this.props.filterBy.dateIn)
-        console.log(formattedDateIn)
+        // console.log(formattedDateIn)
         const formattedDateOut = this.getInputValue(this.props.filterBy.dateOut)
-        console.log(formattedDateOut)
+        // console.log(formattedDateOut)
+        
 
         const { isModalShown, cmp } = this.state
-
+        const { price, _id, name} = this.props.stay;
+        
 
         return (
             <section className="reserve-container">
@@ -144,7 +157,7 @@ export class StayReserve extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <button className="gradient" type="submit">Reserve</button>
+                            <button className="reserve-submit gradient" type="submit">Reserve</button>
                         </form>
                         {isModalShown && <div className="dynamic-modal">
                             {cmp}
