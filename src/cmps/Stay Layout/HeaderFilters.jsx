@@ -65,12 +65,12 @@ class _HeaderFilters extends Component {
                 <span>|</span>
                 <div className="filters">
                     {
-                        FILTERS.map((filter => (
-                            <button className={cn('filter-btn', { 'is-active': this.state.filterBy.amenities[filter] })} 
+                        FILTERS.map((filter, idx) => (
+                            <button key={idx} className={cn('filter-btn', { 'is-active': this.state.filterBy.amenities[filter] })} 
                                 onClick={() => this.toggleFilter(filter)}>
                                     { filter }
                             </button>
-                        )))
+                        ))
                     }
                 </div>
             </div>

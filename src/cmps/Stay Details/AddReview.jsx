@@ -1,6 +1,8 @@
 import { Component } from 'react'
 import { userService } from '../../services/user.services.js'
-// import GuestUserImg from "https://res.cloudinary.com/kitsunex3/image/upload/v1643031396/Airbnb%20clone/Users/GuestUser_dynjr7.png";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import $ from 'jquery';
 
 
 export class AddReview extends Component {
@@ -54,6 +56,7 @@ export class AddReview extends Component {
                 </div>
                 <div className = "review-txt-area">
                 <textarea
+                    id="reviewBox"
                     placeholder="Write a review about this stay."
                     type="text"
                     name="txt"
@@ -63,7 +66,7 @@ export class AddReview extends Component {
                 />
                 </div>
                 <div className="submit-button-area">
-                    <button className = "gradient"onClick={this.onAddReview}>Submit</button>
+                    <button className = "gradient" onClick={this.onAddReview}>Submit</button>
                 </div>
             </section>
         )

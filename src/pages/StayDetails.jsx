@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import $ from 'jquery';
+
 // import { Link, NavLink } from 'react-router-dom';
 // import { Route } from 'react-router-dom';
 import { loadStays, changeHeaderClass } from '../store/stay/stay.actions.js'

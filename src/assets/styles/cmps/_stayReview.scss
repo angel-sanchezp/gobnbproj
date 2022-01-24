@@ -75,7 +75,7 @@
 
 .rm {
     width: 698px;
-    height: 380px;
+    height: 360px;
 }
 
 .review-preview {
@@ -116,7 +116,7 @@
     padding: 20px;
     font-size: inherit;
     font-family: CerealLight;
-    width: 100%;
+    width: 60%;
     height: 150px;
     resize: none;
     border-radius: 13px;
@@ -130,13 +130,10 @@
 
 .submit-button-area button{
     text-align: center;
-    padding: 10px 40px;
+    padding: 10px 10px;
     border-radius: 5px;
     color: #fff;
-    font-size: .875rem;
+    font-size: 1rem;
     font-family: CerealLight;
-    font-weight: 600;
-    margin-bottom: 40px;
-    border: none;
     width: 114px;
 }
