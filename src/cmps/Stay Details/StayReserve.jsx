@@ -12,9 +12,10 @@ export class StayReserve extends React.Component {
 
     state = {
         isModalShown: false,
-        cmp: null
+        cmp: null,
     }
 
+  
     getInputValue = (date) => {
         if (!date) { return '' }
         return moment(date).format("MMM D")
@@ -50,7 +51,6 @@ export class StayReserve extends React.Component {
             // console.log('here guests')
             this.setState(prev => ({ ...prev, cmp: <Guests onChangeAdults={this.onChangeAdults} onChangeChildren={this.onChangeChildren} /> }))
             this.setState(prev => ({ ...prev, isModalShown: true }))
-            this.toggleModal()
         } else {
             // console.log('here calendar')
             this.setState(prev => ({ ...prev, cmp: <Calendar onSetDate={this.onSetDate} filterBy={this.props.filterBy} /> }))
