@@ -5,6 +5,7 @@ import moment from 'moment'
 import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
 import { SearchModal } from './SearchModel.jsx'
 import { Logo } from '../shared/logo.jsx'
+import { ReactComponent as UserAvatar } from '../../assets/svg/user-avatar.svg'
 
 
 
@@ -58,30 +59,18 @@ class _ExpHeader extends Component {
             <div className="explore-header">
                 <section className='main-nav'>
                     <Logo/>
-                    {/* <nav>
-                        {/* <div className="reserve-nav">
-                            <div className="reserve-nav-details">
-                                <div className="nav-price">
-                                    <span>stay price</span><span>/night</span>
-                                </div>
-                                <div className="nav-rating">
-                                    <span>rate</span><span>reviews</span>
-                                </div>
+                    <div className="nav-right">
+                        <nav className="main-nav">
+                            {/* <NavLink activeClassName="my-active" exact to="/explore">Explore</NavLink> */}
+                            <NavLink to="/BecomeHost" className="nav-txt-header">Become Host</NavLink>
+                        </nav>
+                        <section className="login-container">
+                            <div className="user-options">
+                                <div className="burger">☰</div>
+                                <div className="user-avatar"><UserAvatar/></div>
                             </div>
-                            <div className="reserve-btn">
-                                <form action="book/stay">
-                                    <input type="text" />
-                                    <button>
-                                        <span></span>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </nav> */} 
-                    <nav className="main-nav">
-                        {/* <NavLink activeClassName="my-active" exact to="/explore">Explore</NavLink> */}
-                        <NavLink to="/BecomeHost" className="nav-txt-header">Become Host</NavLink>
-                    </nav>
+                        </section>
+                    </div>
                     {!enterInputsMode ? (
                         <form className="exp-mini-form">
                             <div className="input first-container" onClick={this.openModal}>

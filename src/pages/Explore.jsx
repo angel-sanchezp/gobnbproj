@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import _ from 'lodash'
 import moment from 'moment'
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
+import { StayList } from '../cmps/ExpCmps/StayList.jsx'
 
 import { loadStays, changeHeaderClass } from '../store/stay/stay.actions.js'
 import { utilService } from '../services/utils.service'
@@ -102,26 +103,9 @@ class _Explore extends Component {
                             <div className="small-txt-exp-page">Review COVID-19 travel restrictions before you book</div>
                         </div>
                     }
-                    <ul className="list-container">
-
-                        {stays.map(stay =>
-
-                            <li className="explore-card-stay card" key={stay._id} onClick={() => this.onStayClicked(stay._id)}>
-                                <img className="explore-card-image" alt="cat" src={stay.imgUrls[0]} />
-                                <div className="stay-details">
-                                    <div className="line1">
-                                        <div className="black-bold-txt">{stay.name.length > 30 ? stay.name.slice(0, 30).concat('...') : stay.name}</div>
-                                        <div className="black-solid-txt">${stay.price.toLocaleString()} / night</div>
-                                    </div>
-                                    <div className="line2">
-                                        <div className="gray-txt">{utilService.getRandomIntInclusive(1000, 3000)} kilometers away</div>
-                                        {dateOut && dateIn && <div className="gray-small-txt">{this.formatDates(dateIn, dateOut)}</div>}
-                                        {!dateIn && !dateOut && <div className="gray-small-txt">Jan 21 -28</div>} { /** TODO : Fix the random */}
-                                    </div>
-                                </div>
-                            </li>
-                        )}
-                    </ul>
+                    <main>
+                        <StayList stays={stays} onStayClicked={this.onStayClicked} dateIn={dateIn} dateOut={dateOut}/>
+                    </main>
                 </section>
                 <AppFooter/>
             </section>

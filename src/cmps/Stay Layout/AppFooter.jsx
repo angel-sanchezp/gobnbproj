@@ -54,7 +54,7 @@ class _AppFooter extends Component {
                                                 <a href="#/stay/60b7d6c4374aab437c4d2f2e"><span>Beautiful Apartment</span>
                                                     <span>Hong Kong</span></a>
                                             </div>
-                                            <div classNAme="row"> 
+                                            <div className="row"> 
                                                 <a href="#/stay/60b6275805f90634a569de93">
                                                     <span>Villa con migo</span>
                                                     <span>Porto, Portugal</span>

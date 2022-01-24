@@ -47,6 +47,7 @@
     width: 56px;
     border-radius: 50%;
     margin-inline-end: 10px;
+    border: solid 1px rgb(202, 198, 198);
 }
 
 .reviews-modal{
@@ -74,7 +75,7 @@
 
 .rm {
     width: 698px;
-    height: 380px;
+    height: 360px;
 }
 
 .review-preview {
@@ -97,3 +98,42 @@
     font-size: 14px;
 }
 
+.add-review-container{
+    padding: 48px 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.add-review-userInfo{
+    display: flex;
+    padding-top: 20px;
+    font-family: CerealLight;
+
+}
+
+.review-txt-area textarea{
+    margin: 20px 0;
+    padding: 20px;
+    font-size: inherit;
+    font-family: CerealLight;
+    width: 60%;
+    height: 150px;
+    resize: none;
+    border-radius: 13px;
+    border-color: #bdbcbc;
+}
+
+.submit-button-area{
+    display: flex;
+    justify-content: start;
+}
+
+.submit-button-area button{
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: CerealLight;
+    width: 114px;
+}
