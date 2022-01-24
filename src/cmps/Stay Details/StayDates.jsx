@@ -19,8 +19,9 @@ class _StayDates extends React.Component {
 
         return (
             <section className="stay-dates-container">
+                <h2>Select check-in date</h2>
+                <p>Add your travel dates for exact pricing</p>
                 <div className="select-dates">
-                    
                 <Calendar onSetDate={this.onSetDate} filterBy={this.props.filterBy} />
                 </div>
     

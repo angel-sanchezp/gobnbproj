@@ -100,14 +100,14 @@ export class StayReserve extends React.Component {
                                             CHECK-IN
                                         </div>
                                         <div className="add">
-                                            <span>Check in</span>
+                                            <span>
                                             <input name="dateIn"
                                                 id="check-in"
                                                 autoComplete="off"
                                                 placeholder="Add dates"
                                                 onChange={this.handleChange}
                                                 onClick={() => this.OpenModal('calendar')}
-                                                value={formattedDateIn} />
+                                                value={formattedDateIn} /></span>
                                         </div>
                                         <div className="add"></div>
                                     </div>
@@ -116,14 +116,14 @@ export class StayReserve extends React.Component {
                                             CHECKOUT
                                         </div>
                                         <div className="add">
-                                            <span>Check out</span>
+                                            <span>
                                             <input name="dateOut"
                                                 id="check-out"
                                                 autoComplete="off"
                                                 placeholder="Add dates"
                                                 onChange={this.handleChange}
                                                 onClick={() => this.OpenModal('calendar')}
-                                                value={formattedDateOut} />
+                                                value={formattedDateOut} /></span>
                                             {/* value={dateOut.getDay(),monthNames[dateOut.getMonth()]} /> */}
                                         </div>
                                         <div className="add"></div>
@@ -133,13 +133,13 @@ export class StayReserve extends React.Component {
                                             GUESTS
                                         </div>
                                         <div className="add guest">
-                                            <span>Guests</span>
+                                            <span>
                                             <input name="guests"
                                                 id="guests"
-                                                placeholder={`Add gusts`}
+                                                placeholder={`1 guest`}
                                                 onChange={this.handleChange}
                                                 onClick={() => this.OpenModal('guests')}
-                                                value={this.props.filterBy.adults} />
+                                                value={this.props.filterBy.adults} /></span>
                                         </div>
                                     </div>
                                 </div>

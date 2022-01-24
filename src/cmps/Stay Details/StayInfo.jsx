@@ -38,7 +38,7 @@ export function StayInfo({stay , filterBy}){
                     </div>
                 </section>
                 <StayAmenities stay = {stay}/>
-                <section className="selected-dates">
+                <section className="details-calendar">
                     <StayDates filterBy={filterBy}/>
                 </section>
             </section>
