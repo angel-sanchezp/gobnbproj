@@ -132,11 +132,17 @@
     width: 100px;
 }
 
-.reserve-date-picker .calendar{
-    position: absolute !important;
-    top: -24px !important;
-    right: -32px !important;
-    width: 661px !important;
-    z-index: 1 !important;
-    min-height: 460px !important;
+
+
+.reserve-box .css-1snvurg-MuiPickerStaticWrapper-root{
+    position:absolute;
+    top: -20px !important;
+    right: -390px;
+    width: 620px !important;
+    z-index: 2 !important;
+    height: 320px !important;
+    border-radius: 12px;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+    
 }
