@@ -43,6 +43,7 @@
         display: flex;
         -webkit-flex-direction: column;
         flex-direction: column;
+        width:120px
         // grid-gap: 30px;
         // gap: 30px;
 
@@ -181,7 +182,7 @@ a{
         // gap: 30px;
 
     }
-    .first-footer-container{
+    .second-footer-container{
         display: flex;
         -webkit-flex-direction: column;
         flex-direction: column;
@@ -220,6 +221,15 @@ a{
      flex-direction: column;
      justify-content: space-evenly;
      margin-bottom: 20px;
+    }
+    .row{
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        width:120px
+        // grid-gap: 30px;
+        // gap: 30px;
+
     }
 
     

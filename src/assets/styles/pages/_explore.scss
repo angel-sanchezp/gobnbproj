@@ -1,5 +1,5 @@
 .explore-page{
-    padding: 0 rem(80px);
+    padding: 0 rem(70px);
     border-top: 0.5px solid #ddddddba;
 }
 
@@ -7,7 +7,7 @@
 .list-container {
     padding-inline-start: 0px;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(326px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(258px,1fr));
     -moz-column-gap: 24px;
     column-gap: 24px;
     // row-gap: 40px;
@@ -15,19 +15,19 @@
     .explore-card-stay {
         position: relative;
         cursor: pointer;
-        margin-bottom: 20px;
+        margin-bottom: 92px;
     }
     .explore-card-image {
        border-radius: 12px;
         width: 100%;
-        height: 80%;
+        height: 90%;
         object-fit: cover;
     }
     li{
         list-style-type: none;
     }
     .stay-details{
-        height: 20%;
+        height: 100%;
         width: 100%;
     }
 }
@@ -51,7 +51,6 @@
     align-items: center;
 
     .sort{
-        width:20%;
         display: flex;
     }
     .filters{
@@ -60,24 +59,21 @@
     }
 
     .filter-btn{
-        cursor: pointer ;
-        text-align: center ;
-        border: 1px solid black ;
-        background-color: #FFFFFF ;
-        outline: none ;
-        /* padding: 29px ; */
-        margin: 0px 4px ;
-        border-color: #DDDDDD ;
-        border-radius: 30px ;
-        color: #222222 ;
-        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif ;
-        position: relative ;
-        padding-top: 8px ;
-        padding-bottom: 8px ;
-        font-size: 14px ;
+        cursor: pointer;
+        text-align: center;
+        border: 1px solid black;
+        background-color: #FFFFFF;
+        outline: none;
+        margin: 0px 4px;
+        border-color: #DDDDDD;
+        border-radius: 30px;
+        color: #222222;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+        position: relative;
+        padding: 12px 22px;
+        font-size: 15px;
         font-weight: 300;
-        line-height: 16px ;
-        width: 100%;
+        line-height: 18px;
 
         &.is-active {
             border: 1px solid rgb(34, 34, 34) ;
@@ -96,31 +92,47 @@
 }
 
 .stay-details{
-    font-family: CerealBook, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+    // font-family: CerealMedium, sans-serif;
+    font-family: 'CerealLight';
+    // font-family: 'CerealBook';
     font-size: 16px;
     font-weight: 300;
     .line1{
+        font-family: 'CerealLight';
         display: flex;
         color: #393939;
-        justify-content: space-between;
-        margin-top:5px;
-        .black-bold-txt{
-            font-weight: 500;
+        justify-content: flex-start;
+        margin-top: 5px;
+        align-items: center;
+        .rank{
+            font-size: 14px;
+            margin: 2px;
         }
-        .black-solid-txt{
-            font-weight: 300;
+        .review-count{
+            color: #868686;
+            font-size: 14px;
+            font-weight: 100;
+            margin: 1px;
 
         }
        
     }
-    .line2{
+    .black-solid-txt{
         display: flex;
-        color: #868686;
         justify-content: space-between;
         font-size: 15px;
         margin-top: 3px;
-        .gray-small-txt{
-            font-size: 13px;
-        }
+        font-weight: 300;
+        color: black;
     }
+    .line4{
+        display: flex;
+    }
+    .black-bold-txt{
+        font-family: 'CerealMedium';
+        color:black;
+        margin: 2px;
+        font-size: 15px;
+
+    }   
 }
