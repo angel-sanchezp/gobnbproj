@@ -144,7 +144,7 @@ export class StayReserve extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <button className="gradient" style={{ background: "radial-gradient(circle at -0.5px 27.4062px, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%)" }}>Reserve</button>
+                            <button className="gradient" type="submit">Reserve</button>
                         </form>
                         {isModalShown && <div className="dynamic-modal">
                             {cmp}
