@@ -2,7 +2,7 @@ import {HomePage} from './pages/Home.jsx'
 import {Explore} from './pages/Explore.jsx'
 import { StayDetails } from './pages/StayDetails.jsx'
 import { Dashboard } from './pages/Dashboard.jsx'
-import { Orders } from './pages/Orders.jsx'
+import { Trips } from './pages/Trips.jsx'
 
 
 const routes = [
@@ -12,8 +12,8 @@ const routes = [
         component: Dashboard
     },
     {
-        path: '/orders',
-        component: Orders
+        path: '/trips',
+        component: Trips
     },
     {
         path: '/details/:stayId',
