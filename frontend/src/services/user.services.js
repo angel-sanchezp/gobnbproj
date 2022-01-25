@@ -62,7 +62,7 @@ _createUsers();
 function _createUsers() {
   storageService.query(STORAGE_KEY).then((users) => {
     if (!users || !users.length) {
-      storageService.save(STORAGE_KEY, users);
+      storageService.save(STORAGE_KEY, gUsers);
     }
 
     return users;
@@ -130,17 +130,7 @@ function getLoggedinUser() {
   return JSON.parse(localStorage.getItem(STORAGE_KEY_LOGGEDIN));
 }
 
-function getNewUser() {
-  return {
-    _id: utilService.makeId(),
-    fullname: "",
-    imgUrl: "",
-    isAdmin: false,
-    username: "",
-    password: "",
-    email: "",
-  };
-}
+
 
 
 

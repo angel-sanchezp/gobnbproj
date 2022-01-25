@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
-
+import { connect } from 'react-redux'
+import { withRouter } from "react-router-dom"
+import { NavLink } from 'react-router-dom'
 import { useDetectOutsideClick } from "./useDetectOutsideClick.jsx";
 import UserAvatar from '../../assets/user-icon.png';
 import { ReactComponent as Burger } from '../../assets/svg/burger.svg'
@@ -52,3 +54,4 @@ export function DropdownMenu() {
     </div>
   );
 }
+
