@@ -104,9 +104,9 @@ async function login(userCred) {
     if (user) return _saveLocalUser(user)
 }
 async function signup(userInfo) {
-    console.log('sign up in user service', user)
+    console.log('sign up in user service', userInfo)
     const user = await httpService.post('auth/signup', userInfo)
-    return _saveLocalUser(user)
+    if (user) return _saveLocalUser(user)
 
     // return storageService.post(STORAGE_KEY, userInfo)
     //     .then((user) => {
