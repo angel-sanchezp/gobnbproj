@@ -1,72 +1,114 @@
-import { storageService } from './async-storage.service.js'
-
-const STORAGE_KEY = 'user'
-const STORAGE_KEY_LOGGEDIN = 'loggedinUser'
+import { storageService } from "./async-storage.service.js";
+import { utilService } from "./utils.service.js";
+import userJson from "../data/user.json";
 
 export const userService = {
-    login,
-    logout,
-    signup,
-    getLoggedinUser,
-    emptyUser,
-    chargeAmount
-}
+  login,
+  logout,
+  signup,
+  getLoggedinUser,
+  getNewUser,
+};
 
-window.us = userService
+const STORAGE_KEY = "users";
+const STORAGE_KEY_LOGGEDIN = "loggedinUser";
+
+window.us = userService;
+
+const gUsers = [
+  {
+    _id: "u101",
+    fullname: "User 1",
+    imgUrl: "/img/img1.jpg",
+    isAdmin: false,
+    username: "user1",
+    password: "secret",
+  },
+  {
+    _id: "u102",
+    fullname: "User 2",
+    imgUrl: "/img/img2.jpg",
+    isAdmin: false,
+    username: "user2",
+    password: "secret",
+  },
+  {
+    _id: "u103",
+    fullname: "User 3",
+    imgUrl: "/img/img3.jpg",
+    isAdmin: false,
+    username: "user3",
+    password: "secret",
+  },
+  {
+    _id: "u104",
+    fullname: "User 4",
+    imgUrl: "/img/img4.jpg",
+    isAdmin: false,
+    username: "user2",
+    password: "secret",
+  },
+];
+
+_createUsers();
+function _createUsers() {
+  storageService.query(STORAGE_KEY).then((users) => {
+    if (!users || !users.length) {
+      storageService.save(STORAGE_KEY, users);
+    }
+
+    return users;
+  });
+}
 
 function login(credentials) {
-    return storageService.query(STORAGE_KEY).then(users => {
-        const user = users.find(user => user.username === credentials.username &&
-            user.password === credentials.password)
-            
-        _setLoggedinUser(user)
-
-        return user
-    })
-
-
+  return storageService.query(STORAGE_KEY).then((users) => {
+    const user = users.find(
+      (user) =>
+        user.username === credentials.username &&
+        user.email === credentials.email
+    );
+    if (user) {
+      localStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user));
+      return user;
+    } else {
+      console.log("No user with those credentials");
+      console.log(user);
+      return user;
+    }
+  });
 }
+
 function signup(userInfo) {
-    return storageService.post(STORAGE_KEY, userInfo)
-        .then((user) => {
-            _setLoggedinUser(user)
-            return user
-        })
+  return storageService.post(STORAGE_KEY, userInfo).then((user) => {
+    localStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user));
+    return user;
+  });
 }
+
 function logout() {
-    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, null)
-    return Promise.resolve()
+  localStorage.setItem(STORAGE_KEY_LOGGEDIN, null);
+  return Promise.resolve();
 }
 
 function getLoggedinUser() {
-    return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN))
+  return JSON.parse(localStorage.getItem(STORAGE_KEY_LOGGEDIN));
 }
 
-function chargeAmount(amount) {
-    const user = getLoggedinUser()
-    user.score -= amount
-    if (user.score < 0) return Promise.reject('Not enough score')
-    _setLoggedinUser(user)
-    return Promise.resolve(user)
-    // TODO: need to also update the user, in the user array in localStorage
-}
-
-
-
-function emptyUser() {
-    return {
-        username: '',
-        password: '',
-        fullname: '',
-        score: 10000
-    }
-}
-
-function _setLoggedinUser(user) {
-    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
+function getNewUser() {
+  return {
+    _id: utilService.makeId(),
+    fullname: "",
+    imgUrl: "",
+    isAdmin: false,
+    username: "",
+    password: "",
+    email: "",
+    
+  };
 }
 
 
-// Test Data
-// userService.signup({username: 'muki', password: 'muki1', fullname: 'Muki Noya', score: 22})
-// userService.login({ username: 'muki', password: 'muki1' })
+
+
+
