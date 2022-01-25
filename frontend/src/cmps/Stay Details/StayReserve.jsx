@@ -17,20 +17,16 @@ export class StayReserve extends React.Component {
         cmp: null,
         stay: null,
         order: {
-
-            fullname: '',
-            _id: '',
+            hostId: '',
             createdAt: new Date(),
-                name: 'patricia',
-                _id: '1245',
+            buyer_fullname: 'patricia',
+            buyer_id: '1245',
             // buyer:userService.getLoggedinUser(),
             totalPrice: '',
             startDate: '',
             endDate: '',
-            guests: {
-                adults: '',
-                children: ''
-            },
+            adults: '',
+            kids: '',
             stay_id: '',
             stay_name: '',
             stay_price: '',
@@ -40,14 +36,13 @@ export class StayReserve extends React.Component {
 
     componentDidMount() {
         const { stay } = this.props
-        console.log('stay', stay)
         const { _id, name, price, host } = stay
-        this.setState(prevState => ({ ...prevState, order: { ...prevState.order, stay: { ...prevState.order.stay, _id: _id } } }))
-        this.setState(prevState => ({ ...prevState, order: { ...prevState.order, stay: { ...prevState.order.stay, name: name } } }))
-        this.setState(prevState => ({ ...prevState, order: { ...prevState.order, stay: { ...prevState.order.stay, price: price } } }))
-        this.setState(prevState => ({ ...prevState, order: { ...prevState.order, stay: { ...prevState.order.stay, price: price } } }))
-        this.setState(prevState => ({ ...prevState, order: { ...prevState.order, host: { ...prevState.order.host, fullname: host.fullname } } }))
-        this.setState(prevState => ({ ...prevState, order: { ...prevState.order, host: { ...prevState.order.host, _id: host._id } } }))
+        const { order } = this.state
+        order.stay_id = _id
+        order.stay_name = name
+        order.stay_price = price
+        order.hostId = host._id
+        this.setState({ order });
         this.setState({ stay: { ...stay } })
 
     }
@@ -69,18 +64,18 @@ export class StayReserve extends React.Component {
 
     onChangeAdults = (adultsNum) => {
         console.log(adultsNum)
-        this.setState(prevState => ({
-            ...prevState, order: { ...prevState.order, guests: { ...prevState.order.guests, adults: adultsNum } }
+        const {order}=this.state
+        order.adults=adultsNum
+        this.setState({ order });
 
-        }))
 
     }
 
     onChangeChildren = (childrenNum) => {
         console.log(childrenNum)
-        this.setState(prevState => ({
-            ...prevState, order: { ...prevState.order, guests: { ...prevState.order.guests, children: childrenNum } }
-        }))
+        const {order}=this.state
+        order.kids=childrenNum
+        this.setState({ order });
     }
 
     onSetDate = (date) => {
@@ -106,7 +101,7 @@ export class StayReserve extends React.Component {
         const diffDays = date2.diff(date1, 'days')
 
         var { order } = this.state
-        order.totalPrice = diffDays * order.stay.price
+        order.totalPrice = diffDays * order.stay_price
         this.setState({ order });
 
 
