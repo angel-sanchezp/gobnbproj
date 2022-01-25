@@ -4,6 +4,9 @@ import UserAvatar from '../../assets/user-icon.png';
 
 export function DropdownMenu() {
 
+    function openLoginModal ()  {
+        document.querySelector(".user-modal").classList.remove("hidden")
+    }
 
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
@@ -31,7 +34,8 @@ export function DropdownMenu() {
               <a className="menu-opt" href="#">Trips</a>
             </li>
             <li>
-              <a className="menu-opt" href="#">Login/ Signup</a>
+                <button className="menu-opt"onClick={openLoginModal}>Login/ Signup</button>
+              {/* <a className="menu-opt" href="#">Login/ Signup</a> */}
             </li>
           </ul>
         </nav>
