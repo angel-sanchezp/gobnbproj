@@ -88,7 +88,7 @@ async function update(user) {
     // await storageService.put('user', user)
     user = await httpService.put(`user/${user._id}`, user)
     // Handle case in which admin updates other user's details
-    if (getLoggedinUser()._id === user._id) _setLoggedinUser(user)
+    if (_saveLocalUser()._id === user._id) _saveLocalUser(user)
     return user;
 }
 
@@ -100,11 +100,11 @@ async function login(userCred) {
     //         user.password === credentials.password)
 
     const user = await httpService.post('auth/login', userCred)
-    if (user) return _setLoggedinUser(user)
+    if (user) return _saveLocalUser(user)
 }
 async function signup(userInfo) {
     const user = await httpService.post('auth/signup', userInfo)
-    return _setLoggedinUser(user)
+    return _saveLocalUser(user)
 
     // return storageService.post(STORAGE_KEY, userInfo)
     //     .then((user) => {
@@ -120,6 +120,11 @@ async function logout() {
 
 }
 
+function _saveLocalUser(user) {
+    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
+    return user
+}
+
 function getLoggedinUser() {
   return JSON.parse(localStorage.getItem(STORAGE_KEY_LOGGEDIN));
 }
@@ -133,7 +138,6 @@ function getNewUser() {
     username: "",
     password: "",
     email: "",
-    
   };
 }
 

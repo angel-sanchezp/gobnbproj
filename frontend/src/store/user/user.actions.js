@@ -75,7 +75,7 @@ export function getCurrentUser() {
             })
             return user
         } catch (err) {
-            console.log('No user found', err)
+            console.log('User not found', err)
         }
     }
 }
