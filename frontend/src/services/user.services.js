@@ -104,7 +104,6 @@ function getNewUser() {
     username: "",
     password: "",
     email: "",
-    
   };
 }
 
