@@ -1,7 +1,7 @@
 import _ from "lodash";
 import { stayService } from "../../services/stay.services.js";
 
-export function loadStays(predefinedFilterBy) {
+export  function loadStays(predefinedFilterBy) {
     return (dispatch , getState) => {
         const filterBy = _.merge(getState().stayModule.filterBy, predefinedFilterBy);
         console.log(filterBy)
