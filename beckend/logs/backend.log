@@ -1936,3 +1936,24 @@
 25.1.2022, 19:38:39 - INFO - Req!!!
 25.1.2022, 19:38:45 - INFO - Req!!!
 25.1.2022, 19:41:55 - INFO - Req!!!
+25.1.2022, 21:31:57 - INFO - Server is running on port: 3030
+25.1.2022, 21:32:43 - INFO - Server is running on port: 3030
+25.1.2022, 22:10:54 - DEBUG - auth.service - login with username: user1
+25.1.2022, 22:10:58 - ERROR - Failed to Login Invalid username or password
+25.1.2022, 22:14:34 - INFO - Server is running on port: 3030
+25.1.2022, 22:19:08 - INFO - Server is running on port: 3030
+25.1.2022, 22:21:22 - INFO - Server is running on port: 3030
+25.1.2022, 22:21:49 - DEBUG - auth.service - login with username: user1
+25.1.2022, 22:21:52 - ERROR - Failed to Login Invalid username or password
+25.1.2022, 22:26:42 - INFO - Server is running on port: 3030
+25.1.2022, 22:27:35 - DEBUG - auth.service - login with username: user1
+25.1.2022, 22:27:39 - ERROR - Failed to Login Invalid username or password
+25.1.2022, 22:28:14 - INFO - Server is running on port: 3030
+25.1.2022, 22:28:40 - DEBUG - auth.service - login with username: user1
+25.1.2022, 22:28:42 - ERROR - Failed to Login Invalid username or password
+25.1.2022, 22:32:26 - INFO - Server is running on port: 3030
+25.1.2022, 22:33:09 - DEBUG - auth.service - signup with username: user1, fullname: User 1
+25.1.2022, 22:33:47 - DEBUG - auth.route - new account created: {"username":"user1","password":"$2b$10$/T5RDI5.Ree.nynlYL6ks.Ppo3Lv2PLdOoLCxqrphOOoaOm0p98YG","fullname":"User 1","isAdmin":false,"_id":"61f05eabc8e02896300df6d5"}
+25.1.2022, 22:33:47 - DEBUG - auth.service - login with username: user1
+25.1.2022, 22:34:48 - DEBUG - auth.service - login with username: user1
+25.1.2022, 22:37:37 - DEBUG - auth.service - login with username: user1

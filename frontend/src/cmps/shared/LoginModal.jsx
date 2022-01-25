@@ -17,7 +17,7 @@ class _LoginModal extends React.Component {
   handleChange = (ev) => {
     const field = ev.target.name;
     const value = ev.target.value;
-    console.log(field, value)
+    // console.log(field, value)
     this.setState({
       credentials: { ...this.state.credentials, [field]: value },
     });
