@@ -13,15 +13,12 @@ export const userService = {
     logout,
     signup,
     getLoggedinUser,
-    emptyUser,
-    chargeAmount,
     getById,
     remove,
     update,
 }
 
-const STORAGE_KEY = "users";
-const STORAGE_KEY_LOGGEDIN = "loggedinUser";
+
 
 window.us = userService;
 
