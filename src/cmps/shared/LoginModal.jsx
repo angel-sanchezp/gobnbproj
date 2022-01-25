@@ -25,60 +25,55 @@ export class LoginModal extends React.Component {
             <section className="login-signup">
                 <section className="login-modal">
                     <div>
-                        <h3>Login</h3>
+                        <div><button>X</button></div>
+                        <div><h4>Login</h4></div>
+                        <div></div>
                     </div>
-                    <div>
                         <form action="">
                             <div className="login">
-                            <input 
-                            type="text"
-                            placeholder="Enter username" />
+                                <h3>Welcome to Gobnb</h3>
+                                <div>
+                                    <input 
+                                    type="text"
+                                    placeholder="Enter username" />
+                                    <input type="text"
+                                    placeholder="Enter password" />
+                                </div>
                             </div>
-                            <div className="login">
-                            <input type="text"
-                            placeholder="Enter password" />
-                            </div>
-                            {/* onClick will submit inputs */}
                             <button><span>Continue</span></button>
                             <div>
-                                <h4>Don't have and account? <button type="button" onClick={this.openSignup}><span>Signup!</span></button></h4>
-                                
+                                <small>Don't have and account? <button type="button" onClick={this.openSignup}><span>Sign up!</span></button></small>
                             </div>
                         </form>
-                    </div>
                 </section>
                 <section className="signup-modal hidden">
                     <div>
-                        <h3>signup</h3>
+                    <div><button>X</button></div>
+                        <div><h4>Sign up</h4></div>
+                        <div></div>
                     </div>
-                    <div>
                         <form action="">
                             <div className="signup">
-                            <input 
-                            type="text"
-                            placeholder="Enter full name" />
+                                <h3>Welcome to Gobnb</h3>
+                                <div>
+                                    <input 
+                                    type="text"
+                                    placeholder="Enter full name" />
+                                    <input 
+                                    type="text"
+                                    placeholder="Enter username" />
+                                    <input type="text"
+                                    placeholder="Enter email" />
+                                    <input type="text"
+                                    placeholder="Enter password" />
+                                </div>
                             </div>
-                            <div className="signup">
-                            <input 
-                            type="text"
-                            placeholder="Enter username" />
-                            </div>
-                            <div className="signup">
-                            <input type="text"
-                            placeholder="Enter email" />
-                            </div>
-                            <div className="signup">
-                            <input type="text"
-                            placeholder="Enter password" />
-                            </div>
-                            {/* onClick will submit inputs */}
                             <button><span>Continue</span></button>
                             <div>
-                                <h4>Already have an account? <button type="button" onClick={this.openLogin}><span>Login!</span></button></h4>
+                                <small>Already have an account? <button type="button" onClick={this.openLogin}><span>Login!</span></button></small>
                                 {/* on button click- puts signup on hidden & removed login from hidden */}
                             </div>
                         </form>
-                    </div>
                 </section>
             </section>
     )
