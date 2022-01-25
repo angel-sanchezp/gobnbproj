@@ -9,6 +9,7 @@ import { StayList } from '../cmps/ExpCmps/StayList.jsx'
 import { loadStays, changeHeaderClass } from '../store/stay/stay.actions.js'
 import { utilService } from '../services/utils.service'
 
+
 const HEADER_CLASS = 'explore-header'
 
 class _Explore extends Component {
@@ -69,9 +70,7 @@ class _Explore extends Component {
 
     }
 
-    onStayClicked(stayId) {
-    this.props.history.push(`/details/${stayId}`)
-    }
+   
 
     formatDates = (dateIn, dateOut) => {
         return `${moment(parseInt(dateIn)).format("MMM D")} - ${moment(parseInt(dateOut)).format("MMM D")}`
@@ -99,12 +98,13 @@ class _Explore extends Component {
                 <section className="explore-page">
                     {location &&
                         <div className="txt-explore-page">
+                            <button onClick={() => this.onStayClicked('s0001')}>check</button>
                             <div className="small-txt-exp-page">{stays.length} stays in {location}</div>
                             <div className="small-txt-exp-page">Review COVID-19 travel restrictions before you book</div>
                         </div>
                     }
                     <main>
-                        <StayList stays={stays} onStayClicked={this.onStayClicked} dateIn={dateIn} dateOut={dateOut}/>
+                        <StayList stays={stays} dateIn={dateIn} dateOut={dateOut}/>
                     </main>
                 </section>
                 <AppFooter/>
