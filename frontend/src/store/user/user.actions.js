@@ -40,17 +40,30 @@ export function login(user) {
     }
 }
 export function signup(user) {
-    return async (dispatch) => {
-        try{
-            await userService.signup(user)
+    return (dispatch) => {
+        userService.signup(user)
+        .then(user => {
+            console.log('Added user', user);
             const action = {type: 'SET_USER', user}
             dispatch(action)
-
-
-        }catch(err) {
+            // console.log('Signed up')
+        })
+        .catch(err => {
             console.log('Cannot signup')
-        }    
+        })       
     }
+    // return async (dispatch) => {
+    //     console.log('login in user action ', user)
+    //     try{
+    //         await userService.signup(user)
+    //         const action = {type: 'SET_USER', user}
+    //         dispatch(action)
+
+
+    //     }catch(err) {
+    //         console.log('Cannot signup')
+    //     }    
+    // }
 }
 export function logout() {
     return async (dispatch) => {
