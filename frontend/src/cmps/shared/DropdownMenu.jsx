@@ -48,6 +48,9 @@ export function DropdownMenu() {
             <li>
               <button className="menu-opt" href="#">Dashboard</button>
             </li>
+            <li>
+              <button className="menu-opt hidden" href="#">Log Out</button>
+            </li>
           </ul>
         </nav>
       </div>

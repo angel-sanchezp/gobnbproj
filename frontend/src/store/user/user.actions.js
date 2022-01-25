@@ -39,19 +39,36 @@ export function login(user) {
         }
     }
 }
-export function signup(user) {
-    return (dispatch) => {
-        userService.signup(user)
-        .then(user => {
-            console.log('Added user', user);
-            const action = {type: 'SET_USER', user}
-            dispatch(action)
-            // console.log('Signed up')
-        })
-        .catch(err => {
-            console.log('Cannot signup')
-        })       
+
+export function signup(credentials) {
+    return async (dispatch) => {
+        try {
+            const user = await userService.signup(credentials)
+            dispatch({
+                type: 'SET_USER',
+                user
+            })
+        } catch (err) {
+            // showErrorMsg('Cannot signup')
+            console.log('Cannot signup', err)
+        }
+
     }
+}
+
+// export function signup(user) {
+//     return (dispatch) => {
+//         userService.signup(user)
+//         .then(user => {
+//             console.log('Added user', user);
+//             const action = {type: 'SET_USER', user}
+//             dispatch(action)
+//             // console.log('Signed up')
+//         })
+//         .catch(err => {
+//             console.log('Cannot signup')
+//         })       
+//     }
     // return async (dispatch) => {
     //     console.log('login in user action ', user)
     //     try{
@@ -64,7 +81,7 @@ export function signup(user) {
     //         console.log('Cannot signup')
     //     }    
     // }
-}
+// }
 export function logout() {
     return async (dispatch) => {
         try{

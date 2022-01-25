@@ -29,6 +29,7 @@ class _LoginModal extends React.Component {
     console.log('credentials', this.state.credentials)
     if (!credentials) return
     this.props.login(credentials)
+    this.closeModal()
 
     this.resetState();
   };
@@ -39,6 +40,7 @@ class _LoginModal extends React.Component {
     console.log('credentials', this.state.credentials)
     if (!credentials) return
     this.props.signup(credentials);
+    this.closeModal()
     // this.props.history.push("/");
 
     this.resetState();
