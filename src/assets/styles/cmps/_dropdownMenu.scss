@@ -61,7 +61,7 @@
     margin: 0;
   }
   
-  .menu li {
+  .menu li:not(:last-child) {
     border-bottom: 1px solid #dddddd;
   }
   
@@ -70,4 +70,8 @@
     color: #333333;
     padding: 15px 20px;
     display: block;
+  }
+
+  .menu-opt button {
+    border-style: none;
   }
