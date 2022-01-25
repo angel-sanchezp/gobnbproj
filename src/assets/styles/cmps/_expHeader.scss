@@ -4,8 +4,7 @@
     z-index: 10;
     background: white;
     border-bottom: 0.5px solid #ddddddba;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 0px 80px;
 
     .nav-right{
         display: flex;
@@ -71,8 +70,8 @@
         object-fit: contain;
         cursor: pointer;
         width: 123px;
-        margin-top: 0px;
-        color: #f5375d;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+        color:$clr1;
     }
     .nav-txt-header{
         color: black;

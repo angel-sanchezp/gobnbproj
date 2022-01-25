@@ -20,7 +20,9 @@ const WrappedHomeHeader = ({ className }) => (
 
 const HEADERS = {
     "explore-header": ExploreHeader,
-    "details-header": ExpHeader
+    "details-header": ExpHeader,
+    "trip-header": ExpHeader,
+
 }
 
 class _AppHeader extends Component {
