@@ -9,6 +9,7 @@ export function DropdownMenu() {
 
     function openLoginModal ()  {
         document.querySelector(".user-modal").classList.remove("hidden")
+        document.querySelector(".dark-screen").classList.remove("hidden");
     }
 
   const dropdownRef = useRef(null);

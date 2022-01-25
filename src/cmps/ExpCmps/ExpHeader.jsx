@@ -95,9 +95,9 @@ class _ExpHeader extends Component {
                         <SearchModal onCloseModal={this.closeModal} onSetFilter={this.onSetFilter} isMinFilter={this.props.isMinFilter}/> 
                     )}
                 </section>
-                <div className="user-modal hidden">
+                {/* <div className="user-modal hidden">
                 <LoginModal/>
-                </div>
+                </div> */}
             </div>
         )
     }

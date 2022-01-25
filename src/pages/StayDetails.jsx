@@ -14,6 +14,7 @@ import { AddReview } from '../cmps/Stay Details/AddReview.jsx';
 import { StayMap } from '../cmps/Stay Details/StayMap.jsx';
 import { HostInfo } from '../cmps/Stay Details/HostInfo.jsx';
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
+import { LoginModal } from '../cmps/shared/LoginModal'
 
 import share from '../assets/svg/share.jpg';
 import like from '../assets/svg/like.png';
@@ -66,6 +67,9 @@ class _StayDetails extends React.Component {
 
         return (
             <section>
+                <div className="user-modal hidden">
+                    <LoginModal/>
+                </div>
                 <section className="details-container">
                 
                     <section className="stay-header">
