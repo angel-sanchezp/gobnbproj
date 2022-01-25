@@ -41,6 +41,7 @@ export class StayReserve extends React.Component {
     componentDidMount() {
         const { stay } = this.props
         console.log(stay)
+        console.log(this.state)
         this.setState({ stay: { ...stay } })
 
     }

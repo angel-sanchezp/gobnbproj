@@ -6,6 +6,7 @@ import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
 import { SearchModal } from './SearchModel.jsx'
 import { Logo } from '../shared/logo.jsx'
 import { ReactComponent as UserAvatar } from '../../assets/svg/user-avatar.svg'
+import { LoginModal } from '../shared/LoginModal.jsx'
 
 
 
@@ -28,6 +29,10 @@ class _ExpHeader extends Component {
             ...prevState, 
             enterInputsMode: true
         }))
+    }
+
+    openLoginModal = () => {
+        document.querySelector(".login-signup").classList.remove(".hidden")
     }
 
     // formatDates = (dateIn, dateOut) => {
@@ -67,7 +72,7 @@ class _ExpHeader extends Component {
                         <section className="login-container">
                             <div className="user-options">
                                 <div className="burger">☰</div>
-                                <div className="user-avatar"><UserAvatar/></div>
+                                <div className="user-avatar" onClick={this.openLoginModal}><UserAvatar/></div>
                             </div>
                         </section>
                     </div>
@@ -91,6 +96,7 @@ class _ExpHeader extends Component {
                         <SearchModal onCloseModal={this.closeModal} onSetFilter={this.onSetFilter} isMinFilter={this.props.isMinFilter}/> 
                     )}
                 </section>
+                <LoginModal/>
             </div>
         )
     }

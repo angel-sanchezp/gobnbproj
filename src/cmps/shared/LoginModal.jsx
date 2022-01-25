@@ -1,8 +1,7 @@
 
 export function LoginModal () {
     return (
-        <template>
-            <section className="login-signup">
+            <section className="login-signup hidden">
                 <section className="login-modal">
                     <div>
                         <h3>Login</h3>
@@ -61,6 +60,5 @@ export function LoginModal () {
                     </div>
                 </section>
             </section>
-        </template>
     )
 }
