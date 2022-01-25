@@ -1,10 +1,18 @@
+
+import { Component } from 'react'
 import { utilService } from '../../services/utils.service.js'
 import { ReactComponent as Star } from '../../assets/svg/star.svg'
+import { withRouter } from "react-router-dom"
 
-export function StayPreview({stay, dateIn, dateOut, onStayClicked }) {
+class _StayPreview extends Component {
+    onStayClicked(stayId) {
+        this.props.history.push(`/details/${stayId}`)
+    }
 
-    return(
-        <li className="explore-card-stay card" key={stay._id} onClick={() => onStayClicked(stay._id)}>
+    render(){
+        const { stay } = this.props
+        return(
+            <li className="explore-card-stay card" key={stay._id} onClick={() => this.onStayClicked(stay._id)}>
             <img className="explore-card-image" alt="cat" src={stay.imgUrls[0]} />
             
             <div className="stay-details">
@@ -31,7 +39,19 @@ export function StayPreview({stay, dateIn, dateOut, onStayClicked }) {
                 </div>
             </div>
         </li>
-       
-    )
+   
+        )
 
-}
+    }
+
+ }
+
+  
+
+
+// const mapDispatchToProps = {
+//     loadStays,
+//     changeHeaderClass
+// }
+
+export const StayPreview = (withRouter(_StayPreview))
