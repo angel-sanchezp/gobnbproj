@@ -3,7 +3,7 @@ const logger = require('../../services/logger.service')
 
 async function login(req, res) {
     let { username, password } = req.body;
-    console.log(req.body)
+    console.log('login req in aouth contoller',req.body)
     
     // console.log('login in controller ',username, password)
     try {
@@ -18,8 +18,10 @@ async function login(req, res) {
     }
 }
 
+
 async function signup(req, res) {
     try {
+        console.log(req.body)
         const { username, password, fullname } = req.body
         // Never log passwords
         // logger.debug(fullname + ', ' + username + ', ' + password)
