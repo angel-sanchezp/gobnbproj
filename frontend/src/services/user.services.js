@@ -1,5 +1,6 @@
 import { storageService } from './async-storage.service.js'
 import { httpService } from '../services/http.services.js'
+import { utilService } from '../services/utils.service.js'
 
 
 const STORAGE_KEY = 'user'
@@ -13,15 +14,12 @@ export const userService = {
     logout,
     signup,
     getLoggedinUser,
-    emptyUser,
-    chargeAmount,
     getById,
     remove,
     update,
 }
 
-const STORAGE_KEY = "users";
-const STORAGE_KEY_LOGGEDIN = "loggedinUser";
+
 
 window.us = userService;
 
@@ -124,7 +122,7 @@ async function logout() {
 }
 
 function _saveLocalUser(user) {
-    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
+    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
     return user
 }
 

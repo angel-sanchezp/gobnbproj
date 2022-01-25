@@ -17,7 +17,7 @@ class _LoginModal extends React.Component {
   handleChange = (ev) => {
     const field = ev.target.name;
     const value = ev.target.value;
-    console.log(field, value)
+    // console.log(field, value)
     this.setState({
       credentials: { ...this.state.credentials, [field]: value },
     });
@@ -51,7 +51,9 @@ class _LoginModal extends React.Component {
 
     try {
       const user = this.props.signup(this.state.credentials);
-      this.props.history.push("/");
+      // this.props.history.push("/");
+      document.querySelector(".user-modal").classList.add("hidden");
+      document.querySelector(".dark-screen").classList.add("hidden");
     } catch (err) {
       console.log("error:", err);
     }
@@ -214,18 +216,18 @@ class _LoginModal extends React.Component {
   }
 }
 
-// function mapStateToProps(state) {
-//   return {
-//     user: state.userModule.user,
-//   };
-// }
-// const mapDispatchToProps = {
-//   login,
-//   signup,
-//   update,
-// };
+function mapStateToProps(state) {
+  return {
+    user: state.userModule.user,
+  };
+}
+const mapDispatchToProps = {
+  login,
+  signup,
+  update,
+};
 
 export const LoginModal = connect(
-  // mapStateToProps,
-  // mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(_LoginModal);
