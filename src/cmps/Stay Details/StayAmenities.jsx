@@ -2,7 +2,22 @@ import { imageListClasses } from "@mui/material";
 import { isThisSecond } from "date-fns";
 import { eventBusService } from "../../services/event-bus.service";
 
-import { ReactComponent as BeachAccess } from './BeachAccess.svg'
+import { ReactComponent as Kitchen } from '../../assets/svg/amenities/kitchen.svg'
+import { ReactComponent as Wifi } from '../../assets/svg/amenities/wifi.svg'
+import { ReactComponent as Bath } from '../../assets/svg/amenities/bath.svg'
+import { ReactComponent as IndoorFireplace } from '../../assets/svg/amenities/fireplace.svg'
+import { ReactComponent as Parking } from '../../assets/svg/amenities/parking.svg'
+import { ReactComponent as Stove } from '../../assets/svg/amenities/stove.svg'
+import { ReactComponent as Pool } from '../../assets/svg/amenities/pool.svg'
+import { ReactComponent as TV } from '../../assets/svg/amenities/tv.svg'
+import { ReactComponent as WashingMachine } from '../../assets/svg/amenities/washingmachine.svg'
+import { ReactComponent as Dryer } from '../../assets/svg/amenities/dryer.svg'
+import { ReactComponent as Elevator } from '../../assets/svg/amenities/elevator.svg'
+import { ReactComponent as BeachAccess } from '../../assets/svg/amenities/BeachAccess.svg'
+import { ReactComponent as Balcony } from '../../assets/svg/amenities/balcony.svg'
+import { ReactComponent as Backyard } from '../../assets/svg/amenities/backyard.svg'
+import { ReactComponent as AC } from '../../assets/svg/amenities/ac.svg'
+import { ReactComponent as Refrigerator } from '../../assets/svg/amenities/refrigerator.svg'
 
 
 export function StayAmenities({stay}) {
@@ -15,56 +30,55 @@ export function StayAmenities({stay}) {
         // console.log(amenity)
         switch (amenity) {
             case "Kitchen":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/kitchen_n1j0n3.png"];
+                logo = <Kitchen/>;
                 break;
             case "Wifi":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862381/Airbnb%20clone/wifi_la4k7v.png"];
+                logo = <Wifi/>;
                 break;
             case "Bath":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862490/Airbnb%20clone/bathtub_h6kiwz.png"];
+                logo = <Bath/>;
                 break;
             case "Indoor fireplace":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/indoor_fireplace_ywjb0z.png"];
+                logo = <IndoorFireplace/>;
                 break;
             case "Parking":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/parking_q8bdfj.png"];
+                logo = <Parking/>;
                 break;
             case "Stove":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/stove_ta63xx.png"];
+                logo = <Stove/>;
                 break;
             case "Pool":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/pool_z5m2b4.png"];
+                logo = <Pool/>;
                 break;
             case "TV":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/tv_qdldsn.png"];
+                logo = <TV/>;
                 break;
             case "Washing machine":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/washer_lmfztp.png"];
+                logo = <WashingMachine/>;
                 break;
             case "Dryer":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/dryer_giewr7.png"];
+                logo = <Dryer/>;
                 break;
             case "Elevator":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/elevator_boepjl.png"];
+                logo = <Elevator/>;
                 break;
             case "Beach access":
                 logo = <BeachAccess/>
                 break;
             case "Balcony":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/balcony_raoqjb.png"];
+                logo = <Balcony/>;
                 break;
             case "Backyard":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/backyard_vuijod.png"];
+                logo = <Backyard/>;
                 break;
             case "Air conditioning":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642862380/Airbnb%20clone/air_conditioning_fvm5mc.png"];
+                logo = <AC/>;
                 break;
             case "Refrigerator":
-                logo = ["https://res.cloudinary.com/kitsunex3/image/upload/v1642864461/Airbnb%20clone/ref_rgdvrj.png"];
+                logo = <Refrigerator/>;
                 break;
         }
         return (<div>{logo}</div>)
-        // return (<img src={logo} alt="Not found" />);
     }
 
     
@@ -88,8 +102,7 @@ export function StayAmenities({stay}) {
                 <div className="amenities">
                     {showAmenities.map((amenity, idx) => (
                         <div className="amenity" key={idx}>
-                            <BeachAccess/>
-                            {/* {setAmenity(amenity)} */}
+                            {setAmenity(amenity)}
                             <span>
                             {amenity}
                             </span>
