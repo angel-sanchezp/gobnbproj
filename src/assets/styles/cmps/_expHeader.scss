@@ -4,8 +4,7 @@
     z-index: 10;
     background: white;
     border-bottom: 0.5px solid #ddddddba;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 0px 80px;
 
     .nav-right{
         display: flex;
@@ -43,27 +42,27 @@
         justify-content: space-between;
         padding: 10px 0px;
     }
-    .user-options {
-        background-color: #fff;
-        cursor: pointer;
-        position: relative;
-        box-shadow: 0 0 0.1em 0.04em rgb(46 47 48 / 27%), 0 0.25em 1em rgb(90 125 188 / 5%);
-        width: 80px;
-        height: 42px;
-        border-radius: 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        .burger{
-            font-size: 18px;
-            margin-top: 10px;
-            margin-left: 10px;
-            font-weight: 400;
-        }
-        .user-avatar{
-            margin-top: 2px;
-        }
-    }
+    // .user-options {
+    //     background-color: #fff;
+    //     cursor: pointer;
+    //     position: relative;
+    //     box-shadow: 0 0 0.1em 0.04em rgb(46 47 48 / 27%), 0 0.25em 1em rgb(90 125 188 / 5%);
+    //     width: 80px;
+    //     height: 42px;
+    //     border-radius: 40px;
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-around;
+        // .burger{
+        //     font-size: 18px;
+        //     margin-top: 10px;
+        //     margin-left: 10px;
+        //     font-weight: 400;
+        // }
+        // .user-avatar{
+        //     margin-top: 2px;
+        // }
+    // }
 
     .logo {
         transition: 0.5s;
@@ -71,8 +70,8 @@
         object-fit: contain;
         cursor: pointer;
         width: 123px;
-        margin-top: 0px;
-        color: #f5375d;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+        color:$clr1;
     }
     .nav-txt-header{
         color: black;

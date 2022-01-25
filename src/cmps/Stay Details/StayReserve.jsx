@@ -6,71 +6,108 @@ import { Guests } from '../FilterCmps/Guests.jsx'
 import { Calendar } from '../FilterCmps/Calendar.jsx'
 // import { render } from '@testing-library/react';
 
-import { utilService } from '../../services/utils.service'
+
+import { userService } from '../../services/user.services.js'
+import { orderService } from '../../services/order.service.js'
 
 export class StayReserve extends React.Component {
 
     state = {
         isModalShown: false,
         cmp: null,
-        stay:null,
-        order : {
-            "_id": null,
-            "hostId": null,
-            "createdAt": null,
-            "buyer": {
-                "_id": null,
-                "fullname": null
+        stay: null,
+        order: {
+
+            fullname: '',
+            _id: '',
+            createdAt: new Date(),
+                name: 'patricia',
+                _id: '1245',
+            // buyer:userService.getLoggedinUser(),
+            totalPrice: '',
+            startDate: '',
+            endDate: '',
+            guests: {
+                adults: '',
+                children: ''
             },
-            "totalPrice": null,
-            "startDate": null,
-            "endDate": null,
-            "guests": {
-                "adults": null,
-                "kids": null
-            },
-            "stay": {
-                "_id": null,
-                "name": null,
-                "price": null
-            },
-            "status": "pending",
+            stay_id: '',
+            stay_name: '',
+            stay_price: '',
+            status: 'pending',
         }
     }
 
     componentDidMount() {
         const { stay } = this.props
-        console.log(stay)
-        console.log(this.state)
+        console.log('stay', stay)
+        const { _id, name, price, host } = stay
+        this.setState(prevState => ({ ...prevState, order: { ...prevState.order, stay: { ...prevState.order.stay, _id: _id } } }))
+        this.setState(prevState => ({ ...prevState, order: { ...prevState.order, stay: { ...prevState.order.stay, name: name } } }))
+        this.setState(prevState => ({ ...prevState, order: { ...prevState.order, stay: { ...prevState.order.stay, price: price } } }))
+        this.setState(prevState => ({ ...prevState, order: { ...prevState.order, stay: { ...prevState.order.stay, price: price } } }))
+        this.setState(prevState => ({ ...prevState, order: { ...prevState.order, host: { ...prevState.order.host, fullname: host.fullname } } }))
+        this.setState(prevState => ({ ...prevState, order: { ...prevState.order, host: { ...prevState.order.host, _id: host._id } } }))
         this.setState({ stay: { ...stay } })
 
     }
 
-  
+
     getInputValue = (date) => {
         if (!date) { return '' }
         return moment(date).format("MMM D")
     }
 
+    onSubmitOrder = async (ev) => {
+        ev.preventDefault()
+        console.log('order state', this.state.order)
+        await orderService.add(this.state.order)
+        console.log('add sucsefully')
+        // this.closeModal()
+    }
+
 
     onChangeAdults = (adultsNum) => {
         console.log(adultsNum)
+        this.setState(prevState => ({
+            ...prevState, order: { ...prevState.order, guests: { ...prevState.order.guests, adults: adultsNum } }
+
+        }))
 
     }
 
     onChangeChildren = (childrenNum) => {
         console.log(childrenNum)
+        this.setState(prevState => ({
+            ...prevState, order: { ...prevState.order, guests: { ...prevState.order.guests, children: childrenNum } }
+        }))
     }
 
     onSetDate = (date) => {
-
-        console.log('dateOn', date)
-        if( date[1]){
+        // console.log('dateOn', date)
+        var { order } = this.state
+        order.startDate = date[0]
+        order.endDate = date[1]
+        this.setState({ order });
+        if (date[1]) {
             setTimeout(() => {
                 this.closeModal()
             }, 1000)
 
- }
+        }
+        this.setTotalPrice(date)
+
+
+    }
+
+    setTotalPrice = (date) => {
+        const date1 = moment(date[0])
+        const date2 = moment(date[1])
+        const diffDays = date2.diff(date1, 'days')
+
+        var { order } = this.state
+        order.totalPrice = diffDays * order.stay.price
+        this.setState({ order });
 
 
     }
@@ -98,9 +135,7 @@ export class StayReserve extends React.Component {
         this.setState(prev => ({ ...prev, isModalShown: !prev.isModalShown }))
     }
 
-    createOrder = ({order}) => {
 
-    }
 
 
 
@@ -114,11 +149,11 @@ export class StayReserve extends React.Component {
         // console.log(formattedDateIn)
         const formattedDateOut = this.getInputValue(this.props.filterBy.dateOut)
         // console.log(formattedDateOut)
-        
+
 
         const { isModalShown, cmp } = this.state
-        const { price, _id, name} = this.props.stay;
-        
+        const { price, _id, name } = this.props.stay;
+
 
         return (
             <section className="reserve-container">
@@ -128,7 +163,7 @@ export class StayReserve extends React.Component {
                             <div className="reserve-price">${this.props.stay.price} <span>/night</span></div>
                             <div className="reserve-reviews"><a className="ab" href="#stayreview">{ReviewsAmount}</a></div>
                         </div>
-                        <form action="">
+                        <form onSubmit={this.onSubmitOrder}>
                             <div className="reserve-date-picker">
                                 <div className="inout">
                                     <div className="checkin">
@@ -137,13 +172,13 @@ export class StayReserve extends React.Component {
                                         </div>
                                         <div className="add">
                                             <span>
-                                            <input name="dateIn"
-                                                id="check-in"
-                                                autoComplete="off"
-                                                placeholder="Add dates"
-                                                onChange={this.handleChange}
-                                                onClick={() => this.OpenModal('calendar')}
-                                                value={formattedDateIn} /></span>
+                                                <input name="dateIn"
+                                                    id="check-in"
+                                                    autoComplete="off"
+                                                    placeholder="Add dates"
+                                                    onChange={this.handleChange}
+                                                    onClick={() => this.OpenModal('calendar')}
+                                                    value={formattedDateIn} /></span>
                                         </div>
                                         <div className="add"></div>
                                     </div>
@@ -153,13 +188,13 @@ export class StayReserve extends React.Component {
                                         </div>
                                         <div className="add">
                                             <span>
-                                            <input name="dateOut"
-                                                id="check-out"
-                                                autoComplete="off"
-                                                placeholder="Add dates"
-                                                onChange={this.handleChange}
-                                                onClick={() => this.OpenModal('calendar')}
-                                                value={formattedDateOut} /></span>
+                                                <input name="dateOut"
+                                                    id="check-out"
+                                                    autoComplete="off"
+                                                    placeholder="Add dates"
+                                                    onChange={this.handleChange}
+                                                    onClick={() => this.OpenModal('calendar')}
+                                                    value={formattedDateOut} /></span>
                                         </div>
                                         <div className="add"></div>
                                     </div>
@@ -169,12 +204,12 @@ export class StayReserve extends React.Component {
                                         </div>
                                         <div className="add guest">
                                             <span>
-                                            <input name="guests"
-                                                id="guests"
-                                                placeholder={`1 guest`}
-                                                onChange={this.handleChange}
-                                                onClick={() => this.OpenModal('guests')}
-                                                value={this.props.filterBy.adults} /></span>
+                                                <input name="guests"
+                                                    id="guests"
+                                                    placeholder={`1 guest`}
+                                                    onChange={this.handleChange}
+                                                    onClick={() => this.OpenModal('guests')}
+                                                    value={this.props.filterBy.adults} /></span>
                                         </div>
                                     </div>
                                 </div>

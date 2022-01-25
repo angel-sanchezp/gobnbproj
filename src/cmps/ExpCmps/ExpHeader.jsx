@@ -7,6 +7,7 @@ import { SearchModal } from './SearchModel.jsx'
 import { Logo } from '../shared/logo.jsx'
 import { ReactComponent as UserAvatar } from '../../assets/svg/user-avatar.svg'
 import { LoginModal } from '../shared/LoginModal.jsx'
+import { DropdownMenu } from '../shared/DropdownMenu'
 
 
 
@@ -32,9 +33,7 @@ class _ExpHeader extends Component {
         }))
     }
 
-    openLoginModal = () => {
-        document.querySelector(".user-modal").classList.remove("hidden")
-    }
+   
 
     // formatDates = (dateIn, dateOut) => {
        
@@ -72,8 +71,7 @@ class _ExpHeader extends Component {
                         </nav>
                         <section className="login-container">
                             <div className="user-options">
-                                <div className="burger">☰</div>
-                                <div className="user-avatar" onClick={this.openLoginModal}><UserAvatar/></div>
+                                <DropdownMenu/>
                             </div>
                         </section>
                     </div>
@@ -97,9 +95,9 @@ class _ExpHeader extends Component {
                         <SearchModal onCloseModal={this.closeModal} onSetFilter={this.onSetFilter} isMinFilter={this.props.isMinFilter}/> 
                     )}
                 </section>
-                <div className="user-modal hidden">
+                {/* <div className="user-modal hidden">
                 <LoginModal/>
-                </div>
+                </div> */}
             </div>
         )
     }

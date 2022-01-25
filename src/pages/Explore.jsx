@@ -5,6 +5,7 @@ import _ from 'lodash'
 import moment from 'moment'
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 import { StayList } from '../cmps/ExpCmps/StayList.jsx'
+import { LoginModal } from '../cmps/shared/LoginModal'
 
 import { loadStays, changeHeaderClass } from '../store/stay/stay.actions.js'
 import { utilService } from '../services/utils.service'
@@ -94,7 +95,9 @@ class _Explore extends Component {
 
         return (
             <section>
-
+                <div className="user-modal hidden">
+                    <LoginModal/>
+                </div>
                 <section className="explore-page">
                     {location &&
                         <div className="txt-explore-page">

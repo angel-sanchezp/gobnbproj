@@ -4,7 +4,9 @@ import { withRouter } from "react-router-dom"
 import { NavLink } from 'react-router-dom'
 import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
 import { ReactComponent as UserAvatar } from '../../assets/svg/user-avatar.svg'
-import { LoginModal } from '../shared/LoginModal.jsx'
+import { DropdownMenu } from '../shared/DropdownMenu.jsx'
+import { LoginModal } from '../shared/LoginModal'
+
 
 
 // import { user } from '../../assets/icon/user-icon.png'
@@ -26,15 +28,12 @@ class _HomeHeader extends Component {
         }, 1000)
     }
 
-    openLoginModal = () => {
-        document.querySelector(".user-modal").classList.remove("hidden")
-    }
 
 
     render() {
         console.log('render', this.props.class)
         return (
-                <section className='main-nav'>
+            <section className='main-nav'>
                     <div className='logo'>
                         <a aria-current="page" className="logo-link active">
                             <h1 className="logo" onClick={() => this.onLogoClicked()}>Go<i className="fab fa-airbnb" aria-hidden="true"></i>
@@ -50,14 +49,13 @@ class _HomeHeader extends Component {
                     </div>
                     <section className="login-container">
                         <div className="user-options">
-                            <div className="burger">☰</div>
-                            <div className="user-avatar" onClick={this.openLoginModal}><UserAvatar/></div>
+                            <DropdownMenu/>
                         </div>
                     </section>
+                    <div className="user-modal hidden">
+                        <LoginModal/>
+                    </div>
                 </section>
-                <div className="user-modal hidden">
-                <LoginModal/>
-                </div>
             </section>
         )
     }
