@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
 import { ReactComponent as UserAvatar } from '../../assets/svg/user-avatar.svg'
 import { LoginModal } from '../shared/LoginModal.jsx'
+import { DropdownMenu } from '../shared/DropdownMenu.jsx'
 
 
 // import { user } from '../../assets/icon/user-icon.png'
@@ -50,8 +51,9 @@ class _HomeHeader extends Component {
                     </div>
                     <section className="login-container">
                         <div className="user-options">
-                            <div className="burger">☰</div>
-                            <div className="user-avatar" onClick={this.openLoginModal}><UserAvatar/></div>
+                            {/* <div className="burger">☰</div> */}
+                            {/* <div className="user-avatar" onClick={this.openLoginModal}></div> */}
+                            <DropdownMenu/>
                         </div>
                     </section>
                 </section>

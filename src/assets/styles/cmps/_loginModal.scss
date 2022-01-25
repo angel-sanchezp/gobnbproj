@@ -1,8 +1,40 @@
 .user-modal{
     position: fixed;
-    left: 50%;
-    top: 50%;
-    height: 300px;
-    width: 300px;
-    background-color: lightgrey;
+    top:10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    z-index: 3;
+    border-radius: 12px;
+    border: 1px solid rgb(202, 198, 198);
+}
+
+.login-signup {
+    height: 400px;
+    width: 400px;
+}
+
+.login-header {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center !important;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+}
+
+.login-header button{
+    flex: 0 0 16px;
+    text-align: left;
+}
+
+.login-header h4 {
+    flex: 0 1 auto !important;
+    text-align: center !important;
+    margin-left: 16px !important;
+    margin-right: 16px 
 }
