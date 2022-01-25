@@ -110,7 +110,7 @@
     margin-top: 5px;
 }
 
-.gradient {
+.reserve-submit {
     margin: 15px 0 10px;
     border-radius: 13px;
     width: 100%;
@@ -122,7 +122,11 @@
     line-height: 20px;
     border: none;
     cursor: pointer;
+}
+
+.gradient {
     background: radial-gradient(circle at 9.5px 2.01562px, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%);
+
 }
 
 .reserve-date-picker input{
@@ -136,13 +140,12 @@
 
 .reserve-box .css-1snvurg-MuiPickerStaticWrapper-root{
     position:absolute;
-    top: -20px !important;
+    top: 60px !important;
     right: -390px;
     width: 620px !important;
     z-index: 2 !important;
-    height: 320px !important;
+    height: 315px !important;
     border-radius: 12px;
     border: 1px solid rgb(221, 221, 221);
-    box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
-    
+    box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px; 
 }

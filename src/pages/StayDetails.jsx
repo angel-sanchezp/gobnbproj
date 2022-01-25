@@ -1,12 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import $ from 'jquery';
+
 // import { Link, NavLink } from 'react-router-dom';
 // import { Route } from 'react-router-dom';
 import { loadStays, changeHeaderClass } from '../store/stay/stay.actions.js'
 import { stayService } from '../services/stay.services.js';
+// import { reviewService } from '../services/review.services.js';
 import { StayGallery } from '../cmps/Stay Details/StayGallery.jsx';
 import { StayInfo } from '../cmps/Stay Details/StayInfo.jsx';
 import { StayReview } from '../cmps/Stay Details/StayReview.jsx';
+import { AddReview } from '../cmps/Stay Details/AddReview.jsx';
 import { StayMap } from '../cmps/Stay Details/StayMap.jsx';
 import { HostInfo } from '../cmps/Stay Details/HostInfo.jsx';
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
@@ -17,7 +21,8 @@ import like from '../assets/svg/like.png';
 class _StayDetails extends React.Component {
     state = {
         stay: null,
-        class: 'details-header'
+        class: 'details-header',
+        // reviews: [],
     }
 
     componentWillMount() {
@@ -37,7 +42,16 @@ class _StayDetails extends React.Component {
         });
     }
 
-    
+    addReview = (review) => {
+        let reviews = [...this.state.stay.reviews, review]
+        review.createdAt = Date.now()/1000
+        this.state.stay.reviews.push(review)
+        // reviewService.add(review)
+        this.setState((prevState) => {
+            return { stay: { ...prevState.stay, reviews } }
+        })
+
+    }
     
     
 
@@ -75,8 +89,8 @@ class _StayDetails extends React.Component {
                     </section>
                 <StayGallery stay = {stay}/>
                 <StayInfo filterBy={filterBy} stay = {stay}/>
-    
                 <StayReview stay = {stay}/>
+                <AddReview addReview={this.addReview}/>
                 <StayMap stay = {stay}/>
                 <HostInfo stay = {stay}/>
             </section>
