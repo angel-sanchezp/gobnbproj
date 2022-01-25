@@ -1,4 +1,4 @@
-import { userService } from '../services/user.service.js'
+import { userService } from '../../services/user.services'
 
 const loggedInUser = userService.getLoggedinUser()
 const initialState = {
