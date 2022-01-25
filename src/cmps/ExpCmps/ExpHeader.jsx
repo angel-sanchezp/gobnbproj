@@ -13,7 +13,8 @@ import { LoginModal } from '../shared/LoginModal.jsx'
 class _ExpHeader extends Component {
 
     state = {
-        enterInputsMode: null
+        enterInputsMode: null,
+        modalIsOpen: false
     }
 
     closeModal = () => {
@@ -32,7 +33,7 @@ class _ExpHeader extends Component {
     }
 
     openLoginModal = () => {
-        document.querySelector(".login-signup").classList.remove(".hidden")
+        document.querySelector(".user-modal").classList.remove("hidden")
     }
 
     // formatDates = (dateIn, dateOut) => {
@@ -96,7 +97,9 @@ class _ExpHeader extends Component {
                         <SearchModal onCloseModal={this.closeModal} onSetFilter={this.onSetFilter} isMinFilter={this.props.isMinFilter}/> 
                     )}
                 </section>
+                <div className="user-modal hidden">
                 <LoginModal/>
+                </div>
             </div>
         )
     }

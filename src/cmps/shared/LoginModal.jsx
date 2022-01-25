@@ -1,7 +1,28 @@
+import { set } from 'lodash';
+import React from 'react';
+import { connect } from 'react-redux';
 
-export function LoginModal () {
+export class LoginModal extends React.Component {
+    state = {
+        modalIsOpen: false
+    }
+    
+    componentDidMount() {
+        // user info
+    }
+
+    openSignup = () => {
+        document.querySelector(".signup-modal").classList.remove("hidden")
+        document.querySelector(".login-modal").classList.add("hidden")
+    }
+
+    openLogin = () => {
+        document.querySelector(".login-modal").classList.remove("hidden")
+        document.querySelector(".signup-modal").classList.add("hidden")
+    }
+    render() {
     return (
-            <section className="login-signup hidden">
+            <section className="login-signup">
                 <section className="login-modal">
                     <div>
                         <h3>Login</h3>
@@ -20,8 +41,8 @@ export function LoginModal () {
                             {/* onClick will submit inputs */}
                             <button><span>Continue</span></button>
                             <div>
-                                <h4>Don't have and account? <button><span>Signup!</span></button></h4>
-                                {/* on button click- puts login on hidden & removed signup from hidden */}
+                                <h4>Don't have and account? <button type="button" onClick={this.openSignup}><span>Signup!</span></button></h4>
+                                
                             </div>
                         </form>
                     </div>
@@ -53,7 +74,7 @@ export function LoginModal () {
                             {/* onClick will submit inputs */}
                             <button><span>Continue</span></button>
                             <div>
-                                <h4>Already have an account? <button><span>Login!</span></button></h4>
+                                <h4>Already have an account? <button type="button" onClick={this.openLogin}><span>Login!</span></button></h4>
                                 {/* on button click- puts signup on hidden & removed login from hidden */}
                             </div>
                         </form>
@@ -61,4 +82,5 @@ export function LoginModal () {
                 </section>
             </section>
     )
+}
 }
