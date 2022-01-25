@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import { useDetectOutsideClick } from "./useDetectOutsideClick.jsx";
 import UserAvatar from '../../assets/user-icon.png';
+import { ReactComponent as Burger } from '../../assets/svg/burger.svg'
+// import { ReactComponent as UserAvatar } from '../../assets/svg/user.svg'
+
 
 export function DropdownMenu() {
 
@@ -16,8 +19,8 @@ export function DropdownMenu() {
     <div className="container">
       <div className="menu-container">
         <button onClick={onClick} className="menu-trigger">
-          <span>User</span>
-          <img
+          <span><Burger/></span>
+          <img className="menu-img"
             src={UserAvatar}
             alt="User avatar"
           />
@@ -28,14 +31,16 @@ export function DropdownMenu() {
         >
           <ul>
             <li>
-              <a className="menu-opt" href="#">Messages</a>
+            <button className="menu-opt"onClick={openLoginModal}>Login / Sign up</button>
             </li>
             <li>
-              <a className="menu-opt" href="#">Trips</a>
+              <button className="menu-opt" href="#">Messages</button>
             </li>
             <li>
-                <button className="menu-opt"onClick={openLoginModal}>Login/ Signup</button>
-              {/* <a className="menu-opt" href="#">Login/ Signup</a> */}
+              <button className="menu-opt" href="#">Trips</button>
+            </li>
+            <li>
+              <button className="menu-opt" href="#">Dashboard</button>
             </li>
           </ul>
         </nav>

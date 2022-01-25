@@ -33,9 +33,7 @@ class _ExpHeader extends Component {
         }))
     }
 
-    openLoginModal = () => {
-        document.querySelector(".user-modal").classList.remove("hidden")
-    }
+   
 
     // formatDates = (dateIn, dateOut) => {
        
@@ -73,8 +71,6 @@ class _ExpHeader extends Component {
                         </nav>
                         <section className="login-container">
                             <div className="user-options">
-                                {/* <div className="burger">☰</div>
-                                <div className="user-avatar" onClick={this.openLoginModal}><UserAvatar/></div> */}
                                 <DropdownMenu/>
                             </div>
                         </section>

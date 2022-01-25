@@ -27,9 +27,6 @@ class _HomeHeader extends Component {
         }, 1000)
     }
 
-    openLoginModal = () => {
-        document.querySelector(".user-modal").classList.remove("hidden")
-    }
 
 
     render() {
@@ -51,15 +48,13 @@ class _HomeHeader extends Component {
                     </div>
                     <section className="login-container">
                         <div className="user-options">
-                            {/* <div className="burger">☰</div> */}
-                            {/* <div className="user-avatar" onClick={this.openLoginModal}></div> */}
                             <DropdownMenu/>
                         </div>
                     </section>
                 </section>
-                <div className="user-modal hidden">
+                {/* <div className="user-modal hidden">
                 <LoginModal/>
-                </div>
+                </div> */}
             </section>
         )
     }
