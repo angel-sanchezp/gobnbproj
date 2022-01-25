@@ -65,21 +65,79 @@ export function logout() {
     }
 }
 
+export function getCurrentUser() {
+    return async (dispatch) => {
+        try {
+            const user = await userService.getLoggedinUser()
+            dispatch({
+                type: 'SET_USER',
+                user,
+            })
+            return user
+        } catch (err) {
+            console.log('No user found', err)
+        }
+    }
+}
 
-// export function loadAndWatchUser(userId) {
-//     return async (dispatch) => {
-//         try {
-//             const user = await userService.getById(userId);
-//             dispatch({ type: 'SET_WATCHED_USER', user })
-//             // socketService.emit(SOCKET_EMIT_USER_WATCH, userId)
-//             socketService.off(SOCKET_EVENT_USER_UPDATED)
-//             socketService.on(SOCKET_EVENT_USER_UPDATED, user => {
-//                 console.log('USER UPADTED FROM SOCKET');
-//                 dispatch({ type: 'SET_WATCHED_USER', user })
-//             })
-//         } catch (err) {
-//             // showErrorMsg('Cannot load user')
-//             console.log('Cannot load user', err)
-//         }
-//     }
-// }
+export function update(credentials) {
+    return async (dispatch) => {
+        try {
+            const user = await userService.update(credentials)
+            dispatch({
+                type: 'SET_USER',
+                user,
+            })
+            return user
+        } catch (err) {
+            console.log('Cannot signup', err)
+        }
+    }
+}
+
+export function addToLikedStays(stayId) {
+    return async (dispatch) => {
+        try {
+            const user = userService.getLoggedinUser()
+            user.likedStays.push(stayId)
+            await userService.update(user)
+            dispatch({
+                type: 'ADD_USER_LIKED_STAY',
+                user,
+            })
+        } catch (err) {
+            console.log('Cannot save stay', err)
+        }
+    }
+}
+
+export function removeFromLikedStays(stayId) {
+    return async (dispatch) => {
+        try {
+            const user = userService.getLoggedinUser()
+            const likedStays = user.likedStays.filter(
+                (likedStay) => likedStay !== stayId
+            )
+            await userService.update({ ...user, likedStays })
+            dispatch({
+                type: 'REMOVE_USER_LIKED_STAY',
+                user,
+            })
+        } catch (err) {
+            console.log('Cannot save stay', err)
+        }
+    }
+}
+
+export function loadUserLikedStays() {
+    return async (dispatch) => {
+        try {
+            const user = await userService.getLoggedinUser()
+            const likedStays = user.likedStays
+            dispatch({ type: 'LOAD_USER_LIKED_STAYS', likedStays })
+            return likedStays
+        } catch (err) {
+            console.log('UserActions: err in loadStaysFromUser', err)
+        }
+    }
+}
