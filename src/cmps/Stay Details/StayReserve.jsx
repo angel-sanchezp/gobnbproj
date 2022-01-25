@@ -13,12 +13,35 @@ export class StayReserve extends React.Component {
     state = {
         isModalShown: false,
         cmp: null,
-        stay:null
+        stay:null,
+        order : {
+            "_id": null,
+            "hostId": null,
+            "createdAt": null,
+            "buyer": {
+                "_id": null,
+                "fullname": null
+            },
+            "totalPrice": null,
+            "startDate": null,
+            "endDate": null,
+            "guests": {
+                "adults": null,
+                "kids": null
+            },
+            "stay": {
+                "_id": null,
+                "name": null,
+                "price": null
+            },
+            "status": "pending",
+        }
     }
 
     componentDidMount() {
         const { stay } = this.props
         console.log(stay)
+        console.log(this.state)
         this.setState({ stay: { ...stay } })
 
     }
@@ -103,7 +126,6 @@ export class StayReserve extends React.Component {
                     <div className="reserve-box">
                         <div className="reserve-info">
                             <div className="reserve-price">${this.props.stay.price} <span>/night</span></div>
-                            {/* <div className="per-night">/night</div> */}
                             <div className="reserve-reviews"><a className="ab" href="#stayreview">{ReviewsAmount}</a></div>
                         </div>
                         <form action="">
@@ -138,7 +160,6 @@ export class StayReserve extends React.Component {
                                                 onChange={this.handleChange}
                                                 onClick={() => this.OpenModal('calendar')}
                                                 value={formattedDateOut} /></span>
-                                            {/* value={dateOut.getDay(),monthNames[dateOut.getMonth()]} /> */}
                                         </div>
                                         <div className="add"></div>
                                     </div>

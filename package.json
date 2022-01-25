@@ -30,6 +30,8 @@
     "redux-thunk": "^2.4.1",
     "sass": "^1.48.0",
     "socket.io": "^4.4.1",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.3.6",
     "web-vitals": "^0.2.4",
     "workbox-background-sync": "^5.1.4",
     "workbox-broadcast-update": "^5.1.4",

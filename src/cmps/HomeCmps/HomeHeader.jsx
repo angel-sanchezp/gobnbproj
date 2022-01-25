@@ -4,6 +4,8 @@ import { withRouter } from "react-router-dom"
 import { NavLink } from 'react-router-dom'
 import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
 import { ReactComponent as UserAvatar } from '../../assets/svg/user-avatar.svg'
+import { LoginModal } from '../shared/LoginModal.jsx'
+
 
 // import { user } from '../../assets/icon/user-icon.png'
 
@@ -22,6 +24,10 @@ class _HomeHeader extends Component {
         setTimeout(() => {
             this.props.history.push(`/explore?location=${location}&dateIn=${dateIn.valueOf()}&dateOut=${dateOut.valueOf()}&guests=${guests}`)
         }, 1000)
+    }
+
+    openLoginModal = () => {
+        document.querySelector(".user-modal").classList.remove("hidden")
     }
 
 
@@ -45,10 +51,13 @@ class _HomeHeader extends Component {
                     <section className="login-container">
                         <div className="user-options">
                             <div className="burger">☰</div>
-                            <div className="user-avatar"><UserAvatar/></div>
+                            <div className="user-avatar" onClick={this.openLoginModal}><UserAvatar/></div>
                         </div>
                     </section>
                 </section>
+                <div className="user-modal hidden">
+                <LoginModal/>
+                </div>
             </section>
         )
     }
