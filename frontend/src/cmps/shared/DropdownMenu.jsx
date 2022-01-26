@@ -53,6 +53,7 @@ export class _DropdownMenu extends React.Component {
         console.log(this.props.user)
         document.querySelectorAll(".opt2").forEach(e=>{e.classList.remove("hidden");});
         document.querySelectorAll(".opt1").forEach(e=>{e.classList.add("hidden");});
+        console.log(this.props.user)
         avatar = this.props.user.imgUrl;
       }
       if(this.state.isAdmin === true) {
