@@ -3,24 +3,16 @@ import { Component } from 'react'
 // import { utilService } from '../../services/utils.service.js'
 // import { ReactComponent as Star } from '../../assets/svg/star.svg'
 import { withRouter } from "react-router-dom"
-
 import { Trips } from '../../pages/Trips'
 
-class _TripPreview extends Component {
-
-
-
-    onTripClicked(tripId) {
-        this.props.history.push(`/details/${tripId}`)
-    }
-
+class _OrderPreview extends Component {
     render(){
-        const { trip } = this.props
+        const { order } = this.props
         return(
-            <li className="trip-card" key={trip._id} onClick={() => this.onTripClicked(trip.stay._id)}>
-                <img className="trip-card-image" alt="cat" src={trip.stay.img} />
+            <li className="trip-card" key={order.stay_id}>
+                <img className="trip-card-image" alt="cat" src={order.stay_img} />
                 <div className="trip-details">
-                    <h2 className="bold-txt">{trip.stay.name}</h2>
+                    <h2 className="bold-txt">{order.stay_name}</h2>
                     <div className="dates">
                         <div className="check-in-box">
                             <div className="bold">Check-in</div>
@@ -36,8 +28,8 @@ class _TripPreview extends Component {
                     </div>
                     <div className="tripcard-bottom">
                         <div className="status-host">
-                            <div className="txt">Order status: {trip.status}</div>
-                            <div className="txt">Hosted by {trip.hostname}</div>
+                            <div className="txt">Order status: {order.status}</div>
+                            <div className="txt">Orded by {order.buyer_fullname}</div>
                         </div>
                         <button className="btn">Cancel order</button>
                     </div>
@@ -56,4 +48,4 @@ class _TripPreview extends Component {
 
 
 
-export const TripPreview = (withRouter(_TripPreview))
+export const OrderPreview = (withRouter(_OrderPreview))

@@ -1,8 +1,8 @@
 .order-page{
-    margin: 20px 70px 90px 70px;
+    margin: 65px 70px 90px 70px;
     h1{
     font-family: 'CerealBook';
-    font-size: 36px;
+    font-size: 28px;
     margin: 17px 0px;
     }
     .section-no-trips{
@@ -22,26 +22,28 @@
         border: 1px black;
         cursor: pointer !important;
         display: inline-block !important;
-        margin: 10px 30px 10px 0px;
+        // margin: 10px 30px 10px 0px;
         position: relative !important;
         text-align: center !important;
         text-decoration: none !important;
-        width: auto !important;
         touch-action: manipulation !important;
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
-        font-size: 16px !important;
+        font-size: 12px !important;
         line-height: 20px !important;
         font-weight: 600 !important;
         border-radius: 8px !important;
         border-width: 1px !important;
         border-style: solid !important;
         outline: none !important;
-        padding: 13px 23px !important;
+        // padding: 13px 23px !important;
         transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s !important;
         -webkit-tap-highlight-color: transparent !important;
         border-color: rgb(34, 34, 34) !important;
         background: rgb(255, 255, 255) !important;
         color: rgb(34, 34, 34) !important;
+        margin-top: 2%;
+        width: 40%;
+        height: 40px;
     }
     .trips-container {
         padding-inline-start: 0px;
@@ -57,7 +59,7 @@
     .trip-card-image {
        border-radius: 12px;
         width: 100%;
-        height: 60%;
+        height: 45%;
         object-fit: cover;
     }
     li{
@@ -66,23 +68,27 @@
     .trip-details{
         height: 100%;
         width: 100%;
+        padding: 0px 8px;
         .bold-txt{
             margin: 0px;
             font-family: 'CerealBook';
             color: black;
+            font-size: 20px;
         }
         .dates{
             display: flex;
-            justify-content: flex-start;
+            // justify-content: flex-start;
             margin: 17px 0px;
         }
         .check-in-box{
-            width: 45%;
+            width: 50%;
+            font-size: 12px;
         }
         .check-out-box{
-            width: 45%;
+            width: 50%;
             border-left: 0.5px solid #ddddddba;
             padding-left: 5%;
+            font-size: 12px;
         }
         .bold{
             font-family: 'CerealMedium';
@@ -96,7 +102,10 @@
         }
         .tripcard-bottom{
             display: flex;
-            justify-content: space-between;
+            // justify-content: space-between;
+        }
+        .status-host{
+            width: 50%;
         }
         
     }

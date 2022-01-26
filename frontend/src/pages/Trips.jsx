@@ -3,13 +3,14 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { socketService } from '../services/socket.service.js'
 import _ from 'lodash'
-import moment from 'moment'
+
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 import { TripPreview } from '../cmps/TripsCmps/TripPreview.jsx'
 
 
 import { changeHeaderClass } from '../store/stay/stay.actions.js'
-import { utilService } from '../services/utils.service'
+import { loadOrders} from '../store/orders/orders.actions.js'
+
 
 
 
@@ -66,8 +67,8 @@ const orders = [
 
 class _Trips extends Component {
     state = {
-        trips: orders,
-        class: 'trip-header',
+        trips: [],
+        class: 'general-header',
     }
 
     componentDidMount(){
@@ -87,6 +88,16 @@ class _Trips extends Component {
       this.setState({trips})
 
     }
+    
+    componentDidMount() {
+      this.props.changeHeaderClass(this.state.class)
+      const trips = this.props.loadTrips() 
+      console.log(trips)
+      this.setState({trips})
+      
+  }
+
+    
 
     render() {
         const { trips } = this.state

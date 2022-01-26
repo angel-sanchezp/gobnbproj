@@ -4,7 +4,7 @@ import { httpService } from '../services/http.services.js'
 // import { socketService, SOCKET_EVENT_REVIEW_ADDED } from './socket.service'
 
 export const orderService = {
-  add,
+  addOrder,
   query,
   remove
 }
@@ -14,9 +14,10 @@ export const orderService = {
 // return axios.get('api/toy/?id=1223&balance=13')
 // return axios.get('api/toy/?', {params: {id: 1223, balanse:13}})
 
-function query() {
+async function query() {
+  console.log('order query')
   // var queryStr = (!filterBy) ? '' : `?name=${filterBy.name}&sort=anaAref`
-  return httpService.get(`order`)
+  return await httpService.get('order')
   // return storageService.query('OrderDB')
 }
 
@@ -25,8 +26,8 @@ function remove(orderId) {
   // return storageService.remove('OrderDB', orderId)
 
 }
-async function add(order) {
-  const addedOrder = await httpService.post(`order`, order)
+async function addOrder(orderInfo) {
+  const order = await httpService.post(`order`, orderInfo)
 
   // Only relevant when frontend-only
   // review.byUser = userService.getLoggedinUser()
@@ -34,7 +35,7 @@ async function add(order) {
   // console.log('order to add in order service ',order)
   // const addedOrder = storageService.save('OrderDB', order)
 
-  return addedOrder
+  return order
 }
 
 
