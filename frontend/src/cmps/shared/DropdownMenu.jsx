@@ -14,7 +14,7 @@ export class DropdownMenu extends React.Component {
   state = {
     isActive: false,
     loggedInUser: null,
-    isAdmin: null,
+    isAdmin: false,
   };
 
   componentDidMount(){
@@ -35,28 +35,30 @@ export class DropdownMenu extends React.Component {
 
   
     render() {
-      if(this.state.loggedInUser) {
-        document.querySelector('opt2').classList.remove('hidden');
-        document.querySelector('opt1').classList.add('hidden');
+      let avatar = UserAvatar;
+      const {loggedInUser} = this.state;
+      if(loggedInUser) {
+        document.querySelectorAll(".opt2").forEach(e=>{e.classList.remove("hidden");});
+        document.querySelectorAll(".opt1").forEach(e=>{e.classList.add("hidden");});
+        avatar = loggedInUser.imgUrl;
       }
       if(this.state.isAdmin === true) {
-        document.querySelector('opt2.opt3').classList.remove('hidden');
-        document.querySelector('opt1').classList.add('hidden');
+        document.querySelectorAll(".opt2").forEach(e=>{e.classList.remove("hidden");});
+        document.querySelectorAll(".opt3").forEach(e=>{e.classList.remove("hidden");});
+        document.querySelectorAll(".opt1").forEach(e=>{e.classList.add("hidden");});
       } 
-      
-      let isActive = this.state.isActive
   return (
     <div className="container">
       <div className="menu-container">
         <button onClick={()=> this.onHandelNav()} className="menu-trigger">
           <span><Burger/></span>
           <img className="menu-img"
-            src={UserAvatar}
+            src={avatar}
             alt="User avatar"
           />
         </button>
         <nav
-          className={`menu ${isActive ? "active" : "inactive"}`}
+          className={`menu ${this.state.isActive ? "active" : "inactive"}`}
         >
           <ul>
             <li className="opt1">
@@ -68,7 +70,7 @@ export class DropdownMenu extends React.Component {
             <li className="opt2 hidden">
             <Link to={`/trips`}><button className="menu-opt">Trips</button></Link>
             </li>
-            <li className="opt1 opt3 hidden">
+            <li className="opt3 hidden">
               <button className="menu-opt" href="#">Dashboard</button>
             </li>
             <li className="opt2 hidden">
