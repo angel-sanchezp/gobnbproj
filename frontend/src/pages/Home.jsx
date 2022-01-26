@@ -29,26 +29,26 @@ class _HomePage extends React.Component {
     this.props.changeHeaderClass(this.state.class);
     console.log(this.props.user);
     this.props.loadStays();
-    this.loggedInUser();
+    // this.loggedInUser();
   }
 
-  loggedInUser = () => {
-      console.log('hi')
-    let user = userService.getLoggedinUser();
-    if (!user)
-      user = {
-        _id: "u101",
-        fullname: "Puki",
-        imgUrl: [
-          "https://res.cloudinary.com/kitsunex3/image/upload/v1643195687/Airbnb%20clone/Avatars/avatar1_nogjgo.png",
-        ],
-        isAdmin: false,
-        username: "user1",
-        password: "muki",
-      };
-      userService.login(user.username, user.password);
-      console.log('login')
-  };
+  // loggedInUser = () => {
+  //     console.log('hi')
+  //   let user = userService.getLoggedinUser();
+  //   if (!user)
+  //     user = {
+  //       _id: "u101",
+  //       fullname: "Puki",
+  //       imgUrl: [
+  //         "https://res.cloudinary.com/kitsunex3/image/upload/v1643195687/Airbnb%20clone/Avatars/avatar1_nogjgo.png",
+  //       ],
+  //       isAdmin: false,
+  //       username: "user1",
+  //       password: "muki",
+  //     };
+  //     userService.login(user.username, user.password);
+  //     console.log('login')
+  // };
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.filterBy !== this.props.filterBy) {
