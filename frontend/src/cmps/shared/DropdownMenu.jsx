@@ -15,6 +15,10 @@ export  class DropdownMenu extends React.Component {
       isActive: false
     }
 
+    // componentDidMount() {
+    //   window.addEventListener("click" , this.onHandleNav);
+    // }
+
     openLoginModal = () => {
         document.querySelector(".user-modal").classList.remove("hidden")
         document.querySelector(".dark-screen").classList.remove("hidden");
@@ -24,20 +28,18 @@ export  class DropdownMenu extends React.Component {
       console.log('hi')
       this.history.push(`/${target}`)
     }
-    // const isActive = false
      onHandelNav = () => {
+      this.setState(prev => ({ ...prev, isActive: !this.state.isActive }))
       if(this.state.isActive){
         window.addEventListener("click");
-        document.querySelector('menu').classList.add('active');
-        document.querySelector('menu').classList.remove('inactive');
-      } else {
-        window.removeEventListener("click");
-        document.querySelector('menu').classList.remove('active');
         document.querySelector('menu').classList.add('inactive');
+        document.querySelector('menu').classList.remove('active');
+      } else {
+        console.log('hi')
+        window.removeEventListener("click");
+        document.querySelector('menu').classList.add('active')
+        document.querySelector('menu').classList.remove('inactive')
       }
-      console.log('changed')
-      this.setState(prev => ({ ...prev, isActive: !this.state.isActive }))
-      // this.setState({ isActive: !isActive })
     }
 
   
