@@ -46,7 +46,7 @@
     .trips-container {
         padding-inline-start: 0px;
         grid-column-gap: 24px;
-        column-gap: 24px;
+        column-gap: 100px;
         display: grid;
         grid-template-columns: repeat(auto-fill,minmax(360px,1fr));
     .trip-card {

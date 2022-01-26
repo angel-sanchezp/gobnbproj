@@ -42,6 +42,15 @@ export class StayReserve extends React.Component {
         order.stay_name = name
         order.stay_price = price
         order.hostId = host._id
+        order.adults=this.props.filterBy.adults
+        order.kids=this.props.filterBy.children
+        order.startDate=this.props.filterBy.dateIn
+        order.endDate=this.props.filterBy.dateOut
+        let date=[]
+        date.push(parseInt(this.props.filterBy.dateIn))
+        date.push(parseInt(this.props.filterBy.dateOut))
+        console.log('date',date)
+        order.totalPrice=this.setTotalPrice(date)
         this.setState({ order });
         this.setState({ stay: { ...stay } })
 
@@ -66,6 +75,7 @@ export class StayReserve extends React.Component {
         console.log(adultsNum)
         const {order}=this.state
         order.adults=adultsNum
+
         this.setState({ order });
 
 
@@ -96,6 +106,7 @@ export class StayReserve extends React.Component {
     }
 
     setTotalPrice = (date) => {
+        console.log(date)
         const date1 = moment(date[0])
         const date2 = moment(date[1])
         const diffDays = date2.diff(date1, 'days')
@@ -145,6 +156,8 @@ export class StayReserve extends React.Component {
         const formattedDateOut = this.getInputValue(this.props.filterBy.dateOut)
         // console.log(formattedDateOut)
 
+  
+
 
         const { isModalShown, cmp } = this.state
         const { price, _id, name } = this.props.stay;
@@ -171,7 +184,7 @@ export class StayReserve extends React.Component {
                                                     id="check-in"
                                                     autoComplete="off"
                                                     placeholder="Add dates"
-                                                    onChange={this.handleChange}
+                                                    readOnly
                                                     onClick={() => this.OpenModal('calendar')}
                                                     value={formattedDateIn} /></span>
                                         </div>
@@ -187,7 +200,7 @@ export class StayReserve extends React.Component {
                                                     id="check-out"
                                                     autoComplete="off"
                                                     placeholder="Add dates"
-                                                    onChange={this.handleChange}
+                                                    readOnly
                                                     onClick={() => this.OpenModal('calendar')}
                                                     value={formattedDateOut} /></span>
                                         </div>
@@ -202,7 +215,7 @@ export class StayReserve extends React.Component {
                                                 <input name="guests"
                                                     id="guests"
                                                     placeholder={`1 guest`}
-                                                    onChange={this.handleChange}
+                                                    readOnly
                                                     onClick={() => this.OpenModal('guests')}
                                                     value={this.props.filterBy.adults} /></span>
                                         </div>

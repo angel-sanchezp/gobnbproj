@@ -15,14 +15,14 @@ import { setFilter } from '../../store/stay/stay.actions.js'
 
 class _HomeHeader extends Component {
     onLogoClicked() {
-        window.location.href = `/`
+        this.props.history.push('/')
     }
 
     onSetFilter = async (filterBy) => {
         // console.log('home filterby ', filterBy)
 
         await this.props.setFilter(filterBy);
-        const { location, dateIn, dateOut, adults = 1, children = 0 } = filterBy 
+        const { location, dateIn, dateOut, adults = 1, children = 0 } = filterBy
         let params = ""
         if (location) {
             params += `&location=${location}`
@@ -48,13 +48,13 @@ class _HomeHeader extends Component {
         console.log('render', this.props.class)
         return (
             <section className='main-nav'>
-                    <div className='logo'>
-                        <a aria-current="page" className="logo-link active">
-                            <h1 className="logo" onClick={() => this.onLogoClicked()}>Go<i className="fab fa-airbnb" aria-hidden="true"></i>
-                                bnb</h1></a>
-                    </div>
+                <div className='logo'>
+                    <a aria-current="page" className="logo-link active">
+                        <h1 className="logo" onClick={() => this.onLogoClicked()}>Go<i className="fab fa-airbnb" aria-hidden="true"></i>
+                            bnb</h1></a>
+                </div>
                 <div className='secondary-search-bar'>
-                    <HomeFilter onSetFilter={this.onSetFilter} isMinFilter={this.props.isMinFilter}/>
+                    <HomeFilter onSetFilter={this.onSetFilter} isMinFilter={this.props.isMinFilter} />
                 </div>
                 <section className="right-nav">
                     <div className="host-options">
@@ -63,11 +63,11 @@ class _HomeHeader extends Component {
                     </div>
                     <section className="login-container">
                         <div className="user-options">
-                            <DropdownMenu/>
+                            <DropdownMenu />
                         </div>
                     </section>
                     <div className="user-modal hidden">
-                        <LoginModal/>
+                        <LoginModal />
                     </div>
                 </section>
             </section>

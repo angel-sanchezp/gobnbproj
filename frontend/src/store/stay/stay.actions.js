@@ -13,17 +13,8 @@ export  function loadStays(predefinedFilterBy) {
                 })
             })
             .catch(err => {
-                // showErrorMsg('Cannot load stays')
                 console.log('Cannot load stays', err)
             })
-
-        // stayService.subscribe((stays) => {
-        //     console.log('Got notified');
-        //     dispatch({
-        //         type: 'SET_STAYS',
-        //         stays
-        //     })
-        // })
     }
 }
 
@@ -36,10 +27,8 @@ export function onRemoveStay(stayId) {
                     type: 'REMOVE_STAY',
                     stayId
                 })
-                // showSuccessMsg('Stay removed')
             })
             .catch(err => {
-                // showErrorMsg('Cannot remove stay')
                 console.log('Cannot remove stay', err)
             })
     }
@@ -55,10 +44,8 @@ export function onAddStay() {
                     type: 'ADD_STAY',
                     stay: savedStay
                 })
-                // showSuccessMsg('Stay added')
             })
             .catch(err => {
-                // showErrorMsg('Cannot add stay')
                 console.log('Cannot add stay', err)
             })
     }
@@ -74,8 +61,6 @@ export function setFilter(filterBy) {
 
 export function changeHeaderClass(newClass) {
         return (dispatch) => {
-            // var newClass = classHeader.toString()
-            // console.log(newClass)
             const action = { type: 'SET_CLASS_HEADER', newClass };
             dispatch(action);
     }
@@ -89,55 +74,3 @@ export function changeFilter(isMinFilter) {
 
 
 
-// export function onEditStay(stayToSave) {
-//     return (dispatch) => {
-//         stayService.save(stayToSave)
-//             .then(savedStay => {
-//                 console.log('Updated Stay:', savedStay);
-//                 dispatch({
-//                     type: 'UPDATE_STAY',
-//                     stay: savedStay
-//                 })
-//                 showSuccessMsg('Stay updated')
-//             })
-//             .catch(err => {
-//                 showErrorMsg('Cannot update stay')
-//                 console.log('Cannot save stay', err)
-//             })
-//     }
-// }
-
-// export function addToStayt(stay) {
-//     return (dispatch) => {
-//         dispatch({
-//             type: 'ADD_TO_STAY',
-//             stay
-//         })
-//     }
-// }
-
-
-// Demo for Optimistic Mutation (IOW - Assuming the server call will work, so updating the UI first)
-// export function onRemoveStayOptimistic(stayId) {
-
-//     return (dispatch, getState) => {
-
-//         dispatch({
-//             type: 'REMOVE_STAY',
-//             stayId
-//         })
-//         showSuccessMsg('Stay removed')
-
-//         stayService.remove(stayId)
-//             .then(() => {
-//                 console.log('Server Reported - Deleted Succesfully');
-//             })
-//             .catch(err => {
-//                 showErrorMsg('Cannot remove stay')
-//                 console.log('Cannot load stays', err)
-//                 dispatch({
-//                     type: 'UNDO_REMOVE_STAY',
-//                 })
-//             })
-//     }
-// }
