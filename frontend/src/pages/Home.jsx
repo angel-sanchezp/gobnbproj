@@ -34,6 +34,7 @@ class _HomePage extends React.Component {
     this.props.changeHeaderClass(this.state.class);
     console.log(this.props.user);
     this.props.loadStays();
+    this.props.loadOrders();
     this.loggedInUser();
   }
 
@@ -199,6 +200,7 @@ function mapStateToProps(state) {
     filterBy: state.stayModule.filterBy,
     classHeader: state.stayModule.classHeader,
     user: state.userModule.user,
+    orders:state.orderModule.orders
   };
 }
 
@@ -208,6 +210,7 @@ const mapDispatchToProps = {
   changeFilter,
   setFilter,
   login,
+  loadOrders
 };
 
 export const HomePage = connect(mapStateToProps, mapDispatchToProps)(_HomePage);
