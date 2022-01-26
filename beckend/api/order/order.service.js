@@ -8,8 +8,8 @@ async function query(filterBy = {}) {
     // console.log('criteria in order service',criteria)
     try {
         const collection = await dbService.getCollection('order')
-        // var orders = await collection.find(criteria).toArray()
-        console.log('after build criteria ',criteria)
+        var orders = await collection.find(criteria).toArray()
+        // console.log('after build criteria ',criteria)
        var orders = await collection.aggregate([
             {
                 $match: criteria
@@ -73,14 +73,16 @@ async function remove(orderId) {
 
 
 async function add(order) {
+    console.log(order.hostId)
     try {
         const collection = await dbService.getCollection('order')
-        await collection.insertOne(order)
-        // const reviewToAdd = {
-        //     byUserId: ObjectId(review.byUserId),
-        //     aboutUserId: ObjectId(review.aboutUserId),
-        //     txt: review.txt
-        // }
+        const orderToAdd = {
+            ...order,
+            hostId: ObjectId(order.hostId),
+            buyer_id: ObjectId(order.buyer_id),
+            stay_id:ObjectId(order.stay_id),
+        }
+        await collection.insertOne(orderToAdd)
         return order;
     } catch (err) {
         logger.error('cannot insert order', err)

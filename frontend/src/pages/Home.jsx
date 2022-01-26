@@ -13,6 +13,7 @@ import {
   changeFilter,
   setFilter,
 } from "../store/stay/stay.actions.js";
+import { loadOrders } from "../store/order/order.actions.js";
 import { AppFooter } from "../cmps/Stay Layout/AppFooter.jsx";
 
 import tokyo from "../assets/img/tokyo.jpeg";
