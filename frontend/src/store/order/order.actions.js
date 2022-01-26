@@ -2,7 +2,20 @@ import { orderService } from '../../services/order.service.js'
 import Swal from "sweetalert2";
 
 
-
+export  function loadOrders() {
+  return (dispatch) => {
+      orderService.query()
+          .then(orders => {
+              console.log('stays from DB:', orders)
+              dispatch({
+                  type: 'SET_ORDERS',orders
+              })
+          })
+          .catch(err => {
+              console.log('Cannot load stays', err)
+          })
+  }
+}
 
 export function addOrder(order) {
 
