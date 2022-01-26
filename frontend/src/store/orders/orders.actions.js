@@ -1,4 +1,4 @@
-import { orderService } from '../../services/order.services'
+import { orderService } from '../../services/order.service.js'
 // import { socketService, SOCKET_EVENT_REVIEW_ADDED } from '../services/socket.service'
 // import { userService } from '../../services/user.services'
 
@@ -8,9 +8,9 @@ export function loadOrders() {
     try {
       const orders = await orderService.query()
       dispatch({ type: 'SET_ORDERS', orders })
-      socketService.on(SOCKET_EVENT_REVIEW_ADDED, (order) =>{
-        dispatch({ type: 'ADD_REVIEW', order })
-      })
+    //   socketService.on(SOCKET_EVENT_REVIEW_ADDED, (order) =>{
+    //     dispatch({ type: 'ADD_REVIEW', order })
+    //   })
 
     } catch (err) {
       console.log('ReviewActions: err in loadReviews', err)
