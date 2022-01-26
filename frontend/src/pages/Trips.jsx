@@ -5,7 +5,8 @@ import _ from 'lodash'
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 import { TripPreview } from '../cmps/TripsCmps/TripPreview.jsx'
 import { changeHeaderClass } from '../store/stay/stay.actions.js'
-import { orderService } from '../services/order.service.js'
+import { loadOrders} from '../store/orders/orders.actions.js'
+
 
 
 
@@ -69,9 +70,7 @@ class _Trips extends Component {
     
     componentDidMount() {
       this.props.changeHeaderClass(this.state.class)
-      let trips = await orderService.query() 
-     
-      
+      const trips = this.props.loadTrips() 
       console.log(trips)
       this.setState({trips})
       
