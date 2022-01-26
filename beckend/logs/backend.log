@@ -1957,3 +1957,15 @@
 25.1.2022, 22:33:47 - DEBUG - auth.service - login with username: user1
 25.1.2022, 22:34:48 - DEBUG - auth.service - login with username: user1
 25.1.2022, 22:37:37 - DEBUG - auth.service - login with username: user1
+25.1.2022, 22:50:07 - DEBUG - auth.service - signup with username: user2, fullname: User 2
+25.1.2022, 22:50:09 - DEBUG - auth.route - new account created: {"username":"user2","password":"$2b$10$NdmhH81yK661Emz7tPYqW.OjetmlQRLGNZYa0LWx43XvUJrAE4zwi","fullname":"User 2","isAdmin":false,"_id":"61f0627fc8e02896300df6d6"}
+25.1.2022, 22:50:09 - DEBUG - auth.service - login with username: user2
+25.1.2022, 22:50:31 - DEBUG - auth.service - signup with username: user3, fullname: User 3
+25.1.2022, 22:50:32 - DEBUG - auth.route - new account created: {"username":"user3","password":"$2b$10$3sfZSRHmca9LgjCQhPz77upbYltdZ2i7Avsv9aJHdgA48vTfsc4EK","fullname":"User 3","isAdmin":false,"_id":"61f06297c8e02896300df6d7"}
+25.1.2022, 22:50:32 - DEBUG - auth.service - login with username: user3
+25.1.2022, 22:50:58 - DEBUG - auth.service - signup with username: user2, fullname: User 4
+25.1.2022, 22:50:58 - DEBUG - auth.route - new account created: {"username":"user2","password":"$2b$10$TZfR/17/UonYbvAyeoM2ju8H/Qgz4dPLm2e.98dNBclhJevlk3I/S","fullname":"User 4","isAdmin":false,"_id":"61f062b2c8e02896300df6d8"}
+25.1.2022, 22:50:58 - DEBUG - auth.service - login with username: user2
+25.1.2022, 23:04:45 - DEBUG - auth.service - signup with username: angel, fullname: angelica
+25.1.2022, 23:04:46 - DEBUG - auth.route - new account created: {"username":"angel","password":"$2b$10$dp34nAmnVsPF.kSRqlNNg.UXJ7K15Ele/jzN7x7Bb7tN1wEezarhy","fullname":"angelica","isAdmin":false,"_id":"61f065edc8e02896300df6d9"}
+25.1.2022, 23:04:46 - DEBUG - auth.service - login with username: angel
