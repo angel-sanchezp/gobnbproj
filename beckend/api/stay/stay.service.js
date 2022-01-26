@@ -12,9 +12,7 @@ module.exports = {
 }
 
 async function query(filterBy = {}) {
-    console.log('filter in query stys service ', filterBy)
     const criteria = _buildCriteria(filterBy)
-    console.log('criteria', criteria)
     try {
         const collection = await dbService.getCollection('stay')
         var stays = await collection.find(criteria).toArray()
@@ -23,24 +21,9 @@ async function query(filterBy = {}) {
         logger.error('cannot find stays', err)
         throw err
     }
-
-    // var filterBy = JSON.parse(filterBy);
-    // console.log('filter in service', filterBy)
-    // const filterdToys = toys.filter((toy) => {
-    //     const isByLabel = isLabelsMatch(toy.labels, filterBy.labels);
-    //     return (
-    //         toy.name.toUpperCase().includes(filterBy.name.toUpperCase()) &&
-    //         toy.inStock === filterBy.inStock &&
-    //         isByLabel
-    //     );
-    // });
-    // return Promise.resolve(filterdToys);
 }
 
-
 function _buildCriteria(filterBy = {}) {
-    console.log('_buildCriteria');
-    console.log('line 48, filterBy: ', filterBy)
     const criteria = {}
     if (filterBy.location) {
         criteria["location.country"] = { $regex: filterBy.location, $options: 'i' }
@@ -49,7 +32,6 @@ function _buildCriteria(filterBy = {}) {
         const maxPrice = JSON.parse(filterBy.maxPrice)
         const minPrice = JSON.parse(filterBy.minPrice)
         criteria["price"] = { $gt: minPrice, $lt: maxPrice }
-
     }
     if (filterBy?.dateIn && filterBy?.dateOut) {
         const checkIn = JSON.parse(filterBy.dateIn)
@@ -63,13 +45,12 @@ function _buildCriteria(filterBy = {}) {
                     ]}
                 }     
             }
-    }
-     
-            
+    }       
     if (filterBy.amenities?.length) {
         criteria["amenities"] = (typeof (filterBy.amenities) === 'string') ? { $in: [filterBy.amenities] } :
             { $all: filterBy.amenities }
     }
+
     console.log('criteria', criteria)
     return criteria
 }

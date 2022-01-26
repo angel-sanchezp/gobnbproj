@@ -1969,3 +1969,115 @@
 25.1.2022, 23:04:45 - DEBUG - auth.service - signup with username: angel, fullname: angelica
 25.1.2022, 23:04:46 - DEBUG - auth.route - new account created: {"username":"angel","password":"$2b$10$dp34nAmnVsPF.kSRqlNNg.UXJ7K15Ele/jzN7x7Bb7tN1wEezarhy","fullname":"angelica","isAdmin":false,"_id":"61f065edc8e02896300df6d9"}
 25.1.2022, 23:04:46 - DEBUG - auth.service - login with username: angel
+<<<<<<< HEAD
+=======
+>>>>>>> d3192d9a157d230b2bd3409e88b363f2eddfeed4
+26.1.2022, 11:43:57 - INFO - Server is running on port: 3030
+26.1.2022, 11:53:55 - INFO - Server is running on port: 3030
+26.1.2022, 11:54:44 - INFO - Req!!!
+26.1.2022, 11:54:57 - INFO - Req!!!
+26.1.2022, 11:55:18 - DEBUG - auth.service - login with username: user1
+26.1.2022, 11:57:27 - INFO - Req!!!
+26.1.2022, 11:57:27 - INFO - Req from: User 1
+26.1.2022, 11:57:28 - INFO - Req!!!
+26.1.2022, 11:57:28 - INFO - Req from: User 1
+26.1.2022, 11:58:00 - INFO - Req!!!
+26.1.2022, 11:58:00 - INFO - Req from: User 1
+26.1.2022, 11:58:07 - INFO - Req!!!
+26.1.2022, 11:58:07 - INFO - Req from: User 1
+26.1.2022, 11:58:13 - INFO - Req!!!
+26.1.2022, 11:58:13 - INFO - Req from: User 1
+26.1.2022, 11:58:31 - INFO - Req!!!
+26.1.2022, 11:58:31 - INFO - Req from: User 1
+26.1.2022, 11:59:14 - INFO - Req!!!
+26.1.2022, 11:59:14 - INFO - Req from: User 1
+26.1.2022, 12:00:07 - INFO - Req!!!
+26.1.2022, 12:00:07 - INFO - Req from: User 1
+26.1.2022, 12:00:10 - INFO - Req!!!
+26.1.2022, 12:00:10 - INFO - Req from: User 1
+26.1.2022, 12:00:11 - INFO - Req!!!
+26.1.2022, 12:00:11 - INFO - Req from: User 1
+26.1.2022, 12:00:36 - INFO - Req!!!
+26.1.2022, 12:00:36 - INFO - Req from: User 1
+26.1.2022, 12:01:20 - INFO - Req!!!
+26.1.2022, 12:01:20 - INFO - Req from: User 1
+26.1.2022, 12:05:49 - ERROR - while finding car s0008 | {}
+26.1.2022, 12:05:49 - ERROR - Failed to get stay | {}
+26.1.2022, 12:06:55 - INFO - Req!!!
+26.1.2022, 12:06:55 - INFO - Req from: User 1
+26.1.2022, 12:07:25 - INFO - Req!!!
+26.1.2022, 12:07:25 - INFO - Req from: User 1
+26.1.2022, 12:07:26 - INFO - Req!!!
+26.1.2022, 12:07:26 - INFO - Req from: User 1
+26.1.2022, 12:07:28 - INFO - Req!!!
+26.1.2022, 12:07:28 - INFO - Req from: User 1
+26.1.2022, 12:07:38 - INFO - Req!!!
+26.1.2022, 12:07:38 - INFO - Req from: User 1
+26.1.2022, 12:08:05 - INFO - Req!!!
+26.1.2022, 12:08:05 - INFO - Req from: User 1
+26.1.2022, 12:10:50 - INFO - Server is running on port: 3030
+26.1.2022, 12:11:50 - INFO - Server is running on port: 3030
+26.1.2022, 12:15:03 - INFO - Req!!!
+26.1.2022, 12:15:23 - INFO - Req!!!
+26.1.2022, 12:15:40 - INFO - Req!!!
+26.1.2022, 12:15:51 - INFO - Req!!!
+26.1.2022, 12:19:10 - INFO - Req!!!
+26.1.2022, 12:25:56 - INFO - Req!!!
+26.1.2022, 12:30:53 - INFO - Req!!!
+26.1.2022, 12:31:09 - INFO - Req!!!
+26.1.2022, 12:34:53 - INFO - Req!!!
+26.1.2022, 12:35:08 - INFO - Req!!!
+26.1.2022, 12:37:29 - INFO - Req!!!
+26.1.2022, 12:37:38 - INFO - Req!!!
+26.1.2022, 12:37:52 - INFO - Req!!!
+26.1.2022, 12:38:47 - INFO - Req!!!
+26.1.2022, 12:39:03 - INFO - Req!!!
+26.1.2022, 12:40:52 - INFO - Req!!!
+26.1.2022, 12:41:02 - INFO - Req!!!
+26.1.2022, 12:43:32 - INFO - Req!!!
+26.1.2022, 12:44:20 - INFO - Req!!!
+26.1.2022, 12:44:37 - INFO - Req!!!
+26.1.2022, 12:44:39 - INFO - Req!!!
+26.1.2022, 12:44:41 - INFO - Req!!!
+26.1.2022, 12:44:51 - INFO - Req!!!
+26.1.2022, 12:45:18 - INFO - Req!!!
+26.1.2022, 12:47:59 - ERROR - while finding car s0008 | {}
+26.1.2022, 12:47:59 - ERROR - Failed to get stay | {}
+26.1.2022, 12:48:52 - INFO - Req!!!
+26.1.2022, 12:49:17 - INFO - Req!!!
+26.1.2022, 12:50:20 - INFO - Req!!!
+26.1.2022, 13:04:56 - INFO - Req!!!
+26.1.2022, 13:05:12 - INFO - Req!!!
+26.1.2022, 13:05:13 - INFO - Req!!!
+26.1.2022, 13:05:14 - INFO - Req!!!
+26.1.2022, 13:05:18 - INFO - Req!!!
+26.1.2022, 13:05:39 - INFO - Req!!!
+26.1.2022, 13:09:21 - INFO - Req!!!
+26.1.2022, 13:09:36 - INFO - Req!!!
+26.1.2022, 13:11:46 - INFO - Req!!!
+26.1.2022, 13:11:59 - INFO - Req!!!
+26.1.2022, 13:12:49 - INFO - Req!!!
+26.1.2022, 13:13:07 - INFO - Req!!!
+26.1.2022, 13:15:49 - INFO - Server is running on port: 3030
+26.1.2022, 13:26:55 - INFO - Req!!!
+26.1.2022, 13:27:06 - INFO - Req!!!
+26.1.2022, 13:27:33 - DEBUG - auth.service - login with username: user1
+26.1.2022, 13:28:27 - INFO - Req!!!
+26.1.2022, 13:28:27 - INFO - Req from: User 1
+26.1.2022, 13:33:36 - INFO - Req!!!
+26.1.2022, 13:33:36 - INFO - Req from: User 1
+26.1.2022, 13:33:51 - INFO - Req!!!
+26.1.2022, 13:33:51 - INFO - Req from: User 1
+26.1.2022, 13:34:14 - INFO - Req!!!
+26.1.2022, 13:34:14 - INFO - Req from: User 1
+26.1.2022, 13:35:52 - INFO - Req!!!
+26.1.2022, 13:35:52 - INFO - Req from: User 1
+26.1.2022, 13:36:29 - INFO - Req!!!
+26.1.2022, 13:36:29 - INFO - Req from: User 1
+26.1.2022, 13:36:46 - INFO - Req!!!
+26.1.2022, 13:36:46 - INFO - Req from: User 1
+26.1.2022, 14:18:22 - INFO - Server is running on port: 3030
+26.1.2022, 14:18:41 - INFO - Req!!!
+=======
+>>>>>>> be316d0d120e45ca2869ae6ec71a6205366dc400
+26.1.2022, 14:55:33 - INFO - Server is running on port: 3030
