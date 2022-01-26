@@ -29,10 +29,9 @@ class _Explore extends Component {
         const urlSearchParams = new URLSearchParams(this.props.location.search)
         return {
             location: urlSearchParams.get('location'),
-            guests: urlSearchParams.get('guests'),
+            guests: urlSearchParams.get('guests') || 1,
             dateIn: urlSearchParams.get('dateIn'),
-            dateOut: urlSearchParams.get('dateOut'),
-            month: urlSearchParams.get('month')
+            dateOut: urlSearchParams.get('dateOut')
         }
     }
 
@@ -88,7 +87,7 @@ class _Explore extends Component {
         const { location } = this.state
         const { dateIn } = this.state
         const { dateOut } = this.state
-        const { month } = this.state
+
         if (!stays) {
             return <h1>No results</h1>
         }
@@ -101,7 +100,6 @@ class _Explore extends Component {
                 <section className="explore-page">
                     {location &&
                         <div className="txt-explore-page">
-                            <button onClick={() => this.onStayClicked('s0001')}>check</button>
                             <div className="small-txt-exp-page">{stays.length} stays in {location}</div>
                             <div className="small-txt-exp-page">Review COVID-19 travel restrictions before you book</div>
                         </div>

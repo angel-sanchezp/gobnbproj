@@ -1,8 +1,10 @@
 export function StayReview({stay}){
+
     const { reviews } = stay;
     const showReviews = (reviews.length > 4) ? reviews.slice(0,4) : reviews.slice();
     let reviewBtn = (reviews.length === 1 ) ? `Show ${reviews.length} review` : `Show all ${reviews.length} reviews`;
     let reviewHeader = (reviews.length === 1 ) ? ` ${reviews.length} review` : `${reviews.length} reviews`;
+    
     if(reviews.length === 0) {
         reviewBtn = `No reviews`;
         reviewHeader = `No reviews`;
@@ -23,7 +25,8 @@ export function StayReview({stay}){
     
     const getDate = (dateToString) => {
         const options = {month: "long", year:"numeric"};
-        const longDate = new Intl.DateTimeFormat("en-US", options).format(dateToString);
+        const date = new Date(dateToString)
+        const longDate = new Intl.DateTimeFormat("en-US", options).format(date);
         return longDate;
     }
 
@@ -33,7 +36,7 @@ export function StayReview({stay}){
             <section className="review-general" >
                 <div className="review-rate">
                     <h2>{reviewHeader} </h2>
-                    </div>
+                </div>
                 <div className="review-statistics">
                     <div className="ratings">
                         <div>Cleanliness</div>
@@ -101,7 +104,7 @@ export function StayReview({stay}){
             </section>
             <section className="review-list">
                 <div className="reviews">
-                {showReviews.map((review, idx) => (
+                {showReviews.map((review = {}, idx) => (
                         <div className="review-preview" key={idx}>
                             <div className="review-info">
                                 <img className="review-user" src={review.by.imgUrl} alt="Not found" />

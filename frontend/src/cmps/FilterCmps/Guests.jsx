@@ -5,10 +5,9 @@ import React from 'react'
 
 
 export class Guests extends React.Component {
-
     state = {
-        adults: 0,
-        children: 0,
+        adults: this.props.adults || 1,
+        children: this.props.children || 0,
     }
 
     handleChange = ({ target }) => {
@@ -27,6 +26,7 @@ export class Guests extends React.Component {
         console.log('adults value in guests', newValue)
         this.props.onChangeAdults(newValue)
     }
+
     changeChildren(indicator) {
         const { children } = this.state
         console.log(children)
@@ -39,18 +39,34 @@ export class Guests extends React.Component {
     }
 
     render() {
-
+        const { onClose } = this.props
         const { adults, children } = this.state
-
 
         return (
             <div className="dynamic-modal-child filter-guest-modal">
-                <div className="modal-label"><div><span>Adults</span><span>Ages 13 or above</span></div>
-                    <div><button type="button" onClick={() => this.changeAdults(-1)}>-</button><span>{adults}</span><button type="button" onClick={() => this.changeAdults(1)}>+</button></div></div>
-                <div className="modal-label"><div><span>Kids</span><span>Ages 0–12</span></div><div>
-                    <button type="button" onClick={() => this.changeChildren(-1)}>-</button><span>{children}</span><button type="button" onClick={() => this.changeChildren(1)}>+</button>
-
-                </div></div>
+                <button type="button" className="close-btn" onClick={this.props.onClose}>x</button>
+                <div className="modal-label">
+                    <div>
+                        <span>Adults</span>
+                        <span>Ages 13 or above</span>
+                    </div>
+                    <div>
+                        <button type="button" onClick={() => this.changeAdults(-1)}>-</button>
+                        <span>{adults}</span>
+                        <button type="button" onClick={() => this.changeAdults(1)}>+</button>
+                    </div>
+                </div>
+                <div className="modal-label">
+                    <div>
+                        <span>Kids</span>
+                        <span>Ages 0–12</span>
+                        </div>
+                    <div>
+                        <button type="button" onClick={() => this.changeChildren(-1)}>-</button>
+                        <span>{children}</span>
+                        <button type="button" onClick={() => this.changeChildren(1)}>+</button>
+                    </div>
+                </div>
             </div>
         )
 

@@ -14,11 +14,9 @@ function query(entityType, delay = 500) {
 
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
-            // reject('OOOOPs')
             resolve(entities)
         }, delay)   
     })
-    // return Promise.resolve(entities)
 }
 
 //  function postMany(entityType, newEntities) {
@@ -46,8 +44,6 @@ function post(entityType, newEntity) {
             return newEntity
         })
 }
-
-
 
 function put(entityType, updatedEntity) {
     return query(entityType)
