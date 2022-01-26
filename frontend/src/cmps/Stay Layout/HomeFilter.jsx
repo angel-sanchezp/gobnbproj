@@ -133,7 +133,7 @@ import { Calendar } from '../FilterCmps/Calendar.jsx'
                                 id="guests"
                                 placeholder={`Add gusts`}
                                 onClick={() => this.openModal('guests')}
-                                value={this.getFormattedGuests} />
+                                value={this.getFormattedGuests} readOnly/>
                     </label>
                     <button>
                         <i className="fas fa-search" aria-hidden="true"> </i>
