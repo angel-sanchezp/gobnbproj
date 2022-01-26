@@ -35,9 +35,13 @@ export function login(user) {
       const action = { type: "SET_USER", user };
       dispatch(action);
       Swal.fire({
+        position: "top-end",
         title: "Welcome!",
         text: "Successfully logged in",
         type: "success",
+        showConfirmButton: false,
+        timerProgressBar: true,
+        timer: 1500,
       }).then(function () {
         window.location = "/";
       });
@@ -63,9 +67,13 @@ export function signup(user) {
       const action = { type: "SET_USER", user };
       dispatch(action);
       Swal.fire({
+        position: "top-end",
         title: "Welcome!",
         text: "Successfully signed up",
         type: "success",
+        showConfirmButton: false,
+        timerProgressBar: true,
+        timer: 1500,
       }).then(function () {
         window.location = "/";
       });
@@ -83,7 +91,6 @@ export function signup(user) {
   };
 }
 
-
 export function logout() {
   return async (dispatch) => {
     try {
@@ -91,9 +98,13 @@ export function logout() {
       const action = { type: "SET_USER", user: null };
       dispatch(action);
       Swal.fire({
-        title: "Welcome!",
+        position: "top-end",
+        title: "Goodbye!",
         text: "Successfully logged out",
         type: "success",
+        showConfirmButton: false,
+        timerProgressBar: true,
+        timer: 1500,
       }).then(function () {
         window.location = "/";
       });

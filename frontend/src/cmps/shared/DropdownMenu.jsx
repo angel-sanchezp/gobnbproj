@@ -16,10 +16,20 @@ export class _DropdownMenu extends React.Component {
     isActive: false,
     loggedInUser: null,
     isAdmin: false,
+    isLoggedOut: null,
   };
 
+
   componentDidMount(){
-    this.setState({ loggedInUser: userService.getLoggedinUser()});
+    
+    console.log(this.state.isLoggedOut)
+    if(this.state.loggedInUser) {
+    this.setState(prev => ({ ...prev, isLoggedOut: true }))
+
+  } else {
+    console.log(this.state.isLoggedOut)
+    this.setState(prev => ({ ...prev, isLoggedOut: false }))
+  }
 };
 
 
@@ -35,29 +45,25 @@ export class _DropdownMenu extends React.Component {
     }
 
     onLogOut = () => {
-      console.log('log out')
-      console.log(this.props)
-      this.props.logout()
-      this.setState({ isLoggedIn: false })
+      console.log('log out', this.state.isLoggedOut)
+      // console.log(this.props)
+      // this.props.logout()
+      this.setState(prev => ({ ...prev, isLoggedOut: true }))
+      console.log('log out', this.state.isLoggedOut)
+      // window.location = "/";
     }
     
-    // showMsg = () => {
-    //   Swal.fire({
-    //     title: "Welcome!",
-    //     text: "Successfully logged in",
-    //     type: "success",
-    //   }).then(function () {
-    //     window.location = "/";
-    //   });
-    // }
+  
   
     render() {
       let avatar = UserAvatar;
       const {loggedInUser} = this.state;
-      if(loggedInUser) {
+      console.log(this.props.user)
+      if(this.props.user) {
+        console.log(this.props.user)
         document.querySelectorAll(".opt2").forEach(e=>{e.classList.remove("hidden");});
         document.querySelectorAll(".opt1").forEach(e=>{e.classList.add("hidden");});
-        avatar = loggedInUser.imgUrl;
+        avatar = this.props.imgUrl;
       }
       if(this.state.isAdmin === true) {
         document.querySelectorAll(".opt2").forEach(e=>{e.classList.remove("hidden");});
