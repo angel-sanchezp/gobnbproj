@@ -13,13 +13,13 @@ import { ReactComponent as Burger } from "../../assets/svg/burger.svg";
 export class DropdownMenu extends React.Component {
   state = {
     isActive: false,
-    loggedInUser: true,
+    loggedInUser: null,
     isAdmin: false,
   };
 
-//   componentDidMount(){
-//     this.setState({ loggedInUser: userService.getLoggedinUser()});
-// };
+  componentDidMount(){
+    this.setState({ loggedInUser: userService.getLoggedinUser()});
+};
 
 
   openLoginModal = () => {
