@@ -39,7 +39,6 @@ if (process.env.NODE_ENV === 'production') {
     app.use(cors(corsOptions))
     // app.use(cors())
 }
-
 //  const app.use(session({
 //     secret: 'some secret token',
 //     resave: false,

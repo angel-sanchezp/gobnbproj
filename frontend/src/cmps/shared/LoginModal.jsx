@@ -17,44 +17,30 @@ class _LoginModal extends React.Component {
   handleChange = (ev) => {
     const field = ev.target.name;
     const value = ev.target.value;
-    console.log(field, value)
+    // console.log(field, value)
     this.setState({
       credentials: { ...this.state.credentials, [field]: value },
     });
   };
 
-  onLogin = async (ev = null) => {
-    if (ev) ev.preventDefault();
-    if (!this.state.credentials.email || !this.state.credentials.password)
-      return;
-    try {
-      let user = await this.props.login(this.state.credentials);
-      if (user) {
-        this.props.history.push("/");
-      }
-    } catch (err) {
-      console.log("error:", err);
-    }
+  onLogin = async (ev) => {
+    ev.preventDefault();
+    const { credentials } = this.state
+    console.log('credentials', this.state.credentials)
+    if (!credentials) return
+    this.props.login(credentials)
+
     this.resetState();
   };
 
-  onSignup = (ev = null) => {
-    if (
-      !this.state.credentials.fullname ||
-      !this.state.credentials.username ||
-      !this.state.credentials.email ||
-      !this.state.credentials.password
-    )
-      return;
+  onSignup = (ev) => {
+    ev.preventDefault()
+    const { credentials } = this.state
+    console.log('credentials', this.state.credentials)
+    if (!credentials) return
+    this.props.signup(credentials);
+    // this.props.history.push("/");
 
-    if (ev) ev.preventDefault();
-
-    try {
-      const user = this.props.signup(this.state.credentials);
-      this.props.history.push("/");
-    } catch (err) {
-      console.log("error:", err);
-    }
     this.resetState();
   };
 
@@ -109,7 +95,7 @@ class _LoginModal extends React.Component {
           </div>
           <div className="login">
             <h3>Welcome to Gobnb</h3>
-            <form className="login-form" action="">
+            <form className="login-form" onSubmit={this.onLogin}>
               <input
                 className="ls"
                 type="text"
@@ -158,7 +144,7 @@ class _LoginModal extends React.Component {
           </div>
           <div className="signup">
             <h3>Welcome to Gobnb</h3>
-            <form className="login-form" action="">
+            <form className="login-form" onSubmit={this.onSignup}>
               <input
                 className="ls"
                 type="text"
@@ -214,18 +200,18 @@ class _LoginModal extends React.Component {
   }
 }
 
-// function mapStateToProps(state) {
-//   return {
-//     user: state.userModule.user,
-//   };
-// }
-// const mapDispatchToProps = {
-//   login,
-//   signup,
-//   update,
-// };
+function mapStateToProps(state) {
+  return {
+    user: state.userModule.user,
+  };
+}
+const mapDispatchToProps = {
+  login,
+  signup,
+  update,
+};
 
 export const LoginModal = connect(
-  // mapStateToProps,
-  // mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(_LoginModal);

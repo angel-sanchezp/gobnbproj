@@ -67,6 +67,7 @@ async function query(filterBy = {}) {
      try {
          const collection = await dbService.getCollection('user')
          const user = await collection.findOne({ username })
+         console.log('user in get by username ',user )
          return user
         } catch (err) {
             logger.error(`while finding user ${username}`, err)
