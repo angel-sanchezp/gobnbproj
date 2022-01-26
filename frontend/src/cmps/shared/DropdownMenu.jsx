@@ -13,7 +13,7 @@ import { ReactComponent as Burger } from "../../assets/svg/burger.svg";
 export class DropdownMenu extends React.Component {
   state = {
     isActive: false,
-    loggedInUser: true,
+    loggedInUser: false,
     isAdmin: false,
   };
 

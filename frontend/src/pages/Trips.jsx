@@ -1,13 +1,11 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 import _ from 'lodash'
-import moment from 'moment'
+
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 import { TripPreview } from '../cmps/TripsCmps/TripPreview.jsx'
-
 import { changeHeaderClass } from '../store/stay/stay.actions.js'
-import { utilService } from '../services/utils.service'
+import { orderService } from '../services/order.service.js'
 
 
 
@@ -64,13 +62,22 @@ const orders = [
 
 class _Trips extends Component {
     state = {
-        trips: orders,
-        class: 'trip-header',
+        trips: [],
+        class: 'general-header',
     }
 
-    componentWillMount() {
-        this.props.changeHeaderClass(this.state.class)
-    }
+    
+    componentDidMount() {
+      this.props.changeHeaderClass(this.state.class)
+      let trips = await orderService.query() 
+     
+      
+      console.log(trips)
+      this.setState({trips})
+      
+  }
+
+    
 
     render() {
         const { trips } = this.state

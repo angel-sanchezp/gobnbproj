@@ -21,7 +21,7 @@ const WrappedHomeHeader = ({ className }) => (
 const HEADERS = {
     "explore-header": ExploreHeader,
     "details-header": ExpHeader,
-    "trip-header": ExpHeader,
+    "general-header": ExpHeader,
 
 }
 

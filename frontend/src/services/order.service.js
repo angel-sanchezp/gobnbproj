@@ -14,9 +14,10 @@ export const orderService = {
 // return axios.get('api/toy/?id=1223&balance=13')
 // return axios.get('api/toy/?', {params: {id: 1223, balanse:13}})
 
-function query() {
+async function query() {
+  console.log('order query')
   // var queryStr = (!filterBy) ? '' : `?name=${filterBy.name}&sort=anaAref`
-  return httpService.get(`order`)
+  return await httpService.get('order')
   // return storageService.query('OrderDB')
 }
 
