@@ -1,4 +1,6 @@
 import { userService } from "../../services/user.services.js";
+import React, { Component } from "react";
+import Swal from "sweetalert2";
 
 // import { socketService, SOCKET_EMIT_USER_WATCH, SOCKET_EVENT_USER_UPDATED } from "../services/socket.service.js";
 
@@ -32,7 +34,22 @@ export function login(user) {
       await userService.login(user);
       const action = { type: "SET_USER", user };
       dispatch(action);
+      Swal.fire({
+        title: "Welcome!",
+        text: "Successfully logged in",
+        type: "success",
+      }).then(function () {
+        window.location = "/";
+      });
     } catch (err) {
+      Swal.fire({
+        title: "Oh no!",
+        text: "Could not login",
+        type: "error",
+        icon: "error",
+      }).then(function () {
+        window.location = "/";
+      });
       console.log("Cannot login");
     }
   };
@@ -45,44 +62,50 @@ export function signup(user) {
       await userService.signup(user);
       const action = { type: "SET_USER", user };
       dispatch(action);
+      Swal.fire({
+        title: "Welcome!",
+        text: "Successfully signed up",
+        type: "success",
+      }).then(function () {
+        window.location = "/";
+      });
     } catch (err) {
+      Swal.fire({
+        title: "Oh no!",
+        text: "Could not sign up",
+        type: "error",
+        icon: "error",
+      }).then(function () {
+        window.location = "/";
+      });
       console.log("Cannot signup");
     }
   };
 }
 
-// export function signup(user) {
-//     return (dispatch) => {
-//         userService.signup(user)
-//         .then(user => {
-//             console.log('Added user', user);
-//             const action = {type: 'SET_USER', user}
-//             dispatch(action)
-//             // console.log('Signed up')
-//         })
-//         .catch(err => {
-//             console.log('Cannot signup')
-//         })
-//     }
-// return async (dispatch) => {
-//     console.log('login in user action ', user)
-//     try{
-//         await userService.signup(user)
-//         const action = {type: 'SET_USER', user}
-//         dispatch(action)
 
-//     }catch(err) {
-//         console.log('Cannot signup')
-//     }
-// }
-// }
 export function logout() {
   return async (dispatch) => {
     try {
       await userService.logout();
       const action = { type: "SET_USER", user: null };
       dispatch(action);
+      Swal.fire({
+        title: "Welcome!",
+        text: "Successfully logged out",
+        type: "success",
+      }).then(function () {
+        window.location = "/";
+      });
     } catch (err) {
+      Swal.fire({
+        title: "Oh no!",
+        text: "Could not logout",
+        type: "error",
+        icon: "error",
+      }).then(function () {
+        window.location = "/";
+      });
       console.log("Cannot logout");
     }
   };
