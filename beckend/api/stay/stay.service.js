@@ -32,7 +32,6 @@ function _buildCriteria(filterBy = {}) {
         const maxPrice = JSON.parse(filterBy.maxPrice)
         const minPrice = JSON.parse(filterBy.minPrice)
         criteria["price"] = { $gt: minPrice, $lt: maxPrice }
-
     }
     if (filterBy?.dateIn && filterBy?.dateOut) {
         const checkIn = JSON.parse(filterBy.dateIn)
@@ -51,6 +50,7 @@ function _buildCriteria(filterBy = {}) {
         criteria["amenities"] = (typeof (filterBy.amenities) === 'string') ? { $in: [filterBy.amenities] } :
             { $all: filterBy.amenities }
     }
+
     console.log('criteria', criteria)
     return criteria
 }
