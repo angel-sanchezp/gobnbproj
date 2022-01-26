@@ -26,6 +26,31 @@ export class DropdownMenu extends React.Component {
     document.querySelector(".dark-screen").classList.remove("hidden");
   };
 
+    // componentDidMount() {
+    //   window.addEventListener("click" , this.onHandleNav);
+    // }
+
+    // openLoginModal = () => {
+    //     document.querySelector(".user-modal").classList.remove("hidden")
+    //     document.querySelector(".dark-screen").classList.remove("hidden");
+    // }
+
+    // onHandleClick = (target) => {
+    //   console.log('hi')
+    //   this.history.push(`/${target}`)
+    // }
+    //  onHandelNav = () => {
+    //   this.setState(prev => ({ ...prev, isActive: !this.state.isActive }))
+    //   if(this.state.isActive){
+    //     window.addEventListener("click");
+    //     document.querySelector('menu').classList.add('inactive');
+    //     document.querySelector('menu').classList.remove('active');
+    //   } else {
+    //     console.log('hi')
+    //     window.removeEventListener("click");
+    //     document.querySelector('menu').classList.add('active')
+    //     document.querySelector('menu').classList.remove('inactive')
+    //   }
   onHandleClick = (target) => {
     // console.log("hi");
     // this.props.history.push(`/${target}`)
