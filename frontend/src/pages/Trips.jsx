@@ -1,10 +1,12 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { socketService } from '../services/socket.service.js'
 import _ from 'lodash'
 import moment from 'moment'
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 import { TripPreview } from '../cmps/TripsCmps/TripPreview.jsx'
+
 
 import { changeHeaderClass } from '../store/stay/stay.actions.js'
 import { utilService } from '../services/utils.service'
@@ -68,8 +70,22 @@ class _Trips extends Component {
         class: 'trip-header',
     }
 
+    componentDidMount(){
+      socketService.off('confirm order');
+      socketService.on('confirm order', this.setOrder());
+
+    }
+
     componentWillMount() {
         this.props.changeHeaderClass(this.state.class)
+
+    }
+
+    setOrder=()=>{
+      const {trips} =this.state
+      if(trips.status==='pending') trips.status='Confirmed'
+      this.setState({trips})
+
     }
 
     render() {

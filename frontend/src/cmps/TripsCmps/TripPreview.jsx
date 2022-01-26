@@ -3,9 +3,13 @@ import { Component } from 'react'
 // import { utilService } from '../../services/utils.service.js'
 // import { ReactComponent as Star } from '../../assets/svg/star.svg'
 import { withRouter } from "react-router-dom"
+
 import { Trips } from '../../pages/Trips'
 
 class _TripPreview extends Component {
+
+
+
     onTripClicked(tripId) {
         this.props.history.push(`/details/${tripId}`)
     }
