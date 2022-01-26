@@ -4,7 +4,7 @@ import { httpService } from '../services/http.services.js'
 // import { socketService, SOCKET_EVENT_REVIEW_ADDED } from './socket.service'
 
 export const orderService = {
-  add,
+  addOrder,
   query,
   remove
 }
@@ -26,8 +26,8 @@ function remove(orderId) {
   // return storageService.remove('OrderDB', orderId)
 
 }
-async function add(order) {
-  const addedOrder = await httpService.post(`order`, order)
+async function addOrder(orderInfo) {
+  const order = await httpService.post(`order`, orderInfo)
 
   // Only relevant when frontend-only
   // review.byUser = userService.getLoggedinUser()
@@ -35,7 +35,7 @@ async function add(order) {
   // console.log('order to add in order service ',order)
   // const addedOrder = storageService.save('OrderDB', order)
 
-  return addedOrder
+  return order
 }
 
 

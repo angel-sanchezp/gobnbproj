@@ -132,17 +132,7 @@ function getLoggedinUser() {
     return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN));
 }
 
-// function getNewUser() {
-//   return {
-//     _id: utilService.makeId(),
-//     fullname: "",
-//     imgUrl: "",
-//     isAdmin: false,
-//     username: "",
-//     password: "",
-//     email: "",
-//   };
-// }
+
 
 
 

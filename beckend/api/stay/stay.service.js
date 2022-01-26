@@ -12,9 +12,7 @@ module.exports = {
 }
 
 async function query(filterBy = {}) {
-    console.log('filter in query stys service ', filterBy)
     const criteria = _buildCriteria(filterBy)
-    console.log('criteria', criteria)
     try {
         const collection = await dbService.getCollection('stay')
         var stays = await collection.find(criteria).toArray()
@@ -23,13 +21,9 @@ async function query(filterBy = {}) {
         logger.error('cannot find stays', err)
         throw err
     }
-
 }
 
-
 function _buildCriteria(filterBy = {}) {
-    console.log('_buildCriteria');
-    console.log('line 48, filterBy: ', filterBy)
     const criteria = {}
     if (filterBy.location) {
         criteria["location.country"] = { $regex: filterBy.location, $options: 'i' }
@@ -51,8 +45,7 @@ function _buildCriteria(filterBy = {}) {
                     ]}
                 }     
             }
-    }
-            
+    }       
     if (filterBy.amenities?.length) {
         criteria["amenities"] = (typeof (filterBy.amenities) === 'string') ? { $in: [filterBy.amenities] } :
             { $all: filterBy.amenities }
