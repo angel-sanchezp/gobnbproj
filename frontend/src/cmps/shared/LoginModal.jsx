@@ -25,7 +25,7 @@ class _LoginModal extends React.Component {
     });
   };
 
-  onLogin = async (ev) => {
+  onLogin = (ev) => {
     ev.preventDefault();
     const { credentials } = this.state
     console.log('credentials', this.state.credentials)
@@ -34,7 +34,7 @@ class _LoginModal extends React.Component {
     this.closeModal()
     // window.location.href = `/`
 
-    this.resetState();
+    // this.resetState();
   };
 
   onSignup = (ev) => {
@@ -46,7 +46,7 @@ class _LoginModal extends React.Component {
     this.closeModal()
     // this.props.history.push("/");
 
-    this.resetState();
+    // this.resetState();
   };
 
   resetState = () => {
@@ -100,7 +100,7 @@ class _LoginModal extends React.Component {
           </div>
           <div className="login">
             <h3>Welcome to Gobnb</h3>
-            <form className="login-form" onSubmit={this.onLogin}>
+            <form className="login-form" onSubmit={(ev)=>this.onLogin(ev)}>
               <input
                 className="ls"
                 type="text"
@@ -149,7 +149,7 @@ class _LoginModal extends React.Component {
           </div>
           <div className="signup">
             <h3>Welcome to Gobnb</h3>
-            <form className="login-form" onSubmit={this.onSignup}>
+            <form className="login-form" onSubmit={(ev) => this.onSignup(ev)}>
               <input
                 className="ls"
                 type="text"

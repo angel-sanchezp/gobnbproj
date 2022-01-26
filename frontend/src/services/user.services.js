@@ -96,6 +96,7 @@ async function update(user) {
 
 
 async function login(userCred) {
+    console.log(userCred)
     // return storageService.query(STORAGE_KEY).then(users => {
     //     const user = users.find(user => user.username === credentials.username &&
     //         user.password === credentials.password)
@@ -104,7 +105,7 @@ async function login(userCred) {
     if (user) return _saveLocalUser(user)
 }
 async function signup(userInfo) {
-    console.log('sign up in user service', user)
+    console.log('sign up in user service', userInfo)
     const user = await httpService.post('auth/signup', userInfo)
     if (user) return _saveLocalUser(user)
 

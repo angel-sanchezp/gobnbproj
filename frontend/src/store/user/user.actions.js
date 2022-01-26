@@ -28,12 +28,12 @@ export function removeUser(userId) {
     }
   };
 }
-export function login(user) {
+export function login(credentials) {
   return async (dispatch) => {
     try {
-      await userService.login(user);
-      const action = { type: "SET_USER", user };
-      dispatch(action);
+      const user = await userService.login(credentials)
+      const action = { type: 'SET_USER', user }
+      dispatch(action)
       Swal.fire({
         position: "top-end",
         title: "Welcome!",
@@ -42,29 +42,27 @@ export function login(user) {
         showConfirmButton: false,
         timerProgressBar: true,
         timer: 1500,
-      }).then(function () {
-        window.location = "/";
       });
+      return user
     } catch (err) {
-      Swal.fire({
-        title: "Oh no!",
-        text: "Could not login",
-        type: "error",
-        icon: "error",
-      }).then(function () {
-        window.location = "/";
-      });
+        Swal.fire({
+          title: "Oh no!",
+          text: "Could not login",
+          type: "error",
+          icon: "error",    
+        });
       console.log("Cannot login");
     }
-  };
+  }
 }
+   
 
-export function signup(user) {
+export function signup(credentials) {
   return async (dispatch) => {
-    console.log("login in user action ", user);
+    console.log("login in user action ", credentials);
     try {
-      await userService.signup(user);
-      const action = { type: "SET_USER", user };
+      const user = await userService.signup(credentials)
+      const action = { type: 'SET_USER', user }
       dispatch(action);
       Swal.fire({
         position: "top-end",
@@ -73,9 +71,9 @@ export function signup(user) {
         type: "success",
         showConfirmButton: false,
         timerProgressBar: true,
-        timer: 1500,
-      }).then(function () {
-        window.location = "/";
+        timer: 1500
+      // }).then(function () {
+      //   this.props.history.push('/');
       });
     } catch (err) {
       Swal.fire({
@@ -83,8 +81,8 @@ export function signup(user) {
         text: "Could not sign up",
         type: "error",
         icon: "error",
-      }).then(function () {
-        window.location = "/";
+      // }).then(function () {
+      //   this.props.history.push('/');
       });
       console.log("Cannot signup");
     }
@@ -105,8 +103,8 @@ export function logout() {
         showConfirmButton: false,
         timerProgressBar: true,
         timer: 1500,
-      }).then(function () {
-        window.location = "/";
+      // }).then(function () {
+      //   this.props.history.push('/');
       });
     } catch (err) {
       Swal.fire({
@@ -114,8 +112,8 @@ export function logout() {
         text: "Could not logout",
         type: "error",
         icon: "error",
-      }).then(function () {
-        window.location = "/";
+      // }).then(function () {
+      //   this.props.history.push('/');
       });
       console.log("Cannot logout");
     }
