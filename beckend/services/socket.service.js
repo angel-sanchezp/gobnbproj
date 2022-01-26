@@ -15,19 +15,19 @@ function connectSockets(http, session) {
         socket.on('disconnect', socket => {
             console.log('Someone disconnected')
         })
-        socket.on('chat topic', topic => {
-            if (socket.myTopic === topic) return;
-            if (socket.myTopic) {
-                socket.leave(socket.myTopic)
-            }
-            socket.join(topic)
-            socket.myTopic = topic
+        socket.on('confirm order', order => {
+            console.log(' confirm order in sockets beckend',order)
+            emitToUser('confirm order', order , order.buyerId)
+
+
         })
-        socket.on('chat newMsg', msg => {
+        socket.on('new order', order=> {
+            console.log('order in sockets beckend',order)
             // emits to all sockets:
             // gIo.emit('chat addMsg', msg)
             // emits only to sockets in the same room
-            gIo.to(socket.myTopic).emit('chat addMsg', msg)
+            // gIo.to(socket.myTopic).emit('new order', order)
+            emitToUser('new order', order , order.hostId)
         })
         socket.on('user-watch', userId => {
             socket.join('watching:' + userId)
@@ -55,7 +55,7 @@ function emitTo({ type, data, label }) {
     else gIo.emit(type, data)
 }
 
-async function emitToUser({ type, data, userId }) {
+async function emitToUser( type, data, userId ) {
     logger.debug('Emiting to user socket: ' + userId)
     const socket = await _getUserSocket(userId)
     if (socket) socket.emit(type, data)

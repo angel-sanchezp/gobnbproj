@@ -2081,3 +2081,123 @@
 =======
 >>>>>>> be316d0d120e45ca2869ae6ec71a6205366dc400
 26.1.2022, 14:55:33 - INFO - Server is running on port: 3030
+26.1.2022, 14:58:38 - INFO - Req!!!
+26.1.2022, 16:34:38 - INFO - Req!!!
+26.1.2022, 17:18:22 - INFO - Req!!!
+26.1.2022, 18:01:47 - INFO - Req!!!
+26.1.2022, 18:01:52 - INFO - Req!!!
+26.1.2022, 18:04:19 - INFO - Req!!!
+26.1.2022, 18:06:57 - INFO - Req!!!
+26.1.2022, 18:07:19 - DEBUG - auth.service - login with username: user1
+26.1.2022, 18:07:19 - DEBUG - Setting (x6TuRcpxjteU7ILqAAAJ) socket.userId = null
+26.1.2022, 18:08:58 - INFO - Req!!!
+26.1.2022, 18:08:58 - INFO - Req from: User 1
+26.1.2022, 18:09:03 - INFO - Req!!!
+26.1.2022, 18:09:03 - INFO - Req from: User 1
+26.1.2022, 18:09:14 - INFO - Req!!!
+26.1.2022, 18:09:14 - INFO - Req from: User 1
+26.1.2022, 18:09:27 - INFO - Req!!!
+26.1.2022, 18:09:27 - INFO - Req from: User 1
+26.1.2022, 18:09:37 - DEBUG - auth.service - login with username: user1
+26.1.2022, 18:09:38 - DEBUG - Setting (F7oxFb54mZ1d9AxnAAAR) socket.userId = 61f05eabc8e02896300df6d5
+26.1.2022, 18:13:01 - INFO - Server is running on port: 3030
+26.1.2022, 18:13:18 - INFO - Server is running on port: 3030
+26.1.2022, 18:18:34 - INFO - Server is running on port: 3030
+26.1.2022, 18:19:01 - INFO - Server is running on port: 3030
+26.1.2022, 18:19:35 - INFO - Req!!!
+26.1.2022, 18:20:34 - INFO - Server is running on port: 3030
+26.1.2022, 18:20:40 - INFO - Server is running on port: 3030
+26.1.2022, 18:20:52 - INFO - Req!!!
+26.1.2022, 18:20:58 - DEBUG - Emiting to user socket: h0002
+26.1.2022, 18:37:18 - INFO - Server is running on port: 3030
+26.1.2022, 18:38:58 - INFO - Server is running on port: 3030
+26.1.2022, 19:00:43 - INFO - Req!!!
+26.1.2022, 19:18:00 - INFO - Req!!!
+26.1.2022, 19:18:38 - INFO - Req!!!
+26.1.2022, 19:18:38 - DEBUG - Emiting to user socket: h0002
+26.1.2022, 19:19:02 - INFO - Req!!!
+26.1.2022, 19:32:01 - INFO - Req!!!
+26.1.2022, 19:34:37 - INFO - Req!!!
+26.1.2022, 19:34:52 - INFO - Req!!!
+26.1.2022, 19:51:08 - INFO - Req!!!
+26.1.2022, 19:52:29 - INFO - Req!!!
+26.1.2022, 19:52:29 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 19:53:04 - INFO - Req!!!
+26.1.2022, 20:06:35 - INFO - Server is running on port: 3030
+26.1.2022, 20:06:51 - INFO - Req!!!
+26.1.2022, 20:09:34 - INFO - Server is running on port: 3030
+26.1.2022, 20:09:37 - INFO - Server is running on port: 3030
+26.1.2022, 20:10:29 - INFO - Server is running on port: 3030
+26.1.2022, 20:11:25 - INFO - Req!!!
+26.1.2022, 20:11:25 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 20:12:28 - INFO - Server is running on port: 3030
+26.1.2022, 20:12:57 - INFO - Req!!!
+26.1.2022, 20:12:57 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 20:13:40 - INFO - Server is running on port: 3030
+26.1.2022, 20:13:50 - INFO - Req!!!
+26.1.2022, 20:13:52 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 20:14:09 - INFO - Req!!!
+26.1.2022, 20:14:20 - INFO - Req!!!
+26.1.2022, 20:16:57 - INFO - Server is running on port: 3030
+26.1.2022, 20:16:59 - INFO - Req!!!
+26.1.2022, 20:18:59 - INFO - Req!!!
+26.1.2022, 20:19:10 - INFO - Server is running on port: 3030
+26.1.2022, 20:19:15 - INFO - Req!!!
+26.1.2022, 20:20:52 - INFO - Server is running on port: 3030
+26.1.2022, 20:20:57 - INFO - Server is running on port: 3030
+26.1.2022, 20:21:01 - INFO - Req!!!
+26.1.2022, 20:23:05 - INFO - Req!!!
+26.1.2022, 20:23:05 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 20:23:11 - INFO - Req!!!
+26.1.2022, 20:23:27 - INFO - Req!!!
+26.1.2022, 20:23:27 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 20:23:48 - INFO - Req!!!
+26.1.2022, 20:23:52 - INFO - Req!!!
+26.1.2022, 20:23:53 - INFO - Req!!!
+26.1.2022, 20:23:55 - INFO - Req!!!
+26.1.2022, 20:24:01 - INFO - Req!!!
+26.1.2022, 20:24:03 - INFO - Req!!!
+26.1.2022, 20:26:19 - INFO - Server is running on port: 3030
+26.1.2022, 20:26:41 - INFO - Req!!!
+26.1.2022, 20:26:48 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 20:27:07 - INFO - Req!!!
+26.1.2022, 20:27:08 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 20:27:21 - INFO - Req!!!
+26.1.2022, 20:27:25 - INFO - Req!!!
+26.1.2022, 20:27:27 - INFO - Req!!!
+26.1.2022, 20:28:59 - INFO - Req!!!
+26.1.2022, 20:32:07 - INFO - Server is running on port: 3030
+26.1.2022, 20:32:10 - INFO - Req!!!
+26.1.2022, 20:32:50 - INFO - Req!!!
+26.1.2022, 20:33:05 - INFO - Req!!!
+26.1.2022, 20:33:05 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 20:33:24 - INFO - Req!!!
+26.1.2022, 20:33:49 - INFO - Server is running on port: 3030
+26.1.2022, 20:33:58 - INFO - Server is running on port: 3030
+26.1.2022, 20:39:52 - INFO - Req!!!
+26.1.2022, 20:40:09 - INFO - Req!!!
+26.1.2022, 20:40:45 - INFO - Req!!!
+26.1.2022, 20:40:59 - INFO - Req!!!
+26.1.2022, 20:40:59 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 20:42:51 - INFO - Req!!!
+26.1.2022, 20:42:57 - INFO - Req!!!
+26.1.2022, 20:45:17 - INFO - Req!!!
+26.1.2022, 20:45:17 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 20:46:47 - INFO - Req!!!
+26.1.2022, 20:47:56 - INFO - Server is running on port: 3030
+26.1.2022, 20:48:13 - INFO - Req!!!
+26.1.2022, 20:48:16 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 20:49:41 - INFO - Req!!!
+26.1.2022, 20:49:41 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 20:49:48 - INFO - Req!!!
+26.1.2022, 20:50:12 - INFO - Req!!!
+26.1.2022, 20:50:12 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 20:50:27 - INFO - Req!!!
+26.1.2022, 20:52:08 - INFO - Server is running on port: 3030
+26.1.2022, 20:52:28 - INFO - Req!!!
+26.1.2022, 20:52:30 - INFO - Req!!!
+26.1.2022, 20:52:45 - INFO - Req!!!
+26.1.2022, 20:52:45 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+26.1.2022, 20:53:00 - INFO - Req!!!
+26.1.2022, 21:02:22 - INFO - Req!!!
+26.1.2022, 21:03:01 - INFO - Req!!!
