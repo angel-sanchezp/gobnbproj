@@ -26,58 +26,12 @@ export class DropdownMenu extends React.Component {
     document.querySelector(".dark-screen").classList.remove("hidden");
   };
 
-    // componentDidMount() {
-    //   window.addEventListener("click" , this.onHandleNav);
-    // }
 
-    // openLoginModal = () => {
-    //     document.querySelector(".user-modal").classList.remove("hidden")
-    //     document.querySelector(".dark-screen").classList.remove("hidden");
-    // }
-
-    // onHandleClick = (target) => {
-    //   console.log('hi')
-    //   this.history.push(`/${target}`)
-    // }
-    //  onHandelNav = () => {
-    //   this.setState(prev => ({ ...prev, isActive: !this.state.isActive }))
-    //   if(this.state.isActive){
-    //     window.addEventListener("click");
-    //     document.querySelector('menu').classList.add('inactive');
-    //     document.querySelector('menu').classList.remove('active');
-    //   } else {
-    //     console.log('hi')
-    //     window.removeEventListener("click");
-    //     document.querySelector('menu').classList.add('active')
-    //     document.querySelector('menu').classList.remove('inactive')
-    //   }
-  onHandleClick = (target) => {
-    // console.log("hi");
-    // this.props.history.push(`/${target}`)
-    window.location.href(`/${target}`);
-  };
-
-    
     // const isActive = false
      onHandelNav = () => {
        this.setState(prev => ({ ...prev, isActive: !this.state.isActive }))
-      // if(this.state.isActive){
-      //   window.addEventListener("click", this.onRemoveActive(true));
-      // } else  if (!this.state.isActive){
-      //   window.removeEventListener("click", this.onRemoveActive(false));
-      // }
     }
     
-    // onRemoveActive = () => {
-      
-    //   // if(this.state.isActive){
-    //   //   // document.querySelector('menu').classList.add('active');
-    //   //   // document.querySelector('menu').classList.remove('inactive');
-    //   // } else  {
-    //   //   // document.querySelector('menu').classList.remove('active');
-    //   //   // document.querySelector('menu').classList.add('inactive');
-    //   // }
-    // }
 
   
     render() {
