@@ -26,7 +26,7 @@ export  class DropdownMenu extends React.Component {
     }
     // const isActive = false
      onHandelNav = () => {
-      if(isActive){
+      if(this.state.isActive){
         window.addEventListener("click");
         document.querySelector('menu').classList.add('active');
         document.querySelector('menu').classList.remove('inactive');
@@ -35,7 +35,9 @@ export  class DropdownMenu extends React.Component {
         document.querySelector('menu').classList.remove('active');
         document.querySelector('menu').classList.add('inactive');
       }
-      isActive = !isActive;
+      console.log('changed')
+      this.setState(prev => ({ ...prev, isActive: !this.state.isActive }))
+      // this.setState({ isActive: !isActive })
     }
 
   
@@ -43,7 +45,7 @@ export  class DropdownMenu extends React.Component {
   return (
     <div className="container">
       <div className="menu-container">
-        <button onClick={onHandelNav} className="menu-trigger">
+        <button onClick={()=> this.onHandelNav()} className="menu-trigger">
           <span><Burger/></span>
           <img className="menu-img"
             src={UserAvatar}
@@ -51,17 +53,17 @@ export  class DropdownMenu extends React.Component {
           />
         </button>
         <nav
-          className={`menu ${isActive ? "active" : "inactive"}`}
+          className={`menu ${this.state.isActive ? "active" : "inactive"}`}
         >
           <ul>
             <li>
-            <button className="menu-opt"onClick={()=>openLoginModal()}>Login / Sign up</button>
+            <button className="menu-opt"onClick={()=>this.openLoginModal()}>Login / Sign up</button>
             </li>
             <li>
               <button className="menu-opt" href="#">Messages</button>
             </li>
             <li>
-              <button className="menu-opt" onClick={()=>onHandleClick('trips')}>Trips</button>
+              <button className="menu-opt" onClick={()=>this.onHandleClick('trips')}>Trips</button>
             </li>
             <li>
               <button className="menu-opt" href="#">Dashboard</button>
