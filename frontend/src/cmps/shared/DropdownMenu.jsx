@@ -6,16 +6,19 @@ import { useDetectOutsideClick } from "./useDetectOutsideClick.jsx";
 import UserAvatar from '../../assets/user-icon.png';
 import { ReactComponent as Burger } from '../../assets/svg/burger.svg'
 // import { ReactComponent as UserAvatar } from '../../assets/svg/user.svg'
+import { logout } from '../../store/user/user.actions'
 
 
-export function DropdownMenu() {
+export  function DropdownMenu() {
 
     function openLoginModal ()  {
         document.querySelector(".user-modal").classList.remove("hidden")
         document.querySelector(".dark-screen").classList.remove("hidden");
     }
 
-    
+    const onLogOut = () => {
+      
+    }
 
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
