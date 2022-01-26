@@ -1,7 +1,5 @@
 import React from "react";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { userService } from "../../services/user.services";
 import UserAvatar from "../../assets/user-icon.png";
@@ -13,13 +11,13 @@ import { ReactComponent as Burger } from "../../assets/svg/burger.svg";
 export class DropdownMenu extends React.Component {
   state = {
     isActive: false,
-    loggedInUser: null,
-    isAdmin: false,
+    loggedInUser: true,
+    isAdmin: true,
   };
 
-  componentDidMount(){
-    this.setState({ loggedInUser: userService.getLoggedinUser()});
-};
+//   componentDidMount(){
+//     this.setState({ loggedInUser: userService.getLoggedinUser()});
+// };
 
 
   openLoginModal = () => {
@@ -72,7 +70,7 @@ export class DropdownMenu extends React.Component {
             <Link to={`/trips`}><button className="menu-opt">Trips</button></Link>
             </li>
             <li className="opt3 hidden">
-              <button className="menu-opt" href="#">Dashboard</button>
+            <Link to={`/dashboard`}><button className="menu-opt">Dashboard</button></Link>
             </li>
             <li className="opt2 hidden">
               <button className="menu-opt" href="#">Log Out</button>
