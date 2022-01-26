@@ -1,6 +1,8 @@
 import { set } from "lodash";
 import React from "react";
 import { connect } from "react-redux";
+import { Link, NavLink } from "react-router-dom";
+
 
 import { login, signup, update } from "../../store/user/user.actions.js";
 
@@ -30,6 +32,7 @@ class _LoginModal extends React.Component {
     if (!credentials) return
     this.props.login(credentials)
     this.closeModal()
+    // window.location.href = `/`
 
     this.resetState();
   };
