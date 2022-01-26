@@ -10,7 +10,6 @@ import tokyo from '../assets/img/tokyo.jpeg'
 import santorini from '../assets/img/santorini.jpeg'
 import paris from '../assets/img/paris.jpeg'
 import cancun from '../assets/img/cancun.jpeg'
-import BecomeHost from '../assets/img/become_a_host.jpeg'
 
 
 class _HomePage extends React.Component {
@@ -29,8 +28,6 @@ class _HomePage extends React.Component {
     }
     
     componentDidUpdate(prevProps, prevState) {
-        // console.log(prevProps.filterBy)
-        // console.log('props in home upadte ', this.props.filterBy)
         if (prevProps.filterBy !== this.props.filterBy) {
             this.props.loadStays();
         }
@@ -38,12 +35,12 @@ class _HomePage extends React.Component {
 
     componentWillUnmount(){
         window.removeEventListener('scroll', this.listenScrollEvent)
+        window.scrollTo(0,0)
     }
 
 
     listenScrollEvent = e => {
         if (window.scrollY > 40) {
-            console.log('hi event listener ')
             this.setState({ class: 'app-header' })
             this.props.changeHeaderClass('app-header')
             this.props.changeFilter(true)
@@ -56,9 +53,10 @@ class _HomePage extends React.Component {
         }
     }
 
-    onStayClicked(stayId) {
-        window.location.href = `/details/${stayId}`;
+    onStayClicked=(stayId)=> {
+          this.props.history.push(`/details/${stayId}`)
     }
+
 
     onSetLocation=(city)=>{
         const {filterBy}=this.state
@@ -69,7 +67,6 @@ class _HomePage extends React.Component {
     }
     
     onSetFilter = () => {
-        // console.log('home filterby ', this.state.filterBy)
         const {filterBy}=this.state
         console.log(filterBy)
         this.props.setFilter(filterBy);
@@ -80,7 +77,6 @@ class _HomePage extends React.Component {
 
     render() {
         const { stays } = this.props
-        // console.log('stays from homepage', stays)
         return (
             <section>
                 <div className='main-container'>
@@ -123,7 +119,6 @@ class _HomePage extends React.Component {
                                 <img className="pop-img" alt="cat" src={stay.imgUrls[0]} />
                                 <div className="pop-img">
                                     <h4>{stay.name}</h4>
-                                    {/* <p>Price: <span>${stay.price.toLocaleString()}</span></p> */}
                                 </div>
                             </div>)
                           
@@ -133,13 +128,11 @@ class _HomePage extends React.Component {
                 </section >
 
                 <div className='banner'>
-                    {/* <h1>Become a host</h1> */}
                     <div className="banner-header">Unlock new opportunities by sharing your space.</div>
                     <div className="banner-txt-botton">Maria <span>Host in Paris</span></div>
                     <button className='learn-btn'>Become Host</button>
                     <div className='banner-host-img' style={{ "--image-url" : "url(https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/96ca588b00a846596f43a0576cd7aa4d-1590415939014/Banners_LIHP_Book_eBook_Store.jpg);"}}/>
-                    { /** style={{ '--image-url': "url(https://res.cloudinary.com/kitsunex3/image/upload/v1642652059/Airbnb%20clone/104ca552-d981-4e74-b9cf-0ee2e7b37d6d_vuzbvm.jpg)" }}  */}
-                    {/* <img  className='host-img'src={BecomeHost}  alt="host" /> */}
+              
                 </div>
                
 

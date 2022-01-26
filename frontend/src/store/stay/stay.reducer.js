@@ -2,7 +2,6 @@ const initialState = {
     stays: [],
     filterBy: {
         location: "",
-        // city:"",
         dateIn: '',
         dateOut: "",
         guests: "",
@@ -19,11 +18,6 @@ export function stayReducer(state = initialState, action) {
         case 'SET_STAYS':
             newState = { ...state, stays: action.stays }
             break
-        // case 'REMOVE_STAY':
-        //     const lastRemovedStay = state.stays.find(STAY => STAY._id === action.carId)
-        //     stays = state.stays.filter(STAY => STAY._id !== action.carId)
-        //     newState = { ...state, stays, lastRemovedStay}
-        //     break
         case 'ADD_STAY':
             newState = { ...state, stays: [...state.stays, action.stay] }
             break

@@ -3,11 +3,8 @@ import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 import { withRouter } from "react-router-dom"
 import moment from 'moment'
-import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
 import { SearchModal } from './SearchModel.jsx'
 import { Logo } from '../shared/logo.jsx'
-import { ReactComponent as UserAvatar } from '../../assets/svg/user-avatar.svg'
-import { LoginModal } from '../shared/LoginModal.jsx'
 import { DropdownMenu } from '../shared/DropdownMenu'
 import { setFilter} from '../../store/stay/stay.actions.js'
 
@@ -52,13 +49,6 @@ class _ExpHeader extends Component {
         return "Add dates"
     }
 
-    
-    // onSearch = (inputs) => {
-    //     notesService.updateNote(note).then(()=>{
-    //         this.closeModal()
-    //         this.loadNotes()
-    //     })
-    // }
 
     get getFormattedGuests() {
         const { children = 0, adults = 1 } = this.props.filterBy
@@ -69,18 +59,9 @@ class _ExpHeader extends Component {
         return text;
     }
 
-    // get getFormattedDates() {
-    //     const urlSearchParams = new URLSearchParams(this.props.location.search)
-    //     return {
-    //         dateIn: urlSearchParams.get('dateIn'),
-    //         dateOut: urlSearchParams.get('dateOut')
-    //     }
-    // }
-
     render() {
         const { enterInputsMode } = this.state
         const { dateIn, dateOut ,location } = this.props.filterBy
-        // console.log(dateIn,dateOut)
         return (
             <div className="explore-header">
                 <section className='main-nav'>
