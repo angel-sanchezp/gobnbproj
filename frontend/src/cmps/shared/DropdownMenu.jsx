@@ -25,62 +25,61 @@ export class DropdownMenu extends React.Component {
     // window.location.href(`/${target}`);
   };
 
-  onHandelNav = () => {
-    if (isActive) {
-      window.addEventListener("click");
-      document.querySelector("menu").classList.add("active");
-      document.querySelector("menu").classList.remove("inactive");
-    } else {
-      window.removeEventListener("click");
-      document.querySelector("menu").classList.remove("active");
-      document.querySelector("menu").classList.add("inactive");
+    onHandleClick = (target) => {
+      console.log('hi')
+      this.history.push(`/${target}`)
+    }
+    // const isActive = false
+     onHandelNav = () => {
+      if(this.state.isActive){
+        window.addEventListener("click");
+        document.querySelector('menu').classList.add('active');
+        document.querySelector('menu').classList.remove('inactive');
+      } else {
+        window.removeEventListener("click");
+        document.querySelector('menu').classList.remove('active');
+        document.querySelector('menu').classList.add('inactive');
+      }
+      console.log('changed')
+      this.setState(prev => ({ ...prev, isActive: !this.state.isActive }))
+      // this.setState({ isActive: !isActive })
     }
     isActive = !isActive;
   };
 
-  render() {
-    return (
-      <div className="container">
-        <div className="menu-container">
-          <button onClick={onHandelNav} className="menu-trigger">
-            <span>
-              <Burger />
-            </span>
-            <img className="menu-img" src={UserAvatar} alt="User avatar" />
-          </button>
-          <nav className={`menu ${isActive ? "active" : "inactive"}`}>
-            <ul>
-              <li>
-                <button className="menu-opt" 
-                onClick={() => openLoginModal()}>
-                  Login / Sign up
-                </button>
-              </li>
-              <li>
-                <button className="menu-opt" href="#">
-                  Messages
-                </button>
-              </li>
-              <li>
-                <button
-                  className="menu-opt"
-                  onClick={() => onHandleClick("trips")}>
-                  Trips
-                </button>
-              </li>
-              <li>
-                <button className="menu-opt" href="#">
-                  Dashboard
-                </button>
-              </li>
-              <li>
-                <button className="menu-opt hidden" href="#">
-                  Log Out
-                </button>
-              </li>
-            </ul>
-          </nav>
-        </div>
+  
+    render() {
+  return (
+    <div className="container">
+      <div className="menu-container">
+        <button onClick={()=> this.onHandelNav()} className="menu-trigger">
+          <span><Burger/></span>
+          <img className="menu-img"
+            src={UserAvatar}
+            alt="User avatar"
+          />
+        </button>
+        <nav
+          className={`menu ${this.state.isActive ? "active" : "inactive"}`}
+        >
+          <ul>
+            <li>
+            <button className="menu-opt"onClick={()=>this.openLoginModal()}>Login / Sign up</button>
+            </li>
+            <li>
+              <button className="menu-opt" href="#">Messages</button>
+            </li>
+            <li>
+              <button className="menu-opt" onClick={()=>this.onHandleClick('trips')}>Trips</button>
+            </li>
+            <li>
+              <button className="menu-opt" href="#">Dashboard</button>
+            </li>
+            <li>
+              <button className="menu-opt hidden" href="#">Log Out</button>
+            </li>
+          </ul>
+        </nav>
       </div>
     );
   }

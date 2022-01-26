@@ -104,7 +104,7 @@ async function login(userCred) {
     if (user) return _saveLocalUser(user)
 }
 async function signup(userInfo) {
-    console.log('sign up in user service', userInfo)
+    console.log('sign up in user service', user)
     const user = await httpService.post('auth/signup', userInfo)
     if (user) return _saveLocalUser(user)
 
