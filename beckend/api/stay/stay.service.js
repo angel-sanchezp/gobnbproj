@@ -24,17 +24,6 @@ async function query(filterBy = {}) {
         throw err
     }
 
-    // var filterBy = JSON.parse(filterBy);
-    // console.log('filter in service', filterBy)
-    // const filterdToys = toys.filter((toy) => {
-    //     const isByLabel = isLabelsMatch(toy.labels, filterBy.labels);
-    //     return (
-    //         toy.name.toUpperCase().includes(filterBy.name.toUpperCase()) &&
-    //         toy.inStock === filterBy.inStock &&
-    //         isByLabel
-    //     );
-    // });
-    // return Promise.resolve(filterdToys);
 }
 
 
@@ -49,7 +38,6 @@ function _buildCriteria(filterBy = {}) {
         const maxPrice = JSON.parse(filterBy.maxPrice)
         const minPrice = JSON.parse(filterBy.minPrice)
         criteria["price"] = { $gt: minPrice, $lt: maxPrice }
-
     }
     if (filterBy?.dateIn && filterBy?.dateOut) {
         const checkIn = JSON.parse(filterBy.dateIn)
@@ -64,12 +52,12 @@ function _buildCriteria(filterBy = {}) {
                 }     
             }
     }
-     
             
     if (filterBy.amenities?.length) {
         criteria["amenities"] = (typeof (filterBy.amenities) === 'string') ? { $in: [filterBy.amenities] } :
             { $all: filterBy.amenities }
     }
+
     console.log('criteria', criteria)
     return criteria
 }
