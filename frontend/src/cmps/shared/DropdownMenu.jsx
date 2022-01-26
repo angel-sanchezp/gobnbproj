@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { Link, NavLink } from "react-router-dom";
 
+import { userService } from "../../services/user.services";
 import UserAvatar from "../../assets/user-icon.png";
 import { ReactComponent as Burger } from "../../assets/svg/burger.svg";
 // import { ReactComponent as UserAvatar } from '../../assets/svg/user.svg'
@@ -12,7 +13,13 @@ import { ReactComponent as Burger } from "../../assets/svg/burger.svg";
 export class DropdownMenu extends React.Component {
   state = {
     isActive: false,
+    loggedInUser: null,
+    isAdmin: null,
   };
+
+  componentDidMount(){
+    this.setState({ loggedInUser: userService.getLoggedinUser()});
+};
 
   openLoginModal = () => {
     document.querySelector(".user-modal").classList.remove("hidden");
@@ -49,6 +56,15 @@ export class DropdownMenu extends React.Component {
 
   
     render() {
+      if(this.state.loggedInUser) {
+        document.querySelector('opt2').classList.remove('hidden');
+        document.querySelector('opt1').classList.add('hidden');
+      }
+      if(this.state.isAdmin === true) {
+        document.querySelector('opt2.opt3').classList.remove('hidden');
+        document.querySelector('opt1').classList.add('hidden');
+      } 
+      
       let isActive = this.state.isActive
   return (
     <div className="container">
@@ -64,20 +80,20 @@ export class DropdownMenu extends React.Component {
           className={`menu ${isActive ? "active" : "inactive"}`}
         >
           <ul>
-            <li>
+            <li className="opt1">
             <button className="menu-opt"onClick={()=>this.openLoginModal()}>Login / Sign up</button>
             </li>
-            <li>
+            <li className="opt2 hidden">
               <button className="menu-opt" href="#">Messages</button>
             </li>
-            <li>
+            <li className="opt2 hidden">
             <Link to={`/trips`}><button className="menu-opt">Trips</button></Link>
             </li>
-            <li>
+            <li className="opt1 opt3 hidden">
               <button className="menu-opt" href="#">Dashboard</button>
             </li>
-            <li>
-              <button className="menu-opt hidden" href="#">Log Out</button>
+            <li className="opt2 hidden">
+              <button className="menu-opt" href="#">Log Out</button>
             </li>
           </ul>
         </nav>
