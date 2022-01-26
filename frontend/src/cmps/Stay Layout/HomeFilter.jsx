@@ -25,44 +25,40 @@ import { Calendar } from '../FilterCmps/Calendar.jsx'
     onSubmitFilter = async (ev) => {
         ev.preventDefault()
         // console.log('filter state',this.state.filterBy)
-      await  this.props.onSetFilter(this.state.filterBy)
-
+        await  this.props.onSetFilter(this.state.filterBy)
         this.closeModal()
     }
-
-    
 
     toggleModal = () => {
         this.setState(prev => ({ ...prev, isModalShown: !prev.isModalShown }))
     }
 
     onChangeAdults=(adultsNum)=> {
-        var {filterBy} =this.state
+        var {filterBy} = this.state
         filterBy.adults = adultsNum
         this.setState({ filterBy });
     }
 
     onChangeChildren=(childrenNum)=> {
-        var {filterBy} =this.state
+        var {filterBy} = this.state
         filterBy.children = childrenNum
         this.setState({ filterBy });
     }
 
     onSetDate=(date)=>{
-        var {filterBy} =this.state
-        filterBy.dateIn = date[0]
-        filterBy.dateOut = date[1]
-        console.log('dateIn',  filterBy.dateIn)
-        console.log('dateOn'  ,filterBy.dateIn)
+        var {filterBy} = this.state
+        filterBy.dateIn = date[0] && date[0].valueOf()
+        filterBy.dateOut = date[1] && date[1].valueOf()
         this.setState({ filterBy });
     }
 
-    OpenModal = (indicator) => {
+    openModal = (indicator) => {
         if (indicator === 'guests') {
             // console.log('here guests')
-            this.setState(prev => ({ ...prev, cmp: <Guests onChangeAdults={this.onChangeAdults} onChangeChildren={this.onChangeChildren} /> }))
+            const { adults = 1, children = 0 } = this.state.filterBy
+            this.setState(prev => ({ ...prev, cmp: <Guests adults={adults} children={children} onChangeAdults={this.onChangeAdults} onChangeChildren={this.onChangeChildren} onClose={this.closeModal} /> }))
             this.setState(prev => ({ ...prev, isModalShown: true }))
-        } else {
+        } else if(indicator === 'calendar') {
             // console.log('here calendar')
             this.setState(prev => ({ ...prev, cmp: <Calendar onSetDate={this.onSetDate} filterBy={this.props.filterBy} /> }))
             this.setState(prev => ({ ...prev, isModalShown: true }))
@@ -75,11 +71,23 @@ import { Calendar } from '../FilterCmps/Calendar.jsx'
 
     getInputValue = (date) => {
         if (!date) { return '' }
+        if (typeof date === "string") {
+            date = parseInt(date);
+        }
         return moment(date).format("MMM D")
     }
 
+    get getFormattedGuests() {
+        const { children = 0, adults = 1 } = this.state.filterBy
+        let text = `${adults} adult${adults > 1 ? 's' : ''}`
+        if (children) {
+            text += `, ${children} child${children > 1 ? 's' : ''}`
+        }
+        return text;
+    }
+
     render() {
-        const { location = "", dateIn, dateOut, guests = 1 } = this.state.filterBy
+        const { location = "", dateIn, dateOut, children = 0, adults = 1 } = this.state.filterBy
         // console.log(this.props.isMinFilter)
         const { isModalShown, span, cmp } = this.state
         const formattedDateIn = this.getInputValue(dateIn)
@@ -87,7 +95,6 @@ import { Calendar } from '../FilterCmps/Calendar.jsx'
 
         return <section className="main-filter-container">
             {!this.props.isMinFilter && <section className='secondary-search-bar'>
-
                 <form className="max-filter" onSubmit={this.onSubmitFilter}>
                     <label>
                         <span>Location</span>
@@ -97,7 +104,6 @@ import { Calendar } from '../FilterCmps/Calendar.jsx'
                             type="search"
                             placeholder="Where are you going?"
                             onChange={this.handleChange}
-                            onClick={this.toggleModal}
                             value={location} />
                     </label>
                     <label htmlFor="check-in" className="label-check-in">
@@ -107,7 +113,7 @@ import { Calendar } from '../FilterCmps/Calendar.jsx'
                             autoComplete="off"
                             placeholder="Add dates"
                             onChange={this.handleChange}
-                            onClick={() => this.OpenModal('calendar')}
+                            onClick={() => this.openModal('calendar')}
                             value={formattedDateIn} />
                     </label>
                     <label htmlFor="check-out">
@@ -117,7 +123,7 @@ import { Calendar } from '../FilterCmps/Calendar.jsx'
                             autoComplete="off"
                             placeholder="Add dates"
                             onChange={this.handleChange}
-                            onClick={() => this.OpenModal('calendar')}
+                            onClick={() => this.openModal('calendar')}
                             value={formattedDateOut}/>
                             {/* value={dateOut.getDay(),monthNames[dateOut.getMonth()]} /> */}
                     </label>
@@ -126,9 +132,8 @@ import { Calendar } from '../FilterCmps/Calendar.jsx'
                             <input name="guests"
                                 id="guests"
                                 placeholder={`Add gusts`}
-                                onChange={this.handleChange}
-                                onClick={() => this.OpenModal('guests')}
-                                value={guests} />
+                                onClick={() => this.openModal('guests')}
+                                value={this.getFormattedGuests} />
                     </label>
                     <button>
                         <i className="fas fa-search" aria-hidden="true"> </i>
@@ -158,9 +163,8 @@ function mapStateToProps(state) {
     }
 }
 const mapDispatchToProps = {
-
-
 }
+
 export const HomeFilter = connect(mapStateToProps, mapDispatchToProps)(withRouter(_HomeFilter))
 
 

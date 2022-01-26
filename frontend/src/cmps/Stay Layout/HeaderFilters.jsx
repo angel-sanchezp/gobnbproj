@@ -15,60 +15,79 @@ const FILTERS = [
 ]
 
 class _HeaderFilters extends Component {
-
     state = {
-        filterBy: {
-            amenities: [],
-            sortBy: ''
-        },
+        minPrice: '',
+        maxPrice: '',
+        showPriceModal: false
     }
 
     componentDidUpdate(prevProps, prevState) {
-        // console.log(prevProps.filterBy)
-        // console.log('props in home upadte ', this.props.filterBy)
         if (prevProps.filterBy !== this.props.filterBy) {
             this.props.loadStays();
         }
     }
 
-    onSort = (value) => {
-        var { filterBy } = this.state
-        if (value === 'price') {
-            filterBy.sortBy = value
-            this.setState({ filterBy });
-            this.send()
-        } else {
-            filterBy.sortBy = value
-            this.setState({ filterBy });
-            this.send()
-        }
-    }
-
     toggleFilter = (value) => {
-        var { filterBy } = this.state
-        filterBy.amenities[value] = !filterBy.amenities[value]
-        this.setState({ filterBy });
-        this.send()
+        var { filterBy: { amenities = [] } } = this.props
+        const filterIdx = amenities.findIndex(a => a === value)
+        let newAmenities = amenities;
+        if (filterIdx === -1) {
+            newAmenities.push(value)
+        } else {
+            newAmenities = amenities.splice(filterIdx, 1)
+        }
+        this.props.setFilter({ ...this.props.filterBy, amenities })
     }
 
-    send = () => {
-        this.props.setFilter(this.state.filterBy)
+    togglePriceModal = () => {
+        this.setState((prevState) => ({
+            showPriceModal: !prevState.showPriceModal
+        }))
+        console.log("Toggle price modal")
+    }
+
+    filterPrice = (ev) => {
+        ev.preventDefault();
+        const { minPrice, maxPrice } = this.state;
+        const newFilters = {}
+        if (minPrice) newFilters.minPrice = minPrice;
+        if (maxPrice) newFilters.maxPrice = maxPrice;
+        
+        this.props.setFilter({
+            ...this.props.filterBy,
+            ...newFilters
+        })
+    }
+
+    handlePriceChange = (ev, type) => {
+        this.setState({
+            [type]: ev.target.value
+        })
     }
 
     render() {
+        const { showPriceModal, minPrice, maxPrice } = this.state;
+
         return (
             <div className="filter-sort-line">
                 <div className="sort">
-                    <button className="filter-btn" onClick={() => this.onSort('price')}>Price</button>
+                    { showPriceModal && (
+                        <form onSubmit={this.filterPrice}>
+                            <input type="number" placeholder="Minimum price" value={minPrice} onChange={(ev) => this.handlePriceChange(ev, "minPrice")}/>
+                            <input type="number" placeholder="Maximum price" value={maxPrice} onChange={(ev) => this.handlePriceChange(ev, "maxPrice")}/>
+                            <button type="submit">Submit</button>
+                        </form>
+                    )}
+                    <button className="filter-btn" onClick={this.togglePriceModal}>Price</button>
                     <button className="filter-btn" onClick={() => this.onSort('type')}>Type of place</button>
                 </div>
                 <span>|</span>
                 <div className="filters">
                     {
                         FILTERS.map((filter, idx) => (
-                            <button key={idx} className={cn('filter-btn', { 'is-active': this.state.filterBy.amenities[filter] })} 
+                            <button key={idx} className={cn('filter-btn', { 'is-active': this.props.filterBy.amenities.includes(filter) })}
                                 onClick={() => this.toggleFilter(filter)}>
-                                    { filter }
+                                {filter}
                             </button>
                         ))
                     }
@@ -81,8 +100,6 @@ class _HeaderFilters extends Component {
 function mapStateToProps(state) {
     return {
         filterBy: state.stayModule.filterBy,
-
-
     }
 }
 

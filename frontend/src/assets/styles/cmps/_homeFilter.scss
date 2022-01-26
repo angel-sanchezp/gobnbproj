@@ -146,6 +146,11 @@
     top: 81px;
     left: 5px;
 
+    .filter-guest-modal .close-btn {
+        width: 100%;
+        text-align: end;
+    }
+
     .filter-guest-modal {
         z-index: 5;
         position: absolute;
