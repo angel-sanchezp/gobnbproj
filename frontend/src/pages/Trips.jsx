@@ -73,13 +73,15 @@ class _Trips extends Component {
   componentDidMount() {
     socketService.off('confirm order');
     socketService.on('confirm order', this.setOrder());
-
+    this.props.loadOrders()
   }
 
   componentWillMount() {
     this.props.changeHeaderClass(this.state.class)
 
   }
+
+
 
   setOrder = () => {
     const { trips } = this.state
@@ -132,7 +134,7 @@ function mapStateToProps(state) {
     stays: state.stayModule.stays,
     filterBy: state.stayModule.filterBy,
     class: state.stayModule.classHeader,
-    trips:state.orderModule.orders
+    trips: state.orderModule.orders
   }
 }
 

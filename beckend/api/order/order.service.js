@@ -95,7 +95,7 @@ async function add(order) {
 function _buildCriteria(filterBy) {
     console.log(filterBy)
     const criteria = {}
-    if (filterBy.buyer) criteria.buyer_id=  filterBy.buyer
+    if (filterBy.user) criteria.buyer_id=  filterBy.user
 
     return criteria
 }
