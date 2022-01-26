@@ -20,15 +20,29 @@ class _HomeHeader extends Component {
 
     onSetFilter = async (filterBy) => {
         // console.log('home filterby ', filterBy)
-       await this.props.setFilter(filterBy);
-        const { location, dateIn, dateOut, guests = 1 } = filterBy 
 
+        await this.props.setFilter(filterBy);
+        const { location, dateIn, dateOut, adults = 1, children = 0 } = filterBy 
+        let params = ""
+        if (location) {
+            params += `&location=${location}`
+        }
+        if (dateIn) {
+            params += `&dateIn=${dateIn.valueOf()}`
+        }
+        if (dateOut) {
+            params += `&dateOut=${dateOut.valueOf()}`
+        }
+        if (children) {
+            params += `&children=${children}`
+        }
+        if (adults) {
+            params += `&adults=${adults}`
+        }
         setTimeout(() => {
-            this.props.history.push(`/explore?location=${location}&dateIn=${dateIn.valueOf()}&dateOut=${dateOut.valueOf()}&guests=${guests}`)
+            this.props.history.push(`/explore?${params}`)
         }, 1000)
     }
-
-
 
     render() {
         console.log('render', this.props.class)

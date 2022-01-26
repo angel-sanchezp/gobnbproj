@@ -21,7 +21,7 @@ module.exports = {
 //get stays
 async function getStays(req, res) {
     try {
-        let  filterBy  = req.query;
+        let filterBy = req.query;
         console.log(' filter from server', req.query)
             // filterBy = JSON.parse(location);
         //   console.log('filter by after jason in controller',filterBy)
@@ -38,7 +38,7 @@ async function getStays(req, res) {
 async function getStayById(req, res) {
     try {
         const stayId = req.params.id
-        const toy = await stayService.getById(stayId)
+        const stay = await stayService.getById(stayId)
         res.json(stay)
     } catch (err) {
         logger.error('Failed to get stay', err)
@@ -48,11 +48,9 @@ async function getStayById(req, res) {
 
 //save stay
 async function addStay(req, res) {
-    // console.log('addtoy', req.session)
     try {
         const stay = req.body
-        // console.log('stay from postamn',stay)
-        console.log('stay in stoy controller js ', req.body)
+        console.log('stay in stay controller js ', req.body)
         const addedStay = await stayService.add(stay)
         console.log('added',addedStay)
         res.json(addedStay)
@@ -82,9 +80,8 @@ async function updateStay(req, res) {
 //remove stay
 async function removeStay(req, res) {
     try {
-        const toyId = req.params.id
-        // console.log(toyId)
-        const removedStay = await stayService.removeToy(stayId)
+        const stayId = req.params.id
+        const removedStay = await stayService.removeStay(stayId)
         res.send(removedStay)
     } catch (err) {
         logger.error('Failed to remove stay', err)
