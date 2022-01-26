@@ -2,32 +2,48 @@ import React, { useRef } from "react";
 import { connect } from 'react-redux'
 import { withRouter } from "react-router-dom"
 import { NavLink } from 'react-router-dom'
-import { useDetectOutsideClick } from "./useDetectOutsideClick.jsx";
+// import { useDetectOutsideClick } from "./useDetectOutsideClick.jsx";
 import UserAvatar from '../../assets/user-icon.png';
 import { ReactComponent as Burger } from '../../assets/svg/burger.svg'
 // import { ReactComponent as UserAvatar } from '../../assets/svg/user.svg'
 import { logout } from '../../store/user/user.actions'
+import { render } from "sass";
 
 
-export  function DropdownMenu() {
+export  class DropdownMenu extends React.Component {
+    state = {
+      isActive: false
+    }
 
-    function openLoginModal ()  {
+    openLoginModal = () => {
         document.querySelector(".user-modal").classList.remove("hidden")
         document.querySelector(".dark-screen").classList.remove("hidden");
     }
 
-    const onLogOut = () => {
-      
+    onHandleClick = (target) => {
+      console.log('hi')
+      this.history.push(`/${target}`)
+    }
+    // const isActive = false
+     onHandelNav = () => {
+      if(isActive){
+        window.addEventListener("click");
+        document.querySelector('menu').classList.add('active');
+        document.querySelector('menu').classList.remove('inactive');
+      } else {
+        window.removeEventListener("click");
+        document.querySelector('menu').classList.remove('active');
+        document.querySelector('menu').classList.add('inactive');
+      }
+      isActive = !isActive;
     }
 
-  const dropdownRef = useRef(null);
-  const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
-  const onClick = () => setIsActive(!isActive);
-
+  
+    render() {
   return (
     <div className="container">
       <div className="menu-container">
-        <button onClick={onClick} className="menu-trigger">
+        <button onClick={onHandelNav} className="menu-trigger">
           <span><Burger/></span>
           <img className="menu-img"
             src={UserAvatar}
@@ -35,18 +51,17 @@ export  function DropdownMenu() {
           />
         </button>
         <nav
-          ref={dropdownRef}
           className={`menu ${isActive ? "active" : "inactive"}`}
         >
           <ul>
             <li>
-            <button className="menu-opt"onClick={openLoginModal}>Login / Sign up</button>
+            <button className="menu-opt"onClick={()=>openLoginModal()}>Login / Sign up</button>
             </li>
             <li>
               <button className="menu-opt" href="#">Messages</button>
             </li>
             <li>
-              <button className="menu-opt" >Trips</button>
+              <button className="menu-opt" onClick={()=>onHandleClick('trips')}>Trips</button>
             </li>
             <li>
               <button className="menu-opt" href="#">Dashboard</button>
@@ -59,5 +74,6 @@ export  function DropdownMenu() {
       </div>
     </div>
   );
+    }
 }
 
