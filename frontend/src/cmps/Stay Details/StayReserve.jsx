@@ -1,9 +1,12 @@
 // import { useEffect } from 'react';
 import React from 'react'
 import moment from 'moment';
+import { socketService } from '../../services/socket.service.js'
+
 
 import { Guests } from '../FilterCmps/Guests.jsx'
 import { Calendar } from '../FilterCmps/Calendar.jsx'
+
 // import { render } from '@testing-library/react';
 
 
@@ -18,18 +21,17 @@ export class StayReserve extends React.Component {
         cmp: null,
         stay: null,
         order: {
-            hostId: '',
+            hostId: this.props.stay.host._id,
             createdAt: new Date(),
-            buyer_fullname: 'patricia',
-            buyer_id: '1245',
-            // buyer:userService.getLoggedinUser(),
+            buyer_fullname: userService.getLoggedinUser().fullname,
+            buyerId: userService.getLoggedinUser()._id,
             totalPrice: '',
             startDate: '',
             endDate: '',
             adults: '',
             kids: '',
-            stay_id: '',
-            stay_name: '',
+            stay_id: this.props.stay._id,
+            stay_name: this.props.stay.name,
             stay_price: '',
             status: 'pending',
         }
@@ -66,7 +68,9 @@ export class StayReserve extends React.Component {
     onSubmitOrder = async (ev) => {
         ev.preventDefault()
         console.log('order state', this.state.order)
-        await orderService.add(this.state.order)
+        await orderService.addOrder(this.state.order)
+        socketService.emit('new order', this.state.order);
+
         console.log('add sucsefully')
         // this.closeModal()
     }

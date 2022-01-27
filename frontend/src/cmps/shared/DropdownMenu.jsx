@@ -21,15 +21,10 @@ export class _DropdownMenu extends React.Component {
 
 
   componentDidMount(){
-    
+    if(this.props.user){
+      this.setState(prev => ({ ...prev, loggedInUser: this.props.user }))
+    }
     console.log(this.state.isLoggedOut)
-    if(this.state.loggedInUser) {
-    this.setState(prev => ({ ...prev, isLoggedOut: true }))
-
-  } else {
-    console.log(this.state.isLoggedOut)
-    this.setState(prev => ({ ...prev, isLoggedOut: false }))
-  }
 };
 
 
@@ -45,12 +40,8 @@ export class _DropdownMenu extends React.Component {
     }
 
     onLogOut = () => {
-      console.log('log out', this.state.isLoggedOut)
-      // console.log(this.props)
-      // this.props.logout()
+      this.props.logout()
       this.setState(prev => ({ ...prev, isLoggedOut: true }))
-      console.log('log out', this.state.isLoggedOut)
-      // window.location = "/";
     }
     
   
@@ -58,12 +49,12 @@ export class _DropdownMenu extends React.Component {
     render() {
       let avatar = UserAvatar;
       const {loggedInUser} = this.state;
-      console.log(this.props.user)
       if(this.props.user) {
         console.log(this.props.user)
         document.querySelectorAll(".opt2").forEach(e=>{e.classList.remove("hidden");});
         document.querySelectorAll(".opt1").forEach(e=>{e.classList.add("hidden");});
-        avatar = this.props.imgUrl;
+        console.log(this.props.user)
+        avatar = this.props.user.imgUrl;
       }
       if(this.state.isAdmin === true) {
         document.querySelectorAll(".opt2").forEach(e=>{e.classList.remove("hidden");});
@@ -93,7 +84,7 @@ export class _DropdownMenu extends React.Component {
             <li className="opt2 hidden">
             <Link to={`/trips`}><button className="menu-opt">Trips</button></Link>
             </li>
-            <li className="opt3 hidden">
+            <li className="opt2 hidden">
             <Link to={`/dashboard`}><button className="menu-opt">Dashboard</button></Link>
             </li>
             <li className="opt2 hidden">

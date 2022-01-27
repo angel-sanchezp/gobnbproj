@@ -4,12 +4,20 @@
     z-index: 10;
     background: white;
     border-bottom: 0.5px solid #ddddddba;
-    padding: 0px 80px;
-
+    padding: 15px 80px;
+    
     .nav-right{
         display: flex;
         justify-content: space-between;
-        width: 200px;
+        width: 27%;
+        align-items: center;
+    }
+    .main-nav{
+        width: 100%;
+        padding: 0px 25px 0px 0px;
+        display: flex;
+        justify-content: space-between;
+        
     }
     
 
@@ -41,6 +49,11 @@
         display: flex;
         justify-content: space-between;
         padding: 10px 0px;
+        .nav-links{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
     }
     // .user-options {
     //     background-color: #fff;
@@ -72,12 +85,16 @@
         width: 123px;
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
         color:$clr1;
+        h1.logo{
+            margin: 8px 0px 0px 0px;
+        }
+       
     }
     .nav-txt-header{
         color: black;
         text-decoration: none;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .exp-mini-form {
@@ -86,7 +103,7 @@
         padding: 0px 10px 0px 10px;
         margin-top: 64px;
         height: 46px;
-        width: 366px;
+        width: 395px;
         display: flex;
         align-items: center;
         border: 1px solid rgba(88, 88, 88, 0.2196078431);
@@ -108,7 +125,7 @@
             justify-content: center;
             background-color: #ff385c;
             height: 30px;
-            width: 51px;
+            width: 45px;
             color: white;
             font-size: 0.875rem;
             border-radius: 50%;
@@ -141,11 +158,12 @@
     .modal-container {
         position: fixed;
         background: white;
-        top: 67px;
-        width: 100%;
+        right: 0px;
+        top: 82px;
         height: 100px;
         z-index: 1;
         border-bottom: 1px solid rgba(88, 88, 88, 0.2196078431);
+        width: 100%;
     }
 
     .reserve-nav{

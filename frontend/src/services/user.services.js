@@ -1,6 +1,8 @@
 import { storageService } from './async-storage.service.js'
 import { httpService } from '../services/http.services.js'
 import { utilService } from '../services/utils.service.js'
+import { socketService} from './socket.service'
+
 
 
 const STORAGE_KEY = 'user'
@@ -19,44 +21,8 @@ export const userService = {
     update,
 }
 
-
-
 window.us = userService;
 
-const gUsers = [
-    {
-        _id: "u101",
-        fullname: "User 1",
-        imgUrl: "/img/img1.jpg",
-        isAdmin: false,
-        username: "user1",
-        password: "secret",
-    },
-    {
-        _id: "u102",
-        fullname: "User 2",
-        imgUrl: ["https://res.cloudinary.com/kitsunex3/image/upload/v1643195687/Airbnb%20clone/Avatars/avatar2_noeug0.png"],
-        isAdmin: false,
-        username: "user2",
-        password: "secret",
-    },
-    {
-        _id: "u103",
-        fullname: "User 3",
-        imgUrl: "/img/img3.jpg",
-        isAdmin: false,
-        username: "user3",
-        password: "secret",
-    },
-    {
-        _id: "u104",
-        fullname: "User 4",
-        imgUrl: "/img/img4.jpg",
-        isAdmin: false,
-        username: "user2",
-        password: "secret",
-    },
-];
 
 _createUsers();
 function _createUsers() {
@@ -96,16 +62,19 @@ async function update(user) {
 
 
 async function login(userCred) {
+    console.log(userCred)
     // return storageService.query(STORAGE_KEY).then(users => {
     //     const user = users.find(user => user.username === credentials.username &&
     //         user.password === credentials.password)
-    console.log(userCred)
     const user = await httpService.post('auth/login', userCred)
+    socketService.emit('set-user-socket', user._id);
     if (user) return _saveLocalUser(user)
 }
 async function signup(userInfo) {
-    console.log('sign up in user service', user)
+    console.log('sign up in user service', userInfo)
     const user = await httpService.post('auth/signup', userInfo)
+    socketService.emit('set-user-socket', userInfo._id);
+
     if (user) return _saveLocalUser(user)
 
     // return storageService.post(STORAGE_KEY, userInfo)
@@ -118,6 +87,8 @@ async function signup(userInfo) {
 }
 async function logout() {
     sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, null)
+    socketService.emit('unset-user-socket');
+
     return await httpService.post('auth/logout')
 
 }

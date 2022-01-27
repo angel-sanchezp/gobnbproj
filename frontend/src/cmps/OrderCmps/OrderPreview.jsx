@@ -7,12 +7,23 @@ import { Trips } from '../../pages/Trips'
 
 class _OrderPreview extends Component {
     render(){
-        const { order } = this.props
+        const { 
+            order: {
+                stay_id,
+                stayDetails: {
+                    imgUrls: [firstImageUrl]
+                },
+                stay_name,
+                status,
+                buyer_fullname
+            }
+        } = this.props;
+
         return(
-            <li className="trip-card" key={order.stay_id}>
-                <img className="trip-card-image" alt="cat" src={order.stay_img} />
+            <li className="trip-card" key={stay_id}>
+                <img className="trip-card-image" alt="cat" src={firstImageUrl} />
                 <div className="trip-details">
-                    <h2 className="bold-txt">{order.stay_name}</h2>
+                    <h2 className="bold-txt">{stay_name}</h2>
                     <div className="dates">
                         <div className="check-in-box">
                             <div className="bold">Check-in</div>
@@ -23,25 +34,19 @@ class _OrderPreview extends Component {
                             <div className="bold">Checkout</div>
                             <div>Fri,Sep 31,2022</div>
                             <div>15:00 AM</div>
-
                         </div>
                     </div>
                     <div className="tripcard-bottom">
                         <div className="status-host">
-                            <div className="txt">Order status: {order.status}</div>
-                            <div className="txt">Orded by {order.buyer_fullname}</div>
+                            <div className="txt">Order status: {status}</div>
+                            <div className="txt">Orded by {buyer_fullname}</div>
                         </div>
-                        <button className="btn">Cancel order</button>
+                        <button className="btn">Approve</button>
                     </div>
-
                 </div>
-            
             </li>
-   
         )
-
     }
-
  }
 
   

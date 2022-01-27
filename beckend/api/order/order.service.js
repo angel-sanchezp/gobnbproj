@@ -1,6 +1,7 @@
 const dbService = require('../../services/db.service')
 const ObjectId = require('mongodb').ObjectId
 const asyncLocalStorage = require('../../services/als.service')
+const logger = require('../../services/logger.service')
 
 async function query(filterBy = {}) {
     // console.log('filterBy in order',filterBy)
@@ -8,8 +9,8 @@ async function query(filterBy = {}) {
     // console.log('criteria in order service',criteria)
     try {
         const collection = await dbService.getCollection('order')
-        // var orders = await collection.find(criteria).toArray()
-        console.log('after build criteria ',criteria)
+        var orders = await collection.find(criteria).toArray()
+        // console.log('after build criteria ',criteria)
        var orders = await collection.aggregate([
             {
                 $match: criteria
@@ -73,14 +74,16 @@ async function remove(orderId) {
 
 
 async function add(order) {
+    console.log(order.hostId)
     try {
         const collection = await dbService.getCollection('order')
-        await collection.insertOne(order)
-        // const reviewToAdd = {
-        //     byUserId: ObjectId(review.byUserId),
-        //     aboutUserId: ObjectId(review.aboutUserId),
-        //     txt: review.txt
-        // }
+        const orderToAdd = {
+            ...order,
+            hostId: ObjectId(order.hostId),
+            buyerId: ObjectId(order.buyerId),
+            stay_id:ObjectId(order.stay_id),
+        }
+        await collection.insertOne(orderToAdd)
         return order;
     } catch (err) {
         logger.error('cannot insert order', err)
@@ -93,7 +96,8 @@ async function add(order) {
 function _buildCriteria(filterBy) {
     console.log(filterBy)
     const criteria = {}
-    if (filterBy.buyer) criteria.buyer_id=  filterBy.buyer
+    if (filterBy.buyerId) criteria.buyerId = ObjectId(filterBy.buyerId)
+    if (filterBy.hostId) criteria.hostId = ObjectId(filterBy.hostId)
 
     return criteria
 }

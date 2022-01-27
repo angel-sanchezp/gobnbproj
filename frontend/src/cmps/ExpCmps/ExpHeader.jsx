@@ -68,8 +68,10 @@ class _ExpHeader extends Component {
                     <Logo/>
                     <div className="nav-right">
                         <nav className="main-nav">
-                            {/* <NavLink activeClassName="my-active" exact to="/explore">Explore</NavLink> */}
-                            <NavLink to="/BecomeHost" className="nav-txt-header">Become Host</NavLink>
+                            <div className="nav-links">
+                            <NavLink className="nav-txt-header" to="/explore">Explore</NavLink>
+                            <NavLink className="nav-txt-header" to="/BecomeHost" >Become Host</NavLink>
+                            </div>
                             
                         </nav>
                         <section className="login-container">

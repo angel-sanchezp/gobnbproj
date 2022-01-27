@@ -4,9 +4,9 @@ const socketService = require('../../services/socket.service')
 const orderService = require('./order.service')
 
 async function getOrders(req, res) {
-    console.log('get orders',req.query)
+    console.log('get orders',req.params)
     try {
-        const orders = await orderService.query(req.query)
+        const orders = await orderService.query(req.params)
         res.send(orders)
     } catch (err) {
         logger.error('Cannot get reviews', err)

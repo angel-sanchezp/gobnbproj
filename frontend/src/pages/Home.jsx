@@ -2,7 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 
+import { login } from "../store/user/user.actions.js";
+
 import { userService } from "../services/user.services";
+
+
 import {
   loadStays,
   changeHeaderClass,
@@ -29,27 +33,10 @@ class _HomePage extends React.Component {
     this.props.changeHeaderClass(this.state.class);
     console.log(this.props.user);
     this.props.loadStays();
-    // this.loggedInUser();
+    this.loggedInUser();
   }
 
-  // loggedInUser = () => {
-  //     console.log('hi')
-  //   let user = userService.getLoggedinUser();
-  //   if (!user)
-  //     user = {
-  //       _id: "u101",
-  //       fullname: "Puki",
-  //       imgUrl: [
-  //         "https://res.cloudinary.com/kitsunex3/image/upload/v1643195687/Airbnb%20clone/Avatars/avatar1_nogjgo.png",
-  //       ],
-  //       isAdmin: false,
-  //       username: "user1",
-  //       password: "muki",
-  //     };
-  //     userService.login(user.username, user.password);
-  //     console.log('login')
-  // };
-
+ 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.filterBy !== this.props.filterBy) {
       this.props.loadStays();
@@ -59,7 +46,24 @@ class _HomePage extends React.Component {
   componentWillUnmount() {
     window.removeEventListener("scroll", this.listenScrollEvent);
     window.scrollTo(0, 0);
+    
   }
+
+  loggedInUser = () => {
+    console.log('hi')
+    // let user = userService.getLoggedinUser();
+    if (!this.props.user){
+      const credentials = {
+        username: "lbiton",
+        password: "liat1234",
+        imgUrl : "https://scontent.fsdv2-1.fna.fbcdn.net/v/t1.18169-9/545952_2328785314693_1307571669_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=174925&_nc_ohc=R467Q15qJhsAX9woJl9&_nc_ht=scontent.fsdv2-1.fna&oh=00_AT9sCkdbrBSBM50G04h6BpayTHbadbHVrFaC00vTb4lr_Q&oe=62176821"
+      };
+      this.props.login(credentials)
+      console.log('login')
+    }else{
+      return
+    }
+  };
 
   listenScrollEvent = (e) => {
     if (window.scrollY > 40) {
@@ -194,6 +198,7 @@ function mapStateToProps(state) {
     filterBy: state.stayModule.filterBy,
     classHeader: state.stayModule.classHeader,
     user: state.userModule.user,
+    orders:state.orderModule.orders
   };
 }
 
@@ -202,6 +207,7 @@ const mapDispatchToProps = {
   changeHeaderClass,
   changeFilter,
   setFilter,
+  login,
 };
 
 export const HomePage = connect(mapStateToProps, mapDispatchToProps)(_HomePage);
