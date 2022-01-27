@@ -103,8 +103,8 @@ export function logout() {
         showConfirmButton: false,
         timerProgressBar: true,
         timer: 1500,
-      }).then(function () {
-        window.location = "/";
+      // }).then(function () {
+        // window.location = "/";
       });
     } catch (err) {
       Swal.fire({
