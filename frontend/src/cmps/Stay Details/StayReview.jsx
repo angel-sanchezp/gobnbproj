@@ -32,7 +32,7 @@ export function StayReview({stay}){
 
 
     return (
-        <section className="reviews-container" id="stayreview">
+        <section className="reviews-container bd" id="stayreview">
             <section className="review-general" >
                 <div className="review-rate">
                     <h2>{reviewHeader} </h2>

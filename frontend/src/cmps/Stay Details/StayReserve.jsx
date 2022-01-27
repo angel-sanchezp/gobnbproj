@@ -20,11 +20,12 @@ export class StayReserve extends React.Component {
         isModalShown: false,
         cmp: null,
         stay: null,
+        gTotalPrice:0,
         order: {
             hostId: this.props.stay.host._id,
             createdAt: new Date(),
-            buyer_fullname: userService.getLoggedinUser().fullname,
-            buyerId: userService.getLoggedinUser()._id,
+            // buyer_fullname: userService.getLoggedinUser().fullname,
+            // buyerId: userService.getLoggedinUser()._id,
             totalPrice: '',
             startDate: '',
             endDate: '',
@@ -59,6 +60,7 @@ export class StayReserve extends React.Component {
 
     }
 
+   
 
     getInputValue = (date) => {
         if (!date) { return '' }
@@ -69,7 +71,7 @@ export class StayReserve extends React.Component {
         ev.preventDefault()
         // console.log('order state', this.state.order)
         await orderService.addOrder(this.state.order)
-        socketService.emit('new order', this.state.order);
+        // socketService.emit('new order', this.state.order);
 
         // console.log('add sucsefully')
         // this.closeModal()
@@ -116,12 +118,16 @@ export class StayReserve extends React.Component {
         const date2 = moment(date[1])
         const diffDays = date2.diff(date1, 'days')
 
+        let {gTotalPrice} = this.state
         var { order } = this.state
+        var price = +this.state.order.stay_price;
         order.totalPrice = diffDays * order.stay_price
+        gTotalPrice = diffDays * price
         this.setState({ order });
-
-
+        this.setState(pre => ({...pre, gTotalPrice: gTotalPrice}))
     }
+
+    
 
 
 
@@ -152,12 +158,18 @@ export class StayReserve extends React.Component {
         document.querySelector(".btn1").classList.remove("hidden")
     }
 
-
+    handleChange = (ev) => {
+        const field = ev.target.name;
+        const value = ev.target.value;
+        console.log(field, value)
+        this.setState({
+          date: { ...this.state.date, [field]: value },
+        });
+      };
 
 
 
     render() {
-
         const { reviews } = this.props.stay;
         const { order } = this.state.order;
         let ReviewsAmount = (reviews.length === 1) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
@@ -167,14 +179,17 @@ export class StayReserve extends React.Component {
         // console.log(formattedDateIn)
         const formattedDateOut = this.getInputValue(this.props.filterBy.dateOut)
         // console.log(formattedDateOut)
-
-  
-
-
+        
+        
+        
         const { isModalShown, cmp } = this.state
         const { price, _id, name } = this.props.stay;
-        console.log(order)
-        // const nights = price/ order.totalPrice;
+        let total = this.state.gTotalPrice;
+        let night = total / price;
+        if(!total){
+            total = 0;
+            night = 0;
+        }
 
         return (
             <section className="reserve-container">
@@ -220,7 +235,8 @@ export class StayReserve extends React.Component {
                                                     placeholder="Add dates"
                                                     readOnly
                                                     onClick={() => this.OpenModal('calendar')}
-                                                    value={formattedDateOut} /></span>
+                                                    value={formattedDateOut} 
+                                                    onChange={this.onHandleChange}/></span>
                                         </div>
                                         <div className="add"></div>
                                     </div>
@@ -235,7 +251,8 @@ export class StayReserve extends React.Component {
                                                     placeholder={`1 guest`}
                                                     readOnly
                                                     onClick={() => this.OpenModal('guests')}
-                                                    value={this.props.filterBy.adults} /></span>
+                                                    value={this.props.filterBy.adults} 
+                                                    onChange={this.onHandleChange}/></span>
                                         </div>
                                     </div>
                                 </div>
@@ -246,10 +263,8 @@ export class StayReserve extends React.Component {
                         <div className="order-preview hidden">
                             <small>You won't be charged yet</small>
                             <div>
-                                <span>price X nights</span>
-                                <span>Total</span>
-                                {/* <span>${price} X {nights} nights</span> */}
-                                {/* <span>${order.totalPrice}</span> */}
+                                <span>${price} X {night} nights</span>
+                                <span>${total}</span>
                             </div>
                             <div>
                                 <span>Service fee</span>
@@ -258,8 +273,7 @@ export class StayReserve extends React.Component {
                             <hr />
                             <div>
                                 <span>Total</span>
-                                <span>Price</span>
-                                {/* <span>${order.totalPrice}</span> */}
+                                <span>${total}</span>
                             </div>
                         </div>
                         {isModalShown && <div className="dynamic-modal">

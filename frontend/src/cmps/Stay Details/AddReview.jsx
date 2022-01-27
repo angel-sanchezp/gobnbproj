@@ -38,6 +38,7 @@ export class AddReview extends Component {
                 imgUrl: loggedInUser.imgUrl
             }
         }
+        console.log(review)
         this.props.addReview(review)
     };
 

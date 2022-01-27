@@ -1,14 +1,15 @@
 import React from "react";
 import { connect } from 'react-redux'
 import { Link } from "react-router-dom";
-import Swal from "sweetalert2";
+
 // import { logout } from "../../store/user/user.actions.js"
 
 import { userService } from "../../services/user.services";
 import UserAvatar from "../../assets/user-icon.png";
+import Avatar from "../../assets/svg/avatar.png";
 import { ReactComponent as Burger } from "../../assets/svg/burger.svg";
 // import { ReactComponent as UserAvatar } from '../../assets/svg/user.svg'
-import { logout } from "../../store/user/user.actions";
+import { logout, login } from "../../store/user/user.actions";
 // import { render } from "sass";
 
 export class _DropdownMenu extends React.Component {
@@ -17,6 +18,7 @@ export class _DropdownMenu extends React.Component {
     loggedInUser: null,
     isAdmin: false,
     isLoggedOut: null,
+    isDemo: false
   };
 
 
@@ -41,8 +43,19 @@ export class _DropdownMenu extends React.Component {
 
     onLogOut = () => {
       this.props.logout()
-      this.setState(prev => ({ ...prev, isLoggedOut: true }))
-      this.openLoginModal();
+      
+      // this.setState(prev => ({ ...prev, isLoggedOut: true }))
+    }
+
+    onDemoUser = () => {
+      const credentials = {
+        username: "user2",
+        password: "secret"
+      }
+      this.props.login(credentials)
+      this.setState(prev => ({...prev, isDemo: !this.state.isDemo}))
+      console.log(this.state.isDemo)
+      // window.location.href = `/`
     }
     
   
@@ -56,6 +69,7 @@ export class _DropdownMenu extends React.Component {
         document.querySelectorAll(".opt1").forEach(e=>{e.classList.add("hidden");});
         // console.log(this.props.user)
         avatar = this.props.user.imgUrl;
+        if(!this.props.user.imgUrl) avatar = Avatar;
       }
       if(this.state.isAdmin === true) {
         document.querySelectorAll(".opt2").forEach(e=>{e.classList.remove("hidden");});
@@ -78,6 +92,9 @@ export class _DropdownMenu extends React.Component {
           <ul>
             <li className="opt1">
             <button className="menu-opt"onClick={()=>this.openLoginModal()}>Login / Sign up</button>
+            </li>
+            <li className="opt1">
+            <button className="menu-opt"onClick={()=>this.onDemoUser()}>Demo user</button>
             </li>
             <li className="opt2 hidden">
               <button className="menu-opt">Messages</button>
@@ -105,6 +122,7 @@ function mapStateToProps(state) {
 }
 const mapDispatchToProps = {
   logout,
+  login
 }
 
 export const DropdownMenu = connect(

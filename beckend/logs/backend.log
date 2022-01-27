@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1/27/2022, 3:21:15 PM - INFO - Server is running on port: 3030
 1/27/2022, 3:22:33 PM - INFO - Req!!!
 1/27/2022, 3:22:36 PM - INFO - Req!!!
@@ -7,3 +8,9 @@
 1/27/2022, 3:23:51 PM - INFO - Req!!!
 1/27/2022, 3:31:46 PM - INFO - Server is running on port: 3030
 1/27/2022, 3:32:19 PM - INFO - Req!!!
+=======
+1/27/2022, 3:29:20 PM - INFO - Server is running on port: 3030
+1/27/2022, 3:31:07 PM - INFO - Req!!!
+1/27/2022, 3:32:48 PM - INFO - Server is running on port: 3030
+1/27/2022, 3:32:48 PM - INFO - Req!!!
+>>>>>>> 3b472f91b3e1cbdd84b94f9dc635863c456f3314
