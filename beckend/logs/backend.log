@@ -317,8 +317,37 @@
 1/27/2022, 4:13:41 PM - INFO - Req!!!
 1/27/2022, 4:23:56 PM - DEBUG - auth.service - login with username: lbiton
 1/27/2022, 4:23:56 PM - INFO - Req!!!
+<<<<<<< HEAD
+1/27/2022, 6:27:29 PM - INFO - Req!!!
+1/27/2022, 6:27:29 PM - INFO - Req from: liat biton
+1/27/2022, 6:44:41 PM - INFO - Req!!!
+1/27/2022, 6:44:41 PM - INFO - Req from: liat biton
+1/27/2022, 6:44:41 PM - DEBUG - auth.service - login with username: lbiton
+1/27/2022, 6:45:46 PM - INFO - Req!!!
+1/27/2022, 6:45:46 PM - INFO - Req from: liat biton
+1/27/2022, 6:48:45 PM - INFO - Req!!!
+1/27/2022, 6:48:45 PM - INFO - Req from: liat biton
+1/27/2022, 6:51:52 PM - INFO - Req!!!
+1/27/2022, 6:51:52 PM - INFO - Req from: liat biton
+1/27/2022, 7:09:31 PM - INFO - Req!!!
+1/27/2022, 7:09:31 PM - INFO - Req from: liat biton
+1/27/2022, 7:15:28 PM - INFO - Req!!!
+1/27/2022, 7:15:28 PM - INFO - Req from: liat biton
+1/27/2022, 7:16:02 PM - INFO - Req!!!
+1/27/2022, 7:16:02 PM - INFO - Req from: liat biton
+1/27/2022, 7:16:02 PM - DEBUG - auth.service - login with username: lbiton
+1/27/2022, 7:50:07 PM - INFO - Req!!!
+1/27/2022, 7:50:07 PM - INFO - Req from: liat biton
+1/27/2022, 7:50:17 PM - INFO - Req!!!
+1/27/2022, 7:50:17 PM - INFO - Req from: liat biton
+1/27/2022, 8:09:26 PM - INFO - Req!!!
+1/27/2022, 8:09:26 PM - INFO - Req from: liat biton
+1/27/2022, 8:13:08 PM - INFO - Req!!!
+1/27/2022, 8:13:08 PM - INFO - Req from: liat biton
+=======
 >>>>>>> 460ce3669041debcdd3ad6ba2828795fc8772886
 27.1.2022, 19:52:40 - INFO - Server is running on port: 3030
+<<<<<<< HEAD
 27.1.2022, 19:55:27 - INFO - Req!!!
 27.1.2022, 19:55:31 - INFO - Req!!!
 27.1.2022, 19:56:56 - INFO - Req!!!
@@ -333,3 +362,14 @@
 27.1.2022, 21:32:37 - INFO - Req!!!
 27.1.2022, 21:32:54 - INFO - Req!!!
 27.1.2022, 21:34:51 - INFO - Req!!!
+=======
+>>>>>>> 04f1c6c9f9cfe634995ba28ad951b4ab3b49bf8f
+1/27/2022, 8:33:23 PM - INFO - Req!!!
+1/27/2022, 8:33:23 PM - INFO - Req from: liat biton
+1/27/2022, 8:33:25 PM - INFO - Req!!!
+1/27/2022, 8:33:25 PM - INFO - Req from: liat biton
+1/27/2022, 8:34:14 PM - ERROR - cannot find stays | {"reason":{"type":"ReplicaSetNoPrimary","servers":{},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":"atlas-gssao6-shard-0","maxSetVersion":6,"maxElectionId":"7fffffff0000000000000046","commonWireVersion":9,"logicalSessionTimeoutMinutes":30}}
+1/27/2022, 8:34:14 PM - ERROR - Failed to get stays | {"reason":{"type":"ReplicaSetNoPrimary","servers":{},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":"atlas-gssao6-shard-0","maxSetVersion":6,"maxElectionId":"7fffffff0000000000000046","commonWireVersion":9,"logicalSessionTimeoutMinutes":30}}
+1/27/2022, 9:59:30 PM - INFO - Req!!!
+1/27/2022, 9:59:30 PM - INFO - Req from: liat biton
+>>>>>>> a392ca63083f04766d52196a56a46856f40c009a

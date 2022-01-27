@@ -24,8 +24,8 @@ export class StayReserve extends React.Component {
         order: {
             hostId: this.props.stay.host._id,
             createdAt: new Date(),
-            // buyer_fullname: userService.getLoggedinUser().fullname,
-            // buyerId: userService.getLoggedinUser()._id,
+            buyer_fullname: userService.getLoggedinUser().fullname,
+            buyerId: userService.getLoggedinUser()._id,
             totalPrice: '',
             startDate: '',
             endDate: '',
