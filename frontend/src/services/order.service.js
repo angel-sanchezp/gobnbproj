@@ -18,6 +18,7 @@ async function query(filterBy) {
   const { hostId, buyerId } = filterBy;
   const url = hostId ? `order/host/${hostId}` : `order/user/${buyerId}`;
   const orders = await httpService.get(url)
+  
   console.log(orders)
   return orders
   // return storageService.query('OrderDB')

@@ -56,7 +56,7 @@ const userRoutes = require('./api/user/user.routes')
 const stayRoutes = require('./api/stay/stay.routes')
 const orderRoutes = require('./api/order/order.routes')
 // const hostOrderRoutes = require('./api/hostOrder/hostOrder.routes')
-const hostRoutes = require('./api/host/host.routes')
+// const hostRoutes = require('./api/host/host.routes')
 const {connectSockets} = require('./services/socket.service')
 
 
@@ -71,9 +71,8 @@ app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/stay', stayRoutes)
 app.use('/api/order', orderRoutes)
-// app.use('/api/hostOrder', hostOrderRoutes)
-app.use('/api/host', hostRoutes)
-connectSockets(http, session)
+// app.use('/api/host', hostRoutes)
+// connectSockets(http, session)
 
 
 

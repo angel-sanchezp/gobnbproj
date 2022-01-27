@@ -9,8 +9,8 @@ async function getOrders(req, res) {
         const orders = await orderService.query(req.params)
         res.send(orders)
     } catch (err) {
-        logger.error('Cannot get reviews', err)
-        res.status(500).send({ err: 'Failed to get reviews' })
+        logger.error('Cannot get orders', err)
+        res.status(500).send({ err: 'Failed to get orders' })
     }
 }
 

@@ -14,6 +14,7 @@ module.exports = {
     remove,
     add,
     update,
+    // getHostById
 }
 
 async function query(filterBy = {}) {
@@ -107,6 +108,28 @@ async function getById(userId) {
         throw err
     }
 }
+
+// async function getHostById(hostId) {
+//     try {
+//         // console.log('user by Id  in sevice ',userId)
+//         const collection = await dbService.getCollection('user')
+//         const host = await collection.findOne({ '_id': ObjectId(hostId) })
+//         // console.log('user after get from collection',user)
+
+//         delete host.password
+
+//         host.historyOrders = await orderService.query({ byUserId: ObjectId(host._id) })
+//         host.historyOrders= host.historyOrders.map(order => {
+//             delete order.byUser
+//             return order
+//         })
+
+//         return host
+//     } catch (err) {
+//         logger.error(`while finding user ${hostId}`, err)
+//         throw err
+//     }
+// }
 // function getById(userId) {
 //     var user = users.find(user => user._id === userId)
 //     if (!user) return Promise.reject(`No such User ${userId}`)
