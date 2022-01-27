@@ -104,7 +104,7 @@ export function logout() {
         timerProgressBar: true,
         timer: 1500,
       // }).then(function () {
-        // window.location = "/";
+      //   window.location = "/";
       });
     } catch (err) {
       Swal.fire({

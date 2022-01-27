@@ -1,7 +1,19 @@
+<<<<<<< HEAD
+1/27/2022, 3:21:15 PM - INFO - Server is running on port: 3030
+1/27/2022, 3:22:33 PM - INFO - Req!!!
+1/27/2022, 3:22:36 PM - INFO - Req!!!
+1/27/2022, 3:23:14 PM - INFO - Req!!!
+1/27/2022, 3:23:17 PM - INFO - Req!!!
+1/27/2022, 3:23:48 PM - INFO - Req!!!
+1/27/2022, 3:23:51 PM - INFO - Req!!!
+1/27/2022, 3:31:46 PM - INFO - Server is running on port: 3030
+1/27/2022, 3:32:19 PM - INFO - Req!!!
+=======
 1/27/2022, 3:29:20 PM - INFO - Server is running on port: 3030
 1/27/2022, 3:31:07 PM - INFO - Req!!!
 1/27/2022, 3:32:48 PM - INFO - Server is running on port: 3030
 1/27/2022, 3:32:48 PM - INFO - Req!!!
+<<<<<<< HEAD
 1/27/2022, 3:44:37 PM - INFO - Req!!!
 1/27/2022, 3:49:28 PM - INFO - Server is running on port: 3030
 1/27/2022, 3:49:45 PM - INFO - Req!!!
@@ -32,3 +44,47 @@
 1/27/2022, 4:05:03 PM - INFO - Req from: liat biton
 1/27/2022, 4:07:10 PM - INFO - Req!!!
 1/27/2022, 4:07:10 PM - INFO - Req from: liat biton
+=======
+>>>>>>> 3b472f91b3e1cbdd84b94f9dc635863c456f3314
+1/27/2022, 3:36:37 PM - INFO - Server is running on port: 3030
+1/27/2022, 3:37:17 PM - INFO - Req!!!
+1/27/2022, 3:37:22 PM - INFO - Req!!!
+1/27/2022, 3:37:42 PM - INFO - Req!!!
+1/27/2022, 3:38:01 PM - INFO - Req!!!
+1/27/2022, 3:38:06 PM - INFO - Req!!!
+1/27/2022, 3:39:09 PM - INFO - Req!!!
+1/27/2022, 3:39:59 PM - INFO - Req!!!
+1/27/2022, 3:42:15 PM - INFO - Req!!!
+1/27/2022, 3:42:18 PM - INFO - Req!!!
+1/27/2022, 3:43:09 PM - INFO - Req!!!
+1/27/2022, 3:43:23 PM - DEBUG - auth.service - login with username: user2
+1/27/2022, 3:44:21 PM - INFO - Req!!!
+1/27/2022, 3:44:26 PM - INFO - Req!!!
+1/27/2022, 3:44:35 PM - INFO - Req!!!
+1/27/2022, 3:46:46 PM - INFO - Req!!!
+1/27/2022, 3:48:27 PM - INFO - Req!!!
+1/27/2022, 3:48:27 PM - DEBUG - auth.service - login with username: lbiton
+1/27/2022, 3:49:13 PM - INFO - Req!!!
+1/27/2022, 3:49:13 PM - DEBUG - auth.service - login with username: lbiton
+1/27/2022, 3:49:21 PM - INFO - Req!!!
+1/27/2022, 3:49:21 PM - DEBUG - auth.service - login with username: lbiton
+1/27/2022, 3:49:28 PM - INFO - Req!!!
+1/27/2022, 3:49:28 PM - DEBUG - auth.service - login with username: lbiton
+1/27/2022, 3:51:25 PM - INFO - Req!!!
+1/27/2022, 3:51:25 PM - INFO - Req from: liat biton
+1/27/2022, 3:51:25 PM - INFO - Req!!!
+1/27/2022, 3:51:25 PM - INFO - Req from: liat biton
+1/27/2022, 3:54:05 PM - INFO - Req!!!
+1/27/2022, 3:54:05 PM - INFO - Req from: liat biton
+1/27/2022, 3:54:05 PM - DEBUG - auth.service - login with username: lbiton
+1/27/2022, 3:54:05 PM - INFO - Req!!!
+1/27/2022, 4:00:30 PM - INFO - Req!!!
+1/27/2022, 4:00:54 PM - INFO - Req!!!
+1/27/2022, 4:00:54 PM - INFO - Req from: liat biton
+1/27/2022, 4:00:54 PM - INFO - Req!!!
+1/27/2022, 4:01:00 PM - INFO - Req!!!
+1/27/2022, 4:04:38 PM - INFO - Req!!!
+1/27/2022, 4:04:38 PM - DEBUG - auth.service - login with username: lbiton
+1/27/2022, 4:07:09 PM - INFO - Req!!!
+1/27/2022, 4:07:09 PM - DEBUG - auth.service - login with username: lbiton
+>>>>>>> e672cf0ea5d0067f64845720d0f570e572ae65d2
