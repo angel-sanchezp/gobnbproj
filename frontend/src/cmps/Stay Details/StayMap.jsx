@@ -15,7 +15,7 @@ export function StayMap({stay}) {
     // console.log(stay.location)
     const loc = { lat: stay.location.lat, lng: stay.location.lng }
     return (
-        <section className='map-container' id="staymap">
+        <section className='map-container bd' id="staymap">
             <div className="h2-general"><h2>Where you'll be</h2></div>
             <div>
                 <LoadScript googleMapsApiKey='AIzaSyDRSjfskUcII98LZQXzMblQX_hnBhcX26k'>

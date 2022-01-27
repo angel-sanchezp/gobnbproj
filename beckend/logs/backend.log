@@ -77,3 +77,73 @@
 1/27/2022, 11:41:39 AM - INFO - Req!!!
 1/27/2022, 11:43:16 AM - INFO - Req!!!
 1/27/2022, 11:50:23 AM - INFO - Req!!!
+1/27/2022, 12:52:39 PM - INFO - Req!!!
+1/27/2022, 12:55:11 PM - INFO - Req!!!
+1/27/2022, 1:04:53 PM - INFO - Req!!!
+1/27/2022, 1:34:55 PM - INFO - Req!!!
+1/27/2022, 1:40:06 PM - DEBUG - auth.service - login with username: user2
+1/27/2022, 1:40:13 PM - INFO - Req!!!
+1/27/2022, 1:40:13 PM - INFO - Req from: User 2
+1/27/2022, 1:40:32 PM - INFO - Req!!!
+1/27/2022, 1:40:32 PM - INFO - Req from: User 2
+1/27/2022, 1:41:28 PM - INFO - Req!!!
+1/27/2022, 1:41:28 PM - INFO - Req from: User 2
+1/27/2022, 1:41:57 PM - INFO - Req!!!
+1/27/2022, 1:41:57 PM - INFO - Req from: User 2
+1/27/2022, 1:42:00 PM - INFO - Req!!!
+1/27/2022, 1:42:00 PM - INFO - Req from: User 2
+1/27/2022, 1:42:06 PM - INFO - Req!!!
+1/27/2022, 1:42:06 PM - INFO - Req from: User 2
+1/27/2022, 1:42:11 PM - INFO - Req!!!
+1/27/2022, 1:42:11 PM - INFO - Req from: User 2
+1/27/2022, 1:42:13 PM - INFO - Req!!!
+1/27/2022, 1:42:13 PM - INFO - Req from: User 2
+1/27/2022, 1:42:33 PM - INFO - Req!!!
+1/27/2022, 1:42:33 PM - INFO - Req from: User 2
+1/27/2022, 1:42:49 PM - INFO - Req!!!
+1/27/2022, 1:42:49 PM - INFO - Req from: User 2
+1/27/2022, 1:43:56 PM - INFO - Req!!!
+1/27/2022, 1:43:56 PM - INFO - Req from: User 2
+1/27/2022, 1:45:07 PM - INFO - Req!!!
+1/27/2022, 2:02:54 PM - INFO - Req!!!
+1/27/2022, 2:03:47 PM - DEBUG - auth.service - login with username: user2
+1/27/2022, 2:03:57 PM - INFO - Req!!!
+1/27/2022, 2:07:46 PM - INFO - Req!!!
+1/27/2022, 2:10:02 PM - DEBUG - auth.service - login with username: user2
+1/27/2022, 2:10:16 PM - INFO - Req!!!
+1/27/2022, 2:10:16 PM - INFO - Req from: User 2
+1/27/2022, 2:11:59 PM - INFO - Req!!!
+1/27/2022, 2:11:59 PM - INFO - Req from: User 2
+1/27/2022, 2:14:47 PM - INFO - Req!!!
+1/27/2022, 2:14:47 PM - INFO - Req from: User 2
+1/27/2022, 2:14:56 PM - INFO - Req!!!
+1/27/2022, 2:14:57 PM - DEBUG - auth.service - login with username: user2
+1/27/2022, 2:17:06 PM - INFO - Req!!!
+1/27/2022, 2:17:09 PM - DEBUG - auth.service - login with username: user2
+1/27/2022, 2:18:26 PM - INFO - Req!!!
+1/27/2022, 2:18:26 PM - INFO - Req from: User 2
+1/27/2022, 2:18:36 PM - INFO - Req!!!
+1/27/2022, 2:18:36 PM - INFO - Req from: User 2
+1/27/2022, 2:20:05 PM - INFO - Req!!!
+1/27/2022, 2:20:07 PM - DEBUG - auth.service - login with username: user2
+1/27/2022, 2:20:08 PM - INFO - Req!!!
+1/27/2022, 2:20:08 PM - INFO - Req from: User 2
+1/27/2022, 2:20:21 PM - DEBUG - auth.service - login with username: user2
+1/27/2022, 2:20:22 PM - INFO - Req!!!
+1/27/2022, 2:20:22 PM - INFO - Req from: User 2
+1/27/2022, 2:20:31 PM - DEBUG - auth.service - login with username: user2
+1/27/2022, 2:21:01 PM - INFO - Req!!!
+1/27/2022, 2:21:04 PM - DEBUG - auth.service - login with username: user2
+1/27/2022, 2:21:47 PM - INFO - Req!!!
+1/27/2022, 2:21:47 PM - INFO - Req from: User 2
+1/27/2022, 2:23:16 PM - INFO - Req!!!
+1/27/2022, 2:23:16 PM - INFO - Req from: User 2
+1/27/2022, 2:27:50 PM - INFO - Req!!!
+1/27/2022, 2:28:34 PM - DEBUG - auth.service - signup with username: 23224, fullname: 12233
+1/27/2022, 2:28:34 PM - DEBUG - auth.route - new account created: {"username":"23224","password":"$2b$10$Wu91dz2f3uBJSCJvvD.ZrumeEJoS2FBIjSoSPcdFP7AnEt3GCG0AG","fullname":"12233","isAdmin":false,"_id":"61f28ff21768bb6ee14e1552"}
+1/27/2022, 2:28:34 PM - DEBUG - auth.service - login with username: 23224
+1/27/2022, 2:28:47 PM - DEBUG - auth.service - login with username: user2
+1/27/2022, 2:28:57 PM - INFO - Req!!!
+1/27/2022, 2:29:04 PM - DEBUG - auth.service - login with username: user2
+1/27/2022, 2:30:11 PM - INFO - Req!!!
+1/27/2022, 2:30:11 PM - INFO - Req from: User 2

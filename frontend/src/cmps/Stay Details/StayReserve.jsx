@@ -53,7 +53,7 @@ export class StayReserve extends React.Component {
         let date=[]
         date.push(parseInt(this.props.filterBy.dateIn))
         date.push(parseInt(this.props.filterBy.dateOut))
-        console.log('date',date)
+        // console.log('date',date)
         order.totalPrice=this.setTotalPrice(date)
         this.setState({ order });
         this.setState({ stay: { ...stay } })
@@ -71,7 +71,7 @@ export class StayReserve extends React.Component {
         ev.preventDefault()
         console.log('order state', this.state.order)
         await orderService.addOrder(this.state.order)
-        socketService.emit('new order', this.state.order);
+        // socketService.emit('new order', this.state.order);
 
         console.log('add sucsefully')
         // this.closeModal()
@@ -79,7 +79,7 @@ export class StayReserve extends React.Component {
 
 
     onChangeAdults = (adultsNum) => {
-        console.log(adultsNum)
+        // console.log(adultsNum)
         const {order}=this.state
         order.adults=adultsNum
 
@@ -89,7 +89,7 @@ export class StayReserve extends React.Component {
     }
 
     onChangeChildren = (childrenNum) => {
-        console.log(childrenNum)
+        // console.log(childrenNum)
         const {order}=this.state
         order.kids=childrenNum
         this.setState({ order });
@@ -113,7 +113,7 @@ export class StayReserve extends React.Component {
     }
 
     setTotalPrice = (date) => {
-        console.log(date)
+        // console.log(date)
         const date1 = moment(date[0])
         const date2 = moment(date[1])
         const diffDays = date2.diff(date1, 'days')
@@ -158,12 +158,18 @@ export class StayReserve extends React.Component {
         document.querySelector(".btn1").classList.remove("hidden")
     }
 
-
+    handleChange = (ev) => {
+        const field = ev.target.name;
+        const value = ev.target.value;
+        console.log(field, value)
+        this.setState({
+          date: { ...this.state.date, [field]: value },
+        });
+      };
 
 
 
     render() {
-        console.log(this.state.gTotalPrice)
         const { reviews } = this.props.stay;
         const { order } = this.state.order;
         let ReviewsAmount = (reviews.length === 1) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
@@ -178,8 +184,12 @@ export class StayReserve extends React.Component {
         
         const { isModalShown, cmp } = this.state
         const { price, _id, name } = this.props.stay;
-        const total = this.state.gTotalPrice;
-        const night = total / price;
+        let total = this.state.gTotalPrice;
+        let night = total / price;
+        if(!total){
+            total = 0;
+            night = 0;
+        }
 
         return (
             <section className="reserve-container">
@@ -225,7 +235,8 @@ export class StayReserve extends React.Component {
                                                     placeholder="Add dates"
                                                     readOnly
                                                     onClick={() => this.OpenModal('calendar')}
-                                                    value={formattedDateOut} /></span>
+                                                    value={formattedDateOut} 
+                                                    onChange={this.onHandleChange}/></span>
                                         </div>
                                         <div className="add"></div>
                                     </div>
@@ -240,7 +251,8 @@ export class StayReserve extends React.Component {
                                                     placeholder={`1 guest`}
                                                     readOnly
                                                     onClick={() => this.OpenModal('guests')}
-                                                    value={this.props.filterBy.adults} /></span>
+                                                    value={this.props.filterBy.adults} 
+                                                    onChange={this.onHandleChange}/></span>
                                         </div>
                                     </div>
                                 </div>

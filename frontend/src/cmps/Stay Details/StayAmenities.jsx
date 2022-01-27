@@ -97,11 +97,11 @@ export function StayAmenities({stay}) {
 
     return (
         <section>
-            <section className="amenities-container">
+            <section className="amenities-container bd">
                 <div className="h2-general"><h2>What this place offer</h2></div>
                 <div className="amenities">
                     {showAmenities.map((amenity, idx) => (
-                        <div className="amenity" key={idx}>
+                        <div className="amenity fl" key={idx}>
                             <span className="a-icon">
                                 {setAmenity(amenity)}
                             </span>
@@ -118,14 +118,14 @@ export function StayAmenities({stay}) {
             </section>
             <section>
                 <div className="amenities-modal hidden">
-                    <div className="modal-btn">
+                    <div className="modal-btn fl">
                         <button  onClick={() => amenityModal(false)}>X</button>
                     </div>
                     <div>
                         <h2>What this place offer</h2>
                         <div className="modal-area">
                         {amenities.map((amenity, idx) => (
-                            <div className="amenity" key={idx}>
+                            <div className="amenity fl" key={idx}>
                                 <div className="a-icon">
                                     {setAmenity(amenity)}
                                 </div>

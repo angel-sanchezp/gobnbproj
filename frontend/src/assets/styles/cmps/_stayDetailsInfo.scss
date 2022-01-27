@@ -1,36 +1,16 @@
-.stay-info-container{
-    // margin-top: rem(15px);
-    padding: 40px 0px 24px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    z-index: 0;
-    // width: 1120px;
 
+
+.stay-info-container{
+    padding: 40px 0px 24px;
+    z-index: 0;
 }
 
 .summary-info {
     width: 60%;
-    // flex-basis: 70%;
-    // display: block;
-    
-    
 }
 
 .top-info {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    // padding: 40px 0px 24px;
     padding-bottom: 24px;
-    border-bottom: 1px solid #ddd;
-}
-
-.top-details{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
 .top-info h2{
@@ -48,7 +28,6 @@
 
 .host-img {
     grid-column: 2;
-    // margin-top: rem(7px);
     object-fit: contain;
     height: 56px;
     width: 56px;
@@ -58,11 +37,9 @@
 .general-benefits{
     padding-top: 32px;
     padding-bottom: 32px;
-    border-bottom: 1px solid #ddd;
 }
 
 .benefit{
-    display: flex;
     justify-content: start;
     align-items: center;
 }
@@ -100,7 +77,6 @@
 
 .sleep-general {
     border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
     padding: rem(35px) 0px;
 }
 
@@ -114,11 +90,9 @@
 
 .stay-sleep {
     width: 45%;
-    
 }
 
 .sleep {
-    // width: 100%;
     width: 330px;
     height: 200px;;
     object-fit: cover;
@@ -126,16 +100,12 @@
 }
 
 .amenities-container {
-    border-bottom: 1px solid #ddd;
     padding: rem(35px) 0px;
 }
 
-// .amenities{
-//     display: flex;
-// }
+
 
 .amenity{
-    display: flex;
     align-items: center;
     padding: 0px 0px 8px;
 }
@@ -150,7 +120,6 @@
 }
 
 .more-modal{
-    display: inline-block;
     cursor: pointer;
     border: 0.2px solid #222;
     border-radius: 8px;
@@ -182,9 +151,8 @@
 }
 
 .modal-btn {
-    display: flex;
-    padding: 5px 5px 5px;
     display: inline-block;
+    padding: 5px 5px 5px;
 }
 
 

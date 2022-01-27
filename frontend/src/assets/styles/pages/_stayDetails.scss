@@ -1,6 +1,26 @@
-// html{
-//     scroll-behavior: smooth;
-// }
+.fl {
+    display: flex;
+}
+
+.flr{
+    flex-direction: row;
+}
+
+.flc{
+    flex-direction: column;
+}
+
+.wr {
+    flex-wrap:wrap;
+}
+
+.sp {
+    justify-content: space-between;
+}
+
+.bd{
+    border-bottom: 1px solid #ddd;
+}
 
 .ag:link, .ag:visited,  .ag:hover, .ag:active
 {
@@ -22,7 +42,6 @@
     background-color: #ffffff;
     display: grid;
     grid-column: 2;
-    // margin-top: rem(10px);
     line-break: strict;
 }
 
@@ -33,20 +52,10 @@
 .details-btn{
     cursor:pointer;
     font-family: CerealBook;
-    position: relative;
     font-size: inherit;
-    line-height: inherit;
-    font-weight: inherit;
-    border-radius: 0px;
     outline: none;
-    transition: box-shadow 0.2s ease 0s;
-    background: transparent;
-    color: inherit;
-    display: block;
-    margin: 0px;
     padding: 0px;
     text-decoration: underline;
-    text-align: inherit;
     height: 100%;
     width: 100%;
 }
@@ -62,35 +71,26 @@
 }
 
 .stay-name{
-    color: inherit;
-    font-family: CerealMedium, sans-serif;
+    font-family: CerealBook, sans-serif;
     font-size: 1.5em;
     font-weight: inherit;
-    line-height: inherit;
     margin: 0;
 }
 
 .general-info{
-    display: flex;
     align-items: flex-end;
-    justify-content: space-between;
     font-family: CerealBook;
     font-size: rem(14px);
 }
 
 .mainName-info{
-    
     margin: rem(4px) 0px 0px;
-    display: flex;
-    flex-wrap:wrap;
 }
 
 .dot {
     vertical-align: top;
     color: rgb(113, 113, 113);
-    font-family: circular;
     font-weight: 400;
-    // margin: 8px 8px 0px;
     margin: 4px 4px;
 }
 
@@ -98,6 +98,7 @@
     color: black;
     font-family: CerealMedium;
 }
+
 .details-gallery{
     align-content: center;
     width: 100%;
@@ -142,20 +143,9 @@
     padding: 0;
 }
 
-.stay-info-container{
-    border-bottom: 1px solid #ddd;
-
-}
-
-.reviews-container {
-    border-bottom: 1px solid #ddd;
-}
 
 .map-container {
     padding: 48px 0px;
-    border-bottom: 1px solid #ddd;
-    // padding-top: 48px;
-    // padding-bottom: 48px;
 }
 
 .g{
