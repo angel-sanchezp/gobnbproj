@@ -23,18 +23,18 @@ export class Guests extends React.Component {
 
         const newValue = this.state.adults + indicator
         this.setState({ adults: newValue })
-        console.log('adults value in guests', newValue)
+        // console.log('adults value in guests', newValue)
         this.props.onChangeAdults(newValue)
     }
 
     changeChildren(indicator) {
         const { children } = this.state
-        console.log(children)
+        // console.log(children)
         if (!children && indicator === -1) return
 
         const newValue = this.state.children + indicator
         this.setState({ children: newValue })
-        console.log('children value in guests', newValue)
+        // console.log('children value in guests', newValue)
         this.props.onChangeChildren(newValue)
     }
 

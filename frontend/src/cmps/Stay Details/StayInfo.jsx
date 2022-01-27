@@ -4,7 +4,7 @@ import { StayDates } from './StayDates.jsx';
 // import { filter } from 'lodash';
 
 export function StayInfo({stay , filterBy}){
-    console.log(filterBy)
+    // console.log(filterBy)
     return (
         <section className="stay-info-container">
             <section className="summary-info">

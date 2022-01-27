@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const loadOrders = (dispatch, filterBy) => {
   orderService.query(filterBy)
   .then(orders => {
-      console.log('stays from DB:', orders)
+      // console.log('stays from DB:', orders)
       dispatch({
           type: 'SET_ORDERS',
           orders
@@ -32,7 +32,7 @@ export function loadBuyerOrders() {
 
 export function addOrder(order) {
     return async (dispatch) => {
-        console.log("order action ", order);
+        // console.log("order action ", order);
         try {
             await orderService.addOrder(order)
             const action = { type: 'ADD_ORDER', order };
@@ -57,8 +57,24 @@ export function addOrder(order) {
               }).then(function () {
                 window.location = "/explore";
               });
-            console.log('Cannot add order', err);
+            // console.log('Cannot add order', err);
         }
     }
+}
+
+
+export function updateOrder(orderId) {
+  return async (dispatch) => {
+      // console.log("order action ", orderId);
+      try {
+          // await orderService.updateOrder(orderId)
+          const action = { type: 'UPDATE_ORDER', orderId };
+          dispatch(action);
+
+      } catch (err) {
+  
+          console.log('Cannot add order', err);
+      }
+  }
 }
 

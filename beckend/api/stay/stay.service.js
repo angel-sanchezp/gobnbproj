@@ -29,8 +29,8 @@ function _buildCriteria(filterBy = {}) {
         criteria["location.country"] = { $regex: filterBy.location, $options: 'i' }
     }
     if (filterBy.maxPrice && filterBy.minPrice) {
-        const maxPrice = JSON.parse(filterBy.maxPrice)
-        const minPrice = JSON.parse(filterBy.minPrice)
+        const maxPrice = +(filterBy.maxPrice)
+        const minPrice = +(filterBy.minPrice)
         criteria["price"] = { $gt: minPrice, $lt: maxPrice }
     }
     if (filterBy?.dateIn && filterBy?.dateOut) {

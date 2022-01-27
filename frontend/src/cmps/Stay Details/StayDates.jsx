@@ -12,7 +12,7 @@ class _StayDates extends React.Component {
     
 
     onSetDate=(date)=>{
-      console.log(date)
+    //   console.log(date)
     }
 
     render(){

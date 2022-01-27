@@ -28,7 +28,7 @@ class _LoginModal extends React.Component {
   onLogin = (ev) => {
     ev.preventDefault();
     const { credentials } = this.state
-    console.log('credentials', this.state.credentials)
+    // console.log('credentials', this.state.credentials)
     if (!credentials) return
     this.props.login(credentials)
     this.closeModal()
@@ -40,7 +40,7 @@ class _LoginModal extends React.Component {
   onSignup = (ev) => {
     ev.preventDefault()
     const { credentials } = this.state
-    console.log('credentials', this.state.credentials)
+    // console.log('credentials', this.state.credentials)
     if (!credentials) return
     this.props.signup(credentials);
     this.closeModal()

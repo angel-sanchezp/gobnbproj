@@ -51,7 +51,7 @@ export class StayReserve extends React.Component {
         let date=[]
         date.push(parseInt(this.props.filterBy.dateIn))
         date.push(parseInt(this.props.filterBy.dateOut))
-        console.log('date',date)
+        // console.log('date',date)
         order.totalPrice=this.setTotalPrice(date)
         this.setState({ order });
         this.setState({ stay: { ...stay } })
@@ -66,17 +66,17 @@ export class StayReserve extends React.Component {
 
     onSubmitOrder = async (ev) => {
         ev.preventDefault()
-        console.log('order state', this.state.order)
+        // console.log('order state', this.state.order)
         await orderService.addOrder(this.state.order)
         socketService.emit('new order', this.state.order);
 
-        console.log('add sucsefully')
+        // console.log('add sucsefully')
         // this.closeModal()
     }
 
 
     onChangeAdults = (adultsNum) => {
-        console.log(adultsNum)
+        // console.log(adultsNum)
         const {order}=this.state
         order.adults=adultsNum
 
@@ -86,7 +86,7 @@ export class StayReserve extends React.Component {
     }
 
     onChangeChildren = (childrenNum) => {
-        console.log(childrenNum)
+        // console.log(childrenNum)
         const {order}=this.state
         order.kids=childrenNum
         this.setState({ order });
@@ -110,7 +110,7 @@ export class StayReserve extends React.Component {
     }
 
     setTotalPrice = (date) => {
-        console.log(date)
+        // console.log(date)
         const date1 = moment(date[0])
         const date2 = moment(date[1])
         const diffDays = date2.diff(date1, 'days')

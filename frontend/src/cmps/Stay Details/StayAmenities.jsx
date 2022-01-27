@@ -84,7 +84,7 @@ export function StayAmenities({stay}) {
     
 
     const amenityModal = (isOpen) => {
-        console.log(isOpen)
+        // console.log(isOpen)
         if(isOpen){
             document.querySelector(".amenities-modal").classList.remove("hidden");
             document.querySelector("body").classList.add("modal-open");

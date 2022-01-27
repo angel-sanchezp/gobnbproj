@@ -59,7 +59,7 @@ class _StayDetails extends React.Component {
     render() {
         const { stay } = this.state;
         const {filterBy} =this.props
-        console.log(filterBy)
+        // console.log(filterBy)
         if (!stay) return <h1>Loading...</h1>
         const  {reviews}  = stay;
         let headerReviews = (reviews.length === 1 ) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
@@ -106,7 +106,7 @@ class _StayDetails extends React.Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state)
+    // console.log(state)
     return {
         filterBy: state.stayModule.filterBy,
 
