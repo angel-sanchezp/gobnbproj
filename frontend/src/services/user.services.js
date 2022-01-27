@@ -35,7 +35,7 @@ const gUsers = [
     {
         _id: "u102",
         fullname: "User 2",
-        imgUrl: "/img/img2.jpg",
+        imgUrl: ["https://res.cloudinary.com/kitsunex3/image/upload/v1643195687/Airbnb%20clone/Avatars/avatar2_noeug0.png"],
         isAdmin: false,
         username: "user2",
         password: "secret",
@@ -99,7 +99,7 @@ async function login(userCred) {
     // return storageService.query(STORAGE_KEY).then(users => {
     //     const user = users.find(user => user.username === credentials.username &&
     //         user.password === credentials.password)
-
+    console.log(userCred)
     const user = await httpService.post('auth/login', userCred)
     if (user) return _saveLocalUser(user)
 }

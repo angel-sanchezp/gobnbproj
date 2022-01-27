@@ -9,6 +9,7 @@ import { Calendar } from '../FilterCmps/Calendar.jsx'
 
 import { userService } from '../../services/user.services.js'
 import { orderService } from '../../services/order.service.js'
+import { ReactComponent as Star } from '../../assets/svg/star.svg'
 
 export class StayReserve extends React.Component {
 
@@ -141,6 +142,12 @@ export class StayReserve extends React.Component {
         this.setState(prev => ({ ...prev, isModalShown: !prev.isModalShown }))
     }
 
+    onAvailablity = () => {
+        document.querySelector(".btn2").classList.add("hidden")
+        document.querySelector(".order-preview").classList.remove("hidden")
+        document.querySelector(".btn1").classList.remove("hidden")
+    }
+
 
 
 
@@ -148,6 +155,7 @@ export class StayReserve extends React.Component {
     render() {
 
         const { reviews } = this.props.stay;
+        const { order } = this.state.order;
         let ReviewsAmount = (reviews.length === 1) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
         if (reviews.length === 0) ReviewsAmount = `No reviews`;
 
@@ -161,7 +169,8 @@ export class StayReserve extends React.Component {
 
         const { isModalShown, cmp } = this.state
         const { price, _id, name } = this.props.stay;
-
+        console.log(order)
+        // const nights = price/ order.totalPrice;
 
         return (
             <section className="reserve-container">
@@ -169,7 +178,12 @@ export class StayReserve extends React.Component {
                     <div className="reserve-box">
                         <div className="reserve-info">
                             <div className="reserve-price">${this.props.stay.price} <span>/night</span></div>
-                            <div className="reserve-reviews"><a className="ab" href="#stayreview">{ReviewsAmount}</a></div>
+                            <div className="reserve-rate">
+                            <span className='dot'><Star/></span>
+                            <span className='dot b'>4.7</span>
+                            <span className='dotr'>· </span>
+                                <a className="ab" href="#stayreview"><span className="reserve-reviews">{ReviewsAmount}</span></a>
+                            </div>
                         </div>
                         <form onSubmit={this.onSubmitOrder}>
                             <div className="reserve-date-picker">
@@ -222,8 +236,28 @@ export class StayReserve extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <button className="reserve-submit gradient" type="submit">Reserve</button>
+                            <button className="reserve-submit gradient btn1 hidden" type="submit">Reserve</button>
                         </form>
+                        <button className="reserve-submit btn2 gradient" type="button" onClick={()=> this.onAvailablity()}>Check Availability</button>
+                        <div className="order-preview hidden">
+                            <small>You won't be charged yet</small>
+                            <div>
+                                <span>price X nights</span>
+                                <span>Total</span>
+                                {/* <span>${price} X {nights} nights</span> */}
+                                {/* <span>${order.totalPrice}</span> */}
+                            </div>
+                            <div>
+                                <span>Service fee</span>
+                                <span>$0</span>
+                            </div>
+                            <hr />
+                            <div>
+                                <span>Total</span>
+                                <span>Price</span>
+                                {/* <span>${order.totalPrice}</span> */}
+                            </div>
+                        </div>
                         {isModalShown && <div className="dynamic-modal">
                             {cmp}
                         </div>}

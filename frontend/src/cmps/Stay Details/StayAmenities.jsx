@@ -102,9 +102,11 @@ export function StayAmenities({stay}) {
                 <div className="amenities">
                     {showAmenities.map((amenity, idx) => (
                         <div className="amenity" key={idx}>
-                            {setAmenity(amenity)}
+                            <span className="a-icon">
+                                {setAmenity(amenity)}
+                            </span>
                             <span>
-                            {amenity}
+                                {amenity}
                             </span>
                             
                         </div>
@@ -124,7 +126,7 @@ export function StayAmenities({stay}) {
                         <div className="modal-area">
                         {amenities.map((amenity, idx) => (
                             <div className="amenity" key={idx}>
-                                <div className="amenity-img">
+                                <div className="a-icon">
                                     {setAmenity(amenity)}
                                 </div>
                                 {amenity}

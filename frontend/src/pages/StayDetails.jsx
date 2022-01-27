@@ -15,7 +15,7 @@ import { StayMap } from '../cmps/Stay Details/StayMap.jsx';
 import { HostInfo } from '../cmps/Stay Details/HostInfo.jsx';
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 import { LoginModal } from '../cmps/shared/LoginModal'
-
+import { ReactComponent as Star } from '../assets/svg/star.svg'
 import share from '../assets/svg/share.jpg';
 import like from '../assets/svg/like.png';
 
@@ -66,7 +66,7 @@ class _StayDetails extends React.Component {
         if(reviews.length === 0) headerReviews = `No reviews`;
 
         return (
-            <section>
+            <section className='main-layout-res'>
                 <div className="user-modal hidden">
                     <LoginModal/>
                 </div>
@@ -78,11 +78,11 @@ class _StayDetails extends React.Component {
                         </h1>
                         <div className="general-info">
                             <span className="mainName-info">
-                            {/* <span>{stay.rate}</span> */}
-                            <span><button className="details-btn" type="button"><a className="ab" href="#stayreview">{headerReviews}</a></button></span>
-                            {/* <span className='dot'> · </span> */}
-                            {/* <span className="g">Superhost</span> */}
-                            <span className='dot'> · </span>
+                            <span className='dot'><Star/></span>
+                            <span className='dot b'>4.7</span>
+                            <span className='dot'>·</span>
+                            <span><button className="details-btn" type="button">  <a className="ab" href="#stayreview">{headerReviews}</a></button></span>
+                            <span className='dot'>·</span>
                             <span><button className="details-btn g" type="button"><a className="ag" href="#staymap">{stay.location.address}</a></button></span>
                             </span>
                             <div>
