@@ -1,5 +1,5 @@
 export function StayReview({stay}){
-
+    console.log(stay)
     const { reviews } = stay;
     const showReviews = (reviews.length > 4) ? reviews.slice(0,4) : reviews.slice();
     let reviewBtn = (reviews.length === 1 ) ? `Show ${reviews.length} review` : `Show all ${reviews.length} reviews`;
