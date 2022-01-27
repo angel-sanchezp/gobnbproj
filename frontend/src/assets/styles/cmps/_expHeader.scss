@@ -4,7 +4,7 @@
     z-index: 10;
     background: white;
     border-bottom: 0.5px solid #ddddddba;
-    padding: 0px 80px;
+    padding: 15px 80px;
     
     .nav-right{
         display: flex;
@@ -158,11 +158,12 @@
     .modal-container {
         position: fixed;
         background: white;
-        top: 67px;
-        width: 100%;
+        right: 0px;
+        top: 82px;
         height: 100px;
         z-index: 1;
         border-bottom: 1px solid rgba(88, 88, 88, 0.2196078431);
+        width: 100%;
     }
 
     .reserve-nav{

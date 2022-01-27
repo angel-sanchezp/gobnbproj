@@ -41,7 +41,7 @@ class _OrderPreview extends Component {
                             <div className="txt">Order status: {status}</div>
                             <div className="txt">Orded by {buyer_fullname}</div>
                         </div>
-                        <button className="btn">Cancel order</button>
+                        <button className="btn">Approve</button>
                     </div>
                 </div>
             </li>
