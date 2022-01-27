@@ -1,6 +1,7 @@
 const dbService = require('../../services/db.service')
 const ObjectId = require('mongodb').ObjectId
 const asyncLocalStorage = require('../../services/als.service')
+const logger = require('../../services/logger.service')
 
 async function query(filterBy = {}) {
     // console.log('filterBy in order',filterBy)
@@ -79,7 +80,7 @@ async function add(order) {
         const orderToAdd = {
             ...order,
             hostId: ObjectId(order.hostId),
-            buyer_id: ObjectId(order.buyer_id),
+            buyerId: ObjectId(order.buyerId),
             stay_id:ObjectId(order.stay_id),
         }
         await collection.insertOne(orderToAdd)
@@ -95,7 +96,8 @@ async function add(order) {
 function _buildCriteria(filterBy) {
     console.log(filterBy)
     const criteria = {}
-    if (filterBy.buyer) criteria.buyer_id=  filterBy.buyer
+    if (filterBy.buyerId) criteria.buyerId = ObjectId(filterBy.buyerId)
+    if (filterBy.hostId) criteria.hostId = ObjectId(filterBy.hostId)
 
     return criteria
 }

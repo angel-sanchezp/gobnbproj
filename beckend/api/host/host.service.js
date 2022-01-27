@@ -117,7 +117,7 @@ async function add(host) {
     try {
         // peek only updatable fields!
         const hostToAdd = {
-            hostname: host.username,
+            username: host.username,
             password: host.password,
             fullname: host.fullname,
             stays:host.stays,

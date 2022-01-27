@@ -84,7 +84,7 @@ export class _DropdownMenu extends React.Component {
             <li className="opt2 hidden">
             <Link to={`/trips`}><button className="menu-opt">Trips</button></Link>
             </li>
-            <li className="opt3 hidden">
+            <li className="opt2 hidden">
             <Link to={`/dashboard`}><button className="menu-opt">Dashboard</button></Link>
             </li>
             <li className="opt2 hidden">

@@ -13,7 +13,6 @@ import {
   changeFilter,
   setFilter,
 } from "../store/stay/stay.actions.js";
-import { loadOrders } from "../store/order/order.actions.js";
 import { AppFooter } from "../cmps/Stay Layout/AppFooter.jsx";
 
 import tokyo from "../assets/img/tokyo.jpeg";
@@ -34,7 +33,6 @@ class _HomePage extends React.Component {
     this.props.changeHeaderClass(this.state.class);
     console.log(this.props.user);
     this.props.loadStays();
-    this.props.loadOrders();
     this.loggedInUser();
   }
 
@@ -210,7 +208,6 @@ const mapDispatchToProps = {
   changeFilter,
   setFilter,
   login,
-  loadOrders
 };
 
 export const HomePage = connect(mapStateToProps, mapDispatchToProps)(_HomePage);

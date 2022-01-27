@@ -1,24 +1,36 @@
 import { orderService } from '../../services/order.service.js'
+import { userService } from '../../services/user.services.js'
 import Swal from "sweetalert2";
 
+const loadOrders = (dispatch, filterBy) => {
+  orderService.query(filterBy)
+  .then(orders => {
+      console.log('stays from DB:', orders)
+      dispatch({
+          type: 'SET_ORDERS',
+          orders
+      })
+  })
+  .catch(err => {
+      console.log('Cannot load stays', err)
+  })
+}
 
-export  function loadOrders() {
+export function loadHostOrders() {
   return (dispatch) => {
-      orderService.query()
-          .then(orders => {
-              console.log('stays from DB:', orders)
-              dispatch({
-                  type: 'SET_ORDERS',orders
-              })
-          })
-          .catch(err => {
-              console.log('Cannot load stays', err)
-          })
+      const host = userService.getLoggedinUser()
+      loadOrders(dispatch, { hostId: host._id })
+  }
+}
+
+export function loadBuyerOrders() {
+  return (dispatch) => {
+      const buyer = userService.getLoggedinUser()
+      loadOrders(dispatch, { buyerId: buyer._id })
   }
 }
 
 export function addOrder(order) {
-
     return async (dispatch) => {
         console.log("order action ", order);
         try {

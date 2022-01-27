@@ -20,18 +20,17 @@ export class StayReserve extends React.Component {
         cmp: null,
         stay: null,
         order: {
-            hostId: '',
+            hostId: this.props.stay.host._id,
             createdAt: new Date(),
-            buyer_fullname: 'User 1',
-            buyer_id: '61f05eabc8e02896300df6d5',
-            // buyer:userService.getLoggedinUser(),
+            buyer_fullname: userService.getLoggedinUser().fullname,
+            buyerId: userService.getLoggedinUser()._id,
             totalPrice: '',
             startDate: '',
             endDate: '',
             adults: '',
             kids: '',
-            stay_id: '',
-            stay_name: '',
+            stay_id: this.props.stay._id,
+            stay_name: this.props.stay.name,
             stay_price: '',
             status: 'pending',
         }
@@ -68,7 +67,7 @@ export class StayReserve extends React.Component {
     onSubmitOrder = async (ev) => {
         ev.preventDefault()
         console.log('order state', this.state.order)
-        await orderService.add(this.state.order)
+        await orderService.addOrder(this.state.order)
         socketService.emit('new order', this.state.order);
 
         console.log('add sucsefully')

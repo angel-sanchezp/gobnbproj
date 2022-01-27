@@ -3,12 +3,9 @@ import { Component } from 'react'
 // import { utilService } from '../../services/utils.service.js'
 // import { ReactComponent as Star } from '../../assets/svg/star.svg'
 import { withRouter } from "react-router-dom"
-
 import { Trips } from '../../pages/Trips'
 
 class _TripPreview extends Component {
-
-
 
     onTripClicked(tripId) {
         this.props.history.push(`/details/${tripId}`)
@@ -16,7 +13,7 @@ class _TripPreview extends Component {
 
     render(){
         const { trip } = this.props
-        console.log(trip)
+        console.log('trip' , trip)
         return(
             <li className="trip-card" key={trip._id} onClick={() => this.onTripClicked(trip.stay_id)}>
                 <img className="trip-card-image" alt="cat" src={trip.stayDetails.imgUrls[0]} />
@@ -38,23 +35,14 @@ class _TripPreview extends Component {
                     <div className="tripcard-bottom">
                         <div className="status-host">
                             <div className="txt">Order status: {trip.status}</div>
-                            <div className="txt">Hosted by {trip.hostname}</div>
+                            <div className="txt">Hosted by {trip.hostDetails.fullname}</div>
                         </div>
                         <button className="btn">Cancel order</button>
                     </div>
-
                 </div>
-            
             </li>
-   
         )
-
     }
-
  }
-
-  
-
-
 
 export const TripPreview = (withRouter(_TripPreview))
