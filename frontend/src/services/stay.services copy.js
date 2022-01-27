@@ -1074,17 +1074,17 @@ function _createStays() {
 }
 
 async function query(filterBy) {
-    console.log('filterby in service', filterBy)
+    // console.log('filterby in service', filterBy)
     const stays = await storageService.query(STORAGE_KEY)
 
     if(filterBy.sortBy){
         const sorted= _sortBy(filterBy.sortBy,stays)
-        console.log('sorted',sorted)
+        // console.log('sorted',sorted)
         return sorted
     }
 
     const filteredStays = _getFilteredStays(stays, filterBy)
-    console.log('filteredStays in service', filteredStays)
+    // console.log('filteredStays in service', filteredStays)
 
     return filteredStays
 }
@@ -1096,7 +1096,7 @@ async function query(filterBy) {
 
 
 function _getFilteredStays(stays, filterBy) {
-    console.log(filterBy)
+    // console.log(filterBy)
     if (filterBy.location) {
         let { location } = filterBy
         // console.log('location in filtereed stays',location)
@@ -1122,7 +1122,7 @@ function _getFilteredStays(stays, filterBy) {
 
             return !isNotAvailable
         });
-        console.log(availables)
+        // console.log(availables)
         return availables
     } else if (filterBy.adults && filterBy.children) {
         let { adults } = filterBy
@@ -1138,9 +1138,9 @@ function _getFilteredStays(stays, filterBy) {
     } else if (filterBy.amenities) {
         const allAmenities = stays.filter((stay) => {
             return filterBy.amenities.every(amenity => {
-                console.log('amenities', amenity)
+                // console.log('amenities', amenity)
                 return stay.amenities.some(a => {
-                    console.log('a', a)
+                    // console.log('a', a)
                     return a.toLowerCase() === amenity.toLowerCase()
                 })
             })
@@ -1168,7 +1168,7 @@ function _getFilteredStays(stays, filterBy) {
  async function _sortBy(sortBy , stays) {
 
     if (sortBy === 'price') {
-        console.log(sortBy)
+        // console.log(sortBy)
         stays.sort(function (a, b) {
             return a.price - b.price;
         });
@@ -1176,7 +1176,7 @@ function _getFilteredStays(stays, filterBy) {
 
 
     } else if (sortBy === 'type') {
-        console.log(sortBy)
+        // console.log(sortBy)
         stays.sort(function (a, b) {
             var fromA = a.from.toUpperCase(); // ignore upper and lowercase
             var fromB = b.from.toUpperCase(); // ignore upper and lowercase

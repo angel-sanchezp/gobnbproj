@@ -59,14 +59,14 @@ class _Explore extends Component {
         var end = new Date(Date.now() + (DAY_MS * (MAX_LENGTH - nights)))
         var start = new Date(Date.now())
 
-        console.log({ start, end, nights });
+        // console.log({ start, end, nights });
 
         // Get random date between 2 dates
         var periodStart = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
 
         var periodEnd = new Date(periodStart.getTime() + (DAY_MS * nights))
 
-        console.log({ start: periodStart, end: periodEnd, nights });
+        // console.log({ start: periodStart, end: periodEnd, nights });
 
     }
 

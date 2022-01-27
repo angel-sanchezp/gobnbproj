@@ -43,7 +43,7 @@ class _HeaderFilters extends Component {
         this.setState((prevState) => ({
             showPriceModal: !prevState.showPriceModal
         }))
-        console.log("Toggle price modal")
+        // console.log("Toggle price modal")
     }
 
     filterPrice = (ev) => {

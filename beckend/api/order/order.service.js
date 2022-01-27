@@ -18,7 +18,7 @@ async function query(filterBy = {}) {
             {
                 $lookup:
                 {
-                    from: 'host',
+                    from: 'user',
                     localField: 'hostId',
                     foreignField: '_id',
                     as: 'hostDetails'
@@ -56,6 +56,8 @@ async function query(filterBy = {}) {
     }
 
 }
+
+
 
 async function remove(orderId) {
     try {

@@ -69,11 +69,11 @@ export class StayReserve extends React.Component {
 
     onSubmitOrder = async (ev) => {
         ev.preventDefault()
-        console.log('order state', this.state.order)
+        // console.log('order state', this.state.order)
         await orderService.addOrder(this.state.order)
         // socketService.emit('new order', this.state.order);
 
-        console.log('add sucsefully')
+        // console.log('add sucsefully')
         // this.closeModal()
     }
 

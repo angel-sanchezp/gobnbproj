@@ -26,7 +26,7 @@ export class _DropdownMenu extends React.Component {
     if(this.props.user){
       this.setState(prev => ({ ...prev, loggedInUser: this.props.user }))
     }
-    console.log(this.state.isLoggedOut)
+    // console.log(this.state.isLoggedOut)
 };
 
 
@@ -64,10 +64,10 @@ export class _DropdownMenu extends React.Component {
       let avatar = UserAvatar;
       const {loggedInUser} = this.state;
       if(this.props.user) {
-        console.log(this.props.user)
+        // console.log(this.props.user)
         document.querySelectorAll(".opt2").forEach(e=>{e.classList.remove("hidden");});
         document.querySelectorAll(".opt1").forEach(e=>{e.classList.add("hidden");});
-        console.log(this.props.user)
+        // console.log(this.props.user)
         avatar = this.props.user.imgUrl;
         if(!this.props.user.imgUrl) avatar = Avatar;
       }

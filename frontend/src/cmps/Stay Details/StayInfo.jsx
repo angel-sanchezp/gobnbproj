@@ -9,7 +9,7 @@ import { ReactComponent as Check } from '../../assets/svg/check.svg'
 
 
 export function StayInfo({stay , filterBy}){
-    console.log(filterBy)
+    // console.log(filterBy)
     return (
         <section className="stay-info-container fl sp flr bd">
             <section className="summary-info">
