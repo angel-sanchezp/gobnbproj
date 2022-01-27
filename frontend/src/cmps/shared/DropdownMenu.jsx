@@ -41,7 +41,8 @@ export class _DropdownMenu extends React.Component {
 
     onLogOut = () => {
       this.props.logout()
-      this.setState(prev => ({ ...prev, isLoggedOut: true }))
+      
+      // this.setState(prev => ({ ...prev, isLoggedOut: true }))
     }
     
   

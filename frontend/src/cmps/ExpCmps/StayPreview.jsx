@@ -4,7 +4,7 @@ import { utilService } from '../../services/utils.service.js'
 import { ReactComponent as Star } from '../../assets/svg/star.svg'
 import { withRouter } from "react-router-dom"
 import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
+// import 'react-slideshow-image/dist/styles.css'
 
 
 class _StayPreview extends Component {

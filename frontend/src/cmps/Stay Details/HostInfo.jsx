@@ -21,10 +21,10 @@ export function HostInfo({stay}) {
                     Hello. I am a big traveller and Airbnb is a great way to make
                     new friends and meet new people.
                 </p>
-                <p>
+                <div>
                     <h3>During your stay</h3>
                     There is someone within 10 minutes to meet your expectations.
-                </p>
+                </div>
             </div>
         </section>
     )

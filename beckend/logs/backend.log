@@ -19,3 +19,61 @@
 27.1.2022, 10:19:07 - INFO - Req!!!
 27.1.2022, 10:22:20 - INFO - Req!!!
 1/27/2022, 10:34:34 AM - INFO - Server is running on port: 3030
+1/27/2022, 10:45:23 AM - INFO - Server is running on port: 3030
+1/27/2022, 10:49:20 AM - INFO - Server is running on port: 3030
+1/27/2022, 10:49:25 AM - INFO - Server is running on port: 3030
+1/27/2022, 10:54:03 AM - INFO - Server is running on port: 3030
+1/27/2022, 10:54:22 AM - DEBUG - auth.service - login with username: user2
+1/27/2022, 10:54:24 AM - ERROR - Failed to Login Invalid username or password
+1/27/2022, 10:54:38 AM - DEBUG - auth.service - login with username: user2
+1/27/2022, 10:54:58 AM - DEBUG - auth.service - signup with username: 123, fullname: bfb
+1/27/2022, 10:54:59 AM - DEBUG - auth.route - new account created: {"username":"123","password":"$2b$10$IbOhoVewLU.7ENWM664G6.zUV4VaUa/RzSZXebVkSWKo5STpJuxBK","fullname":"bfb","isAdmin":false,"_id":"61f25de31768bb6ee14e1547"}
+1/27/2022, 10:54:59 AM - DEBUG - auth.service - login with username: 123
+1/27/2022, 10:55:32 AM - DEBUG - auth.service - login with username: 123
+1/27/2022, 10:56:11 AM - DEBUG - auth.service - login with username: user2
+1/27/2022, 10:56:11 AM - ERROR - Failed to Login Invalid username or password
+1/27/2022, 11:00:33 AM - INFO - Req!!!
+1/27/2022, 11:00:33 AM - INFO - Req from: bfb
+1/27/2022, 11:02:32 AM - INFO - Req!!!
+1/27/2022, 11:02:32 AM - INFO - Req from: bfb
+1/27/2022, 11:02:32 AM - DEBUG - auth.service - login with username: lbiton
+1/27/2022, 11:03:01 AM - INFO - Req!!!
+1/27/2022, 11:03:01 AM - INFO - Req from: liat biton
+1/27/2022, 11:03:01 AM - DEBUG - auth.service - login with username: lbiton
+1/27/2022, 11:05:05 AM - INFO - Req!!!
+1/27/2022, 11:05:05 AM - INFO - Req from: liat biton
+1/27/2022, 11:05:05 AM - DEBUG - auth.service - login with username: lbiton
+1/27/2022, 11:05:37 AM - INFO - Req!!!
+1/27/2022, 11:05:37 AM - INFO - Req from: liat biton
+1/27/2022, 11:05:45 AM - DEBUG - auth.service - login with username: user2
+1/27/2022, 11:07:22 AM - DEBUG - auth.service - login with username: user2
+1/27/2022, 11:08:06 AM - INFO - Req!!!
+1/27/2022, 11:08:06 AM - INFO - Req from: User 2
+1/27/2022, 11:08:14 AM - DEBUG - auth.service - login with username: user2
+1/27/2022, 11:08:19 AM - INFO - Req!!!
+1/27/2022, 11:08:19 AM - INFO - Req from: User 2
+1/27/2022, 11:08:21 AM - INFO - Req!!!
+1/27/2022, 11:08:21 AM - INFO - Req from: User 2
+1/27/2022, 11:11:47 AM - INFO - Req!!!
+1/27/2022, 11:11:47 AM - INFO - Req from: User 2
+1/27/2022, 11:11:53 AM - DEBUG - auth.service - login with username: user2
+1/27/2022, 11:12:11 AM - INFO - Req!!!
+1/27/2022, 11:13:28 AM - INFO - Req!!!
+1/27/2022, 11:13:31 AM - INFO - Req!!!
+1/27/2022, 11:13:37 AM - DEBUG - auth.service - login with username: user2
+1/27/2022, 11:14:36 AM - INFO - Req!!!
+1/27/2022, 11:14:40 AM - INFO - Req!!!
+1/27/2022, 11:14:41 AM - INFO - Req!!!
+1/27/2022, 11:14:46 AM - INFO - Req!!!
+1/27/2022, 11:14:52 AM - DEBUG - auth.service - login with username: user2
+1/27/2022, 11:15:24 AM - INFO - Req!!!
+1/27/2022, 11:15:30 AM - DEBUG - auth.service - login with username: user2
+1/27/2022, 11:15:36 AM - INFO - Req!!!
+1/27/2022, 11:26:07 AM - INFO - Req!!!
+1/27/2022, 11:30:25 AM - INFO - Req!!!
+1/27/2022, 11:30:30 AM - INFO - Req!!!
+1/27/2022, 11:37:52 AM - INFO - Req!!!
+1/27/2022, 11:38:44 AM - INFO - Req!!!
+1/27/2022, 11:41:39 AM - INFO - Req!!!
+1/27/2022, 11:43:16 AM - INFO - Req!!!
+1/27/2022, 11:50:23 AM - INFO - Req!!!

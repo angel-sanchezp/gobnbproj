@@ -20,11 +20,12 @@ export class StayReserve extends React.Component {
         isModalShown: false,
         cmp: null,
         stay: null,
+        gTotalPrice:0,
         order: {
             hostId: this.props.stay.host._id,
             createdAt: new Date(),
-            buyer_fullname: userService.getLoggedinUser().fullname,
-            buyerId: userService.getLoggedinUser()._id,
+            // buyer_fullname: userService.getLoggedinUser().fullname,
+            // buyerId: userService.getLoggedinUser()._id,
             totalPrice: '',
             startDate: '',
             endDate: '',
@@ -59,6 +60,7 @@ export class StayReserve extends React.Component {
 
     }
 
+   
 
     getInputValue = (date) => {
         if (!date) { return '' }
@@ -116,12 +118,16 @@ export class StayReserve extends React.Component {
         const date2 = moment(date[1])
         const diffDays = date2.diff(date1, 'days')
 
+        let {gTotalPrice} = this.state
         var { order } = this.state
+        var price = +this.state.order.stay_price;
         order.totalPrice = diffDays * order.stay_price
+        gTotalPrice = diffDays * price
         this.setState({ order });
-
-
+        this.setState(pre => ({...pre, gTotalPrice: gTotalPrice}))
     }
+
+    
 
 
 
@@ -157,7 +163,7 @@ export class StayReserve extends React.Component {
 
 
     render() {
-
+        console.log(this.state.gTotalPrice)
         const { reviews } = this.props.stay;
         const { order } = this.state.order;
         let ReviewsAmount = (reviews.length === 1) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
@@ -167,14 +173,13 @@ export class StayReserve extends React.Component {
         // console.log(formattedDateIn)
         const formattedDateOut = this.getInputValue(this.props.filterBy.dateOut)
         // console.log(formattedDateOut)
-
-  
-
-
+        
+        
+        
         const { isModalShown, cmp } = this.state
         const { price, _id, name } = this.props.stay;
-        console.log(order)
-        // const nights = price/ order.totalPrice;
+        const total = this.state.gTotalPrice;
+        const night = total / price;
 
         return (
             <section className="reserve-container">
@@ -246,10 +251,8 @@ export class StayReserve extends React.Component {
                         <div className="order-preview hidden">
                             <small>You won't be charged yet</small>
                             <div>
-                                <span>price X nights</span>
-                                <span>Total</span>
-                                {/* <span>${price} X {nights} nights</span> */}
-                                {/* <span>${order.totalPrice}</span> */}
+                                <span>${price} X {night} nights</span>
+                                <span>${total}</span>
                             </div>
                             <div>
                                 <span>Service fee</span>
@@ -258,8 +261,7 @@ export class StayReserve extends React.Component {
                             <hr />
                             <div>
                                 <span>Total</span>
-                                <span>Price</span>
-                                {/* <span>${order.totalPrice}</span> */}
+                                <span>${total}</span>
                             </div>
                         </div>
                         {isModalShown && <div className="dynamic-modal">
