@@ -31,7 +31,7 @@ class _HomePage extends React.Component {
   componentDidMount() {
     window.addEventListener("scroll", this.listenScrollEvent);
     this.props.changeHeaderClass(this.state.class);
-    console.log(this.props.user);
+    // console.log(this.props.user);
     this.props.loadStays();
     this.loggedInUser();
   }
@@ -50,7 +50,7 @@ class _HomePage extends React.Component {
   }
 
   loggedInUser = () => {
-    console.log('hi')
+    // console.log('hi')
     // let user = userService.getLoggedinUser();
     if (!this.props.user){
       const credentials = {
@@ -59,7 +59,7 @@ class _HomePage extends React.Component {
         imgUrl : "https://scontent.fsdv2-1.fna.fbcdn.net/v/t1.18169-9/545952_2328785314693_1307571669_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=174925&_nc_ohc=R467Q15qJhsAX9woJl9&_nc_ht=scontent.fsdv2-1.fna&oh=00_AT9sCkdbrBSBM50G04h6BpayTHbadbHVrFaC00vTb4lr_Q&oe=62176821"
       };
       this.props.login(credentials)
-      console.log('login')
+      // console.log('login')
     }else{
       return
     }
@@ -84,14 +84,14 @@ class _HomePage extends React.Component {
   onSetLocation = (city) => {
     const { filterBy } = this.state;
     filterBy.city = city;
-    console.log(this.state.filterBy);
+    // console.log(this.state.filterBy);
     this.setState({ filterBy });
     this.onSetFilter();
   };
 
   onSetFilter = () => {
     const { filterBy } = this.state;
-    console.log(filterBy);
+    // console.log(filterBy);
     this.props.setFilter(filterBy);
     setTimeout(() => {
       this.props.history.push(`/explore?location=${filterBy.city}`);

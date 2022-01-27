@@ -900,6 +900,98 @@ const gStays = [
         ],
         "likedByUsers": ["mini-user"],
         "isPopular": "false"
+    },
+    {
+        "_id": "s0016",
+        "name": "Yposkafo Jacuzzi House",
+        "type": "House",
+        "imgUrls": [
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1643263699/Airbnb%20clone/dc5ffc77-c7b5-4b37-8806-20b77cbc42e1_glbuc0.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1643263700/Airbnb%20clone/7e665deb-dd01-4503-b37a-4a524c47239a_nvj905.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1643263699/Airbnb%20clone/872ecba3-cda6-489a-aa20-beb9cbf0d048_pmylwm.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1643263699/Airbnb%20clone/9ac0452f-ecb5-48e0-948c-04f52e693527_rwhjik.jpg",
+            "https://res.cloudinary.com/kitsunex3/image/upload/v1643263699/Airbnb%20clone/8a249e43-5e01-4910-bb99-9d62bba1696d_hzhm2o.jpg"
+        ],
+        "price": 203,
+        "summery": "Tucked in the Caldera cliffs of Santorini, Yposkafo is situated in the village of Oia. Renovated in 2016, with a unique indoor - outdoor Jacuzzi, endless horizon and view of the Aegean Sea, this is the ideal choice for couples.",
+        "capacity": 2,
+        "bedrooms": 1,
+        "beds": 3,
+        "bathrooms": 1,
+        "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1643263699/Airbnb%20clone/e4df20ff-4e30-4a8e-8eed-b1724458baac_n2ocga.jpg"],
+        "amenities": ["Kitchen", "Parking", "TV", "Balcony", "Wifi", "Bath", "Air conditioning","Refrigerator", "Stove"],
+        "host": {
+            "_id": "h0015",
+            "fullname": "Veluvana",
+            "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/18_na5npr.jpg"
+        },
+        "location": {
+            "country": "Greece",
+            "countryCode": "GR",
+            "city": "Santorini",
+            "address": "Oia, Egeo Freece",
+            "lat": 36.461571,
+            "lng": 25.377907
+        },
+        "reviews": [
+            {
+                "id": "r0015",
+                "created": Date.now(),
+                "txt": "Wonderful place with an amazing view. Comfortable, romantic, and beautiful. Great staff as well. Thanks for the amazing stay!",
+                "rate": 5,
+                "by": {
+                    "_id": "u0015",
+                    "fullname": "Ryan",
+                    "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/15_liaeqo.jpg"
+                }
+            },
+            {
+                "id": "r00151",
+                "created": Date.now(),
+                "txt": "I enjoyed everything about this Bamboo House! Perfect 1-2 night stay connecting with nature.",
+                "rate": 4.5,
+                "by": {
+                    "_id": "u00151",
+                    "fullname": "Katya",
+                    "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/12_zmmmfq.jpg"
+                }
+            },
+            {
+                "id": "r00152",
+                "created": Date.now(),
+                "txt": "Will stay again",
+                "rate": 3.5,
+                "by": {
+                    "_id": "u00152",
+                    "fullname": "Galina",
+                    "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/10_wd9gc9.jpg"
+                }
+            },
+            {
+                "id": "r00153",
+                "created": Date.now(),
+                "txt": "In the middle of nowhere",
+                "rate": 3.5,
+                "by": {
+                    "_id": "u00153",
+                    "fullname": "Michelle",
+                    "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922845/Airbnb%20clone/Users/4_tkbgjo.jpg"
+                }
+            },
+            {
+                "id": "r00154",
+                "created": 1616502526000,
+                "txt": "Too pricey!",
+                "rate": 3.5,
+                "by": {
+                    "_id": "u00154",
+                    "fullname": "Josh",
+                    "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/13_fsg2vd.jpg"
+                }
+            }
+        ],
+        "likedByUsers": ["mini-user"],
+        "isPopular": "false"
     }
 ]
 
@@ -918,17 +1010,17 @@ function _createStays() {
 }
 
 async function query(filterBy) {
-    console.log('filterby in service', filterBy)
+    // console.log('filterby in service', filterBy)
     const stays = await storageService.query(STORAGE_KEY)
 
     if(filterBy.sortBy){
         const sorted= _sortBy(filterBy.sortBy,stays)
-        console.log('sorted',sorted)
+        // console.log('sorted',sorted)
         return sorted
     }
 
     const filteredStays = _getFilteredStays(stays, filterBy)
-    console.log('filteredStays in service', filteredStays)
+    // console.log('filteredStays in service', filteredStays)
 
     return filteredStays
 }
@@ -940,7 +1032,7 @@ async function query(filterBy) {
 
 
 function _getFilteredStays(stays, filterBy) {
-    console.log(filterBy)
+    // console.log(filterBy)
     if (filterBy.location) {
         let { location } = filterBy
         // console.log('location in filtereed stays',location)
@@ -966,7 +1058,7 @@ function _getFilteredStays(stays, filterBy) {
 
             return !isNotAvailable
         });
-        console.log(availables)
+        // console.log(availables)
         return availables
     } else if (filterBy.adults && filterBy.children) {
         let { adults } = filterBy
@@ -982,9 +1074,9 @@ function _getFilteredStays(stays, filterBy) {
     } else if (filterBy.amenities) {
         const allAmenities = stays.filter((stay) => {
             return filterBy.amenities.every(amenity => {
-                console.log('amenities', amenity)
+                // console.log('amenities', amenity)
                 return stay.amenities.some(a => {
-                    console.log('a', a)
+                    // console.log('a', a)
                     return a.toLowerCase() === amenity.toLowerCase()
                 })
             })
@@ -1012,7 +1104,7 @@ function _getFilteredStays(stays, filterBy) {
  async function _sortBy(sortBy , stays) {
 
     if (sortBy === 'price') {
-        console.log(sortBy)
+        // console.log(sortBy)
         stays.sort(function (a, b) {
             return a.price - b.price;
         });
@@ -1020,7 +1112,7 @@ function _getFilteredStays(stays, filterBy) {
 
 
     } else if (sortBy === 'type') {
-        console.log(sortBy)
+        // console.log(sortBy)
         stays.sort(function (a, b) {
             var fromA = a.from.toUpperCase(); // ignore upper and lowercase
             var fromB = b.from.toUpperCase(); // ignore upper and lowercase

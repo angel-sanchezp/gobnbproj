@@ -1,7 +1,6 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { socketService } from '../services/socket.service.js'
 import _ from 'lodash'
 
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
@@ -15,8 +14,6 @@ const CLASS = 'general-header';
 
 class _Trips extends Component {
   componentDidMount() {
-    // socketService.off('confirm order');
-    // socketService.on('confirm order', this.setOrder());
     this.props.changeHeaderClass(CLASS)
   }
 
@@ -25,15 +22,11 @@ class _Trips extends Component {
     this.props.changeHeaderClass(CLASS)
   }
 
-  // setOrder = () => {
-  //   const { trips } = this.props
-  //   if (trips.status === 'pending') trips.status = 'Confirmed'
-  //   this.setState({ trips })
-  // }
+
 
   render() {
     const { trips } = this.props
-    console.log('trips', trips)
+    // console.log('trips', trips)
     return (
       <section>
 

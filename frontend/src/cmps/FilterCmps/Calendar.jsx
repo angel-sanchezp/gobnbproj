@@ -12,9 +12,9 @@ function getWeeksAfter(date,amount){
 
 
 export function Calendar({onSetDate , filterBy}) {
-    console.log('filter by in deteils',filterBy)
+    // console.log('filter by in deteils',filterBy)
     const [value, setValue] = useState([parseInt(filterBy.dateIn), parseInt(filterBy.dateOut)]);
-    console.log(value)
+    // console.log(value)
 
     useEffect(() => {
         onSetDate(value); // using camelCase for variable name is recommended.
@@ -27,7 +27,7 @@ export function Calendar({onSetDate , filterBy}) {
             value={value}
             maxDate={getWeeksAfter(value[0],4)}
             onChange={(newValue) => {
-                console.log('new value ', newValue)
+                // console.log('new value ', newValue)
                 setValue(newValue)
             }}
             renderInput={(startProps, endProps) => (

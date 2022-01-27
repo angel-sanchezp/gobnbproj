@@ -8,7 +8,7 @@ import routes from './routes.js'
 export class RootCmp extends  React.Component {
     render() {
         return (
-            <div >
+            <div>
                 <div className="dark-screen hidden"></div>
                 <AppHeader />
                 <main>

@@ -6,9 +6,12 @@ import { withRouter } from "react-router-dom"
 import { Trips } from '../../pages/Trips'
 
 class _OrderPreview extends Component {
+
+  
     render(){
         const { 
             order: {
+                _id,
                 stay_id,
                 stayDetails: {
                     imgUrls: [firstImageUrl]
@@ -18,6 +21,9 @@ class _OrderPreview extends Component {
                 buyer_fullname
             }
         } = this.props;
+
+
+
 
         return(
             <li className="trip-card" key={stay_id}>
@@ -41,7 +47,7 @@ class _OrderPreview extends Component {
                             <div className="txt">Order status: {status}</div>
                             <div className="txt">Orded by {buyer_fullname}</div>
                         </div>
-                        <button className="btn">Approve</button>
+                        <button className="btn" onClick={()=>this.props.setConfirm(_id)}>Approve</button>
                     </div>
                 </div>
             </li>

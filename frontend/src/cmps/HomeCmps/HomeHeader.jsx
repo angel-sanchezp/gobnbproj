@@ -45,7 +45,7 @@ class _HomeHeader extends Component {
     }
 
     render() {
-        console.log('render', this.props.class)
+        // console.log('render', this.props.class)
         return (
             <section className='main-nav'>
                 <div className='logo'>

@@ -5,7 +5,9 @@ import _ from 'lodash'
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 import { OrderPreview } from '../cmps/OrderCmps/OrderPreview.jsx'
 import { changeHeaderClass } from '../store/stay/stay.actions.js'
-import { loadHostOrders } from '../store/order/order.actions.js'
+import { loadHostOrders, updateOrder } from '../store/order/order.actions.js'
+import { socketService } from '../services/socket.service.js'
+
 
 const CLASS = 'general-header';
 
@@ -15,10 +17,15 @@ class _Dashboard extends Component {
         this.props.changeHeaderClass(CLASS)
     }
 
+    setConfirm=(orderId)=>{
+        socketService.emit('confirm order',orderId);
+        this.props.updateOrder(orderId)
+    }
+
     render() {
         const { orders = [] } = this.props
         const sellerName = _.get(orders, "[0].hostDetails.fullname", "")
-        console.log(orders)
+        // console.log(orders)
         return (
             <section>
                 <section className="order-page">
@@ -30,7 +37,7 @@ class _Dashboard extends Component {
                         </section>
                         :
                         <ul className="trips-container">
-                            {orders.map(order => (<OrderPreview key={order._id} order={order} />))}
+                            {orders.map(order => (<OrderPreview key={order._id} order={order} setConfirm={this.setConfirm}/>))}
                         </ul>
                     }
                 </section>
@@ -41,7 +48,7 @@ class _Dashboard extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state)
+    // console.log(state)
     return {
         stays: state.stayModule.stays,
         filterBy: state.stayModule.filterBy,
@@ -52,7 +59,8 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = {
     loadHostOrders,
-    changeHeaderClass
+    changeHeaderClass,
+    updateOrder
 }
 
 export const Dashboard = connect(mapStateToProps, mapDispatchToProps)(_Dashboard)

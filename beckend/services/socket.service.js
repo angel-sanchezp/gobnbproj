@@ -17,7 +17,7 @@ function connectSockets(http, session) {
         })
         socket.on('confirm order', order => {
             console.log(' confirm order in sockets beckend',order)
-            emitToUser('confirm order', order , order.buyerId)
+            socket.to(order.buyer_id).emit('confirm order',order)
 
 
         })
@@ -27,7 +27,8 @@ function connectSockets(http, session) {
             // gIo.emit('chat addMsg', msg)
             // emits only to sockets in the same room
             // gIo.to(socket.myTopic).emit('new order', order)
-            emitToUser('new order', order , order.hostId)
+            // emitToUser('new order', order , order.hostId)
+            socket.to(order.hostId).emit('new order',order)
         })
         socket.on('user-watch', userId => {
             socket.join('watching:' + userId)
@@ -35,6 +36,7 @@ function connectSockets(http, session) {
         socket.on('set-user-socket', userId => {
             logger.debug(`Setting (${socket.id}) socket.userId = ${userId}`)
             socket.userId = userId
+            socket.join(userId)
         })
         socket.on('unset-user-socket', () => {
             delete socket.userId

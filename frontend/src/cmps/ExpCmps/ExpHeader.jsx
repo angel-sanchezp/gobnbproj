@@ -34,7 +34,7 @@ class _ExpHeader extends Component {
     }
 
     openModal = () => {
-        console.log('openModal')
+        // console.log('openModal')
         this.setState(prevState=>({ 
             ...prevState, 
             enterInputsMode: true

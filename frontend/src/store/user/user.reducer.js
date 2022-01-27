@@ -3,6 +3,7 @@ import { userService } from "../../services/user.services";
 const loggedInUser = userService.getLoggedinUser();
 const initialState = {
   user: loggedInUser ? loggedInUser : null,
+  
 };
 
 // add update user

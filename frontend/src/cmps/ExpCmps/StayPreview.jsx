@@ -14,10 +14,11 @@ class _StayPreview extends Component {
 
     render() {
         const { stay } = this.props
+        const autoplay=false
         return (
             <li className="explore-card-stay card" key={stay._id}>
                 <div className="slide-container">
-                    <Slide>
+                    <Slide autoplay={autoplay}>
                         {stay.imgUrls.map((img, index) => (
                             <div className="each-slide" key={index}>
                                 {/* <div style={{ 'backgroundImage': `url(${img})` }}> */}

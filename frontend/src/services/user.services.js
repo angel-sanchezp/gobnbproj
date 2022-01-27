@@ -62,7 +62,7 @@ async function update(user) {
 
 
 async function login(userCred) {
-    console.log(userCred)
+    // console.log(userCred)
     // return storageService.query(STORAGE_KEY).then(users => {
     //     const user = users.find(user => user.username === credentials.username &&
     //         user.password === credentials.password)
@@ -71,7 +71,7 @@ async function login(userCred) {
     if (user) return _saveLocalUser(user)
 }
 async function signup(userInfo) {
-    console.log('sign up in user service', userInfo)
+    // console.log('sign up in user service', userInfo)
     const user = await httpService.post('auth/signup', userInfo)
     // socketService.emit('set-user-socket', userInfo._id);
 
@@ -94,7 +94,7 @@ async function logout() {
 }
 
 function _saveLocalUser(user) {
-    console.log('save to session in service', user)
+    // console.log('save to session in service', user)
     sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
     return user
 }

@@ -7,7 +7,7 @@ export  function loadStays(predefinedFilterBy) {
         console.log(filterBy)
         stayService.query(filterBy)
             .then(stays => {
-                console.log('stays from DB:', stays)
+                // console.log('stays from DB:', stays)
                 dispatch({
                     type: 'SET_STAYS',stays
                 })
@@ -22,7 +22,7 @@ export function onRemoveStay(stayId) {
     return (dispatch, getState) => {
         stayService.remove(stayId)
             .then(() => {
-                console.log('Deleted Succesfully!');
+                // console.log('Deleted Succesfully!');
                 dispatch({
                     type: 'REMOVE_STAY',
                     stayId
@@ -39,7 +39,7 @@ export function onAddStay() {
         const stay = stayService.getEmptyStay();
         stayService.save(stay)
             .then(savedStay => {
-                console.log('Added Stay', savedStay);
+                // console.log('Added Stay', savedStay);
                 dispatch({
                     type: 'ADD_STAY',
                     stay: savedStay
@@ -52,7 +52,7 @@ export function onAddStay() {
 }
 
 export function setFilter(filterBy) {
-    console.log('actions',filterBy)
+    // console.log('actions',filterBy)
     return (dispatch) => {
         const action = { type: 'SET_FILTER', filterBy };
         dispatch(action);

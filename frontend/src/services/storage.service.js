@@ -15,7 +15,7 @@ function loadFromStorage(key) {
 
 function query(entityType, delay = 500) {
     var entities = JSON.parse(localStorage.getItem(entityType)) || []
-    console.log(' entity in query ',entities)
+    // console.log(' entity in query ',entities)
 
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
