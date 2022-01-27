@@ -53,7 +53,7 @@ export class StayReserve extends React.Component {
         let date=[]
         date.push(parseInt(this.props.filterBy.dateIn))
         date.push(parseInt(this.props.filterBy.dateOut))
-        // console.log('date',date)
+        console.log('date',date)
         order.totalPrice=this.setTotalPrice(date)
         this.setState({ order });
         this.setState({ stay: { ...stay } })
@@ -113,7 +113,7 @@ export class StayReserve extends React.Component {
     }
 
     setTotalPrice = (date) => {
-        // console.log(date)
+        console.log(date)
         const date1 = moment(date[0])
         const date2 = moment(date[1])
         const diffDays = date2.diff(date1, 'days')
@@ -158,26 +158,28 @@ export class StayReserve extends React.Component {
         document.querySelector(".btn1").classList.remove("hidden")
     }
 
-    handleChange = (ev) => {
-        const field = ev.target.name;
-        const value = ev.target.value;
-        console.log(field, value)
-        this.setState({
-          date: { ...this.state.date, [field]: value },
-        });
-      };
+    get formattedGuests() {
+        const { kids = 0, adults = 1 } = this.state.order
+        let text = `${adults} adult${adults > 1 ? 's' : ''}`
+        if (kids) {
+            text += `, ${kids} child${kids > 1 ? 's' : ''}`
+        }
+        return text;
+    }
+
+
 
 
 
     render() {
         const { reviews } = this.props.stay;
-        const { order } = this.state.order;
+        const { order } = this.state;
         let ReviewsAmount = (reviews.length === 1) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
         if (reviews.length === 0) ReviewsAmount = `No reviews`;
 
-        const formattedDateIn = this.getInputValue(this.props.filterBy.dateIn)
+        const formattedDateIn = this.getInputValue(order.startDate)
         // console.log(formattedDateIn)
-        const formattedDateOut = this.getInputValue(this.props.filterBy.dateOut)
+        const formattedDateOut = this.getInputValue(order.endDate)
         // console.log(formattedDateOut)
         
         
@@ -251,8 +253,7 @@ export class StayReserve extends React.Component {
                                                     placeholder={`1 guest`}
                                                     readOnly
                                                     onClick={() => this.OpenModal('guests')}
-                                                    value={this.props.filterBy.adults} 
-                                                    onChange={this.onHandleChange}/></span>
+                                                    value={this.formattedGuests} readOnly /></span>
                                         </div>
                                     </div>
                                 </div>

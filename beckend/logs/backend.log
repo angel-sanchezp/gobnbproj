@@ -1,4 +1,227 @@
 <<<<<<< HEAD
+1/27/2022, 4:34:43 AM - INFO - Server is running on port: 3030
+1/27/2022, 4:36:31 AM - INFO - Req!!!
+1/27/2022, 4:36:31 AM - DEBUG - auth.service - login with username: lbiton
+1/27/2022, 4:36:36 AM - INFO - Req!!!
+1/27/2022, 4:37:00 AM - DEBUG - Setting (i2eKhD374TQnP_hKAAAF) socket.userId = 61f1a100b3f0d3ee18481142
+1/27/2022, 4:37:05 AM - INFO - Req!!!
+1/27/2022, 4:37:37 AM - INFO - Req!!!
+1/27/2022, 4:37:53 AM - INFO - Req!!!
+1/27/2022, 4:47:15 AM - INFO - Req!!!
+1/27/2022, 4:50:15 AM - INFO - Req!!!
+27.1.2022, 9:44:20 - INFO - Server is running on port: 3030
+27.1.2022, 9:44:24 - INFO - Req!!!
+27.1.2022, 9:45:01 - INFO - Req!!!
+27.1.2022, 9:45:06 - INFO - Req!!!
+27.1.2022, 9:45:12 - INFO - Req!!!
+27.1.2022, 9:48:05 - INFO - Req!!!
+27.1.2022, 9:48:11 - INFO - Req!!!
+27.1.2022, 9:48:26 - INFO - Req!!!
+27.1.2022, 10:19:07 - INFO - Req!!!
+27.1.2022, 10:22:20 - INFO - Req!!!
+27.1.2022, 10:29:59 - INFO - Req!!!
+27.1.2022, 10:52:34 - INFO - Req!!!
+27.1.2022, 10:57:33 - INFO - Req!!!
+27.1.2022, 11:11:47 - INFO - Req!!!
+27.1.2022, 11:14:07 - INFO - Req!!!
+27.1.2022, 11:14:16 - INFO - Req!!!
+27.1.2022, 11:19:31 - INFO - Req!!!
+27.1.2022, 11:19:54 - INFO - Req!!!
+27.1.2022, 11:23:09 - INFO - Req!!!
+27.1.2022, 11:23:09 - DEBUG - auth.service - login with username: lbiton
+27.1.2022, 11:23:10 - DEBUG - Setting (N1yKr-7vQdoe2pjmAAAR) socket.userId = 61f1a100b3f0d3ee18481142
+27.1.2022, 11:31:01 - DEBUG - auth.service - login with username: angel
+27.1.2022, 11:31:02 - ERROR - Failed to Login Invalid username or password
+27.1.2022, 11:31:12 - DEBUG - auth.service - login with username: angel
+27.1.2022, 11:31:12 - DEBUG - Setting (N1yKr-7vQdoe2pjmAAAR) socket.userId = 61f065edc8e02896300df6d9
+27.1.2022, 11:31:25 - INFO - Req!!!
+27.1.2022, 11:31:25 - INFO - Req from: angelica
+27.1.2022, 11:34:29 - DEBUG - auth.service - login with username: lbiton
+27.1.2022, 11:34:29 - INFO - Req!!!
+27.1.2022, 11:34:29 - DEBUG - Setting (YefKsPcZOwblKlvHAAAT) socket.userId = 61f1a100b3f0d3ee18481142
+27.1.2022, 11:36:51 - INFO - Req!!!
+27.1.2022, 11:36:51 - DEBUG - Emiting to user socket: 61efd48b613a6c32359dc1b6
+27.1.2022, 11:39:47 - INFO - Req!!!
+27.1.2022, 11:39:47 - DEBUG - Emiting to user socket: 61f1a100b3f0d3ee18481142
+27.1.2022, 11:45:40 - INFO - Req!!!
+27.1.2022, 11:46:35 - INFO - Req!!!
+27.1.2022, 11:46:35 - DEBUG - Emiting to user socket: 61f1a100b3f0d3ee18481142
+27.1.2022, 11:47:28 - INFO - Req!!!
+27.1.2022, 11:47:31 - INFO - Req!!!
+27.1.2022, 12:06:11 - INFO - Req!!!
+27.1.2022, 12:08:36 - INFO - Req!!!
+27.1.2022, 12:08:36 - INFO - Req!!!
+27.1.2022, 12:23:46 - INFO - Req!!!
+27.1.2022, 12:23:46 - INFO - Req!!!
+27.1.2022, 12:24:00 - INFO - Req!!!
+27.1.2022, 12:24:00 - INFO - Req!!!
+27.1.2022, 12:27:01 - INFO - Req!!!
+27.1.2022, 12:27:24 - INFO - Req!!!
+27.1.2022, 12:27:24 - DEBUG - Emiting to user socket: 61f1a100b3f0d3ee18481142
+27.1.2022, 12:27:55 - INFO - Req!!!
+27.1.2022, 12:28:02 - INFO - Req!!!
+27.1.2022, 12:28:09 - INFO - Req!!!
+27.1.2022, 12:29:26 - INFO - Server is running on port: 3030
+27.1.2022, 12:30:30 - INFO - Server is running on port: 3030
+27.1.2022, 12:32:01 - INFO - Server is running on port: 3030
+27.1.2022, 12:38:12 - INFO - Req!!!
+27.1.2022, 12:44:42 - INFO - Req!!!
+27.1.2022, 12:46:19 - INFO - Req!!!
+27.1.2022, 12:46:25 - INFO - Req!!!
+27.1.2022, 12:46:39 - INFO - Req!!!
+27.1.2022, 13:35:39 - INFO - Req!!!
+27.1.2022, 13:36:27 - INFO - Req!!!
+27.1.2022, 13:36:49 - INFO - Req!!!
+27.1.2022, 13:37:01 - INFO - Req!!!
+27.1.2022, 13:37:27 - INFO - Req!!!
+27.1.2022, 13:40:25 - INFO - Req!!!
+27.1.2022, 13:41:13 - INFO - Req!!!
+27.1.2022, 13:48:48 - INFO - Req!!!
+27.1.2022, 13:49:32 - INFO - Req!!!
+27.1.2022, 13:49:32 - DEBUG - auth.service - login with username: lbiton
+27.1.2022, 13:49:37 - DEBUG - Setting (ea1IUlhbiHmO0CMSAAAT) socket.userId = 61f1a100b3f0d3ee18481142
+27.1.2022, 13:49:46 - INFO - Req!!!
+27.1.2022, 13:49:46 - DEBUG - auth.service - login with username: lbiton
+27.1.2022, 13:49:46 - DEBUG - Setting (TDlv_IsIo8uAhCCRAAAV) socket.userId = 61f1a100b3f0d3ee18481142
+27.1.2022, 13:49:52 - INFO - Req!!!
+27.1.2022, 13:50:04 - DEBUG - auth.service - login with username: lbiton
+27.1.2022, 13:50:04 - INFO - Req!!!
+27.1.2022, 13:50:04 - DEBUG - Setting (ZT8UfXqw3-NO1pQUAAAZ) socket.userId = 61f1a100b3f0d3ee18481142
+27.1.2022, 13:50:19 - INFO - Req!!!
+27.1.2022, 13:51:15 - INFO - Req!!!
+27.1.2022, 13:51:15 - DEBUG - auth.service - login with username: lbiton
+27.1.2022, 13:51:15 - DEBUG - Setting (zbqsY9jetOPn-B_qAAAd) socket.userId = 61f1a100b3f0d3ee18481142
+27.1.2022, 13:55:06 - DEBUG - auth.service - login with username: angel
+27.1.2022, 13:55:06 - DEBUG - Setting (zbqsY9jetOPn-B_qAAAd) socket.userId = 61f065edc8e02896300df6d9
+27.1.2022, 13:56:16 - INFO - Req!!!
+27.1.2022, 13:56:16 - INFO - Req from: angelica
+27.1.2022, 13:56:20 - INFO - Req!!!
+27.1.2022, 13:56:20 - INFO - Req from: angelica
+27.1.2022, 13:56:36 - INFO - Req!!!
+27.1.2022, 13:56:36 - INFO - Req from: angelica
+27.1.2022, 13:57:04 - INFO - Req!!!
+27.1.2022, 13:57:04 - INFO - Req from: angelica
+27.1.2022, 13:57:43 - INFO - Req!!!
+27.1.2022, 13:57:43 - INFO - Req from: angelica
+27.1.2022, 13:58:38 - INFO - Req!!!
+27.1.2022, 13:58:38 - INFO - Req from: angelica
+27.1.2022, 14:04:10 - INFO - Req!!!
+27.1.2022, 14:04:10 - INFO - Req from: angelica
+27.1.2022, 14:04:42 - INFO - Req!!!
+27.1.2022, 14:04:42 - INFO - Req from: angelica
+27.1.2022, 14:09:03 - INFO - Req!!!
+27.1.2022, 14:09:03 - INFO - Req from: angelica
+27.1.2022, 14:14:27 - INFO - Req!!!
+27.1.2022, 14:14:27 - INFO - Req from: angelica
+27.1.2022, 14:14:45 - INFO - Req!!!
+27.1.2022, 14:14:45 - INFO - Req from: angelica
+27.1.2022, 14:14:54 - INFO - Req!!!
+27.1.2022, 14:14:54 - INFO - Req from: angelica
+27.1.2022, 14:15:47 - INFO - Req!!!
+27.1.2022, 14:15:47 - INFO - Req from: angelica
+27.1.2022, 14:16:01 - INFO - Req!!!
+27.1.2022, 14:16:01 - INFO - Req from: angelica
+27.1.2022, 14:16:12 - INFO - Req!!!
+27.1.2022, 14:16:12 - INFO - Req from: angelica
+27.1.2022, 14:16:25 - INFO - Req!!!
+27.1.2022, 14:16:25 - INFO - Req from: angelica
+27.1.2022, 14:17:22 - INFO - Req!!!
+27.1.2022, 14:17:22 - INFO - Req from: angelica
+27.1.2022, 14:17:30 - INFO - Req!!!
+27.1.2022, 14:17:30 - INFO - Req from: angelica
+27.1.2022, 14:28:01 - INFO - Req!!!
+27.1.2022, 14:28:01 - INFO - Req from: angelica
+27.1.2022, 14:28:07 - INFO - Req!!!
+27.1.2022, 14:28:07 - INFO - Req from: angelica
+27.1.2022, 14:28:07 - INFO - Req!!!
+27.1.2022, 14:28:07 - INFO - Req from: angelica
+27.1.2022, 14:28:16 - INFO - Req!!!
+27.1.2022, 14:28:16 - INFO - Req from: angelica
+27.1.2022, 14:28:16 - INFO - Req!!!
+27.1.2022, 14:28:16 - INFO - Req from: angelica
+27.1.2022, 14:28:34 - INFO - Req!!!
+27.1.2022, 14:28:34 - INFO - Req from: angelica
+27.1.2022, 14:28:41 - INFO - Req!!!
+27.1.2022, 14:28:41 - INFO - Req from: angelica
+27.1.2022, 14:29:35 - INFO - Req!!!
+27.1.2022, 14:29:35 - INFO - Req from: angelica
+27.1.2022, 14:29:35 - INFO - Req!!!
+27.1.2022, 14:29:35 - INFO - Req from: angelica
+27.1.2022, 14:43:50 - INFO - Req!!!
+27.1.2022, 14:43:50 - INFO - Req from: angelica
+27.1.2022, 14:43:58 - INFO - Req!!!
+27.1.2022, 14:43:58 - INFO - Req from: angelica
+27.1.2022, 14:44:21 - INFO - Req!!!
+27.1.2022, 14:44:21 - INFO - Req from: angelica
+27.1.2022, 14:44:21 - INFO - Req!!!
+27.1.2022, 14:44:21 - INFO - Req from: angelica
+27.1.2022, 14:45:59 - INFO - Req!!!
+27.1.2022, 14:45:59 - INFO - Req from: angelica
+27.1.2022, 14:47:03 - INFO - Req!!!
+27.1.2022, 14:47:03 - INFO - Req from: angelica
+27.1.2022, 14:47:05 - INFO - Req!!!
+27.1.2022, 14:47:05 - INFO - Req from: angelica
+27.1.2022, 14:47:10 - INFO - Req!!!
+27.1.2022, 14:47:10 - INFO - Req from: angelica
+27.1.2022, 14:47:12 - INFO - Req!!!
+27.1.2022, 14:47:12 - INFO - Req from: angelica
+27.1.2022, 14:47:14 - INFO - Req!!!
+27.1.2022, 14:47:14 - INFO - Req from: angelica
+27.1.2022, 14:47:16 - INFO - Req!!!
+27.1.2022, 14:47:16 - INFO - Req from: angelica
+27.1.2022, 14:47:17 - INFO - Req!!!
+27.1.2022, 14:47:17 - INFO - Req from: angelica
+27.1.2022, 14:47:19 - INFO - Req!!!
+27.1.2022, 14:47:19 - INFO - Req from: angelica
+27.1.2022, 14:47:21 - INFO - Req!!!
+27.1.2022, 14:47:21 - INFO - Req from: angelica
+27.1.2022, 14:47:23 - INFO - Req!!!
+27.1.2022, 14:47:23 - INFO - Req from: angelica
+27.1.2022, 14:47:25 - INFO - Req!!!
+27.1.2022, 14:47:25 - INFO - Req from: angelica
+27.1.2022, 14:47:27 - INFO - Req!!!
+27.1.2022, 14:47:27 - INFO - Req from: angelica
+27.1.2022, 14:47:34 - INFO - Req!!!
+27.1.2022, 14:47:34 - INFO - Req from: angelica
+27.1.2022, 14:48:10 - INFO - Req!!!
+27.1.2022, 14:48:10 - INFO - Req from: angelica
+27.1.2022, 14:48:21 - INFO - Req!!!
+27.1.2022, 14:48:21 - INFO - Req from: angelica
+27.1.2022, 14:48:47 - INFO - Req!!!
+27.1.2022, 14:48:47 - INFO - Req from: angelica
+27.1.2022, 15:02:23 - INFO - Req!!!
+27.1.2022, 15:02:23 - INFO - Req from: angelica
+27.1.2022, 15:02:31 - INFO - Req!!!
+27.1.2022, 15:02:31 - INFO - Req from: angelica
+27.1.2022, 15:02:44 - INFO - Req!!!
+27.1.2022, 15:02:44 - INFO - Req from: angelica
+27.1.2022, 15:12:31 - INFO - Server is running on port: 3030
+27.1.2022, 15:12:38 - INFO - Req!!!
+27.1.2022, 15:12:52 - INFO - Req!!!
+27.1.2022, 15:14:28 - INFO - Req!!!
+27.1.2022, 15:28:10 - INFO - Req!!!
+27.1.2022, 15:28:24 - INFO - Req!!!
+27.1.2022, 15:46:35 - INFO - Req!!!
+27.1.2022, 15:46:35 - DEBUG - auth.service - login with username: lbiton
+27.1.2022, 15:46:36 - DEBUG - Setting (7rqUOJeUZ82nge75AAAL) socket.userId = 61f1a100b3f0d3ee18481142
+27.1.2022, 19:00:44 - DEBUG - auth.service - login with username: angel
+27.1.2022, 19:00:46 - DEBUG - Setting (7rqUOJeUZ82nge75AAAL) socket.userId = 61f065edc8e02896300df6d9
+27.1.2022, 19:01:00 - INFO - Req!!!
+27.1.2022, 19:01:00 - INFO - Req from: angelica
+27.1.2022, 19:36:29 - INFO - Req!!!
+27.1.2022, 19:36:29 - INFO - Req from: angelica
+27.1.2022, 19:38:16 - INFO - Req!!!
+27.1.2022, 19:38:16 - INFO - Req from: angelica
+27.1.2022, 19:42:15 - INFO - Req!!!
+27.1.2022, 19:42:15 - INFO - Req from: angelica
+27.1.2022, 19:46:19 - INFO - Req!!!
+27.1.2022, 19:46:19 - INFO - Req from: angelica
+27.1.2022, 19:48:02 - INFO - Req!!!
+27.1.2022, 19:48:02 - INFO - Req from: angelica
+27.1.2022, 19:48:48 - INFO - Req!!!
+27.1.2022, 19:48:48 - INFO - Req from: angelica
+=======
+<<<<<<< HEAD
 1/27/2022, 3:21:15 PM - INFO - Server is running on port: 3030
 1/27/2022, 3:22:33 PM - INFO - Req!!!
 1/27/2022, 3:22:36 PM - INFO - Req!!!
@@ -94,6 +317,7 @@
 1/27/2022, 4:13:41 PM - INFO - Req!!!
 1/27/2022, 4:23:56 PM - DEBUG - auth.service - login with username: lbiton
 1/27/2022, 4:23:56 PM - INFO - Req!!!
+<<<<<<< HEAD
 1/27/2022, 6:27:29 PM - INFO - Req!!!
 1/27/2022, 6:27:29 PM - INFO - Req from: liat biton
 1/27/2022, 6:44:41 PM - INFO - Req!!!
@@ -120,3 +344,15 @@
 1/27/2022, 8:09:26 PM - INFO - Req from: liat biton
 1/27/2022, 8:13:08 PM - INFO - Req!!!
 1/27/2022, 8:13:08 PM - INFO - Req from: liat biton
+=======
+>>>>>>> 460ce3669041debcdd3ad6ba2828795fc8772886
+27.1.2022, 19:52:40 - INFO - Server is running on port: 3030
+>>>>>>> 04f1c6c9f9cfe634995ba28ad951b4ab3b49bf8f
+1/27/2022, 8:33:23 PM - INFO - Req!!!
+1/27/2022, 8:33:23 PM - INFO - Req from: liat biton
+1/27/2022, 8:33:25 PM - INFO - Req!!!
+1/27/2022, 8:33:25 PM - INFO - Req from: liat biton
+1/27/2022, 8:34:14 PM - ERROR - cannot find stays | {"reason":{"type":"ReplicaSetNoPrimary","servers":{},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":"atlas-gssao6-shard-0","maxSetVersion":6,"maxElectionId":"7fffffff0000000000000046","commonWireVersion":9,"logicalSessionTimeoutMinutes":30}}
+1/27/2022, 8:34:14 PM - ERROR - Failed to get stays | {"reason":{"type":"ReplicaSetNoPrimary","servers":{},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":"atlas-gssao6-shard-0","maxSetVersion":6,"maxElectionId":"7fffffff0000000000000046","commonWireVersion":9,"logicalSessionTimeoutMinutes":30}}
+1/27/2022, 9:59:30 PM - INFO - Req!!!
+1/27/2022, 9:59:30 PM - INFO - Req from: liat biton
