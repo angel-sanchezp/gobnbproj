@@ -18,7 +18,6 @@
 27.1.2022, 9:48:26 - INFO - Req!!!
 27.1.2022, 10:19:07 - INFO - Req!!!
 27.1.2022, 10:22:20 - INFO - Req!!!
-<<<<<<< HEAD
 27.1.2022, 10:29:59 - INFO - Req!!!
 27.1.2022, 10:52:34 - INFO - Req!!!
 27.1.2022, 10:57:33 - INFO - Req!!!
@@ -198,7 +197,25 @@
 27.1.2022, 15:12:31 - INFO - Server is running on port: 3030
 27.1.2022, 15:12:38 - INFO - Req!!!
 27.1.2022, 15:12:52 - INFO - Req!!!
-=======
-1/27/2022, 10:34:34 AM - INFO - Server is running on port: 3030
->>>>>>> 2850fa3473f8a7b1ff9bb61f9d4f13f0623747cc
 27.1.2022, 15:14:28 - INFO - Req!!!
+27.1.2022, 15:28:10 - INFO - Req!!!
+27.1.2022, 15:28:24 - INFO - Req!!!
+27.1.2022, 15:46:35 - INFO - Req!!!
+27.1.2022, 15:46:35 - DEBUG - auth.service - login with username: lbiton
+27.1.2022, 15:46:36 - DEBUG - Setting (7rqUOJeUZ82nge75AAAL) socket.userId = 61f1a100b3f0d3ee18481142
+27.1.2022, 19:00:44 - DEBUG - auth.service - login with username: angel
+27.1.2022, 19:00:46 - DEBUG - Setting (7rqUOJeUZ82nge75AAAL) socket.userId = 61f065edc8e02896300df6d9
+27.1.2022, 19:01:00 - INFO - Req!!!
+27.1.2022, 19:01:00 - INFO - Req from: angelica
+27.1.2022, 19:36:29 - INFO - Req!!!
+27.1.2022, 19:36:29 - INFO - Req from: angelica
+27.1.2022, 19:38:16 - INFO - Req!!!
+27.1.2022, 19:38:16 - INFO - Req from: angelica
+27.1.2022, 19:42:15 - INFO - Req!!!
+27.1.2022, 19:42:15 - INFO - Req from: angelica
+27.1.2022, 19:46:19 - INFO - Req!!!
+27.1.2022, 19:46:19 - INFO - Req from: angelica
+27.1.2022, 19:48:02 - INFO - Req!!!
+27.1.2022, 19:48:02 - INFO - Req from: angelica
+27.1.2022, 19:48:48 - INFO - Req!!!
+27.1.2022, 19:48:48 - INFO - Req from: angelica

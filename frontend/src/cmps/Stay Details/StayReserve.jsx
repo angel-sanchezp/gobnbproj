@@ -52,7 +52,7 @@ export class StayReserve extends React.Component {
         let date=[]
         date.push(parseInt(this.props.filterBy.dateIn))
         date.push(parseInt(this.props.filterBy.dateOut))
-        // console.log('date',date)
+        console.log('date',date)
         order.totalPrice=this.setTotalPrice(date)
         this.setState({ order });
         this.setState({ stay: { ...stay } })
@@ -111,13 +111,15 @@ export class StayReserve extends React.Component {
     }
 
     setTotalPrice = (date) => {
-        // console.log(date)
+        console.log(date)
         const date1 = moment(date[0])
         const date2 = moment(date[1])
         const diffDays = date2.diff(date1, 'days')
 
         var { order } = this.state
+        console.log(order)
         order.totalPrice = diffDays * order.stay_price
+        console.log('total price ',order.totalPrice)
         this.setState({ order });
 
 
@@ -152,6 +154,15 @@ export class StayReserve extends React.Component {
         document.querySelector(".btn1").classList.remove("hidden")
     }
 
+    get formattedGuests() {
+        const { kids = 0, adults = 1 } = this.state.order
+        let text = `${adults} adult${adults > 1 ? 's' : ''}`
+        if (kids) {
+            text += `, ${kids} child${kids > 1 ? 's' : ''}`
+        }
+        return text;
+    }
+
 
 
 
@@ -159,23 +170,16 @@ export class StayReserve extends React.Component {
     render() {
 
         const { reviews } = this.props.stay;
-        const { order } = this.state.order;
+        const { order } = this.state;
         let ReviewsAmount = (reviews.length === 1) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
         if (reviews.length === 0) ReviewsAmount = `No reviews`;
 
-        const formattedDateIn = this.getInputValue(this.props.filterBy.dateIn)
+        const formattedDateIn = this.getInputValue(order.startDate)
         // console.log(formattedDateIn)
-        const formattedDateOut = this.getInputValue(this.props.filterBy.dateOut)
+        const formattedDateOut = this.getInputValue(order.endDate)
         // console.log(formattedDateOut)
 
-  
-
-
         const { isModalShown, cmp } = this.state
-        const { price, _id, name } = this.props.stay;
-        console.log(order)
-        // const nights = price/ order.totalPrice;
-
         return (
             <section className="reserve-container">
                 <div className="reserve-position">
@@ -235,7 +239,7 @@ export class StayReserve extends React.Component {
                                                     placeholder={`1 guest`}
                                                     readOnly
                                                     onClick={() => this.OpenModal('guests')}
-                                                    value={this.props.filterBy.adults} /></span>
+                                                    value={this.formattedGuests} readOnly /></span>
                                         </div>
                                     </div>
                                 </div>
@@ -249,7 +253,7 @@ export class StayReserve extends React.Component {
                                 <span>price X nights</span>
                                 <span>Total</span>
                                 {/* <span>${price} X {nights} nights</span> */}
-                                {/* <span>${order.totalPrice}</span> */}
+                                <span>${order.totalPrice}</span>
                             </div>
                             <div>
                                 <span>Service fee</span>
@@ -259,7 +263,7 @@ export class StayReserve extends React.Component {
                             <div>
                                 <span>Total</span>
                                 <span>Price</span>
-                                {/* <span>${order.totalPrice}</span> */}
+                                <span>${order.totalPrice}</span>
                             </div>
                         </div>
                         {isModalShown && <div className="dynamic-modal">

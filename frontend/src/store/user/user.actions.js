@@ -1,5 +1,4 @@
 import { userService } from "../../services/user.services.js";
-import React, { Component } from "react";
 import Swal from "sweetalert2";
 
 // import { socketService, SOCKET_EMIT_USER_WATCH, SOCKET_EVENT_USER_UPDATED } from "../services/socket.service.js";
