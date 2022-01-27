@@ -1,7 +1,7 @@
 .explore-header {
     position: sticky;
     top: 0px;
-    z-index: 10;
+    z-index: 99;
     background: white;
     border-bottom: 0.5px solid #ddddddba;
     padding: 15px 80px;
@@ -25,7 +25,7 @@
         content: "";
         position: sticky;
         top: 0px;
-        z-index: 10;
+        z-index: 99;
         background: white;
         // box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px;
         box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px !important;

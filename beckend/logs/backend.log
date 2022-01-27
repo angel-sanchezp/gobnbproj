@@ -88,3 +88,9 @@
 1/27/2022, 4:07:09 PM - INFO - Req!!!
 1/27/2022, 4:07:09 PM - DEBUG - auth.service - login with username: lbiton
 >>>>>>> e672cf0ea5d0067f64845720d0f570e572ae65d2
+1/27/2022, 4:13:01 PM - INFO - Req!!!
+1/27/2022, 4:13:01 PM - INFO - Req from: liat biton
+1/27/2022, 4:13:41 PM - DEBUG - auth.service - login with username: lbiton
+1/27/2022, 4:13:41 PM - INFO - Req!!!
+1/27/2022, 4:23:56 PM - DEBUG - auth.service - login with username: lbiton
+1/27/2022, 4:23:56 PM - INFO - Req!!!
