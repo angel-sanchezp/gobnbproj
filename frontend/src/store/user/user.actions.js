@@ -103,7 +103,7 @@ export function logout() {
         timerProgressBar: true,
         timer: 1500,
       // }).then(function () {
-      //   this.props.history.push('/');
+      //   window.location = "/";
       });
     } catch (err) {
       Swal.fire({
@@ -111,8 +111,8 @@ export function logout() {
         text: "Could not logout",
         type: "error",
         icon: "error",
-      // }).then(function () {
-      //   this.props.history.push('/');
+      }).then(function () {
+        window.location = "/";
       });
       console.log("Cannot logout");
     }

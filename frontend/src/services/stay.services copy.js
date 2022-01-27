@@ -56,7 +56,71 @@ const gStays = [
             "lat": 35.680984,
             "lng": 139.538030
         },
-        "reviews": [
+        "reviews": [{
+            "id": "r0002",
+            "created": 1616502526000,
+            "txt": "This was such a great experience, the space was really inspirational. The location is very near to Tokyo, and with an IC card and JR pass, you can get anywhere.",
+            "rate": 4,
+            "by": {
+                "_id": "u0002",
+                "fullname": "Forrest",
+                "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/18_na5npr.jpg"
+            },
+            "id": "r0002",
+            "created": Date.now(),
+            "txt": "Very stylish place. Matsuda is very quick to communicate when you have any questions and will walk you through all aspects of the apartment. Very fun place to stay.",
+            "rate": 4,
+            "by": {
+                "_id": "u0002",
+                "fullname": "Joseph",
+                "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/18_na5npr.jpg"
+            },
+            "id": "r0002",
+            "created": Date.now(),
+            "txt": "Awesome experience! This place has been on my to do for list for YEARS and finally it happened! Perfect stay for Archi / Design / Art nerds.",
+            "rate": 4,
+            "by": {
+                "_id": "u0002",
+                "fullname": "Katie",
+                "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/18_na5npr.jpg"
+            },
+            "id": "r0002",
+            "created": Date.now(),
+            "txt": "Would recommend this place to everyone !",
+            "rate": 4,
+            "by": {
+                "_id": "u0002",
+                "fullname": "John",
+                "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/18_na5npr.jpg"
+            },
+            "id": "r0002",
+            "created": Date.now(),
+            "txt": "Matsuda was a really helpful and friendly host and made us feel very welcome. The loft was amazing, such an interesting and unusual place to stay.",
+            "rate": 4,
+            "by": {
+                "_id": "u0002",
+                "fullname": "Ann",
+                "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/18_na5npr.jpg"
+            },
+            "id": "r0002",
+            "created": Date.now(),
+            "txt": "Fantastic apartment and very functional amenities as we were expected!",
+            "rate": 4,
+            "by": {
+                "_id": "u0002",
+                "fullname": "Jennifer",
+                "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/18_na5npr.jpg"
+            },
+            "id": "r0002",
+            "created": Date.now(),
+            "txt": "Great room in a perfect location! Keiko was the perfect host giving us wonderful tips and insider info.",
+            "rate": 4,
+            "by": {
+                "_id": "u0002",
+                "fullname": "Lisa",
+                "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/18_na5npr.jpg"
+            }
+        }
             
         ],
         "likedByUsers": ["mini-user"],

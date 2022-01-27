@@ -6,7 +6,8 @@ module.exports = {
     getUsers,
     deleteUser,
     updateUser,
-    addUser
+    addUser,
+    getHostUser
 }
 async function getUser(req, res) {
     try {
@@ -18,6 +19,21 @@ async function getUser(req, res) {
         res.status(500).send({ err: 'Failed to get user' })
     }
 }
+
+async function getHostUser(req, res) {
+    try {
+        console.log('host in controller',req.params.id)
+        const host = await userService.getHostById(req.params.id)
+        res.send(host)
+    } catch (err) {
+        logger.error('Failed to get host', err)
+        res.status(500).send({ err: 'Failed to get host' })
+    }
+}
+
+
+
+
 
 async function getUsers(req, res) {
     try {

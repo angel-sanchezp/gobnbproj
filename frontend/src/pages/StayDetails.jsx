@@ -62,6 +62,7 @@ class _StayDetails extends React.Component {
         // console.log(filterBy)
         if (!stay) return <h1>Loading...</h1>
         const  {reviews}  = stay;
+        // console.log(reviews)
         let headerReviews = (reviews.length === 1 ) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
         if(reviews.length === 0) headerReviews = `No reviews`;
 
@@ -76,8 +77,8 @@ class _StayDetails extends React.Component {
                         <h1 className="stay-name">
                             {stay.name}
                         </h1>
-                        <div className="general-info">
-                            <span className="mainName-info">
+                        <div className="general-info fl sp">
+                            <span className="mainName-info fl wr">
                             <span className='dot'><Star/></span>
                             <span className='dot b'>4.7</span>
                             <span className='dot'>·</span>

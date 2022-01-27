@@ -31,7 +31,6 @@ class _HomePage extends React.Component {
   componentDidMount() {
     window.addEventListener("scroll", this.listenScrollEvent);
     this.props.changeHeaderClass(this.state.class);
-    // console.log(this.props.user);
     this.props.loadStays();
     this.loggedInUser();
   }

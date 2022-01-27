@@ -11,10 +11,10 @@ import { ReactComponent as Check } from '../../assets/svg/check.svg'
 export function StayInfo({stay , filterBy}){
     // console.log(filterBy)
     return (
-        <section className="stay-info-container">
+        <section className="stay-info-container fl sp flr bd">
             <section className="summary-info">
-                <div className="top-info">
-                    <div className="top-details">
+                <div className="top-info fl wr sp bd flr">
+                    <div className="top-details fl wr flc">
                         <div>
                             <h2>{stay.type} Hosted by {stay.host.fullname}</h2>
                         </div>
@@ -29,30 +29,30 @@ export function StayInfo({stay , filterBy}){
                         <img src={stay.host.imgUrl} className="host-img"alt="" />
                     </div>
                 </div>
-                <div className="general-benefits">
+                <div className="general-benefits bd">
                     <div>
-                        <div className="benefit">
+                        <div className="benefit fl fl">
                             <div className="b-icon"><Home/></div>
                             <div className="b-details">
                                 <h4>Entire home</h4>
                                 <p>You’ll have the place to yourself.</p>
                             </div>
                         </div>
-                        <div className="benefit">
+                        <div className="benefit fl">
                             <div className="b-icon"><Clean/></div>
                             <div className="b-details">
                                 <h4>Enhanced Clean</h4>
                                 <p>This Host committed to Airbnb's 5-step enhanced cleaning process.</p>
                             </div>
                         </div>
-                        <div className="benefit">
+                        <div className="benefit fl">
                             <div className="b-icon"><Location/></div>
                             <div className="b-details">
                                 <h4>Great location</h4>
                                 <p>95% of recent guests gave the location a 5-star rating.</p>
                             </div>
                         </div>
-                        <div className="benefit">
+                        <div className="benefit fl">
                             <div className="b-icon"><Check/></div>
                             <div className="b-details">
                                 <h4>Great check-in experience</h4>
@@ -67,7 +67,7 @@ export function StayInfo({stay , filterBy}){
                     {stay.summery}
                 </p>
                 </div>
-                <section className="sleep-general">
+                <section className="sleep-general bd">
                     <div className="sleep-title">
                         <h2>Where you'll sleep</h2>
                     </div>
