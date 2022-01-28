@@ -22,7 +22,7 @@ class _StayPreview extends Component {
                         {stay.imgUrls.map((img, index) => (
                             <div className="each-slide" key={index}>
                                 {/* <div style={{ 'backgroundImage': `url(${img})` }}> */}
-                                <img className="explore-card-image" alt="cat" src={img} />
+                                <img className="explore-card-image" alt="cat" src={img} onClick={() => this.onStayClicked(stay._id)}/>
                                    
                                 {/* </div> */}
                             </div>
@@ -32,7 +32,7 @@ class _StayPreview extends Component {
 
 
 
-                <div className="stay-details" onClick={() => this.onStayClicked(stay._id)}>
+                <div className="stay-details">
                     <div className="line1">
                         <div className="star"><Star /></div>
                         <div className="rank">4.73</div>
