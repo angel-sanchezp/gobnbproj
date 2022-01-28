@@ -7,8 +7,6 @@ import { socketService } from '../../services/socket.service.js'
 import { Guests } from '../FilterCmps/Guests.jsx'
 import { Calendar } from '../FilterCmps/Calendar.jsx'
 
-// import { render } from '@testing-library/react';
-
 
 import { userService } from '../../services/user.services.js'
 import { orderService } from '../../services/order.service.js'

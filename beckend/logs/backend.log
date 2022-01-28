@@ -356,3 +356,31 @@
 1/27/2022, 8:34:14 PM - ERROR - Failed to get stays | {"reason":{"type":"ReplicaSetNoPrimary","servers":{},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":"atlas-gssao6-shard-0","maxSetVersion":6,"maxElectionId":"7fffffff0000000000000046","commonWireVersion":9,"logicalSessionTimeoutMinutes":30}}
 1/27/2022, 9:59:30 PM - INFO - Req!!!
 1/27/2022, 9:59:30 PM - INFO - Req from: liat biton
+1/27/2022, 10:04:38 PM - INFO - Req!!!
+1/27/2022, 10:04:38 PM - INFO - Req from: liat biton
+1/27/2022, 10:04:54 PM - INFO - Req!!!
+1/27/2022, 10:04:54 PM - INFO - Req from: liat biton
+1/27/2022, 10:20:02 PM - INFO - Req!!!
+1/27/2022, 10:20:02 PM - INFO - Req from: liat biton
+1/27/2022, 10:23:11 PM - INFO - Req!!!
+1/27/2022, 10:23:11 PM - INFO - Req from: liat biton
+1/27/2022, 10:23:13 PM - INFO - Req!!!
+1/27/2022, 10:23:13 PM - INFO - Req from: liat biton
+1/27/2022, 10:24:38 PM - INFO - Req!!!
+1/27/2022, 10:24:38 PM - INFO - Req from: liat biton
+1/27/2022, 10:35:42 PM - INFO - Req!!!
+1/27/2022, 10:35:42 PM - INFO - Req from: liat biton
+1/27/2022, 10:35:44 PM - INFO - Req!!!
+1/27/2022, 10:35:44 PM - INFO - Req from: liat biton
+1/27/2022, 10:35:48 PM - INFO - Req!!!
+1/27/2022, 10:35:48 PM - INFO - Req from: liat biton
+1/28/2022, 11:49:13 AM - INFO - Server is running on port: 3030
+1/28/2022, 11:49:14 AM - INFO - Req!!!
+1/28/2022, 11:49:14 AM - DEBUG - auth.service - login with username: lbiton
+1/28/2022, 11:50:24 AM - INFO - Req!!!
+1/28/2022, 12:01:04 PM - INFO - Req!!!
+1/28/2022, 12:02:42 PM - INFO - Req!!!
+1/28/2022, 5:21:57 PM - INFO - Req!!!
+1/28/2022, 5:26:51 PM - INFO - Req!!!
+1/28/2022, 5:27:04 PM - INFO - Req!!!
+1/28/2022, 5:27:07 PM - INFO - Req!!!
