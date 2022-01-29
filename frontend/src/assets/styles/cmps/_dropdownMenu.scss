@@ -40,6 +40,13 @@
       height: 28px;
       width: 28px;
   }
+
+  .menu-point{
+    width: 10px;
+    margin-top: -18px;
+    z-index: 10;
+    position: absolute;
+  }
   
   .menu {
     background: #ffffff;

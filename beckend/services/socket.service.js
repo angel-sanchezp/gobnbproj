@@ -2,7 +2,7 @@ const asyncLocalStorage = require('./als.service');
 const logger = require('./logger.service');
 
 var gIo = null
-var gMsgs=[]
+var gMsgs = []
 
 function connectSockets(http, session) {
     gIo = require('socket.io')(http, {
@@ -11,43 +11,44 @@ function connectSockets(http, session) {
         }
     })
     gIo.on('connection', socket => {
-        console.log('New socket', socket.id)
+        console.log('New socket', socket.id, session)
         socket.on('disconnect', socket => {
             console.log('Someone disconnected')
         })
         socket.on('confirm order', order => {
-            console.log(' confirm order in sockets beckend',order)
-            socket.to(order.buyer_id).emit('confirm order',order)
+            console.log(' confirm order in sockets beckend', order)
+            socket.to(order.buyer_id).emit('confirm order', order)
 
 
         })
-        socket.on('new order', order=> {
-            console.log('order in sockets beckend',order)
+        socket.on('new order', order => {
+            console.log('order in sockets beckend', order)
             // emits to all sockets:
             // gIo.emit('chat addMsg', msg)
             // emits only to sockets in the same room
             // gIo.to(socket.myTopic).emit('new order', order)
             // emitToUser('new order', order , order.hostId)
-            socket.to(order.hostId).emit('new order',order)
+            socket.to(order.hostId).emit('new order', order)
         })
         socket.on('user-watch', userId => {
             socket.join('watching:' + userId)
         })
         socket.on('set-user-socket', userId => {
             logger.debug(`Setting (${socket.id}) socket.userId = ${userId}`)
+            console.log('from set user socket', userId);
             socket.userId = userId
             socket.join(userId)
         })
         socket.on('unset-user-socket', () => {
             delete socket.userId
         })
-        socket.on('typing', room=> {
+        socket.on('typing', room => {
             // console.log('typing',data);
             socket.broadcast.to(room).emit('typing msg', ` is typing...`);
             // excludedSocket.broadcast.to(room).emit(type, data)
 
-            
-          });
+
+        });
 
     })
 }
@@ -57,7 +58,7 @@ function emitTo({ type, data, label }) {
     else gIo.emit(type, data)
 }
 
-async function emitToUser( type, data, userId ) {
+async function emitToUser(type, data, userId) {
     logger.debug('Emiting to user socket: ' + userId)
     const socket = await _getUserSocket(userId)
     if (socket) socket.emit(type, data)
@@ -92,6 +93,7 @@ async function _getUserSocket(userId) {
 async function _getAllSockets() {
     // return all Socket instances
     const sockets = await gIo.fetchSockets();
+    console.log('all sockets',sockets)
     return sockets;
 }
 // function _getAllSockets() {

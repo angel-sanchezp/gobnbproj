@@ -5,21 +5,32 @@ import _ from 'lodash'
 import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 import { OrderPreview } from '../cmps/OrderCmps/OrderPreview.jsx'
 import { changeHeaderClass } from '../store/stay/stay.actions.js'
-import { loadHostOrders, updateOrder } from '../store/order/order.actions.js'
+import { loadHostOrders, updateOrder, setConfirmedOrder } from '../store/order/order.actions.js'
 import { socketService } from '../services/socket.service.js'
+import { getWeekYearWithOptions } from 'date-fns/fp'
 
 
 const CLASS = 'general-header';
 
 class _Dashboard extends Component {
+
+
     componentWillMount() {
         this.props.loadHostOrders()
         this.props.changeHeaderClass(CLASS)
     }
 
-    setConfirm=(orderId)=>{
-        socketService.emit('confirm order',orderId);
-        this.props.updateOrder(orderId)
+    componentDidUpdate(prevProps, prevState) {
+        if(prevProps.orders !== this.props.orders){
+            this.props.loadHostOrders()
+        }
+
+    }
+
+    setConfirm = (order) => {
+        socketService.emit('confirm order', order);
+        this.props.updateOrder(order)
+        this.props.setConfirmedOrder()
     }
 
     render() {
@@ -37,7 +48,7 @@ class _Dashboard extends Component {
                         </section>
                         :
                         <ul className="trips-container">
-                            {orders.map(order => (<OrderPreview key={order._id} order={order} setConfirm={this.setConfirm}/>))}
+                            {orders.map(order => (<OrderPreview key={order._id} order={order} setConfirm={this.setConfirm} />))}
                         </ul>
                     }
                 </section>
@@ -53,14 +64,16 @@ function mapStateToProps(state) {
         stays: state.stayModule.stays,
         filterBy: state.stayModule.filterBy,
         class: state.stayModule.classHeader,
-        orders: state.orderModule.orders
+        orders: state.orderModule.orders,
+        isNewOrder: state.orderModule.orders
     }
 }
 
 const mapDispatchToProps = {
     loadHostOrders,
     changeHeaderClass,
-    updateOrder
+    updateOrder,
+    setConfirmedOrder
 }
 
 export const Dashboard = connect(mapStateToProps, mapDispatchToProps)(_Dashboard)

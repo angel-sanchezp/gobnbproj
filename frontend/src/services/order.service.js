@@ -6,7 +6,8 @@ import { httpService } from '../services/http.services.js'
 export const orderService = {
   addOrder,
   query,
-  remove
+  remove,
+  updateOrder
 }
 
 
@@ -18,14 +19,11 @@ async function query(filterBy) {
   const { hostId, buyerId } = filterBy;
   const url = hostId ? `order/host/${hostId}` : `order/user/${buyerId}`;
   const orders = await httpService.get(url)
-  // console.log(orders)
   return orders
-  // return storageService.query('OrderDB')
 }
 
 function remove(orderId) {
   return httpService.delete(`order/${orderId}`)
-  // return storageService.remove('OrderDB', orderId)
 
 }
 async function addOrder(orderInfo) {
@@ -39,6 +37,14 @@ async function addOrder(orderInfo) {
 
   return order
 }
+
+async function updateOrder(order) {
+  // await storageService.put('user', user)
+  order = await httpService.put(`order/${order._id}`,order)
+  // Handle case in which admin updates other user's details
+  return order;
+}
+
 
 
 

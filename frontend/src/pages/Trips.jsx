@@ -13,9 +13,18 @@ import { loadBuyerOrders } from '../store/order/order.actions.js'
 const CLASS = 'general-header';
 
 class _Trips extends Component {
+
+
   componentDidMount() {
     this.props.changeHeaderClass(CLASS)
   }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.trips !== this.props.trips) {
+      this.props.loadBuyerOrders();
+    }
+  }
+
 
   componentWillMount() {
     this.props.loadBuyerOrders();
@@ -25,8 +34,8 @@ class _Trips extends Component {
 
 
   render() {
-    const { trips } = this.props
-    // console.log('trips', trips)
+    const { trips = [] } = this.props
+
     return (
       <section>
 

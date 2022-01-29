@@ -8,6 +8,9 @@ import { Logo } from '../shared/logo.jsx'
 import { DropdownMenu } from '../shared/DropdownMenu'
 import { setFilter} from '../../store/stay/stay.actions.js'
 
+import point from "../../assets/img/point.png";
+
+
 class _ExpHeader extends Component {
 
     state = {

@@ -9,7 +9,8 @@ import { LoginModal } from '../shared/LoginModal'
 
 
 
-// import { user } from '../../assets/icon/user-icon.png'
+import point from "../../assets/img/point.png";
+
 
 import { setFilter } from '../../store/stay/stay.actions.js'
 
@@ -45,7 +46,7 @@ class _HomeHeader extends Component {
     }
 
     render() {
-        // console.log('render', this.props.class)
+        console.log('render red dot ', this.props.isRedDot)
         return (
             <section className='main-nav'>
                 <div className='logo'>

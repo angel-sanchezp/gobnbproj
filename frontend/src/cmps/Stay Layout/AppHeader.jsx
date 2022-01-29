@@ -3,8 +3,9 @@ import { connect } from 'react-redux'
 import { HomeHeader } from '../HomeCmps/HomeHeader.jsx';
 import { ExpHeader } from '../ExpCmps/ExpHeader.jsx';
 import { HeaderFilters } from '../Stay Layout/HeaderFilters.jsx';
-// import { socketService } from '../../services/socket.service.js'
-import { addOrder } from '../../store/order/order.actions.js'
+import { socketService } from '../../services/socket.service.js'
+import { addOrder, updateOrder, loadHostOrders, loadBuyerOrders } from '../../store/order/order.actions.js'
+import { userService } from '../../services/user.services.js'
 
 // import { user } from '../../assets/icon/user-icon.png'
 
@@ -30,30 +31,57 @@ const HEADERS = {
 
 class _AppHeader extends Component {
 
+    // state = {
+    //     isRedDot: false
+    // };
+
     onLogoClicked() {
         window.location.href = `/`
     }
 
-    // componentDidMount() {
-    //     socketService.off('confirm order');
-    //     socketService.on('confirm order',(order)=> this.setOrderConfirm(order));
-    //     socketService.off('new order');
-    //     socketService.on('new order', (order)=>this.setOrderRecived(order));
+    componentDidMount() {
+        socketService.off('confirm order');
+        socketService.off('new order');
+        socketService.on('confirm order', this.setOrderConfirm);
+        socketService.on('new order', this.setOrderRecived);
+
+    }
+
+    // componentDidUpdate(prevProps) {
+    //     // console.log('prev orders ',prevProps.orders)
+    //     const { user, orders } = this.props;
+    //     if(prevProps.orders!== orders){
+    //         if ((user.isHost && (prevProps.orders.length !== orders.length)) || (!user.isHost && (prevProps.orders !== orders.length))) {
+    //             this.setState({ isRedDot: true })
+    //         }
+
+    //     }
 
     // }
 
-    // setOrderRecived=(order)=>{
-    //     this.props.addOrder(order)
-    // }
+    setOrderRecived = () => {
+        // const user = userService.getLoggedinUser()
+        // // console.log(user)
+        // if (user.isHost) {
+        //     this.props.loadHostOrders()
 
-    // setOrderConfirm = (order) => {
-    //     console.log('order confirmed')
+        // } else {
+        //     this.props.loadBuyerOrders()
 
-   
-    // }
-    // const { trips } = this.props
-    // if (trips.status === 'pending') trips.status = 'Confirmed'
-    // this.setState({ trips })
+        // }
+    }
+
+    setOrderConfirm = () => {
+        // const user = userService.getLoggedinUser()
+        // // console.log(user)
+        // if (user.isHost) {
+        //     this.props.loadHostOrders()
+        // } else {
+        //     this.props.loadBuyerOrders()
+
+        // }
+    }
+
 
     render() {
         const Header = HEADERS[this.props.class] || WrappedHomeHeader;
@@ -68,13 +96,21 @@ class _AppHeader extends Component {
 function mapStateToProps(state) {
     return {
         class: state.stayModule.classHeader,
-        isMinFilter: state.stayModule.isMinFilter
+        isMinFilter: state.stayModule.isMinFilter,
+        user: state.userModule.user,
+        orders: state.orderModule.orders,
+        isConfirmedOrder: state.orderModule.isConfirmedOrder
     }
 }
 const mapDispatchToProps = {
-    addOrder
+    addOrder,
+    updateOrder,
+    loadHostOrders,
+    loadBuyerOrders,
+
+
 }
 
-export const AppHeader = connect(mapStateToProps,mapDispatchToProps)(_AppHeader)
+export const AppHeader = connect(mapStateToProps, mapDispatchToProps)(_AppHeader)
 
 

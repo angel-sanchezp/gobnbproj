@@ -64,11 +64,11 @@ async function query(filterBy = {}) {
 // && user.password === credentials.password
  async function getByUsername(username) {
      
-     console.log('credential in check login ', username)
+    //  console.log('credential in check login ', username)
      try {
          const collection = await dbService.getCollection('user')
          const user = await collection.findOne({ username })
-         console.log('user in get by username ',user )
+        //  console.log('user in get by username ',user )
          return user
         } catch (err) {
             logger.error(`while finding user ${username}`, err)
@@ -89,10 +89,10 @@ async function query(filterBy = {}) {
 
 async function getById(userId) {
     try {
-        console.log('user by Id  in sevice ',userId)
+        // console.log('user by Id  in sevice ',userId)
         const collection = await dbService.getCollection('user')
         const user = await collection.findOne({ '_id': ObjectId(userId) })
-        console.log('user after get from collection',user)
+        // console.log('user after get from collection',user)
 
         delete user.password
 
@@ -187,7 +187,7 @@ async function update(user) {
         const collection = await dbService.getCollection('user')
         await collection.updateOne({ '_id': userToSave._id }, { $set: userToSave })
         
-        console.log('update service user',userToSave)
+        // console.log('update service user',userToSave)
         return userToSave;
     } catch (err) {
         logger.error(`cannot update user ${user._id}`, err)
@@ -233,10 +233,10 @@ function _saveUsersToFile() {
     return new Promise((resolve, reject) => {
         fs.writeFile('data/user.json', JSON.stringify(users, null, 2), (err) => {
             if (err) {
-                console.log(err);
+                // console.log(err);
                 reject('Cannot write to file')
             } else {
-                console.log('Wrote Successfully!');
+                // console.log('Wrote Successfully!');
                 resolve()
             }
         });

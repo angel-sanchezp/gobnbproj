@@ -11,7 +11,6 @@ class _OrderPreview extends Component {
     render(){
         const { 
             order: {
-                _id,
                 stay_id,
                 stayDetails: {
                     imgUrls: [firstImageUrl]
@@ -47,7 +46,7 @@ class _OrderPreview extends Component {
                             <div className="txt">Order status: {status}</div>
                             <div className="txt">Orded by {buyer_fullname}</div>
                         </div>
-                        <button className="btn" onClick={()=>this.props.setConfirm(_id)}>Approve</button>
+                        <button className="btn" onClick={()=>this.props.setConfirm(this.props.order)}>Approve</button>
                     </div>
                 </div>
             </li>

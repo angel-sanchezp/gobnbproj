@@ -1,5 +1,7 @@
 const initialState = {
     orders: [],
+    isNewOrder:false,
+    isConfirmedOrder:false
 
 }
 export function orderReducer(state = initialState, action) {
@@ -8,17 +10,25 @@ export function orderReducer(state = initialState, action) {
         case 'SET_ORDERS':
             newState = { ...state, orders: action.orders }
             break
+        case 'NEW_ORDER':
+            console.log(action.isNewOrder)
+            newState = { ...state, isNewOrder: action.isNewOrder }
+            break
+        case 'CONFIRMED_ORDER':
+            newState = { ...state, isConfirmedOrder:  action.isConfirmedOrder }
+            break
         case 'ADD_ORDER':
             newState = { ...state, orders: [...state.orders, action.order] }
             break
-        // case 'UPDATE_ORDER':
-        //     const newOrder = orders.map(order => {
-        //         return (order._id === action.orderId) ? { ...order, status: 'confirm' } : order
-        //     })
-        //     newState = { ...state, orders: newOrder }
-        //     break
+        case 'UPDATE_ORDER':
+            const newOrder = state.orders.map(order => {
+                return (order._id === action.orderId) ? { ...order, status: 'confirm' } : order
+            })
+            newState = { ...state, orders: [...newOrder] }
+            break
+     
 
-        // default:
+        default:
     }
 
     window.orderState = newState

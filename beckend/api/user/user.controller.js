@@ -11,7 +11,7 @@ module.exports = {
 }
 async function getUser(req, res) {
     try {
-        console.log('user in controller',req.params.id)
+        // console.log('user in controller',req.params.id)
         const user = await userService.getById(req.params.id)
         res.send(user)
     } catch (err) {
@@ -22,7 +22,7 @@ async function getUser(req, res) {
 
 async function getHostUser(req, res) {
     try {
-        console.log('host in controller',req.params.id)
+        // console.log('host in controller',req.params.id)
         const host = await userService.getHostById(req.params.id)
         res.send(host)
     } catch (err) {
@@ -72,7 +72,7 @@ async function updateUser(req, res) {
 async function addUser(req,res){
     try{
         const user =req.body
-        console.log('server js ', req.body)
+        // console.log('server js ', req.body)
         const addedUser= await userService.add(user)
         res.json(addedUser)
 

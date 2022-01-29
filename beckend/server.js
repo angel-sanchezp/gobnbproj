@@ -72,7 +72,7 @@ app.use('/api/user', userRoutes)
 app.use('/api/stay', stayRoutes)
 app.use('/api/order', orderRoutes)
 // app.use('/api/host', hostRoutes)
-// connectSockets(http, session)
+connectSockets(http, session)
 
 
 

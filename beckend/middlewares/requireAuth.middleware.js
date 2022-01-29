@@ -3,13 +3,13 @@ const logger = require('../services/logger.service')
 async function requireAuth(req, res, next) {
   const user = req.session
   
-  console.log('eq.session',req.session)
-  console.log('eq.session.user',req.session.user)
+  // console.log('eq.session',req.session)
+  // console.log('eq.session.user',req.session.user)
   if (!req.session || !req.session.user) {
     res.status(401).end('Unauthorized!')
     return
   }
-  console.log('user auth',user)
+  // console.log('user auth',user)
   next()
 }
 

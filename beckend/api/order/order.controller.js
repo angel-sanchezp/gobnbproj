@@ -4,7 +4,7 @@ const socketService = require('../../services/socket.service')
 const orderService = require('./order.service')
 
 async function getOrders(req, res) {
-    console.log('get orders',req.params)
+    // console.log('get orders',req.params)
     try {
         const orders = await orderService.query(req.params)
         res.send(orders)
@@ -15,7 +15,7 @@ async function getOrders(req, res) {
 }
 
 async function deleteOrder(req, res) {
-    console.log(req.params.id)
+    // console.log(req.params.id)
     try {
         await orderService.remove(req.params.id)
         res.send({ msg: 'Deleted successfully' })
@@ -27,7 +27,7 @@ async function deleteOrder(req, res) {
 
 
 async function addOrder(req, res) {
-    console.log('req order add',req.body);
+    // console.log('req order add',req.body);
     try {
         var order = req.body
         // order.byUserId = req.session.user._id
@@ -51,14 +51,26 @@ async function addOrder(req, res) {
         res.send(order)
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         logger.error('Failed to add review', err)
         res.status(500).send({ err: 'Failed to add review' })
+    }
+}
+async function updateOrder(req, res) {
+    try {
+        // console.log('updateorder in order controller',req.body)
+        const orderId = req.body
+        const savedOrder = await orderService.update(orderId)
+        res.send(savedOrder)
+    } catch (err) {
+        logger.error('Failed to update order', err)
+        res.status(500).send({ err: 'Failed to update order' })
     }
 }
 
 module.exports = {
     getOrders,
     deleteOrder,
-    addOrder
+    addOrder,
+    updateOrder
 }
