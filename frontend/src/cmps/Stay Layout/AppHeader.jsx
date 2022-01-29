@@ -6,6 +6,9 @@ import { HeaderFilters } from '../Stay Layout/HeaderFilters.jsx';
 import { socketService } from '../../services/socket.service.js'
 import { addOrder, updateOrder, loadHostOrders, loadBuyerOrders } from '../../store/order/order.actions.js'
 import { userService } from '../../services/user.services.js'
+import { GeneralHeader } from '../Stay Layout/GeneralHeader.jsx';
+// import { socketService } from '../../services/socket.service.js'
+import { addOrder } from '../../store/order/order.actions.js'
 
 // import { user } from '../../assets/icon/user-icon.png'
 
@@ -25,7 +28,7 @@ const WrappedHomeHeader = ({ className }) => (
 const HEADERS = {
     "explore-header": ExploreHeader,
     "details-header": ExpHeader,
-    "general-header": ExpHeader,
+    "general-header": GeneralHeader,
 
 }
 

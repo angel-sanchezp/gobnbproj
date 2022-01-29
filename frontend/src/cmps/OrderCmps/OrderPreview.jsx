@@ -1,16 +1,19 @@
 
 import { Component } from 'react'
-// import { utilService } from '../../services/utils.service.js'
-// import { ReactComponent as Star } from '../../assets/svg/star.svg'
+
 import { withRouter } from "react-router-dom"
-import { Trips } from '../../pages/Trips'
+import moment from 'moment'
 
 class _OrderPreview extends Component {
 
   
     render(){
+        console.log(this.props.order)
         const { 
             order: {
+                endDate,
+                startDate,
+                _id,
                 stay_id,
                 stayDetails: {
                     imgUrls: [firstImageUrl]
@@ -25,29 +28,29 @@ class _OrderPreview extends Component {
 
 
         return(
-            <li className="trip-card" key={stay_id}>
-                <img className="trip-card-image" alt="cat" src={firstImageUrl} />
-                <div className="trip-details">
-                    <h2 className="bold-txt">{stay_name}</h2>
-                    <div className="dates">
-                        <div className="check-in-box">
-                            <div className="bold">Check-in</div>
-                            <div>Fri,Sep 29,2022</div>
-                            <div>11:00 AM</div>
+            <li className="dashboard-card" key={stay_id}>
+                <div className="order-details">
+                    <div className="status">Request status: {status} </div>
+                    <div className="silver">{stay_name}</div>
+                    
+
+                    <div className="second-row">
+                        <div className="left">
+                            <div className="buyer-txt">{buyer_fullname}</div>
+                            <div className="buyer-txt">2 guests</div>
+                            {/* <div className="buyer-txt">{moment(parseInt(startDate)).format("MMM D")} - {moment(parseInt(endDate)).format("D")}</div> */}
+                            <div className="buyer-txt">Feb 3-5</div>
                         </div>
-                        <div className="check-out-box">
-                            <div className="bold">Checkout</div>
-                            <div>Fri,Sep 31,2022</div>
-                            <div>15:00 AM</div>
+                        <div className="right">
+                            <img className="buyer-pic" src="https://scontent.ftlv2-1.fna.fbcdn.net/v/t39.30808-6/242760047_10226828922885236_3213359265222316842_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=xiz6-UfeL40AX-79VOi&_nc_ht=scontent.ftlv2-1.fna&oh=00_AT8q0aw1_eXCWF2wcvz9GdQq6ou9YMkzOIoQvMj6fKKncg&oe=61F85FA4"></img>
                         </div>
+                        
                     </div>
-                    <div className="tripcard-bottom">
-                        <div className="status-host">
-                            <div className="txt">Order status: {status}</div>
-                            <div className="txt">Orded by {buyer_fullname}</div>
-                        </div>
-                        <button className="btn" onClick={()=>this.props.setConfirm(this.props.order)}>Approve</button>
-                    </div>
+                </div>
+
+                <div className="buttons">
+                    <button className="first-dashboard-btn" onClick={()=>this.props.setConfirm(_id)}>Approve</button>
+                    <button className="dashboard-btn">Reject</button>
                 </div>
             </li>
         )

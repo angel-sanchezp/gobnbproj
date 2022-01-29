@@ -3,6 +3,7 @@ import { userService } from '../../services/user.services.js'
 import Swal from "sweetalert2";
 import { TRUE } from 'sass';
 
+
 const loadOrders = (dispatch, filterBy) => {
   orderService.query(filterBy)
     .then(orders => {
@@ -15,26 +16,22 @@ const loadOrders = (dispatch, filterBy) => {
       console.log('Cannot load stays', err)
     })
 }
-
 export function loadHostOrders() {
   return (dispatch) => {
     const host = userService.getLoggedinUser()
     loadOrders(dispatch, { hostId: host._id })
   }
 }
-
 export function loadBuyerOrders() {
   return (dispatch) => {
     const buyer = userService.getLoggedinUser()
     loadOrders(dispatch, { buyerId: buyer._id })
   }
 }
-
 export function addOrder(order) {
   return async () => {
     try {
       await orderService.addOrder(order)
-
       Swal.fire({
         position: 'top-end',
         title: "Thank you!",
@@ -51,6 +48,38 @@ export function addOrder(order) {
         type: "error",
         icon: "error",
       })
+    }
+  }
+}
+export function updateOrder(order) {
+  console.log('update oder from socket', order)
+  return async (dispatch) => {
+    try {
+      await orderService.updateOrder(order)
+      const action = { type: 'UPDATE_ORDER', order };
+      dispatch(action);
+    } catch (err) {
+      console.log('Cannot add order', err);
+    }
+  }
+}
+export function setNewOrder() {
+  return async (dispatch) => {
+    try {
+      const action = { type: 'NEW_ORDER', isNewOrder:true};
+      dispatch(action);
+    } catch (err) {
+      console.log('Cannot add order', err);
+    }
+  }
+}
+export function setConfirmedOrder() {
+  return async (dispatch) => {
+    try {
+      const action = { type: 'CONFIRMED_ORDER', isConfirmedOrder:true };
+      dispatch(action);
+    } catch (err) {
+      console.log('Cannot add order', err);
     }
   }
 }
@@ -92,6 +121,20 @@ export function setConfirmedOrder() {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

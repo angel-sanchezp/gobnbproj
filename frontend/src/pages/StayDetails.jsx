@@ -26,14 +26,21 @@ class _StayDetails extends React.Component {
         // reviews: [],
     }
 
-    componentWillMount() {
-        this.props.changeHeaderClass(this.state.class)
-    }
-   
-  
-
+    // componentWillMount() {
+    //     // this.props.changeHeaderClass(this.state.class)
+    // }
+    
+    
+    
     componentDidMount() {
+        this.props.changeHeaderClass(this.state.class)
         this.loadStay();
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.listenScrollEvent);
+        window.scrollTo(0, 0);
+        
     }
 
     loadStay = () => {
@@ -80,7 +87,7 @@ class _StayDetails extends React.Component {
                         <div className="general-info fl sp">
                             <span className="mainName-info fl wr">
                             <span className='dot'><Star/></span>
-                            <span className='dot b'>4.7</span>
+                            <span className='dot b'>{stay.rank}</span>
                             <span className='dot'>·</span>
                             <span><button className="details-btn" type="button">  <a className="ab" href="#stayreview">{headerReviews}</a></button></span>
                             <span className='dot'>·</span>
