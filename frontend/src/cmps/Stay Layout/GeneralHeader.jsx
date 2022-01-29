@@ -6,6 +6,8 @@ import moment from 'moment'
 import { Logo } from '../shared/logo.jsx'
 import { DropdownMenu } from '../shared/DropdownMenu'
 import { setFilter} from '../../store/stay/stay.actions.js'
+import point from "../../assets/img/point.png";
+
 
 class _GeneralHeader extends Component {
 
@@ -46,6 +48,8 @@ class _GeneralHeader extends Component {
                             <div className="user-options">
                                 <DropdownMenu/>
                             </div>
+                            {this.props.isRedDot  && <img className="menu-point" src={point} alt="red point" />}
+
                         </section>
                     </div>
                 </section>

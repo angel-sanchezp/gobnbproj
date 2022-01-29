@@ -33,9 +33,9 @@ const HEADERS = {
 
 class _AppHeader extends Component {
 
-    // state = {
-    //     isRedDot: false
-    // };
+    state = {
+        isRedDot: false
+    };
 
     onLogoClicked() {
         window.location.href = `/`
@@ -49,39 +49,44 @@ class _AppHeader extends Component {
 
     }
 
-    // componentDidUpdate(prevProps) {
-    //     // console.log('prev orders ',prevProps.orders)
-    //     const { user, orders } = this.props;
-    //     if(prevProps.orders!== orders){
-    //         if ((user.isHost && (prevProps.orders.length !== orders.length)) || (!user.isHost && (prevProps.orders !== orders.length))) {
-    //             this.setState({ isRedDot: true })
-    //         }
+    componentDidUpdate(prevProps) {
+        // console.log('prev orders ',prevProps.orders)
+        const { user, orders } = this.props;
+        if(prevProps.orders!== orders){
+            if (user.isHost && (prevProps.orders.length !== orders.length)) {
+                this.setState({ isRedDot: true })
+            }
 
-    //     }
+        }
 
-    // }
+    }
 
     setOrderRecived = () => {
-        // const user = userService.getLoggedinUser()
-        // // console.log(user)
-        // if (user.isHost) {
-        //     this.props.loadHostOrders()
+        const user = userService.getLoggedinUser()
 
-        // } else {
-        //     this.props.loadBuyerOrders()
+        console.log(user)
+        if (user.isHost) {
+            this.props.loadHostOrders()
 
-        // }
+        } else {
+            this.props.loadBuyerOrders()
+
+        }
     }
 
     setOrderConfirm = () => {
-        // const user = userService.getLoggedinUser()
-        // // console.log(user)
-        // if (user.isHost) {
-        //     this.props.loadHostOrders()
-        // } else {
-        //     this.props.loadBuyerOrders()
-
+        const user = userService.getLoggedinUser()
+        // console.log(this.props);
+        // if (this.props.location.pathname !== '/trips') {
+        //     this.setState({ isRedDot: true })
         // }
+
+        if (user.isHost) {
+            this.props.loadHostOrders()
+        } else {
+            this.props.loadBuyerOrders()
+
+        }
     }
 
 
@@ -89,7 +94,7 @@ class _AppHeader extends Component {
         const Header = HEADERS[this.props.class] || WrappedHomeHeader;
 
         return (
-            <Header className={this.props.class} />
+            <Header className={this.props.class} isRedDot={this.state.isRedDot} />
         )
     }
 }

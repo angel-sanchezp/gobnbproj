@@ -17,7 +17,7 @@ function connectSockets(http, session) {
         })
         socket.on('confirm order', order => {
             console.log(' confirm order in sockets beckend', order)
-            socket.to(order.buyer_id).emit('confirm order', order)
+            socket.to(order.buyerId).emit('confirm order', order)
 
 
         })

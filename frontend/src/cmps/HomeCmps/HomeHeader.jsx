@@ -66,6 +66,8 @@ class _HomeHeader extends Component {
                         <div className="user-options">
                             <DropdownMenu />
                         </div>
+                        {this.props.isRedDot  && <img className="menu-point" src={point} alt="red point" />}
+
                     </section>
                     <div className="user-modal hidden">
                         <LoginModal />

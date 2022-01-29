@@ -14,16 +14,22 @@ import { getWeekYearWithOptions } from 'date-fns/fp'
 const CLASS = 'general-header';
 
 class _Dashboard extends Component {
-
+    state = {
+        orders: this.props.orders
+    }
 
     componentWillMount() {
+        const { user } = this.props
+        user && socketService.emit('set-user-socket', user._id)
         this.props.loadHostOrders()
         this.props.changeHeaderClass(CLASS)
     }
 
     componentDidUpdate(prevProps, prevState) {
         if(prevProps.orders !== this.props.orders){
+            this.setState({ orders: this.props.orders })
             this.props.loadHostOrders()
+
         }
 
     }
@@ -39,9 +45,9 @@ class _Dashboard extends Component {
     }
 
     render() {
-        const { orders = [] } = this.props
+        const { orders = [] } = this.state
+    
         const sellerName = _.get(orders, "[0].hostDetails.fullname", "")
-        // console.log(orders)
         return (
             <section>
                 <section className="dashboard-page">
@@ -127,7 +133,8 @@ function mapStateToProps(state) {
         filterBy: state.stayModule.filterBy,
         class: state.stayModule.classHeader,
         orders: state.orderModule.orders,
-        isNewOrder: state.orderModule.orders
+        user: state.userModule.user
+
     }
 }
 
