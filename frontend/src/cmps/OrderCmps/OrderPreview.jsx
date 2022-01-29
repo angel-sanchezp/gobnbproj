@@ -1,7 +1,6 @@
 
 import { Component } from 'react'
-// import { utilService } from '../../services/utils.service.js'
-// import { ReactComponent as Star } from '../../assets/svg/star.svg'
+
 import { withRouter } from "react-router-dom"
 import moment from 'moment'
 
@@ -39,7 +38,8 @@ class _OrderPreview extends Component {
                         <div className="left">
                             <div className="buyer-txt">{buyer_fullname}</div>
                             <div className="buyer-txt">2 guests</div>
-                            <div className="buyer-txt">{moment(parseInt(startDate)).format("MMM D")} - {moment(parseInt(endDate)).format("D")}</div>
+                            {/* <div className="buyer-txt">{moment(parseInt(startDate)).format("MMM D")} - {moment(parseInt(endDate)).format("D")}</div> */}
+                            <div className="buyer-txt">Feb 3-5</div>
                         </div>
                         <div className="right">
                             <img className="buyer-pic" src="https://scontent.ftlv2-1.fna.fbcdn.net/v/t39.30808-6/242760047_10226828922885236_3213359265222316842_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=xiz6-UfeL40AX-79VOi&_nc_ht=scontent.ftlv2-1.fna&oh=00_AT8q0aw1_eXCWF2wcvz9GdQq6ou9YMkzOIoQvMj6fKKncg&oe=61F85FA4"></img>
