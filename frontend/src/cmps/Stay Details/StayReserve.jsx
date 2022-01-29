@@ -66,7 +66,7 @@ class _StayReserve extends React.Component {
         // console.log('order state', this.state.order)
         await this.props.addOrder(this.state.order)
         socketService.emit('new order', this.state.order);
-        console.log('sockect emit ')
+        // console.log('sockect emit ')
         this.props.setNewOrder()
         // this.closeModal()
     }
