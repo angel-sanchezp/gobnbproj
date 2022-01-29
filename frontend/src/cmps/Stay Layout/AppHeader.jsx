@@ -8,7 +8,6 @@ import { addOrder, updateOrder, loadHostOrders, loadBuyerOrders } from '../../st
 import { userService } from '../../services/user.services.js'
 import { GeneralHeader } from '../Stay Layout/GeneralHeader.jsx';
 // import { socketService } from '../../services/socket.service.js'
-import { addOrder } from '../../store/order/order.actions.js'
 
 // import { user } from '../../assets/icon/user-icon.png'
 
