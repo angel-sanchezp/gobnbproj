@@ -6,9 +6,18 @@ import moment from 'moment'
 
 class _OrderPreview extends Component {
 
-  
+
+    onApproveClicked = (order) => {
+        document.querySelectorAll(".after-approve").forEach(e=>{e.classList.remove("hidden");});
+        document.querySelectorAll(".before-approve").forEach(e=>{e.classList.add("hidden");});
+        this.props.setConfirm(this.props.order)
+
+
+    }
+    
+
+
     render(){
-        console.log(this.props.order)
         const { 
             order: {
                 endDate,
@@ -49,8 +58,14 @@ class _OrderPreview extends Component {
                 </div>
 
                 <div className="buttons">
-                    <button className="first-dashboard-btn" onClick={()=>this.props.setConfirm(_id)}>Approve</button>
-                    <button className="dashboard-btn">Reject</button>
+                    <div className="before-approve">
+                        <button className="first-dashboard-btn" onClick={()=>this.onApproveClicked(this.props.order)}>Approve</button>
+                        <button className="dashboard-btn">Reject</button>
+                    </div>
+                    <div className="after-approve hidden">
+                        <button className="first-dashboard-btn" >Message</button>
+                        <button className="dashboard-btn">Call</button>
+                    </div>   
                 </div>
             </li>
         )

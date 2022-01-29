@@ -8,7 +8,6 @@ export function orderReducer(state = initialState, action) {
     var newState = state
     switch (action.type) {
         case 'SET_ORDERS':
-            console.log('set orders')
             newState = { ...state, orders: action.orders }
             break
         case 'NEW_ORDER':
