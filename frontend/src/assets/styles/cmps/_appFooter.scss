@@ -236,3 +236,37 @@ a{
     
 
 }
+
+@media only screen and (max-width: 650px) {
+    .main-footer{
+        background-color: #f7f7f7;
+        bottom: 0;
+        display: block;
+        grid-template-columns: minmax(2rem, 1fr) minmax(auto, 100%) minmax(2rem, 1fr);
+        padding-bottom: 27px;
+        padding: 0px 20px;
+        .div-link{
+            display: flex;
+            flex-direction: column;
+            width: 120px;
+            padding: 0px 10px;
+        }
+    }
+
+    .main-footer2 {
+        margin: 0px 20px;
+        background-color: #f7f7f7;
+        bottom: 0;
+        display: block;
+        padding-bottom: 27px;
+        background-color: white;
+        .row{
+            display: flex;
+            flex-direction: column;
+            width: 120px;
+            margin: 0px 10px;
+        }
+
+    }
+        
+}

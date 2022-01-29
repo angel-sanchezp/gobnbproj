@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { HomeHeader } from '../HomeCmps/HomeHeader.jsx';
 import { ExpHeader } from '../ExpCmps/ExpHeader.jsx';
 import { HeaderFilters } from '../Stay Layout/HeaderFilters.jsx';
+import { GeneralHeader } from '../Stay Layout/GeneralHeader.jsx';
 // import { socketService } from '../../services/socket.service.js'
 import { addOrder } from '../../store/order/order.actions.js'
 
@@ -24,7 +25,7 @@ const WrappedHomeHeader = ({ className }) => (
 const HEADERS = {
     "explore-header": ExploreHeader,
     "details-header": ExpHeader,
-    "general-header": ExpHeader,
+    "general-header": GeneralHeader,
 
 }
 
