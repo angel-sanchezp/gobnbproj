@@ -8,7 +8,6 @@ class _OrderPreview extends Component {
 
   
     render(){
-        console.log(this.props.order)
         const { 
             order: {
                 endDate,
@@ -49,7 +48,7 @@ class _OrderPreview extends Component {
                 </div>
 
                 <div className="buttons">
-                    <button className="first-dashboard-btn" onClick={()=>this.props.setConfirm(_id)}>Approve</button>
+                    <button className="first-dashboard-btn" onClick={()=>this.props.setConfirm(this.props.order)}>Approve</button>
                     <button className="dashboard-btn">Reject</button>
                 </div>
             </li>
