@@ -77,7 +77,7 @@ export class _DropdownMenu extends React.Component {
         document.querySelectorAll(".opt1").forEach(e=>{e.classList.add("hidden");});
       }
       if(this.state.isLoggedOut === true) {
-        document.querySelectorAll(".opt2").forEach(e=>{e.classList.remove("hidden");});
+        document.querySelectorAll(".opt2").forEach(e=>{e.classList.add("hidden");});
         document.querySelectorAll(".opt3").forEach(e=>{e.classList.remove("hidden");});
         document.querySelectorAll(".opt1").forEach(e=>{e.classList.remove("hidden");});
       }

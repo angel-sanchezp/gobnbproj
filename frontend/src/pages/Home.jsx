@@ -110,7 +110,7 @@ class _HomePage extends React.Component {
             style={{ width: "100%" }}
           />
           <div className="header-txt-on-banner">
-            Not Sure where to go? Perfect.
+            Not sure where to go? Perfect.
           </div>
           <Link to={`/explore`}>
             <button className="btn-flexible">
