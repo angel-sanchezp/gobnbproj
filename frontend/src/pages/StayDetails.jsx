@@ -26,13 +26,14 @@ class _StayDetails extends React.Component {
         // reviews: [],
     }
 
-    componentWillMount() {
-        this.props.changeHeaderClass(this.state.class)
-    }
-   
-  
-
+    // componentWillMount() {
+    //     // this.props.changeHeaderClass(this.state.class)
+    // }
+    
+    
+    
     componentDidMount() {
+        this.props.changeHeaderClass(this.state.class)
         this.loadStay();
     }
 

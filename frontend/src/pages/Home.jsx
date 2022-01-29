@@ -33,7 +33,6 @@ class _HomePage extends React.Component {
     this.props.changeHeaderClass(this.state.class);
     this.props.loadStays();
     this.loggedInUser();
-
   }
 
  

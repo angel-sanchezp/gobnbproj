@@ -135,3 +135,15 @@
     font-family: CerealLight;
     width: 114px;
 }
+
+
+
+.react-slideshow-container .default-nav{
+    opacity:0
+}
+
+.react-slideshow-container .default-nav:hover{
+    opacity:1;
+    visibility: visible !important;
+
+}
