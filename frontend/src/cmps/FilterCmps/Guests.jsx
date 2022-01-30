@@ -44,7 +44,7 @@ export class Guests extends React.Component {
 
         return (
             <div className="dynamic-modal-child filter-guest-modal">
-                <button type="button" className="close-btn" onClick={this.props.onClose}>x</button>
+                <button type="button" className="close-btn" onClick={this.props.closeModal}>x</button>
                 <div className="modal-label">
                     <div>
                         <span>Adults</span>
