@@ -42137,3 +42137,40 @@
 30.1.2022, 15:22:25 - DEBUG - Setting (pyoQ3LH3R_ZKBHPCAAAD) socket.userId = 61f065edc8e02896300df6d9
 30.1.2022, 15:22:25 - INFO - Req!!!
 30.1.2022, 15:22:25 - INFO - Req!!!
+30.1.2022, 15:30:40 - INFO - Req!!!
+30.1.2022, 15:30:46 - INFO - Req!!!
+30.1.2022, 15:31:16 - INFO - Req!!!
+30.1.2022, 15:31:16 - DEBUG - auth.service - login with username: lbiton
+30.1.2022, 15:31:17 - DEBUG - Setting (0JcYn0KvWzWqohfgAAAJ) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 15:31:38 - DEBUG - auth.service - login with username: angel
+30.1.2022, 15:31:38 - DEBUG - Setting (0JcYn0KvWzWqohfgAAAJ) socket.userId = 61f065edc8e02896300df6d9
+30.1.2022, 15:31:52 - INFO - Req!!!
+30.1.2022, 15:31:52 - DEBUG - auth.service - login with username: lbiton
+30.1.2022, 15:31:52 - DEBUG - Setting (VCX7m9fQ5-6_5DV1AAAL) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 15:32:17 - INFO - Req!!!
+30.1.2022, 17:14:15 - INFO - Req!!!
+30.1.2022, 17:14:15 - DEBUG - auth.service - login with username: lbiton
+30.1.2022, 17:14:17 - DEBUG - Setting (b_2VlCHhqsRYp2daAAAN) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 17:14:40 - DEBUG - auth.service - login with username: lbiton
+30.1.2022, 17:14:40 - INFO - Req!!!
+30.1.2022, 17:14:40 - INFO - Req from: Liat Biton
+30.1.2022, 17:14:40 - DEBUG - Setting (pnBcBN6mSboT0jCTAAAR) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 17:14:57 - DEBUG - auth.service - login with username: angel
+30.1.2022, 17:14:57 - ERROR - Failed to Login Invalid username or password
+30.1.2022, 17:15:46 - INFO - Req!!!
+30.1.2022, 17:15:46 - DEBUG - auth.service - login with username: lbiton
+30.1.2022, 17:15:46 - DEBUG - Setting (jaE9w20r2VR3Zip8AAAT) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 17:16:02 - DEBUG - auth.service - login with username: angel
+30.1.2022, 17:16:02 - DEBUG - Setting (jaE9w20r2VR3Zip8AAAT) socket.userId = 61f065edc8e02896300df6d9
+30.1.2022, 17:19:29 - INFO - Req!!!
+30.1.2022, 17:19:29 - INFO - Req from: angelica
+30.1.2022, 17:19:43 - INFO - Req!!!
+30.1.2022, 17:19:43 - INFO - Req from: angelica
+30.1.2022, 17:27:20 - INFO - Req!!!
+30.1.2022, 17:27:20 - INFO - Req from: angelica
+30.1.2022, 17:27:20 - DEBUG - auth.service - login with username: lbiton
+30.1.2022, 17:27:20 - DEBUG - Setting (MeeTmEySffjf_1VrAAAX) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 17:27:40 - DEBUG - auth.service - login with username: ange
+30.1.2022, 17:27:40 - ERROR - Failed to Login Invalid username or password
+30.1.2022, 17:27:47 - DEBUG - auth.service - login with username: angel
+30.1.2022, 17:27:47 - DEBUG - Setting (MeeTmEySffjf_1VrAAAX) socket.userId = 61f065edc8e02896300df6d9
