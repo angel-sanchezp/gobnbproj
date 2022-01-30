@@ -25,13 +25,15 @@ class _Trips extends Component {
     user && socketService.emit('set-user-socket', user._id)
     this.props.changeHeaderClass(CLASS)
     this.props.loadBuyerOrders();
+    this.setState({ trips: this.props.trips })
+
 
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.trips !== this.props.trips) {
       this.setState({ trips: this.props.trips })
-      this.props.loadBuyerOrders();
+      // this.props.loadBuyerOrders();
 
     }
   }

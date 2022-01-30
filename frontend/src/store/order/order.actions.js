@@ -2,6 +2,7 @@ import { orderService } from '../../services/order.service.js'
 import { userService } from '../../services/user.services.js'
 import Swal from "sweetalert2";
 import { TRUE } from 'sass';
+import { showSuccessMsg, showErrorMsg } from "../../services/event-bus.service.js";
 
 
 const loadOrders = (dispatch, filterBy) => {
@@ -32,6 +33,7 @@ export function addOrder(order) {
   return async () => {
     try {
       await orderService.addOrder(order)
+      // showSuccessMsg('Reserved stay!')
       Swal.fire({
         position: 'top-end',
         title: "Thank you!",
@@ -39,9 +41,11 @@ export function addOrder(order) {
         icon: "success",
         showConfirmButton: false,
         timerProgressBar: true,
-        timer: 1500
+        timer: 1000,
+
       })
     } catch (err) {
+      // showErrorMsg('Could not reserve stay.')
       Swal.fire({
         title: "Oh no!",
         text: "Could not reserve stay",

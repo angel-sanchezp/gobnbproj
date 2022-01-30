@@ -45,8 +45,8 @@ class _HomeFilter extends React.Component {
 
     onSetDate = (date) => {
         var { filterBy } = this.state
-        filterBy.dateIn = date[0] && date[0].valueOf()
-        filterBy.dateOut = date[1] && date[1].valueOf()
+        filterBy.dateIn = +(date[0] && date[0].valueOf())
+        filterBy.dateOut = +(date[1] && date[1].valueOf())
         this.setState({ filterBy });
     }
 

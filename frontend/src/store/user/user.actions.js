@@ -1,5 +1,6 @@
 import { userService } from "../../services/user.services.js";
 import Swal from "sweetalert2";
+import { showSuccessMsg, showErrorMsg } from "../../services/event-bus.service.js";
 
 // import { socketService, SOCKET_EMIT_USER_WATCH, SOCKET_EVENT_USER_UPDATED } from "../services/socket.service.js";
 
@@ -31,8 +32,10 @@ export function login(credentials) {
   return async (dispatch) => {
     try {
       const user = await userService.login(credentials)
+      console.log(user)
       const action = { type: 'SET_USER', user }
       dispatch(action)
+      // showSuccessMsg(`Welcome ${user.fullname}`)
       Swal.fire({
         position: "top-end",
         title: "Welcome!",
@@ -40,10 +43,11 @@ export function login(credentials) {
         type: "success",
         showConfirmButton: false,
         timerProgressBar: true,
-        timer: 1500,
+        timer: 1000,
       });
       return user
     } catch (err) {
+      // showErrorMsg('Could not login.')
         Swal.fire({
           title: "Oh no!",
           text: "Could not login",
@@ -63,6 +67,7 @@ export function signup(credentials) {
       const user = await userService.signup(credentials)
       const action = { type: 'SET_USER', user }
       dispatch(action);
+      // showSuccessMsg('Signed up!')
       Swal.fire({
         position: "top-end",
         title: "Welcome!",
@@ -70,11 +75,12 @@ export function signup(credentials) {
         type: "success",
         showConfirmButton: false,
         timerProgressBar: true,
-        timer: 1500
+        timer: 1000,
       // }).then(function () {
       //   this.props.history.push('/');
       });
     } catch (err) {
+      // showErrorMsg('Could not sign up.')
       Swal.fire({
         title: "Oh no!",
         text: "Could not sign up",
@@ -94,6 +100,7 @@ export function logout() {
       await userService.logout();
       const action = { type: "SET_USER", user: null };
       dispatch(action);
+      // showSuccessMsg('Logged out!')
       Swal.fire({
         position: "top-end",
         title: "Goodbye!",
@@ -101,17 +108,19 @@ export function logout() {
         type: "success",
         showConfirmButton: false,
         timerProgressBar: true,
-        timer: 1500,
+        timer: 1000,
       // }).then(function () {
       //   window.location = "/";
       });
     } catch (err) {
+      // showErrorMsg('Could not logout.')
       Swal.fire({
         title: "Oh no!",
         text: "Could not logout",
         type: "error",
         icon: "error",
-      }).then(function () {
+      })
+      .then(function () {
         window.location = "/";
       });
       console.log("Cannot logout");

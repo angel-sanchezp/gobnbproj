@@ -25,12 +25,14 @@ class _Dashboard extends Component {
         user && socketService.emit('set-user-socket', user._id)
         this.props.loadHostOrders()
         this.props.changeHeaderClass(CLASS)
+        this.setState({ orders: this.props.orders })
+
     }
 
     componentDidUpdate(prevProps, prevState) {
         if(prevProps.orders !== this.props.orders){
             this.setState({ orders: this.props.orders })
-            this.props.loadHostOrders()
+            // this.props.loadHostOrders()
 
         }
 
@@ -40,10 +42,6 @@ class _Dashboard extends Component {
         socketService.emit('confirm order', order);
         this.props.updateOrder(order)
         this.props.setConfirmedOrder()
-     
-        
-
-        
     }
 
     render() {

@@ -126,28 +126,28 @@ class _HomePage extends React.Component {
               className="ins-image"
               onClick={() => this.onSetLocation("Tokyo")}
             >
-              <img alt="cat" src={tokyo} />
+              <img alt="cat" src="https://res.cloudinary.com/kitsunex3/image/upload/v1643544853/Airbnb%20clone/tokyo.7e473ea6119e3ceca2ee_ulbvsm.jpg" />
               <h2>Tokyo</h2>
             </div>
             <div
               className="ins-image"
               onClick={() => this.onSetLocation("Santorini")}
             >
-              <img alt="cat" src={santorini} />
+              <img alt="cat" src="https://res.cloudinary.com/kitsunex3/image/upload/v1643544852/Airbnb%20clone/santorini.31f0a3ebf40db092ead4_qngvtv.jpg" />
               <h2>Santorini</h2>
             </div>
             <div
               className="ins-image"
               onClick={() => this.onSetLocation("Paris")}
             >
-              <img alt="cat" src={paris} />
+              <img alt="cat" src="https://res.cloudinary.com/kitsunex3/image/upload/v1643544853/Airbnb%20clone/paris.0b4c94ae16b8142e6a18_utqovn.jpg" />
               <h2>Paris</h2>
             </div>
             <div
               className="ins-image"
               onClick={() => this.onSetLocation("Cancun")}
             >
-              <img alt="cat" src={cancun} />
+              <img alt="cat" src="https://res.cloudinary.com/kitsunex3/image/upload/v1643544853/Airbnb%20clone/cancun.a7d02297a80c763fd7fe_f14680.jpg" />
               <h2>Cancun</h2>
             </div>
           </section>

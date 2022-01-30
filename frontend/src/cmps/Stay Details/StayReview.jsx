@@ -1,3 +1,5 @@
+import { ReactComponent as Star } from '../../assets/svg/star.svg'
+
 export function StayReview({stay}){
     const { reviews } = stay;
     const showReviews = (reviews.length > 4) ? reviews.slice(0,4) : reviews.slice();
@@ -28,14 +30,17 @@ export function StayReview({stay}){
         return longDate;
     }
 
+    
+
 
     return (
         <section className="reviews-container bd" id="stayreview">
             <section className="review-general" >
                 <div className="review-rate">
+                    <span className="review-icon"><Star/></span>
                     <h2>{reviewHeader} </h2>
                 </div>
-                <div className="review-statistics">
+                {/* <div className="review-statistics">
                     <div className="ratings">
                         <div>Cleanliness</div>
                         <div className="rate-score">
@@ -98,7 +103,7 @@ export function StayReview({stay}){
                         </div>
                     </div>
                     
-                </div>
+                </div> */}
             </section>
             <section className="review-list">
                 <div className="reviews">

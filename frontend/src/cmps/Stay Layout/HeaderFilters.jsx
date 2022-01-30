@@ -61,7 +61,8 @@ class _HeaderFilters extends Component {
 
     handlePriceChange = (ev, type) => {
         this.setState({
-            [type]: ev.target.value
+            [type]: (ev.target.value)
+                
         })
     }
 

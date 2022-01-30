@@ -7,6 +7,8 @@ import { socketService } from '../../services/socket.service.js'
 import { addOrder, updateOrder, loadHostOrders, loadBuyerOrders } from '../../store/order/order.actions.js'
 import { userService } from '../../services/user.services.js'
 import { GeneralHeader } from '../Stay Layout/GeneralHeader.jsx';
+import { withRouter } from 'react-router-dom';
+
 // import { socketService } from '../../services/socket.service.js'
 
 // import { user } from '../../assets/icon/user-icon.png'
@@ -18,11 +20,12 @@ const ExploreHeader = () => (
     </>
 )
 
-const WrappedHomeHeader = ({ className }) => (
-    <header className={className}>
-        <HomeHeader />
+const WrappedHomeHeader = (props) => (
+    <header className={props.className} >
+        <HomeHeader {...props} />
     </header>
 )
+
 
 const HEADERS = {
     "explore-header": ExploreHeader,
@@ -50,44 +53,40 @@ class _AppHeader extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        // console.log('prev orders ',prevProps.orders)
-        const { user, orders } = this.props;
-        if(prevProps.orders!== orders){
-            if (user.isHost && (prevProps.orders.length !== orders.length)) {
-                this.setState({ isRedDot: true })
+
+        if (prevProps.location.pathname !== this.props.location.pathname) {
+            if (this.props.location.pathname === '/trips' || this.props.location.pathname === '/dashboard') {
+                this.setState({ isRedDot: false, isNewOrder: false, isOrderConfirmed: false })
             }
-
         }
-
     }
+
 
     setOrderRecived = () => {
         const user = userService.getLoggedinUser()
-
-        console.log(user)
+        console.log('order received!', user.isHost)
         if (user.isHost) {
-            this.props.loadHostOrders()
-
+            // this.props.loadHostOrders()
+            this.setState({ isRedDot: true, isNewOrder: true })
         } else {
             this.props.loadBuyerOrders()
-
         }
     }
 
     setOrderConfirm = () => {
         const user = userService.getLoggedinUser()
-        // console.log(this.props);
+        console.log('order confirmed!', user.isHost);
         // if (this.props.location.pathname !== '/trips') {
-        //     this.setState({ isRedDot: true })
         // }
-
-        if (user.isHost) {
-            this.props.loadHostOrders()
+        if (!user.isHost) {
+            this.setState({ isRedDot: true, isOrderConfirmed: true })
+            // this.props.loadHostOrders()
         } else {
             this.props.loadBuyerOrders()
 
         }
     }
+
 
 
     render() {
@@ -118,6 +117,6 @@ const mapDispatchToProps = {
 
 }
 
-export const AppHeader = connect(mapStateToProps, mapDispatchToProps)(_AppHeader)
+export const AppHeader = connect(mapStateToProps, mapDispatchToProps)(withRouter(_AppHeader))
 
 

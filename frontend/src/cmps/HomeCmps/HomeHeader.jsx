@@ -6,6 +6,7 @@ import { HomeFilter } from '../Stay Layout/HomeFilter.jsx'
 import { ReactComponent as UserAvatar } from '../../assets/svg/user-avatar.svg'
 import { DropdownMenu } from '../shared/DropdownMenu.jsx'
 import { LoginModal } from '../shared/LoginModal'
+import { UserMsg } from '../shared/User-Msg'
 
 
 
@@ -72,6 +73,7 @@ class _HomeHeader extends Component {
                     <div className="user-modal hidden">
                         <LoginModal />
                     </div>
+                <UserMsg/>
                 </section>
             </section>
         )
