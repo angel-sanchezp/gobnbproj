@@ -74,11 +74,14 @@ class _AppHeader extends Component {
         } else {
             this.props.loadBuyerOrders()
 
+
         }
     }
 
     setOrderConfirm = () => {
         const user = userService.getLoggedinUser()
+        this.setState({ isRedDot: false })
+
         // console.log(this.props);
         // if (this.props.location.pathname !== '/trips') {
         //     this.setState({ isRedDot: true })
