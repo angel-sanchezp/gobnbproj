@@ -234,3 +234,29 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 650px)  {
+
+   
+    .home-header-expanded{
+        display: block;
+        padding: 0px 20px;
+        width: 100%;
+        .secondary-search-bar{
+            display: none;
+        }
+        .main-nav > *:not(:last-child) {
+            margin: 0px;
+        }
+        .right-nav{
+            width: 80%;
+            .host-options .become{
+                font-size: 12px;
+                margin-inline-end: 10px;
+            }
+        }
+        
+    }
+
+}

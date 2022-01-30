@@ -45,9 +45,7 @@ class _OrderPreview extends Component {
 
                     <div className="second-row">
                         <div className="left">
-                            <div className="buyer-txt">{buyer_fullname}</div>
-                            <div className="buyer-txt">2 guests</div>
-                            {/* <div className="buyer-txt">{moment(parseInt(startDate)).format("MMM D")} - {moment(parseInt(endDate)).format("D")}</div> */}
+                            <div className="buyer-txt">{buyer_fullname} ( 2 guests )</div>
                             <div className="buyer-txt">Feb 3-5</div>
                         </div>
                         <div className="right">
