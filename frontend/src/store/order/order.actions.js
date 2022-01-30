@@ -33,28 +33,25 @@ export function addOrder(order) {
   return async () => {
     try {
       await orderService.addOrder(order)
-      showSuccessMsg('Reserved stay!')
-      // Swal.fire({
-      //   position: 'top-end',
-      //   title: "Thank you!",
-      //   text: "Successfully reserved stay.",
-      //   icon: "success",
-      //   width: 300,
-      //   height: 100,
-      //   padding: '1em',
-      //   showConfirmButton: false,
-      //   timerProgressBar: true,
-      //   timer: 1000,
-      //   background: 'rgb(124, 207, 124)'
-      // })
+      // showSuccessMsg('Reserved stay!')
+      Swal.fire({
+        position: 'top-end',
+        title: "Thank you!",
+        text: "Successfully reserved stay.",
+        icon: "success",
+        showConfirmButton: false,
+        timerProgressBar: true,
+        timer: 1000,
+
+      })
     } catch (err) {
-      showErrorMsg('Could not reserve stay.')
-      // Swal.fire({
-      //   title: "Oh no!",
-      //   text: "Could not reserve stay",
-      //   type: "error",
-      //   icon: "error",
-      // })
+      // showErrorMsg('Could not reserve stay.')
+      Swal.fire({
+        title: "Oh no!",
+        text: "Could not reserve stay",
+        type: "error",
+        icon: "error",
+      })
     }
   }
 }

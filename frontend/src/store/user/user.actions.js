@@ -35,29 +35,25 @@ export function login(credentials) {
       console.log(user)
       const action = { type: 'SET_USER', user }
       dispatch(action)
-      showSuccessMsg(`Welcome ${user.fullname}`)
-      // Swal.fire({
-      //   position: "top-end",
-      //   title: "Welcome!",
-      //   text: "Successfully logged in",
-      //   type: "success",
-      //   width: 300,
-      //   height: 100,
-      //   padding: '1em',
-      //   showConfirmButton: false,
-      //   timerProgressBar: true,
-      //   timer: 1000,
-      //   background: 'rgb(124, 207, 124)'
-      // });
+      // showSuccessMsg(`Welcome ${user.fullname}`)
+      Swal.fire({
+        position: "top-end",
+        title: "Welcome!",
+        text: "Successfully logged in",
+        type: "success",
+        showConfirmButton: false,
+        timerProgressBar: true,
+        timer: 1000,
+      });
       return user
     } catch (err) {
-      showErrorMsg('Could not login.')
-        // Swal.fire({
-        //   title: "Oh no!",
-        //   text: "Could not login",
-        //   type: "error",
-        //   icon: "error",    
-        // });
+      // showErrorMsg('Could not login.')
+        Swal.fire({
+          title: "Oh no!",
+          text: "Could not login",
+          type: "error",
+          icon: "error",    
+        });
       console.log("Cannot login");
     }
   }
@@ -71,32 +67,28 @@ export function signup(credentials) {
       const user = await userService.signup(credentials)
       const action = { type: 'SET_USER', user }
       dispatch(action);
-      showSuccessMsg('Signed up!')
-      // Swal.fire({
-      //   position: "top-end",
-      //   title: "Welcome!",
-      //   text: "Successfully signed up",
-      //   type: "success",
-      //   width: 300,
-      //   height: 100,
-      //   padding: '1em',
-      //   showConfirmButton: false,
-      //   timerProgressBar: true,
-      //   timer: 1000,
-      //   background: 'rgb(124, 207, 124)'
-      // // }).then(function () {
-      // //   this.props.history.push('/');
-      // });
+      // showSuccessMsg('Signed up!')
+      Swal.fire({
+        position: "top-end",
+        title: "Welcome!",
+        text: "Successfully signed up",
+        type: "success",
+        showConfirmButton: false,
+        timerProgressBar: true,
+        timer: 1000,
+      // }).then(function () {
+      //   this.props.history.push('/');
+      });
     } catch (err) {
-      showErrorMsg('Could not sign up.')
-      // Swal.fire({
-      //   title: "Oh no!",
-      //   text: "Could not sign up",
-      //   type: "error",
-      //   icon: "error",
-      // // }).then(function () {
-      // //   this.props.history.push('/');
-      // });
+      // showErrorMsg('Could not sign up.')
+      Swal.fire({
+        title: "Oh no!",
+        text: "Could not sign up",
+        type: "error",
+        icon: "error",
+      // }).then(function () {
+      //   this.props.history.push('/');
+      });
       console.log("Cannot signup");
     }
   };
@@ -108,30 +100,26 @@ export function logout() {
       await userService.logout();
       const action = { type: "SET_USER", user: null };
       dispatch(action);
-      showSuccessMsg('Logged out!')
-      // Swal.fire({
-      //   position: "top-end",
-      //   title: "Goodbye!",
-      //   text: "Successfully logged out",
-      //   type: "success",
-      //   width: 300,
-      //   height: 100,
-      //   padding: '1em',
-      //   showConfirmButton: false,
-      //   timerProgressBar: true,
-      //   timer: 1000,
-      //   background: 'rgb(124, 207, 124)'
-      // // }).then(function () {
-      // //   window.location = "/";
-      // });
+      // showSuccessMsg('Logged out!')
+      Swal.fire({
+        position: "top-end",
+        title: "Goodbye!",
+        text: "Successfully logged out",
+        type: "success",
+        showConfirmButton: false,
+        timerProgressBar: true,
+        timer: 1000,
+      // }).then(function () {
+      //   window.location = "/";
+      });
     } catch (err) {
-      showErrorMsg('Could not logout.')
-      // Swal.fire({
-      //   title: "Oh no!",
-      //   text: "Could not logout",
-      //   type: "error",
-      //   icon: "error",
-      // })
+      // showErrorMsg('Could not logout.')
+      Swal.fire({
+        title: "Oh no!",
+        text: "Could not logout",
+        type: "error",
+        icon: "error",
+      })
       .then(function () {
         window.location = "/";
       });
