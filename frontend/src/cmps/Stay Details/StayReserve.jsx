@@ -5,6 +5,9 @@ import { connect } from 'react-redux'
 import { socketService } from '../../services/socket.service.js'
 import { Guests } from '../FilterCmps/Guests.jsx'
 import { Calendar } from '../FilterCmps/Calendar.jsx'
+import { showErrorMsg } from '../../services/event-bus.service.js'
+
+
 // import { render } from '@testing-library/react';
 import { userService } from '../../services/user.services.js'
 import { ReactComponent as Star } from '../../assets/svg/star.svg'
@@ -21,8 +24,8 @@ class _StayReserve extends React.Component {
         order: {
             hostId: this.props.stay.host._id,
             createdAt: new Date(),
-            buyer_fullname: userService.getLoggedinUser().fullname,
-            buyerId: userService.getLoggedinUser()._id,
+            buyer_fullname: '',
+            buyerId: '',
             totalPrice: '',
             startDate: '',
             endDate: '',
@@ -34,10 +37,21 @@ class _StayReserve extends React.Component {
             status: 'pending',
         }
     }
+
+    
+
     componentDidMount() {
         const { stay } = this.props
         const { _id, name, price, host } = stay
         const { order } = this.state
+        const user = userService.getLoggedinUser();
+        if(!user) {
+            order.buyer_fullname = 'Guest';
+            order.buyerId = '0000';
+        } else{
+            order.buyer_fullname = user.fullname;
+            order.buyerId = user._id;
+        }
         order.stay_id = _id
         order.stay_name = name
         order.stay_price = price
@@ -63,6 +77,10 @@ class _StayReserve extends React.Component {
     }
     onSubmitOrder = async (ev) => {
         ev.preventDefault()
+        if(this.state.order.buyer_fullname === 'Guest') {
+            console.log('im in')
+            return showErrorMsg('Please sign in first.')
+        }
         // console.log('order state', this.state.order)
         await this.props.addOrder(this.state.order)
         socketService.emit('new order', this.state.order);

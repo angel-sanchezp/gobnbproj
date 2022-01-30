@@ -28,6 +28,8 @@ export function StayReview({stay}){
         return longDate;
     }
 
+    
+
 
     return (
         <section className="reviews-container bd" id="stayreview">
