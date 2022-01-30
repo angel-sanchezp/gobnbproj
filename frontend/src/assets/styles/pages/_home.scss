@@ -227,3 +227,49 @@
   
     }
   }
+
+
+  @media only screen and (max-width: 650px)  {
+    .main-container { 
+        display: block;
+        padding: 0px 20px;
+        min-height: 100vh;
+        background-color: black;
+        justify-items: center;
+        align-content: center;
+        margin-bottom: 100px;
+        .pic {
+            border-radius: 10px;
+            position: relative;
+            height: 250px;
+            margin: 0px;
+            padding: 0px;
+            top: 144px;
+        }
+        .header-txt-on-banner {
+            font-size: 22px;
+            position: absolute;
+            top: 71vh;
+            color: #fff;
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+            z-index: 1;
+            font-weight: 400;
+            padding: 0px 20px;
+        }
+        .btn-flexible{
+            padding: 16px 32px;
+            position: absolute;
+            top: 83vh;
+            left: 30%;
+            cursor: pointer;
+            width: auto;
+            font-size: 16px;
+            border-radius: 1000px;
+            border: 1px solid #000;
+            background: #fff;
+            z-index: 5;
+
+        }
+  
+    }
+  }

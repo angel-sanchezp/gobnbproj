@@ -245,11 +245,11 @@ class _StayReserve extends React.Component {
                         <div className="order-preview hidden">
                             <small>You won't be charged yet</small>
                             <div>
-                                <span>${price} X {night} nights</span>
-                                <span>${total}</span>
+                                <span className="un">${price} X {night} nights</span>
+                                <span >${total}</span>
                             </div>
                             <div>
-                                <span>Service fee</span>
+                                <span className="un">Service fee</span>
                                 <span>$0</span>
                             </div>
                             <hr />

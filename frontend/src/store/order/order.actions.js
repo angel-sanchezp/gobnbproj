@@ -2,6 +2,7 @@ import { orderService } from '../../services/order.service.js'
 import { userService } from '../../services/user.services.js'
 import Swal from "sweetalert2";
 import { TRUE } from 'sass';
+import { showSuccessMsg, showErrorMsg } from "../../services/event-bus.service.js";
 
 
 const loadOrders = (dispatch, filterBy) => {
@@ -32,22 +33,28 @@ export function addOrder(order) {
   return async () => {
     try {
       await orderService.addOrder(order)
-      Swal.fire({
-        position: 'top-end',
-        title: "Thank you!",
-        text: "Successfully reserved stay.",
-        icon: "success",
-        showConfirmButton: false,
-        timerProgressBar: true,
-        timer: 1500
-      })
+      showSuccessMsg('Reserved stay!')
+      // Swal.fire({
+      //   position: 'top-end',
+      //   title: "Thank you!",
+      //   text: "Successfully reserved stay.",
+      //   icon: "success",
+      //   width: 300,
+      //   height: 100,
+      //   padding: '1em',
+      //   showConfirmButton: false,
+      //   timerProgressBar: true,
+      //   timer: 1000,
+      //   background: 'rgb(124, 207, 124)'
+      // })
     } catch (err) {
-      Swal.fire({
-        title: "Oh no!",
-        text: "Could not reserve stay",
-        type: "error",
-        icon: "error",
-      })
+      showErrorMsg('Could not reserve stay.')
+      // Swal.fire({
+      //   title: "Oh no!",
+      //   text: "Could not reserve stay",
+      //   type: "error",
+      //   icon: "error",
+      // })
     }
   }
 }
