@@ -9,6 +9,9 @@ import { DropdownMenu } from '../shared/DropdownMenu'
 import { setFilter} from '../../store/stay/stay.actions.js'
 import { UserMsg } from '../shared/User-Msg'
 
+import point from "../../assets/img/point.png";
+
+
 class _ExpHeader extends Component {
 
     state = {
@@ -79,6 +82,8 @@ class _ExpHeader extends Component {
                             <div className="user-options">
                                 <DropdownMenu/>
                             </div>
+                            {this.props.isRedDot  && <img className="menu-point" src={point} alt="red point" />}
+
                         </section>
                     </div>
                     {!enterInputsMode ? (

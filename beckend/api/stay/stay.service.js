@@ -14,28 +14,28 @@ module.exports = {
 async function query(filterBy = {}) {
     const criteria = _buildCriteria(filterBy)
     try {
-        const collection = await dbService.getCollection('stay')
-        var stays = await collection.find(criteria).toArray()
-        return stays
+        const collection = await dbService.getCollection('stay');
+        var stays = await collection.find(criteria).toArray();
+        return stays;
     } catch (err) {
-        logger.error('cannot find stays', err)
-        throw err
+        logger.error('cannot find stays', err);
+        throw err;
     }
 }
 
 function _buildCriteria(filterBy = {}) {
-    const criteria = {}
+    const criteria = {};
     if (filterBy.location) {
-        criteria["location.country"] = { $regex: filterBy.location, $options: 'i' }
+        criteria["location.country"] = { $regex: filterBy.location, $options: 'i' };
     }
     if (filterBy.maxPrice && filterBy.minPrice) {
-        const maxPrice = +(filterBy.maxPrice)
-        const minPrice = +(filterBy.minPrice)
-        criteria["price"] = { $gt: minPrice, $lt: maxPrice }
+        const maxPrice = +(filterBy.maxPrice);
+        const minPrice = +(filterBy.minPrice);
+        criteria["price"] = { $gt: minPrice, $lt: maxPrice };
     }
     if (filterBy?.dateIn && filterBy?.dateOut) {
-        const checkIn = JSON.parse(filterBy.dateIn)
-        const checkOut = JSON.parse(filterBy.dateOut)
+        const checkIn = +(filterBy.dateIn);
+        const checkOut = +(filterBy.dateOut);
         criteria["inavialabilites"] = 
             { $not:
                 { $elemMatch:
@@ -47,11 +47,9 @@ function _buildCriteria(filterBy = {}) {
             }
     }       
     if (filterBy.amenities?.length) {
-        criteria["amenities"] = (typeof (filterBy.amenities) === 'string') ? { $in: [filterBy.amenities] } :
-            { $all: filterBy.amenities }
+        criteria["amenities"] =
+         (typeof (filterBy.amenities) === 'string') ? { $in: [filterBy.amenities] } :  { $all: filterBy.amenities }
     }
-
-    console.log('criteria', criteria)
     return criteria
 }
 

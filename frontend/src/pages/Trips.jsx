@@ -9,24 +9,44 @@ import { TripPreview } from '../cmps/TripsCmps/TripPreview.jsx'
 
 import { changeHeaderClass } from '../store/stay/stay.actions.js'
 import { loadBuyerOrders } from '../store/order/order.actions.js'
+import { socketService } from '../services/socket.service.js'
+
 
 const CLASS = 'general-header';
 
 class _Trips extends Component {
-  componentDidMount() {
-    this.props.changeHeaderClass(CLASS)
+  state = {
+    trips: this.props.trips
   }
 
-  componentWillMount() {
-    this.props.loadBuyerOrders();
+
+  componentDidMount() {
+    const { user } = this.props
+    user && socketService.emit('set-user-socket', user._id)
     this.props.changeHeaderClass(CLASS)
+    this.props.loadBuyerOrders();
+
   }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.trips !== this.props.trips) {
+      this.setState({ trips: this.props.trips })
+      this.props.loadBuyerOrders();
+
+    }
+  }
+
+
+  // componentWillMount() {
+  //   this.props.loadBuyerOrders();
+  //   this.props.changeHeaderClass(CLASS)
+  // }
 
 
 
   render() {
-    const { trips } = this.props
-    // console.log('trips', trips)
+    const { trips = [] } = this.state
+
     return (
       <section>
 
@@ -55,7 +75,9 @@ function mapStateToProps(state) {
     stays: state.stayModule.stays,
     filterBy: state.stayModule.filterBy,
     class: state.stayModule.classHeader,
-    trips: state.orderModule.orders
+    trips: state.orderModule.orders,
+    user: state.userModule.user
+
   }
 }
 

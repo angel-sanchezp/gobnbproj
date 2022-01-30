@@ -103,8 +103,8 @@
     align-content: center;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4,minmax(180px,1fr));
-    grid-template-rows: 227px 286px;
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+    grid-template-rows: 180px 160px;
     grid-gap: 8px;
     gap: 8px;
     padding: rem(24px) 0px 0px;

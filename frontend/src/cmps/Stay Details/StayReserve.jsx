@@ -1,25 +1,26 @@
 // import { useEffect } from 'react';
 import React from 'react'
 import moment from 'moment';
+import { connect } from 'react-redux'
 import { socketService } from '../../services/socket.service.js'
-
-
 import { Guests } from '../FilterCmps/Guests.jsx'
 import { Calendar } from '../FilterCmps/Calendar.jsx'
 import { showErrorMsg } from '../../services/event-bus.service.js'
 
 
+// import { render } from '@testing-library/react';
 import { userService } from '../../services/user.services.js'
-import { orderService } from '../../services/order.service.js'
 import { ReactComponent as Star } from '../../assets/svg/star.svg'
+import { addOrder, setNewOrder } from '../../store/order/order.actions.js'
 
-export class StayReserve extends React.Component {
+
+class _StayReserve extends React.Component {
 
     state = {
         isModalShown: false,
         cmp: null,
         stay: null,
-        gTotalPrice:0,
+        gTotalPrice: 0,
         order: {
             hostId: this.props.stay.host._id,
             createdAt: new Date(),
@@ -37,8 +38,7 @@ export class StayReserve extends React.Component {
         }
     }
 
-    // userService.getLoggedinUser().fullname
-    // userService.getLoggedinUser()._id
+    
 
     componentDidMount() {
         const { stay } = this.props
@@ -56,27 +56,25 @@ export class StayReserve extends React.Component {
         order.stay_name = name
         order.stay_price = price
         order.hostId = host._id
-        order.adults=this.props.filterBy.adults
-        order.kids=this.props.filterBy.children
-        order.startDate=this.props.filterBy.dateIn
-        order.endDate=this.props.filterBy.dateOut
-        let date=[]
+        order.adults = this.props.filterBy.adults
+        order.kids = this.props.filterBy.children
+        order.startDate = this.props.filterBy.dateIn
+        order.endDate = this.props.filterBy.dateOut
+        let date = []
         date.push(parseInt(this.props.filterBy.dateIn))
         date.push(parseInt(this.props.filterBy.dateOut))
-        console.log('date',date)
-        order.totalPrice=this.setTotalPrice(date)
+        // console.log('date',date)
+        order.totalPrice = this.setTotalPrice(date)
         this.setState({ order });
         this.setState({ stay: { ...stay } })
-
     }
 
-   
+
 
     getInputValue = (date) => {
         if (!date) { return '' }
         return moment(date).format("MMM D")
     }
-
     onSubmitOrder = async (ev) => {
         ev.preventDefault()
         if(this.state.order.buyer_fullname === 'Guest') {
@@ -84,31 +82,24 @@ export class StayReserve extends React.Component {
             return showErrorMsg('Please sign in first.')
         }
         // console.log('order state', this.state.order)
-        await orderService.addOrder(this.state.order)
-        // socketService.emit('new order', this.state.order);
-
-        // console.log('add sucsefully')
+        await this.props.addOrder(this.state.order)
+        socketService.emit('new order', this.state.order);
+        console.log('sockect emit ')
+        this.props.setNewOrder()
         // this.closeModal()
     }
-
-
     onChangeAdults = (adultsNum) => {
         // console.log(adultsNum)
-        const {order}=this.state
-        order.adults=adultsNum
-
+        const { order } = this.state
+        order.adults = adultsNum
         this.setState({ order });
-
-
     }
-
     onChangeChildren = (childrenNum) => {
         // console.log(childrenNum)
-        const {order}=this.state
-        order.kids=childrenNum
+        const { order } = this.state
+        order.kids = childrenNum
         this.setState({ order });
     }
-
     onSetDate = (date) => {
         // console.log('dateOn', date)
         var { order } = this.state
@@ -119,32 +110,22 @@ export class StayReserve extends React.Component {
             setTimeout(() => {
                 this.closeModal()
             }, 1000)
-
         }
         this.setTotalPrice(date)
-
-
     }
-
     setTotalPrice = (date) => {
         console.log(date)
         const date1 = moment(date[0])
         const date2 = moment(date[1])
         const diffDays = date2.diff(date1, 'days')
-
-        let {gTotalPrice} = this.state
+        let { gTotalPrice } = this.state
         var { order } = this.state
         var price = +this.state.order.stay_price;
         order.totalPrice = diffDays * order.stay_price
         gTotalPrice = diffDays * price
         this.setState({ order });
-        this.setState(pre => ({...pre, gTotalPrice: gTotalPrice}))
+        this.setState(pre => ({ ...pre, gTotalPrice: gTotalPrice }))
     }
-
-    
-
-
-
     OpenModal = (indicator) => {
         if (indicator === 'guests') {
             // console.log('here guests')
@@ -157,21 +138,17 @@ export class StayReserve extends React.Component {
             this.setState(prev => ({ ...prev, isModalShown: true }))
         }
     }
-
     closeModal = () => {
         this.setState(prev => ({ ...prev, isModalShown: false }))
     }
-
     toggleModal = () => {
         this.setState(prev => ({ ...prev, isModalShown: !prev.isModalShown }))
     }
-
     onAvailablity = () => {
         document.querySelector(".btn2").classList.add("hidden")
         document.querySelector(".order-preview").classList.remove("hidden")
         document.querySelector(".btn1").classList.remove("hidden")
     }
-
     get formattedGuests() {
         const { kids = 0, adults = 1 } = this.state.order
         let text = `${adults} adult${adults > 1 ? 's' : ''}`
@@ -180,33 +157,23 @@ export class StayReserve extends React.Component {
         }
         return text;
     }
-
-
-
-
-
     render() {
         const { reviews } = this.props.stay;
         const { order } = this.state;
         let ReviewsAmount = (reviews.length === 1) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
         if (reviews.length === 0) ReviewsAmount = `No reviews`;
-
         const formattedDateIn = this.getInputValue(order.startDate)
         // console.log(formattedDateIn)
         const formattedDateOut = this.getInputValue(order.endDate)
         // console.log(formattedDateOut)
-        
-        
-        
         const { isModalShown, cmp } = this.state
         const { price, _id, name } = this.props.stay;
         let total = this.state.gTotalPrice;
         let night = total / price;
-        if(!total){
+        if (!total) {
             total = 0;
             night = 0;
         }
-
         return (
             <section className="reserve-container">
                 <div className="reserve-position">
@@ -214,9 +181,9 @@ export class StayReserve extends React.Component {
                         <div className="reserve-info">
                             <div className="reserve-price">${this.props.stay.price} <span>/night</span></div>
                             <div className="reserve-rate">
-                            <span className='dot'><Star/></span>
-                            <span className='dot b'>4.7</span>
-                            <span className='dotr'>· </span>
+                                <span className='dot'><Star /></span>
+                                <span className='dot b'>{this.props.stay.rank}</span>
+                                <span className='dotr'>· </span>
                                 <a className="ab" href="#stayreview"><span className="reserve-reviews">{ReviewsAmount}</span></a>
                             </div>
                         </div>
@@ -251,8 +218,8 @@ export class StayReserve extends React.Component {
                                                     placeholder="Add dates"
                                                     readOnly
                                                     onClick={() => this.OpenModal('calendar')}
-                                                    value={formattedDateOut} 
-                                                    onChange={this.onHandleChange}/></span>
+                                                    value={formattedDateOut}
+                                                    onChange={this.onHandleChange} /></span>
                                         </div>
                                         <div className="add"></div>
                                     </div>
@@ -274,7 +241,7 @@ export class StayReserve extends React.Component {
                             </div>
                             <button className="reserve-submit gradient btn1 hidden" type="submit">Reserve</button>
                         </form>
-                        <button className="reserve-submit btn2 gradient" type="button" onClick={()=> this.onAvailablity()}>Check Availability</button>
+                        <button className="reserve-submit btn2 gradient" type="button" onClick={() => this.onAvailablity()}>Check Availability</button>
                         <div className="order-preview hidden">
                             <small>You won't be charged yet</small>
                             <div>
@@ -298,9 +265,22 @@ export class StayReserve extends React.Component {
                 </div>
             </section>
         )
-
-
-
     }
-
 }
+function mapStateToProps(state) {
+    return {
+        stays: state.stayModule.stays,
+        filterBy: state.stayModule.filterBy,
+        class: state.stayModule.classHeader,
+        trips: state.orderModule.orders
+    }
+}
+const mapDispatchToProps = {
+    addOrder,
+    setNewOrder
+}
+export const StayReserve = connect(mapStateToProps, mapDispatchToProps)(_StayReserve)
+
+
+
+

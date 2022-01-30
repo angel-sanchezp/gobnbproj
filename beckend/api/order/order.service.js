@@ -11,7 +11,7 @@ async function query(filterBy = {}) {
         const collection = await dbService.getCollection('order')
         var orders = await collection.find(criteria).toArray()
         // console.log('after build criteria ',criteria)
-       var orders = await collection.aggregate([
+        var orders = await collection.aggregate([
             {
                 $match: criteria
             },
@@ -41,13 +41,13 @@ async function query(filterBy = {}) {
             }
         ]).toArray()
         orders = orders.map(order => {
-            console.log('order in map ', order)
-            order.hostDetails = { _id: order.hostDetails._id, fullname: order.hostDetails.fullname , stays:order.hostDetails.stays }
-            order.stayDetails = { name: order.stayDetails.name,  imgUrls:order.stayDetails.imgUrls }
+            // console.log('order in map ', order)
+            order.hostDetails = { _id: order.hostDetails._id, fullname: order.hostDetails.fullname,}
+            order.stayDetails = { name: order.stayDetails.name, imgUrls: order.stayDetails.imgUrls }
             return order
         })
 
-        console.log('orders after agragtzia', orders)
+        // console.log('orders after agragtzia', orders)
 
         return orders
     } catch (err) {
@@ -76,14 +76,14 @@ async function remove(orderId) {
 
 
 async function add(order) {
-    console.log(order.hostId)
+    // console.log(order.hostId)
     try {
         const collection = await dbService.getCollection('order')
         const orderToAdd = {
             ...order,
             hostId: ObjectId(order.hostId),
             buyerId: ObjectId(order.buyerId),
-            stay_id:ObjectId(order.stay_id),
+            stay_id: ObjectId(order.stay_id),
         }
         await collection.insertOne(orderToAdd)
         return order;
@@ -96,12 +96,32 @@ async function add(order) {
 
 
 function _buildCriteria(filterBy) {
-    console.log(filterBy)
+    // console.log(filterBy)
     const criteria = {}
     if (filterBy.buyerId) criteria.buyerId = ObjectId(filterBy.buyerId)
     if (filterBy.hostId) criteria.hostId = ObjectId(filterBy.hostId)
 
     return criteria
+}
+
+async function update(order) {
+    try {
+        const orderToSave = {
+            _id: ObjectId(order._id),
+            status: 'Confirmed'
+        }
+        // peek only updatable fields!
+        // console.log('order in try')
+
+        const collection = await dbService.getCollection('order')
+        await collection.updateOne({ _id: orderToSave._id }, { $set: orderToSave })
+
+        // console.log('update after order', orderToSave)
+        return orderToSave;
+    } catch (err) {
+        logger.error(`cannot update order ${order._id}`, err)
+        throw err
+    }
 }
 
 // function _buildCriteria(filterBy) {
@@ -114,7 +134,8 @@ function _buildCriteria(filterBy) {
 module.exports = {
     query,
     remove,
-    add
+    add,
+    update
 }
 
 

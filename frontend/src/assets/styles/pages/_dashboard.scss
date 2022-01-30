@@ -1,0 +1,80 @@
+
+
+.dashboard-page{
+    margin: 20px 20px 40px 20px;
+    font-size: 15px;
+    h1{
+    font-family: 'CerealBook';
+    font-size: 28px;
+    margin: 17px 0px;
+    }
+    h2{
+        font-family: 'CerealLight';
+        font-size: 20px;
+        font-weight: 300;
+    }
+    ul{
+        padding: 0px;
+    }
+    li{
+        list-style-type: none;
+
+    }
+    .dashboard-card{
+        border: 0.5px solid #ddddddba;
+        border-radius: 20px;
+        margin: 20px 0px;
+    
+        .order-details{
+            padding: 10px;
+        
+            .status{
+                color: #f5375d;
+                font-family: 'CerealMedium';
+                font-size: 15px;
+            }
+            .silver{
+                color: #a5a4a4;
+                font-family: 'CerealLight';
+
+            }
+            .second-row{
+                margin: 10px 0px;
+                display: flex;
+                justify-content: space-between;
+                font-family: 'CerealBook';
+                font-size: 18px;
+            }
+            .buyer-txt{
+                margin: 3px 0px;
+            }
+            .buyer-pic{
+                height: 40px;
+                border-radius: 20px;
+            }
+            
+        }
+    }
+        .buttons{
+            border-top: 0.5px solid #ddddddba;
+            padding-top: 10px;
+            height: 45px;
+            .first-dashboard-btn{
+                font-family: 'CerealMedium';
+                font-size: 15px;
+                border-right: 0.5px solid #ddddddba;
+                width: 50%;
+
+            }
+            .dashboard-btn{
+                font-family: 'CerealMedium';
+                font-size: 15px;
+                width: 50%;
+            }
+        }
+    
+        
+    
+
+
+}

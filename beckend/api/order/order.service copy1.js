@@ -62,17 +62,17 @@ function getaggregation(criteria) {
 }
 
 async function query(filterBy = {}) {
-    console.log('filterBy in order', filterBy)
+    // console.log('filterBy in order', filterBy)
     // console.log('criteria in order service',criteria)
     try {
         const criteria = _buildCriteria(filterBy)
         const collection = await dbService.getCollection('order')
         const mongoQuery = getaggregation(criteria)
-        console.log('mongo query', mongoQuery)
+        // console.log('mongo query', mongoQuery)
         var orders = await collection.aggregate(mongoQuery).toArray()
-        console.log('orders after ongo query', orders)
+        // console.log('orders after ongo query', orders)
         orders = orders.map(order => {
-            console.log('order in map ', order)
+            // console.log('order in map ', order)
             order.hostDetails = { fullname: order.hostDetails.fullname, stays: order.hostDetails.stays }
             // order.stayDetails = { name: order.stay.name,  imgUrls:order.imgUrls }
             // order.userDetails = {fullname:order.userDetails.fullname  }

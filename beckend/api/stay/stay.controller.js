@@ -22,7 +22,7 @@ module.exports = {
 async function getStays(req, res) {
     try {
         let filterBy = req.query;
-        console.log(' filter from server', req.query)
+        // console.log(' filter from server', req.query)
             // filterBy = JSON.parse(location);
         //   console.log('filter by after jason in controller',filterBy)
         const stays = await stayService.query(filterBy)
@@ -50,9 +50,9 @@ async function getStayById(req, res) {
 async function addStay(req, res) {
     try {
         const stay = req.body
-        console.log('stay in stay controller js ', req.body)
+        // console.log('stay in stay controller js ', req.body)
         const addedStay = await stayService.add(stay)
-        console.log('added',addedStay)
+        // console.log('added',addedStay)
         res.json(addedStay)
 
     } catch (err) {
@@ -66,8 +66,8 @@ async function addStay(req, res) {
 async function updateStay(req, res) {
     try {
         const stay = req.body;
-        console.log('update stay ', stay)
-        console.log(stay)
+        // console.log('update stay ', stay)
+        // console.log(stay)
         const updadatedStay = await stayService.update(stay)
         res.json(updadatedStay)
     } catch (err) {

@@ -35,7 +35,7 @@ class _StayPreview extends Component {
                 <div className="stay-details">
                     <div className="line1">
                         <div className="star"><Star /></div>
-                        <div className="rank">4.73</div>
+                        <div className="rank">{stay.rank}</div>
                         <div className="review-count"> ({stay.reviews.length})</div>
                     </div>
                     <div className="line2">

@@ -58,7 +58,7 @@ class _HomePage extends React.Component {
         imgUrl : "https://scontent.fsdv2-1.fna.fbcdn.net/v/t1.18169-9/545952_2328785314693_1307571669_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=174925&_nc_ohc=R467Q15qJhsAX9woJl9&_nc_ht=scontent.fsdv2-1.fna&oh=00_AT9sCkdbrBSBM50G04h6BpayTHbadbHVrFaC00vTb4lr_Q&oe=62176821"
       };
       this.props.login(credentials)
-      // console.log('login')
+      console.log('login')
     }else{
       return
     }
@@ -109,7 +109,7 @@ class _HomePage extends React.Component {
             style={{ width: "100%" }}
           />
           <div className="header-txt-on-banner">
-            Not Sure where to go? Perfect.
+            Not sure where to go? Perfect.
           </div>
           <Link to={`/explore`}>
             <button className="btn-flexible">

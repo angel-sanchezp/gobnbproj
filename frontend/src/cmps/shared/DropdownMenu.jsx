@@ -1,9 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux'
 import { Link } from "react-router-dom";
-
 // import { logout } from "../../store/user/user.actions.js"
-
 import { userService } from "../../services/user.services";
 import UserAvatar from "../../assets/user-icon.png";
 import Avatar from "../../assets/svg/avatar.png";
@@ -11,7 +9,6 @@ import { ReactComponent as Burger } from "../../assets/svg/burger.svg";
 // import { ReactComponent as UserAvatar } from '../../assets/svg/user.svg'
 import { logout, login } from "../../store/user/user.actions";
 // import { render } from "sass";
-
 export class _DropdownMenu extends React.Component {
   state = {
     isActive: false,
@@ -20,32 +17,24 @@ export class _DropdownMenu extends React.Component {
     isLoggedOut: null,
     isDemo: false
   };
-
-
   componentDidMount(){
     if(this.props.user){
       this.setState(prev => ({ ...prev, loggedInUser: this.props.user }))
     }
     // console.log(this.state.isLoggedOut)
 };
-
-
   openLoginModal = () => {
     document.querySelector(".user-modal").classList.remove("hidden");
     document.querySelector(".dark-screen").classList.remove("hidden");
   };
-
-
     // const isActive = false
      onHandelNav = () => {
        this.setState(prev => ({ ...prev, isActive: !this.state.isActive }))
     }
-
     onLogOut = () => {
-      this.setState(prev => ({ ...prev, isActive: false, isLoggedOut: true }))
       this.props.logout()
+      this.setState(prev => ({ ...prev, isActive: false, isLoggedOut: true }))
     }
-
     onDemoUser = () => {
       const credentials = {
         username: "user2",
@@ -56,9 +45,6 @@ export class _DropdownMenu extends React.Component {
       console.log(this.state.isDemo)
       // window.location.href = `/`
     }
-    
-  
-  
     render() {
       let avatar = UserAvatar;
       const {loggedInUser} = this.state;
@@ -80,8 +66,6 @@ export class _DropdownMenu extends React.Component {
         document.querySelectorAll(".opt3").forEach(e=>{e.classList.add("hidden");});
         document.querySelectorAll(".opt1").forEach(e=>{e.classList.remove("hidden");});
       }
-      
-
   return (
     <div className="container">
       <div className="menu-container">
@@ -130,7 +114,6 @@ const mapDispatchToProps = {
   logout,
   login
 }
-
 export const DropdownMenu = connect(
   mapStateToProps,
   mapDispatchToProps

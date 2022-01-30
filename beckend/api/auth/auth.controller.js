@@ -3,13 +3,13 @@ const logger = require('../../services/logger.service')
 
 async function login(req, res) {
     let { username, password } = req.body;
-    console.log('login req in aouth contoller',req.body)
+    // console.log('login req in aouth contoller',req.body)
     
     // console.log('login in controller ',username, password)
     try {
         const user = await authService.login(username, password)
         req.session.user = user
-        console.log('user after service',req.session)
+        // console.log('user after service',req.session)
         // console.log('user after service', req)
         res.json(user)
     } catch (err) {
@@ -21,7 +21,7 @@ async function login(req, res) {
 
 async function signup(req, res) {
     try {
-        console.log(req.body)
+        // console.log(req.body)
         const { username, password, fullname } = req.body
         // Never log passwords
         // logger.debug(fullname + ', ' + username + ', ' + password)
@@ -38,7 +38,7 @@ async function signup(req, res) {
 
 async function logout(req, res){
     try {
-        console.log(req.session)
+        // console.log(req.session)
         req.session.destroy()
         res.send({ msg: 'Logged out successfully' })
     } catch (err) {
