@@ -45,14 +45,14 @@ class _StayDetails extends React.Component {
     }
 
     addReview = (review) => {
-        review.createdAt = Date.now()/1000
+        review.created = Date.now()
         let reviews = [...this.state.stay.reviews, review]
         this.state.stay.reviews.push(review)
+        console.log(this.state.stay)
         // reviewService.add(review)
-        this.setState((prevState) => {
-            return { stay: { ...prevState.stay, reviews } }
+        this.setState((prev) => {
+            return { stay: { ...prev.stay, reviews } }
         })
-
     }
     
     

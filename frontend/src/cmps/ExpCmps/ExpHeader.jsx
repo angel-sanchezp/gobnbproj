@@ -7,6 +7,7 @@ import { SearchModal } from './SearchModel.jsx'
 import { Logo } from '../shared/logo.jsx'
 import { DropdownMenu } from '../shared/DropdownMenu'
 import { setFilter} from '../../store/stay/stay.actions.js'
+import { UserMsg } from '../shared/User-Msg'
 
 class _ExpHeader extends Component {
 
@@ -100,6 +101,8 @@ class _ExpHeader extends Component {
                         <SearchModal onCloseModal={this.closeModal} onSetFilter={this.onSetFilter} isMinFilter={this.props.isMinFilter}/> 
                     )}
                 </section>
+                <UserMsg />
+
                 {/* <div className="user-modal hidden">
                 <LoginModal/>
                 </div> */}
