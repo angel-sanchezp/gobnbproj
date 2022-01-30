@@ -57,6 +57,8 @@ const stayRoutes = require('./api/stay/stay.routes')
 const orderRoutes = require('./api/order/order.routes')
 // const hostOrderRoutes = require('./api/hostOrder/hostOrder.routes')
 // const hostRoutes = require('./api/host/host.routes')
+
+
 const {connectSockets} = require('./services/socket.service')
 
 
@@ -82,7 +84,10 @@ app.get('/**', (req, res) => {
 })
 
 const logger = require('./services/logger.service')
-const port = process.env.PORT || 3030
+const port = process.env.PORT || 3030;
+app.get('/**', (req, res) => {
+    res.sendFile(path.join( _dirname, 'public', 'index.html'));
+})
 http.listen(port, () => {
     logger.info('Server is running on port: ' + port)
 })
