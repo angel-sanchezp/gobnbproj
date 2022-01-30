@@ -2531,3 +2531,10 @@
 1/30/2022, 1:23:44 AM - INFO - Req!!!
 >>>>>>> ae316755f14fab2cd0cfebd6085b86309dcd6bee
 1/30/2022, 9:34:59 AM - INFO - Server is running on port: 3030
+1/30/2022, 9:40:56 AM - INFO - Server is running on port: 3030
+1/30/2022, 9:41:04 AM - DEBUG - auth.service - login with username: lbiton
+1/30/2022, 9:41:04 AM - INFO - Req!!!
+1/30/2022, 9:41:05 AM - DEBUG - Setting (uJIdg77J8qEUZ6UwAAAB) socket.userId = 61f1a100b3f0d3ee18481142
+1/30/2022, 9:42:10 AM - INFO - Req!!!
+1/30/2022, 9:42:10 AM - DEBUG - auth.service - login with username: lbiton
+1/30/2022, 9:42:11 AM - DEBUG - Setting (1UdnOBGf3PbBFtjAAAAD) socket.userId = 61f1a100b3f0d3ee18481142
