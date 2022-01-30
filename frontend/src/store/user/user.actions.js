@@ -32,9 +32,10 @@ export function login(credentials) {
   return async (dispatch) => {
     try {
       const user = await userService.login(credentials)
+      console.log(user)
       const action = { type: 'SET_USER', user }
       dispatch(action)
-      showSuccessMsg('Successfully logged in.')
+      showSuccessMsg(`Welcome ${user.fullname}`)
       // Swal.fire({
       //   position: "top-end",
       //   title: "Welcome!",
@@ -70,7 +71,7 @@ export function signup(credentials) {
       const user = await userService.signup(credentials)
       const action = { type: 'SET_USER', user }
       dispatch(action);
-      showSuccessMsg('Successfully signed up')
+      showSuccessMsg('Signed up!')
       // Swal.fire({
       //   position: "top-end",
       //   title: "Welcome!",
@@ -107,7 +108,7 @@ export function logout() {
       await userService.logout();
       const action = { type: "SET_USER", user: null };
       dispatch(action);
-      showSuccessMsg('Successfully logged out')
+      showSuccessMsg('Logged out!')
       // Swal.fire({
       //   position: "top-end",
       //   title: "Goodbye!",

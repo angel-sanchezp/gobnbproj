@@ -8,29 +8,36 @@
 
 .review-rate{
     padding:  0px 0px 32px;
-}
-
-
-.review-statistics{
-    display: grid;
-    row-gap: 20px;
-    column-gap: 90px;
-    grid-template-columns: 46% 46%;
-    grid-template-rows: 33% 33% 33%;
-    padding-bottom: 50px;
-}
-
-.ratings{
     display: flex;
-    justify-content: center;
-    justify-content: space-between;
+    align-items: baseline;
 }
+
+.review-icon{
+    padding: 0px 10px;
+}
+
+// .review-statistics{
+//     display: grid;
+//     row-gap: 20px;
+//     column-gap: 90px;
+//     grid-template-columns: 46% 46%;
+//     grid-template-rows: 20% 20% 20%;
+//     padding-bottom: 25px;
+// }
+
+// .ratings{
+//     display: flex;
+//     justify-content: center;
+//     justify-content: space-between;
+// }
 
 .reviews {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
-  gap: 55px;
+  column-gap: 40px;
+  row-gap: 20px;
+//   gap: 45px;
 }
 
 

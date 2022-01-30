@@ -1,5 +1,5 @@
 .user-msg {
-    color:rgb(233, 230, 230);
+    color:rgb(44, 42, 42);
     padding: 10px;
     font-size: 1.4em;
     font-family: CerealBook;
@@ -8,7 +8,7 @@
     bottom: 0;
     right:0;
     background-color: grey;
-    border: rgb(231, 224, 224) solid 2px;
+    border: 2px solid #b4b4b4;;
     border-radius: 8px;
 }
 .user-msg button {
@@ -20,10 +20,10 @@
 }
 
 .user-msg.success {
-    background-color: rgb(125, 194, 125);
+    background-color: rgb(253, 244, 244);
 }
 .user-msg.danger {
-    background-color: rgb(211, 119, 119);
+    background-color: rgb(253, 244, 244);
 }
 
 

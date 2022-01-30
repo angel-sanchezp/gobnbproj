@@ -33,7 +33,7 @@ export function addOrder(order) {
   return async () => {
     try {
       await orderService.addOrder(order)
-      showSuccessMsg('Successfully reserved stay')
+      showSuccessMsg('Reserved stay!')
       // Swal.fire({
       //   position: 'top-end',
       //   title: "Thank you!",
