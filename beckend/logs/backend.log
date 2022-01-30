@@ -42131,12 +42131,90 @@
 1/30/2022, 3:07:27 PM - INFO - Req!!!
 1/30/2022, 3:07:47 PM - INFO - Req!!!
 1/30/2022, 3:10:05 PM - INFO - Req!!!
+<<<<<<< HEAD
+1/30/2022, 3:11:19 PM - INFO - Req!!!
+1/30/2022, 3:11:40 PM - DEBUG - auth.service - login with username: user2
+1/30/2022, 3:11:40 PM - DEBUG - Setting (KhYLdxC4fcMK4BzyAAAP) socket.userId = 61f0627fc8e02896300df6d6
+1/30/2022, 3:12:04 PM - INFO - Req!!!
+1/30/2022, 3:12:04 PM - INFO - Req from: User 2
+1/30/2022, 3:12:32 PM - DEBUG - Setting (KhYLdxC4fcMK4BzyAAAP) socket.userId = 61f0627fc8e02896300df6d6
+1/30/2022, 3:12:32 PM - INFO - Req!!!
+1/30/2022, 3:12:32 PM - INFO - Req from: User 2
+1/30/2022, 3:12:44 PM - INFO - Req!!!
+1/30/2022, 3:12:44 PM - INFO - Req from: User 2
+1/30/2022, 3:12:56 PM - DEBUG - Setting (n0aIV643AdcewMekAAAN) socket.userId = 61f1a100b3f0d3ee18481142
+1/30/2022, 3:12:56 PM - INFO - Req!!!
+1/30/2022, 3:12:56 PM - INFO - Req from: User 2
+1/30/2022, 3:13:16 PM - INFO - Req!!!
+1/30/2022, 3:13:16 PM - INFO - Req from: User 2
+1/30/2022, 3:13:43 PM - INFO - Req!!!
+1/30/2022, 3:13:43 PM - DEBUG - auth.service - login with username: lbiton
+1/30/2022, 3:13:44 PM - DEBUG - Setting (a5J9CYVymKM9SIXhAAAT) socket.userId = 61f1a100b3f0d3ee18481142
+1/30/2022, 3:13:56 PM - DEBUG - auth.service - login with username: user2
+1/30/2022, 3:13:56 PM - DEBUG - Setting (KhYLdxC4fcMK4BzyAAAP) socket.userId = 61f0627fc8e02896300df6d6
+1/30/2022, 3:14:05 PM - INFO - Req!!!
+1/30/2022, 3:14:05 PM - INFO - Req from: User 2
+1/30/2022, 3:15:30 PM - DEBUG - Setting (a5J9CYVymKM9SIXhAAAT) socket.userId = 61f1a100b3f0d3ee18481142
+1/30/2022, 3:15:30 PM - INFO - Req!!!
+1/30/2022, 3:15:30 PM - INFO - Req from: User 2
+1/30/2022, 3:15:31 PM - DEBUG - Setting (a5J9CYVymKM9SIXhAAAT) socket.userId = 61f1a100b3f0d3ee18481142
+1/30/2022, 3:15:32 PM - INFO - Req!!!
+1/30/2022, 3:15:32 PM - INFO - Req from: User 2
+1/30/2022, 3:20:29 PM - DEBUG - auth.service - login with username: user2
+1/30/2022, 3:20:29 PM - DEBUG - Setting (KhYLdxC4fcMK4BzyAAAP) socket.userId = 61f0627fc8e02896300df6d6
+1/30/2022, 3:20:35 PM - INFO - Req!!!
+1/30/2022, 3:20:35 PM - INFO - Req from: User 2
+1/30/2022, 3:20:47 PM - INFO - Req!!!
+1/30/2022, 3:20:47 PM - INFO - Req from: User 2
+1/30/2022, 3:21:02 PM - INFO - Req!!!
+1/30/2022, 3:21:02 PM - INFO - Req from: User 2
+1/30/2022, 3:21:07 PM - INFO - Req!!!
+1/30/2022, 3:21:07 PM - INFO - Req from: User 2
+1/30/2022, 3:21:20 PM - INFO - Req!!!
+1/30/2022, 3:21:20 PM - INFO - Req from: User 2
+1/30/2022, 3:21:30 PM - DEBUG - Setting (1AN52b0OCFEbNL-dAAAX) socket.userId = 61f1a100b3f0d3ee18481142
+1/30/2022, 3:21:30 PM - INFO - Req!!!
+1/30/2022, 3:21:46 PM - INFO - Req!!!
+1/30/2022, 3:21:50 PM - DEBUG - auth.service - login with username: user2
+1/30/2022, 3:21:50 PM - DEBUG - Setting (d0MfjKdiUi-WMlFEAAAZ) socket.userId = 61f0627fc8e02896300df6d6
+1/30/2022, 3:22:03 PM - INFO - Req!!!
+1/30/2022, 3:22:03 PM - INFO - Req from: User 2
+1/30/2022, 3:22:57 PM - INFO - Req!!!
+1/30/2022, 3:22:57 PM - INFO - Req from: User 2
+1/30/2022, 3:23:08 PM - INFO - Req!!!
+1/30/2022, 3:23:08 PM - INFO - Req from: User 2
+1/30/2022, 3:23:14 PM - INFO - Req!!!
+1/30/2022, 3:23:14 PM - INFO - Req from: User 2
+1/30/2022, 3:23:19 PM - INFO - Req!!!
+1/30/2022, 3:23:19 PM - INFO - Req from: User 2
+1/30/2022, 3:23:21 PM - INFO - Req!!!
+1/30/2022, 3:23:21 PM - INFO - Req from: User 2
+1/30/2022, 3:23:23 PM - INFO - Req!!!
+1/30/2022, 3:23:23 PM - INFO - Req from: User 2
+1/30/2022, 3:23:30 PM - INFO - Req!!!
+1/30/2022, 3:23:30 PM - INFO - Req from: User 2
+1/30/2022, 3:23:36 PM - INFO - Req!!!
+1/30/2022, 3:23:36 PM - INFO - Req from: User 2
+1/30/2022, 3:23:39 PM - INFO - Req!!!
+1/30/2022, 3:23:39 PM - INFO - Req from: User 2
+1/30/2022, 3:23:52 PM - INFO - Req!!!
+1/30/2022, 3:23:52 PM - INFO - Req from: User 2
+1/30/2022, 3:23:56 PM - INFO - Req!!!
+1/30/2022, 3:23:56 PM - INFO - Req from: User 2
+1/30/2022, 3:24:00 PM - INFO - Req!!!
+1/30/2022, 3:24:00 PM - INFO - Req from: User 2
+1/30/2022, 3:24:03 PM - INFO - Req!!!
+1/30/2022, 3:24:03 PM - INFO - Req from: User 2
+1/30/2022, 3:24:15 PM - INFO - Req!!!
+1/30/2022, 3:24:15 PM - INFO - Req from: User 2
+=======
 >>>>>>> 94565cc5ee2917ea37b0c9a246e7e5fe4b48d2b0
 30.1.2022, 15:22:19 - INFO - Server is running on port: 3030
 30.1.2022, 15:22:25 - DEBUG - Setting (OsOlR-W9ydtpXh_4AAAC) socket.userId = 61f1a100b3f0d3ee18481142
 30.1.2022, 15:22:25 - DEBUG - Setting (pyoQ3LH3R_ZKBHPCAAAD) socket.userId = 61f065edc8e02896300df6d9
 30.1.2022, 15:22:25 - INFO - Req!!!
 30.1.2022, 15:22:25 - INFO - Req!!!
+<<<<<<< HEAD
 30.1.2022, 15:30:40 - INFO - Req!!!
 30.1.2022, 15:30:46 - INFO - Req!!!
 30.1.2022, 15:31:16 - INFO - Req!!!
@@ -42174,3 +42252,10 @@
 30.1.2022, 17:27:40 - ERROR - Failed to Login Invalid username or password
 30.1.2022, 17:27:47 - DEBUG - auth.service - login with username: angel
 30.1.2022, 17:27:47 - DEBUG - Setting (MeeTmEySffjf_1VrAAAX) socket.userId = 61f065edc8e02896300df6d9
+=======
+>>>>>>> e9798d96308db678c2efe0a4399215cec28698ca
+>>>>>>> b861fa44d094bb95fe1d9cfd5c94ee891c4f50e7
+30.1.2022, 17:29:08 - INFO - Req!!!
+30.1.2022, 17:29:08 - INFO - Req from: angelica
+30.1.2022, 17:29:09 - INFO - Req!!!
+30.1.2022, 17:29:09 - INFO - Req from: angelica
