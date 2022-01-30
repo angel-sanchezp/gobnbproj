@@ -84,7 +84,7 @@ class _StayReserve extends React.Component {
         // console.log('order state', this.state.order)
         await this.props.addOrder(this.state.order)
         socketService.emit('new order', this.state.order);
-        console.log('sockect emit ')
+        // console.log('sockect emit ')
         this.props.setNewOrder()
         // this.closeModal()
     }
@@ -129,12 +129,12 @@ class _StayReserve extends React.Component {
     OpenModal = (indicator) => {
         if (indicator === 'guests') {
             // console.log('here guests')
-            this.setState(prev => ({ ...prev, cmp: <Guests onChangeAdults={this.onChangeAdults} onChangeChildren={this.onChangeChildren} /> }))
+            this.setState(prev => ({ ...prev, cmp: <Guests onChangeAdults={this.onChangeAdults} onChangeChildren={this.onChangeChildren} closeModal={this.closeModal}/> }))
             this.setState(prev => ({ ...prev, isModalShown: true }))
             // this.toggleModal()
         } else {
             // console.log('here calendar')
-            this.setState(prev => ({ ...prev, cmp: <Calendar onSetDate={this.onSetDate} filterBy={this.props.filterBy} /> }))
+            this.setState(prev => ({ ...prev, cmp: <Calendar onSetDate={this.onSetDate} filterBy={this.props.filterBy}/> }))
             this.setState(prev => ({ ...prev, isModalShown: true }))
         }
     }

@@ -50,11 +50,14 @@ class _AppHeader extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        // console.log('prev orders ',prevProps.orders)
+        // console.log('prev is confirmed ',this.props.isConfirmedOrder)
         const { user, orders } = this.props;
         if(prevProps.orders!== orders){
             if (user.isHost && (prevProps.orders.length !== orders.length)) {
                 this.setState({ isRedDot: true })
+            }else if(!user.isHost && this.props.isConfirmedOrder){
+                this.setState({ isRedDot: true })
+
             }
 
         }
@@ -71,11 +74,14 @@ class _AppHeader extends Component {
         } else {
             this.props.loadBuyerOrders()
 
+
         }
     }
 
     setOrderConfirm = () => {
         const user = userService.getLoggedinUser()
+        this.setState({ isRedDot: false })
+
         // console.log(this.props);
         // if (this.props.location.pathname !== '/trips') {
         //     this.setState({ isRedDot: true })

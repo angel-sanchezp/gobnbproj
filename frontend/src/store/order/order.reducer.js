@@ -11,10 +11,11 @@ export function orderReducer(state = initialState, action) {
             newState = { ...state, orders: action.orders }
             break
         case 'NEW_ORDER':
-            console.log(action.isNewOrder)
+            // console.log(action.isNewOrder)
             newState = { ...state, isNewOrder: action.isNewOrder }
             break
         case 'CONFIRMED_ORDER':
+            // console.log(action.isConfirmedOrder)
             newState = { ...state, isConfirmedOrder:  action.isConfirmedOrder }
             break
         case 'ADD_ORDER':
