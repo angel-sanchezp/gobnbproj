@@ -41988,6 +41988,49 @@
 30.1.2022, 12:24:27 - DEBUG - Setting (8ZClQEaSRZ_HlaTyAAA1) socket.userId = 61f1a100b3f0d3ee18481142
 30.1.2022, 12:24:27 - INFO - Req!!!
 30.1.2022, 12:24:27 - INFO - Req from: angelica
+<<<<<<< HEAD
+30.1.2022, 14:02:55 - INFO - Server is running on port: 3030
+30.1.2022, 14:03:47 - INFO - Req!!!
+30.1.2022, 14:03:47 - DEBUG - auth.service - login with username: lbiton
+30.1.2022, 14:03:52 - DEBUG - Setting (QRqVU9aWkJUPBpZgAAAB) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 14:04:17 - DEBUG - Setting (QRqVU9aWkJUPBpZgAAAB) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 14:04:17 - INFO - Req!!!
+30.1.2022, 14:10:38 - INFO - Req!!!
+30.1.2022, 14:10:38 - DEBUG - Setting (AqkTRVRxqmtotbhtAAAD) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 14:10:54 - INFO - Req!!!
+30.1.2022, 14:10:54 - DEBUG - auth.service - login with username: lbiton
+30.1.2022, 14:10:56 - DEBUG - Setting (6UswosgMeQZeGYleAAAF) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 14:11:00 - DEBUG - Setting (6UswosgMeQZeGYleAAAF) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 14:11:00 - INFO - Req!!!
+30.1.2022, 14:11:00 - INFO - Req from: Liat Biton
+30.1.2022, 14:11:16 - INFO - Req!!!
+30.1.2022, 14:11:16 - INFO - Req from: Liat Biton
+30.1.2022, 14:23:13 - DEBUG - Setting (6UswosgMeQZeGYleAAAF) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 14:23:13 - INFO - Req!!!
+30.1.2022, 14:23:13 - INFO - Req from: Liat Biton
+30.1.2022, 14:23:18 - INFO - Req!!!
+30.1.2022, 14:23:18 - INFO - Req from: Liat Biton
+30.1.2022, 14:28:30 - INFO - Req!!!
+30.1.2022, 14:28:30 - DEBUG - auth.service - login with username: lbiton
+30.1.2022, 14:28:30 - DEBUG - Setting (rXhWbLaISUxf_G8OAAAJ) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 15:18:26 - INFO - Req!!!
+30.1.2022, 15:18:26 - DEBUG - auth.service - login with username: lbiton
+30.1.2022, 15:18:27 - DEBUG - Setting (rIIJ4XsS-n3QuJLQAAAL) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 15:18:46 - INFO - Req!!!
+30.1.2022, 15:18:46 - INFO - Req from: Liat Biton
+30.1.2022, 15:18:46 - DEBUG - auth.service - login with username: lbiton
+30.1.2022, 15:18:46 - DEBUG - Setting (BdLvBC1nJjaPIRBZAAAN) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 15:19:05 - DEBUG - auth.service - login with username: angel
+30.1.2022, 15:19:05 - DEBUG - Setting (BdLvBC1nJjaPIRBZAAAN) socket.userId = 61f065edc8e02896300df6d9
+30.1.2022, 15:19:52 - INFO - Req!!!
+30.1.2022, 15:19:52 - INFO - Req from: angelica
+30.1.2022, 15:20:01 - DEBUG - Setting (rIIJ4XsS-n3QuJLQAAAL) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 15:20:01 - INFO - Req!!!
+30.1.2022, 15:20:01 - INFO - Req from: angelica
+30.1.2022, 15:20:17 - DEBUG - Setting (BdLvBC1nJjaPIRBZAAAN) socket.userId = 61f065edc8e02896300df6d9
+30.1.2022, 15:20:17 - INFO - Req!!!
+30.1.2022, 15:20:17 - INFO - Req from: angelica
+=======
 >>>>>>> d6ae75d12e3c97c4b368f8424e378122ae8cd5d8
 1/30/2022, 12:33:51 PM - INFO - Server is running on port: 3030
 1/30/2022, 12:34:31 PM - INFO - Req!!!
@@ -42088,6 +42131,7 @@
 1/30/2022, 3:07:27 PM - INFO - Req!!!
 1/30/2022, 3:07:47 PM - INFO - Req!!!
 1/30/2022, 3:10:05 PM - INFO - Req!!!
+<<<<<<< HEAD
 1/30/2022, 3:11:19 PM - INFO - Req!!!
 1/30/2022, 3:11:40 PM - DEBUG - auth.service - login with username: user2
 1/30/2022, 3:11:40 PM - DEBUG - Setting (KhYLdxC4fcMK4BzyAAAP) socket.userId = 61f0627fc8e02896300df6d6
@@ -42163,3 +42207,11 @@
 1/30/2022, 3:24:03 PM - INFO - Req from: User 2
 1/30/2022, 3:24:15 PM - INFO - Req!!!
 1/30/2022, 3:24:15 PM - INFO - Req from: User 2
+=======
+>>>>>>> 94565cc5ee2917ea37b0c9a246e7e5fe4b48d2b0
+30.1.2022, 15:22:19 - INFO - Server is running on port: 3030
+30.1.2022, 15:22:25 - DEBUG - Setting (OsOlR-W9ydtpXh_4AAAC) socket.userId = 61f1a100b3f0d3ee18481142
+30.1.2022, 15:22:25 - DEBUG - Setting (pyoQ3LH3R_ZKBHPCAAAD) socket.userId = 61f065edc8e02896300df6d9
+30.1.2022, 15:22:25 - INFO - Req!!!
+30.1.2022, 15:22:25 - INFO - Req!!!
+>>>>>>> e9798d96308db678c2efe0a4399215cec28698ca
