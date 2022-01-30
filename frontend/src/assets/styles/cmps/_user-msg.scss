@@ -1,23 +1,29 @@
 .user-msg {
-    color:white;
+    color:rgb(233, 230, 230);
     padding: 10px;
     font-size: 1.4em;
+    font-family: CerealBook;
     position: fixed;
-    top:0;
+    // top:0;
+    bottom: 0;
     right:0;
     background-color: grey;
+    border: rgb(231, 224, 224) solid 2px;
+    border-radius: 8px;
 }
 .user-msg button {
     float:right;
     border:0;
     border-radius: 50%;
     margin: 5px;
-    background-color: #222;
+    background-color: rgb(179, 175, 175);
 }
 
 .user-msg.success {
-    background-color: rgb(41, 189, 73);
+    background-color: rgb(125, 194, 125);
 }
 .user-msg.danger {
-    background-color: rgb(216, 59, 59);
+    background-color: rgb(211, 119, 119);
 }
+
+
