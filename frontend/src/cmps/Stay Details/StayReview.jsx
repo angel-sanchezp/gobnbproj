@@ -3,9 +3,9 @@ import { ReactComponent as Star } from '../../assets/svg/star.svg'
 export function StayReview({stay}){
     const { reviews } = stay;
     const showReviews = (reviews.length > 4) ? reviews.slice(0,4) : reviews.slice();
-    let reviewBtn = (reviews.length === 1 ) ? `Show ${reviews.length} review` : `Show all ${reviews.length} reviews`;
-    let reviewHeader = (reviews.length === 1 ) ? ` ${reviews.length} review` : `${reviews.length} reviews`;
-    if(reviews.length === 0) {
+    let reviewBtn = (reviews?.length === 1 ) ? `Show ${reviews?.length} review` : `Show all ${reviews?.length} reviews`;
+    let reviewHeader = (reviews?.length === 1 ) ? ` ${reviews?.length} review` : `${reviews?.length} reviews`;
+    if(reviews?.length === 0) {
         reviewBtn = `No reviews`;
         reviewHeader = `No reviews`;
     }
@@ -13,7 +13,7 @@ export function StayReview({stay}){
     
     
     const reviewModal = (isOpen) => {
-        if(reviews.length === 0) return;
+        if(reviews?.length === 0) return;
         if(isOpen){
             document.querySelector(".reviews-modal").classList.remove("hidden");
             document.querySelector("body").classList.add("modal-open");

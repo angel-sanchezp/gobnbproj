@@ -42215,3 +42215,43 @@
 30.1.2022, 15:22:25 - INFO - Req!!!
 30.1.2022, 15:22:25 - INFO - Req!!!
 >>>>>>> e9798d96308db678c2efe0a4399215cec28698ca
+1/30/2022, 3:26:02 PM - INFO - Req!!!
+1/30/2022, 3:26:02 PM - INFO - Req from: User 2
+1/30/2022, 3:26:22 PM - DEBUG - auth.service - login with username: angel
+1/30/2022, 3:26:23 PM - DEBUG - Setting (d0MfjKdiUi-WMlFEAAAZ) socket.userId = 61f065edc8e02896300df6d9
+1/30/2022, 3:26:32 PM - INFO - Req!!!
+1/30/2022, 3:26:32 PM - INFO - Req from: angelica
+1/30/2022, 3:26:47 PM - INFO - Req!!!
+1/30/2022, 3:26:47 PM - INFO - Req from: angelica
+1/30/2022, 3:29:07 PM - DEBUG - Setting (5aCWjaY9JZXfy0XbAAAd) socket.userId = 61f1a100b3f0d3ee18481142
+1/30/2022, 3:29:07 PM - INFO - Req!!!
+1/30/2022, 3:29:07 PM - INFO - Req from: angelica
+1/30/2022, 3:29:13 PM - INFO - Req!!!
+1/30/2022, 3:29:13 PM - INFO - Req from: angelica
+1/30/2022, 3:32:00 PM - INFO - Req!!!
+1/30/2022, 3:32:00 PM - INFO - Req from: angelica
+1/30/2022, 3:32:05 PM - INFO - Req!!!
+1/30/2022, 3:32:05 PM - INFO - Req from: angelica
+1/30/2022, 3:36:12 PM - INFO - Req!!!
+1/30/2022, 3:36:12 PM - DEBUG - auth.service - login with username: lbiton
+1/30/2022, 3:36:12 PM - DEBUG - Setting (a9I8NPTUEzwiWq4kAAAj) socket.userId = 61f1a100b3f0d3ee18481142
+1/30/2022, 3:36:25 PM - DEBUG - auth.service - login with username: angel
+1/30/2022, 3:36:25 PM - DEBUG - Setting (nkAI2HosB67sVlVTAAAf) socket.userId = 61f065edc8e02896300df6d9
+1/30/2022, 3:36:27 PM - INFO - Req!!!
+1/30/2022, 3:36:27 PM - INFO - Req from: angelica
+1/30/2022, 3:48:58 PM - INFO - Server is running on port: 3030
+1/30/2022, 4:42:02 PM - INFO - Server is running on port: 3030
+1/30/2022, 4:42:13 PM - INFO - Req!!!
+1/30/2022, 4:42:13 PM - DEBUG - auth.service - login with username: lbiton
+1/30/2022, 4:42:14 PM - DEBUG - Setting (7rrxMgOYPHHhUNgxAAAD) socket.userId = 61f1a100b3f0d3ee18481142
+1/30/2022, 7:16:13 PM - INFO - Req!!!
+1/30/2022, 7:22:48 PM - INFO - Req!!!
+1/30/2022, 7:22:50 PM - INFO - Req!!!
+1/30/2022, 7:23:33 PM - INFO - Req!!!
+1/30/2022, 7:23:35 PM - INFO - Req!!!
+1/30/2022, 7:23:46 PM - INFO - Req!!!
+1/30/2022, 7:25:27 PM - INFO - Req!!!
+1/30/2022, 7:25:32 PM - INFO - Req!!!
+1/31/2022, 9:21:22 AM - INFO - Req!!!
+1/31/2022, 9:21:38 AM - INFO - Req!!!
+1/31/2022, 9:22:29 AM - INFO - Req!!!

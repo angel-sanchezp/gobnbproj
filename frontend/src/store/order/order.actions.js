@@ -50,7 +50,6 @@ export function addOrder(order) {
         title: "Oh no!",
         text: "Could not reserve stay",
         type: "error",
-        icon: "error",
       })
     }
   }

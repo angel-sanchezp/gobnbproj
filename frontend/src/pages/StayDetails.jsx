@@ -67,13 +67,14 @@ class _StayDetails extends React.Component {
         const { stay } = this.state;
         const {filterBy} =this.props
         // console.log(filterBy)
-        if (!stay) return <h1>Loading...</h1>
+        if (!stay) return <h1></h1>
         const  {reviews}  = stay;
         // console.log(reviews)
-        let headerReviews = (reviews.length === 1 ) ? `${reviews.length} Review` : `${reviews.length} Reviews`;
-        if(reviews.length === 0) headerReviews = `No reviews`;
+        let headerReviews = (reviews?.length === 1 ) ? `${reviews?.length} Review` : `${reviews?.length} Reviews`;
+        if(reviews?.length === 0) headerReviews = `No reviews`;
 
         return (
+            
             <section className='main-layout-res'>
                 <div className="user-modal hidden">
                     <LoginModal/>

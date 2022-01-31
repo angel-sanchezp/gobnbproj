@@ -56,8 +56,10 @@ function _buildCriteria(filterBy = {}) {
 
 async function getById(stayId) {
     try {
+        console.log('@@@@@@@Log from stay service stayID@@@@@@@', stayId)
         const collection = await dbService.getCollection('stay')
         const stay = await collection.findOne({ '_id': ObjectId(stayId) })
+        console.log('@@@@@@@Log from stay service@@@@@@@', stay)
         return stay
     } catch (err) {
         logger.error(`while finding car ${stayId}`, err)
