@@ -69,7 +69,7 @@ class _StayDetails extends React.Component {
         const { stay } = this.state;
         const {filterBy} =this.props
         // console.log(filterBy)
-        if (!stay) return <div className='loader'><BallTriangle color="#FF385C" height={300} width={300} /> </div>
+        if (!stay) return <div className='loader'><BallTriangle color="#FF385C" height={110} width={110} /> </div>
         const  {reviews}  = stay;
         // console.log(reviews)
         let headerReviews = (reviews?.length === 1 ) ? `${reviews?.length} Review` : `${reviews?.length} Reviews`;

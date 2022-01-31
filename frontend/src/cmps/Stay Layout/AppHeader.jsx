@@ -41,7 +41,8 @@ class _AppHeader extends Component {
     };
 
     onLogoClicked() {
-        window.location.href = `/`
+        // window.location.href = `/`
+        this.props.history.push(`/`)
     }
 
     componentDidMount() {

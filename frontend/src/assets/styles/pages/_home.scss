@@ -86,7 +86,7 @@
 .card-container {
     display: grid;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
     margin-top: 20px;
     gap: 20px;
     h2{
@@ -242,8 +242,8 @@
             position: relative;
             margin: 0px;
             padding: 0px;
-            top: -196px;
-            height: 90vh;
+            top: -256px;
+            height: 100vh;
             background-image: url("https://a0.muscache.com/im/pictures/53e51dcb-8fad-4ce8-b61c-8a7a369267bf.jpg?im_w=1200");
             background-position: center;
         }
@@ -280,7 +280,7 @@
   @media only screen and (max-width: 650px)  {
     .main-container { 
         display: block;
-        padding: 0px 20px;
+        // padding: 0px 20px;
         min-height: 100vh;
         background-color: black;
         justify-items: center;
