@@ -33,7 +33,7 @@ class _Trips extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.trips !== this.props.trips) {
       this.setState({ trips: this.props.trips })
-      // this.props.loadBuyerOrders();
+      this.props.loadBuyerOrders();
 
     }
   }
