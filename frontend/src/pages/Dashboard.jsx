@@ -6,6 +6,8 @@ import { AppFooter } from '../cmps/Stay Layout/AppFooter.jsx'
 import { OrderPreview } from '../cmps/OrderCmps/OrderPreview.jsx'
 import { changeHeaderClass } from '../store/stay/stay.actions.js'
 import { loadHostOrders, updateOrder, setConfirmedOrder } from '../store/order/order.actions.js'
+// import { loadHostOrders, updateOrder, setConfirmedOrder } from '../../src/assets/img/gobnb.jpeg'
+
 import { socketService } from '../services/socket.service.js'
 import { userService } from '../services/user.services.js'
 import { getWeekYearWithOptions } from 'date-fns/fp'
@@ -54,7 +56,9 @@ class _Dashboard extends Component {
                         <section>
                             <h1>Hi, Liat Biton</h1>
                             <h2>Your orders:</h2>
-                                <ul className="trips-container">
+                            
+                            <div className="desktop-container" style={{"display": "hidden;"}}>
+                            <ul className="trips-container">
                                     {orders.map(order => (<OrderPreview key={order._id} order={order} setConfirm={this.setConfirm}/>))}
 
                                     <li className="dashboard-card" key='0002'>
@@ -63,8 +67,7 @@ class _Dashboard extends Component {
                                             <div className="silver">Sea Apt</div>
                                             <div className="second-row">
                                                 <div className="left">
-                                                    <div className="buyer-txt">Lior Akiva</div>
-                                                    <div className="buyer-txt">2 guests</div>
+                                                    <div className="buyer-txt">Lior Akiva ( 2 guests )</div>
                                                     <div className="buyer-txt">Feb 1-3</div>
                                                 </div>
                                                 <div className="right">
@@ -85,8 +88,7 @@ class _Dashboard extends Component {
                                             <div className="silver">Dream House</div>
                                             <div className="second-row">
                                                 <div className="left">
-                                                    <div className="buyer-txt">Anna Haskelsky</div>
-                                                    <div className="buyer-txt">3 guests</div>
+                                                    <div className="buyer-txt">Anna Haskelsky ( 3 guests )</div>
                                                     <div className="buyer-txt">Jan 27-29</div>
                                                 </div>
                                                 <div className="right">
@@ -101,12 +103,16 @@ class _Dashboard extends Component {
                                             <button className="dashboard-btn">Call</button>
                                         </div>
                                     </li>
-                                </ul>
-                            </section>
-                              :
+                            </ul>
+                            <div className="desktop-host-container" style={{"display": "hidden;"}}>
+                                {/* <img src="../../src/assets/img/gobnb.jpeg"/> */}
+                            </div>
+                            </div>
+                        </section>
+                            :
 
                               
-                              <section>
+                            <section>
                                   {_.isEmpty(orders)?
                                     <h1>You have no orders yet</h1>
                                     :
@@ -114,12 +120,14 @@ class _Dashboard extends Component {
                                     {orders.map(order => (<OrderPreview key={order._id} order={order} setConfirm={this.setConfirm}/>))}
                                     </ul>
                                   }
-                              </section>
+                            </section>
         }
-                        </section>
-                </section>
-                <AppFooter />
+                            
+                        
+                    </section>
             </section>
+            <AppFooter />
+        </section>
         )
     }
 }

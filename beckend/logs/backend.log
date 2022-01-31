@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 29.1.2022, 23:49:04 - INFO - Server is running on port: 3030
 29.1.2022, 23:51:34 - INFO - Req!!!
 29.1.2022, 23:51:34 - DEBUG - auth.service - login with username: lbiton
@@ -42514,3 +42515,6 @@
 31.1.2022, 9:35:05 - INFO - Req!!!
 31.1.2022, 9:35:09 - INFO - Req!!!
 31.1.2022, 9:36:32 - INFO - Req!!!
+=======
+>>>>>>> 688016f6562072c5fa1437ff2b1003aeb5c6a969
+31.1.2022, 9:38:33 - INFO - Req!!!
