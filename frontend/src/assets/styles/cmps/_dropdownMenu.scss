@@ -43,8 +43,8 @@
 
   .menu-point{
     width: 16px;
-    margin-top: -41px;
-    right: 21px;
+    margin-top: -42px;
+    right: 80px;
     z-index: 10;
     position: absolute;
   }
@@ -92,4 +92,21 @@
 
   .menu-opt .hidden{
     display: none;
+  }
+
+
+  @media only screen and (max-width: 650px){
+    .menu-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .menu-point{
+        width: 16px;
+        margin-top: -41px;
+        right: 36px;
+        z-index: 10;
+        position: absolute;
+      }
+    }
   }
