@@ -105,7 +105,7 @@
       }
   }
 
-  @media only screen and (max-width: 800px){
+  @media only screen and (max-width: 800px) and (min-width: 660px){
     .menu-point{
       width: 16px;
       margin-top: -41px;
