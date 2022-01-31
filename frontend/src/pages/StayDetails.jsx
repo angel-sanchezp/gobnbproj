@@ -18,6 +18,8 @@ import { LoginModal } from '../cmps/shared/LoginModal'
 import { ReactComponent as Star } from '../assets/svg/star.svg'
 import share from '../assets/svg/share.jpg';
 import like from '../assets/svg/like.png';
+import { BallTriangle } from  'react-loader-spinner'
+
 
 class _StayDetails extends React.Component {
     state = {
@@ -67,7 +69,7 @@ class _StayDetails extends React.Component {
         const { stay } = this.state;
         const {filterBy} =this.props
         // console.log(filterBy)
-        if (!stay) return <h1></h1>
+        if (!stay) return <div className='loader'><BallTriangle color="#FF385C" height={300} width={300} /> </div>
         const  {reviews}  = stay;
         // console.log(reviews)
         let headerReviews = (reviews?.length === 1 ) ? `${reviews?.length} Review` : `${reviews?.length} Reviews`;
