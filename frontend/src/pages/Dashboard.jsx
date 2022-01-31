@@ -32,7 +32,7 @@ class _Dashboard extends Component {
     componentDidUpdate(prevProps, prevState) {
         if(prevProps.orders !== this.props.orders){
             this.setState({ orders: this.props.orders })
-            // this.props.loadHostOrders()
+            this.props.loadHostOrders()
 
         }
 
