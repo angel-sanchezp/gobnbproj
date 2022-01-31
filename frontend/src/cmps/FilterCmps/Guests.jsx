@@ -46,9 +46,9 @@ export class Guests extends React.Component {
             <div className="dynamic-modal-child filter-guest-modal">
                 <button type="button" className="close-btn" onClick={this.props.closeModal}>x</button>
                 <div className="modal-label">
-                    <div>
-                        <span>Adults</span>
-                        <span>Ages 13 or above</span>
+                    <div className="span-label">
+                        <div>Adults</div>
+                        <div className='subtitle-label'>Ages 13 or above</div>
                     </div>
                     <div>
                         <button type="button" onClick={() => this.changeAdults(-1)}>-</button>
@@ -57,9 +57,9 @@ export class Guests extends React.Component {
                     </div>
                 </div>
                 <div className="modal-label">
-                    <div>
-                        <span>Kids</span>
-                        <span>Ages 0–12</span>
+                    <div  className="span-label">
+                        <div>Kids</div>
+                        <div className='subtitle-label'>Ages 0–12</div>
                         </div>
                     <div>
                         <button type="button" onClick={() => this.changeChildren(-1)}>-</button>

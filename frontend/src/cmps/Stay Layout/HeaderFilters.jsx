@@ -68,6 +68,7 @@ class _HeaderFilters extends Component {
 
     render() {
         const { showPriceModal, minPrice, maxPrice } = this.state;
+        console.log('filterby.amenities',this.props.filterBy.amenities);
 
         return (
             <div className="filter-sort-line">

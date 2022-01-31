@@ -42455,3 +42455,62 @@
 30.1.2022, 22:31:51 - DEBUG - auth.service - login with username: lbiton
 30.1.2022, 22:31:52 - DEBUG - Setting (7OpqB9-5XfNVc0fmAAAr) socket.userId = 61f1a100b3f0d3ee18481142
 30.1.2022, 22:34:34 - INFO - Req!!!
+30.1.2022, 22:41:05 - INFO - Req!!!
+30.1.2022, 22:41:10 - INFO - Req!!!
+30.1.2022, 22:44:52 - INFO - Req!!!
+30.1.2022, 22:45:14 - INFO - Req!!!
+30.1.2022, 22:45:18 - INFO - Req!!!
+30.1.2022, 22:45:23 - INFO - Req!!!
+30.1.2022, 22:52:45 - INFO - Req!!!
+30.1.2022, 22:52:56 - INFO - Req!!!
+30.1.2022, 22:52:57 - INFO - Req!!!
+30.1.2022, 22:53:11 - INFO - Req!!!
+30.1.2022, 22:53:55 - INFO - Req!!!
+30.1.2022, 22:53:56 - INFO - Req!!!
+30.1.2022, 22:54:53 - INFO - Req!!!
+30.1.2022, 22:55:00 - INFO - Req!!!
+30.1.2022, 22:55:38 - INFO - Req!!!
+30.1.2022, 22:55:49 - INFO - Req!!!
+30.1.2022, 22:58:16 - INFO - Req!!!
+30.1.2022, 22:58:20 - INFO - Req!!!
+30.1.2022, 22:58:25 - INFO - Req!!!
+30.1.2022, 22:58:26 - INFO - Req!!!
+30.1.2022, 22:59:45 - INFO - Req!!!
+30.1.2022, 22:59:51 - INFO - Req!!!
+30.1.2022, 22:59:52 - INFO - Req!!!
+30.1.2022, 23:01:23 - INFO - Req!!!
+30.1.2022, 23:01:28 - INFO - Req!!!
+30.1.2022, 23:01:29 - INFO - Req!!!
+30.1.2022, 23:04:29 - INFO - Req!!!
+30.1.2022, 23:04:34 - INFO - Req!!!
+30.1.2022, 23:05:24 - INFO - Req!!!
+30.1.2022, 23:05:28 - INFO - Req!!!
+30.1.2022, 23:06:03 - INFO - Req!!!
+30.1.2022, 23:06:38 - INFO - Server is running on port: 3030
+30.1.2022, 23:10:35 - INFO - Server is running on port: 3030
+30.1.2022, 23:10:56 - INFO - Server is running on port: 3030
+30.1.2022, 23:11:11 - INFO - Req!!!
+30.1.2022, 23:11:16 - INFO - Req!!!
+30.1.2022, 23:11:17 - ERROR - cannot find stays | {"operationTime":{"$timestamp":"7059109789875306510"},"ok":0,"code":2,"codeName":"BadValue","$clusterTime":{"clusterTime":{"$timestamp":"7059109789875306510"},"signature":{"hash":"BoV8pBxTi9GHY/soonJToEYKRjM=","keyId":{"low":28,"high":1634670214,"unsigned":false}}}}
+30.1.2022, 23:11:17 - ERROR - Failed to get stays | {"operationTime":{"$timestamp":"7059109789875306510"},"ok":0,"code":2,"codeName":"BadValue","$clusterTime":{"clusterTime":{"$timestamp":"7059109789875306510"},"signature":{"hash":"BoV8pBxTi9GHY/soonJToEYKRjM=","keyId":{"low":28,"high":1634670214,"unsigned":false}}}}
+30.1.2022, 23:13:06 - INFO - Server is running on port: 3030
+30.1.2022, 23:13:11 - INFO - Req!!!
+30.1.2022, 23:13:14 - INFO - Req!!!
+30.1.2022, 23:13:14 - ERROR - Failed to get stays | {}
+30.1.2022, 23:13:52 - INFO - Server is running on port: 3030
+30.1.2022, 23:13:58 - INFO - Req!!!
+30.1.2022, 23:14:02 - INFO - Req!!!
+30.1.2022, 23:14:38 - INFO - Req!!!
+30.1.2022, 23:35:36 - INFO - Req!!!
+31.1.2022, 9:02:50 - INFO - Req!!!
+31.1.2022, 9:05:26 - INFO - Req!!!
+31.1.2022, 9:07:11 - INFO - Req!!!
+31.1.2022, 9:07:17 - INFO - Req!!!
+31.1.2022, 9:29:39 - INFO - Req!!!
+31.1.2022, 9:30:42 - INFO - Req!!!
+31.1.2022, 9:30:50 - INFO - Req!!!
+31.1.2022, 9:30:57 - INFO - Req!!!
+31.1.2022, 9:31:01 - INFO - Req!!!
+31.1.2022, 9:35:05 - INFO - Req!!!
+31.1.2022, 9:35:09 - INFO - Req!!!
+31.1.2022, 9:36:32 - INFO - Req!!!

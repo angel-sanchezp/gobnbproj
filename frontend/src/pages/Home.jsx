@@ -24,7 +24,9 @@ class _HomePage extends React.Component {
   state = {
     class: "home-header-expanded",
     filterBy: {
-      city: "",
+      city:'',
+      amenities:[],
+
     },
   };
 
@@ -83,7 +85,6 @@ class _HomePage extends React.Component {
   onSetLocation = (city) => {
     const { filterBy } = this.state;
     filterBy.city = city;
-    // console.log(this.state.filterBy);
     this.setState({ filterBy });
     this.onSetFilter();
   };
@@ -130,6 +131,13 @@ class _HomePage extends React.Component {
             </div>
             <div
               className="ins-image"
+              onClick={() => this.onSetLocation("Cuzco")}
+            >
+              <img alt="cat" src="https://res.cloudinary.com/angelsa/image/upload/v1643614058/gobnb/cuzco_m2duvb.jpg" />
+              <h2>Cuzco</h2>
+            </div>
+            <div
+              className="ins-image"
               onClick={() => this.onSetLocation("Santorini")}
             >
               <img alt="cat" src="https://res.cloudinary.com/kitsunex3/image/upload/v1643544852/Airbnb%20clone/santorini.31f0a3ebf40db092ead4_qngvtv.jpg" />
@@ -137,17 +145,10 @@ class _HomePage extends React.Component {
             </div>
             <div
               className="ins-image"
-              onClick={() => this.onSetLocation("Paris")}
+              onClick={() => this.onSetLocation("Bali")}
             >
-              <img alt="cat" src="https://res.cloudinary.com/kitsunex3/image/upload/v1643544853/Airbnb%20clone/paris.0b4c94ae16b8142e6a18_utqovn.jpg" />
-              <h2>Paris</h2>
-            </div>
-            <div
-              className="ins-image"
-              onClick={() => this.onSetLocation("Cancun")}
-            >
-              <img alt="cat" src="https://res.cloudinary.com/kitsunex3/image/upload/v1643544853/Airbnb%20clone/cancun.a7d02297a80c763fd7fe_f14680.jpg" />
-              <h2>Cancun</h2>
+              <img alt="cat" src="https://res.cloudinary.com/angelsa/image/upload/v1643614037/gobnb/bali_vv5f3z.jpg" />
+              <h2>Bali</h2>
             </div>
           </section>
 
