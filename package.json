@@ -6,6 +6,7 @@
     "express": "^4.17.2",
     "express-session": "^1.17.2",
     "mongoose": "^6.1.8",
+    "react-loader-spinner": "^5.1.0",
     "react-slideshow-image": "^3.6.1",
     "socket.io": "^4.4.1",
     "sweetalert2": "^11.3.8",
