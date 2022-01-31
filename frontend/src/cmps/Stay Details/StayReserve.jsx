@@ -242,6 +242,7 @@ class _StayReserve extends React.Component {
                             <button className="reserve-submit gradient btn1 hidden" type="submit">Reserve</button>
                         </form>
                         <button className="reserve-submit btn2 gradient" type="button" onClick={() => this.onAvailablity()}>Check Availability</button>
+                        {/* <button className="reserve-submit btn3 hidden" type="button">Reserved successfully</button> */}
                         <div className="order-preview hidden">
                             <small>You won't be charged yet</small>
                             <div>
