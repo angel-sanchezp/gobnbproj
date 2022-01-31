@@ -24,10 +24,15 @@ async function query(filterBy = {}) {
 }
 
 function _buildCriteria(filterBy = {}) {
+    console.log('filterby in stay sevice bouild criteria', filterBy)
     const criteria = {};
     if (filterBy.location) {
         criteria["location.country"] = { $regex: filterBy.location, $options: 'i' };
     }
+    if (filterBy.city) {
+        criteria["location.city"] = { $regex: filterBy.city, $options: 'i' };
+    }
+
     if (filterBy.maxPrice && filterBy.minPrice) {
         console.log(filterBy.maxPrice ,filterBy.minPrice)
         const maxPrice = +(filterBy.maxPrice);

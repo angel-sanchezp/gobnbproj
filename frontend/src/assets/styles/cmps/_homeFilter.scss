@@ -144,7 +144,7 @@
     position: absolute;
     z-index: 5;
     top: 81px;
-    left: 5px;
+    left: -346px;
 
     .filter-guest-modal .close-btn {
         width: 100%;
@@ -157,6 +157,7 @@
         -webkit-transform: translateX(-12.5%);
         transform: translateX(-12.5%);
         padding: 0;
+        left:455px;
         display: -webkit-flex;
         display: flex;
         -webkit-flex-direction: column;
@@ -167,7 +168,7 @@
         background-color: #fff;
         border-radius: 13px;
         width: 400px;
-        font-size: 16px;
+        font-size: 1.2rem;
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
         text-transform: capitalize;
         box-shadow: 0 3px 8px 0 rgb(0 0 0 / 18%);
@@ -178,11 +179,8 @@
     }
 
     .modal-label {
-        display: -webkit-flex;
         display: flex;
-        -webkit-align-items: center;
         align-items: center;
-        -webkit-justify-content: space-between;
         justify-content: space-between;
         width: 100%;
         grid-gap: 10px;
@@ -191,14 +189,13 @@
     }
 
     .modal-label div:first-of-type {
-        -webkit-flex-direction: column;
         flex-direction: column;
-        -webkit-align-items: flex-start;
         align-items: flex-start;
     }
-    .dynamic-modal .filter-guest-modal .modal-label div {
-        display: -webkit-flex;
+ 
+    .modeal-label .span-label{
         display: flex;
+
     }
 
     .modal-label span {
@@ -208,9 +205,15 @@
         color: inherit;
         font-weight: unset;
         font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
-
         margin-left: 5px;
         margin-right: 5px;
+    }
+
+    .modal-label .subtitle-label{
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+        color: #717171;
+        font-size: 0.8rem;
+
     }
 
     .modal-label div:last-of-type button {
