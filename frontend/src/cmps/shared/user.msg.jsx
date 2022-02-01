@@ -19,7 +19,7 @@ export class UserMsg extends React.Component {
       this.setState({ msg })
       setTimeout(()=>{
         this.setState({ msg : null })
-      }, 100000)
+      }, 100000000000000000000000000000000)
     })
   }
 // 2500
@@ -34,7 +34,7 @@ export class UserMsg extends React.Component {
       <section className={'user-msg ' + msgClass}>
         <button onClick={() => {
           this.setState({ msg: null })
-        }}>x</button>
+        }}></button>
         {this.state.msg.txt}
       </section>
     )
