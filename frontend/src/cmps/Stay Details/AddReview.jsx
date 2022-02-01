@@ -27,6 +27,7 @@ export class AddReview extends Component {
 
     onAddReview = () => {
         let { loggedInUser, review } = this.state;
+        console.log(loggedInUser.imgUrl)
         if (loggedInUser === null) {
             review.by = {
                 _id: 'guestId',

@@ -35,16 +35,16 @@ export function login(credentials) {
       console.log(user)
       const action = { type: 'SET_USER', user }
       dispatch(action)
-      // showSuccessMsg(`Welcome ${user.fullname}`)
-      Swal.fire({
-        position: "top-end",
-        title: "Welcome!",
-        text: "Successfully logged in",
-        type: "success",
-        showConfirmButton: false,
-        timerProgressBar: true,
-        timer: 1000,
-      });
+      showSuccessMsg(`Welcome ${user.fullname}`)
+      // Swal.fire({
+      //   position: "top-end",
+      //   title: "Welcome!",
+      //   text: "Successfully logged in",
+      //   type: "success",
+      //   showConfirmButton: false,
+      //   timerProgressBar: true,
+      //   timer: 1000,
+      // });
       return user
     } catch (err) {
       // showErrorMsg('Could not login.')
@@ -67,18 +67,18 @@ export function signup(credentials) {
       const user = await userService.signup(credentials)
       const action = { type: 'SET_USER', user }
       dispatch(action);
-      // showSuccessMsg('Signed up!')
-      Swal.fire({
-        position: "top-end",
-        title: "Welcome!",
-        text: "Successfully signed up",
-        type: "success",
-        showConfirmButton: false,
-        timerProgressBar: true,
-        timer: 1000,
+      showSuccessMsg(`Welcome ${user.fullname}`)
+      // Swal.fire({
+      //   position: "top-end",
+      //   title: "Welcome!",
+      //   text: "Successfully signed up",
+      //   type: "success",
+      //   showConfirmButton: false,
+      //   timerProgressBar: true,
+      //   timer: 1000,
       // }).then(function () {
       //   this.props.history.push('/');
-      });
+      // });
     } catch (err) {
       // showErrorMsg('Could not sign up.')
       Swal.fire({
@@ -100,18 +100,18 @@ export function logout() {
       await userService.logout();
       const action = { type: "SET_USER", user: null };
       dispatch(action);
-      // showSuccessMsg('Logged out!')
-      Swal.fire({
-        position: "top-end",
-        title: "Goodbye!",
-        text: "Successfully logged out",
-        type: "success",
-        showConfirmButton: false,
-        timerProgressBar: true,
-        timer: 1000,
+      showSuccessMsg('Goodbye!')
+      // Swal.fire({
+      //   position: "top-end",
+      //   title: "Goodbye!",
+      //   text: "Successfully logged out",
+      //   type: "success",
+      //   showConfirmButton: false,
+      //   timerProgressBar: true,
+      //   timer: 1000,
       // }).then(function () {
       //   window.location = "/";
-      });
+      // });
     } catch (err) {
       // showErrorMsg('Could not logout.')
       Swal.fire({

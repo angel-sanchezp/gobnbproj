@@ -19,10 +19,10 @@ export class UserMsg extends React.Component {
       this.setState({ msg })
       setTimeout(()=>{
         this.setState({ msg : null })
-      }, 2500)
+      }, 100000)
     })
   }
-
+// 2500
   componentWillUnmount() {
     this.removeEvent()
   }

@@ -1,14 +1,10 @@
 import React from "react";
 import { connect } from 'react-redux'
 import { Link } from "react-router-dom";
-// import { logout } from "../../store/user/user.actions.js"
-import { userService } from "../../services/user.services";
 import UserAvatar from "../../assets/user-icon.png";
 import Avatar from "../../assets/svg/avatar.png";
 import { ReactComponent as Burger } from "../../assets/svg/burger.svg";
-// import { ReactComponent as UserAvatar } from '../../assets/svg/user.svg'
 import { logout, login } from "../../store/user/user.actions";
-// import { render } from "sass";
 export class _DropdownMenu extends React.Component {
   state = {
     isActive: false,
@@ -21,14 +17,14 @@ export class _DropdownMenu extends React.Component {
     if(this.props.user){
       this.setState(prev => ({ ...prev, loggedInUser: this.props.user }))
     }
-    // console.log(this.state.isLoggedOut)
 };
   openLoginModal = () => {
+    this.onHandelNav()
     document.querySelector(".user-modal").classList.remove("hidden");
     document.querySelector(".dark-screen").classList.remove("hidden");
   };
-    // const isActive = false
-     onHandelNav = () => {
+
+    onHandelNav = () => {
        this.setState(prev => ({ ...prev, isActive: !this.state.isActive }))
     }
     onLogOut = () => {
@@ -36,9 +32,11 @@ export class _DropdownMenu extends React.Component {
       this.setState(prev => ({ ...prev, isActive: false, isLoggedOut: true }))
     }
     onDemoUser = () => {
+      this.onHandelNav()
       const credentials = {
-        username: "user2",
-        password: "secret"
+        username: "Guest",
+        password: "guest1234",
+        imgUrl: "https://res.cloudinary.com/kitsunex3/image/upload/v1643692556/Airbnb%20clone/Avatars/Screenshot_2022-02-01_071541_k2bkp5.png"
       }
       this.props.login(credentials)
       this.setState(prev => ({...prev, isDemo: !this.state.isDemo}))
@@ -49,12 +47,11 @@ export class _DropdownMenu extends React.Component {
       let avatar = UserAvatar;
       const {loggedInUser} = this.state;
       if(this.props.user) {
-        // console.log(this.props.user)
         document.querySelectorAll(".opt2").forEach(e=>{e.classList.remove("hidden");});
         document.querySelectorAll(".opt1").forEach(e=>{e.classList.add("hidden");});
-        // console.log(this.props.user)
         avatar = this.props.user.imgUrl;
         if(!this.props.user.imgUrl) avatar = Avatar;
+        if(this.props.user.fullname === 'Guest') avatar = "https://res.cloudinary.com/kitsunex3/image/upload/v1643692556/Airbnb%20clone/Avatars/Screenshot_2022-02-01_071541_k2bkp5.png"
       }
       if(this.state.isAdmin === true) {
         document.querySelectorAll(".opt2").forEach(e=>{e.classList.remove("hidden");});
@@ -90,10 +87,10 @@ export class _DropdownMenu extends React.Component {
               <button className="menu-opt">Messages</button>
             </li>
             <li className="opt2 hidden">
-            <Link to={`/trips`}><button className="menu-opt">Trips</button></Link>
+            <Link to={`/trips`}><button className="menu-opt" onClick={()=>this.onHandelNav()}>Trips</button></Link>
             </li>
             <li className="opt2 hidden">
-            <Link to={`/dashboard`}><button className="menu-opt">Dashboard</button></Link>
+            <Link to={`/dashboard`}><button className="menu-opt" onClick={()=>this.onHandelNav()}>Dashboard</button></Link>
             </li>
             <li className="opt2 hidden">
               <button className="menu-opt" onClick={()=> this.onLogOut()}>Log Out</button>

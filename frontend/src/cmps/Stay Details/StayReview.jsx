@@ -38,7 +38,7 @@ export function StayReview({stay}){
             <section className="review-general" >
                 <div className="review-rate">
                     <span className="review-icon"><Star/></span>
-                    <h2>{reviewHeader} </h2>
+                    <h2>{stay.rank} · {reviewHeader} </h2>
                 </div>
                 {/* <div className="review-statistics">
                     <div className="ratings">
@@ -133,7 +133,7 @@ export function StayReview({stay}){
                         <button  onClick={() => reviewModal(false)}>X</button>
                     </div>
                     <div>
-                        <h2>{reviews.length} Reviews</h2>
+                        <h2 className="bd">{reviews.length} Reviews</h2>
                         <div className="modal-area rm">
                         {reviews.map((review, idx) => (
                             <div className="review-preview" key={idx}>

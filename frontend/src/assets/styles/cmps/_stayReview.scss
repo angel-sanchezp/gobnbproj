@@ -46,6 +46,8 @@
     display: flex;
 }
 
+
+
 .review-user {
     object-fit: cover;
     height: 56px;
@@ -100,6 +102,7 @@
 
 .review-info h3{
     margin: 0;
+    margin-top: 5px;
 
 }
 
@@ -143,6 +146,7 @@
     border-radius: 5px;
     color: #fff;
     font-size: 1rem;
+    font-weight: 600;
     font-family: CerealLight;
     width: 114px;
 }
