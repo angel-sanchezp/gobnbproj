@@ -97,7 +97,7 @@ export function StayAmenities({stay}) {
 
     return (
         <section>
-            <section className="amenities-container bd">
+            <section className="amenities-container bdameniti">
                 <div className="h2-general"><h2>What this place offer</h2></div>
                 <div className="amenities">
                     {showAmenities.map((amenity, idx) => (

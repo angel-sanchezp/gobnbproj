@@ -1,5 +1,6 @@
 .reserve{
     width: 33%;
+    display:none;
     // position: sticky;
 }
 
@@ -207,4 +208,11 @@
 
 .un{
     text-decoration: underline;
+}
+
+@media screen and (min-width: 800px) {
+   .reserve{
+       display: block;
+   }
+    
 }

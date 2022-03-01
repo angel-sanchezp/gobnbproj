@@ -6,7 +6,7 @@
 }
 
 .summary-info {
-    width: 60%;
+    width: 100%;
 }
 
 .top-info {
@@ -185,5 +185,17 @@ body.modal-open {
 
 .details-calendar{
     padding: rem(35px) 0px;
+    display: none;
 }
 
+
+@media screen and (min-width: 800px) {
+    .summary-info{
+        width: 60%;
+    }
+    .details-calendar{
+       display: block;
+    }
+
+    
+}

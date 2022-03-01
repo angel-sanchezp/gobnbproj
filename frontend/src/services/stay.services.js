@@ -8,6 +8,8 @@ const moment = extendMoment(Moment);
 
 const STORAGE_KEY = 'STAYDB'
 
+
+
 export const stayService = {
     query,
     getById,

@@ -6,6 +6,8 @@ import {
     InfoWindow,
 } from '@react-google-maps/api'
 
+import {data} from '../../services/dataAirbnb.js'
+
 const containerStyle = {
     width: '100%',
     height: '60vh',
@@ -14,11 +16,12 @@ const containerStyle = {
 export function StayMap({stay}) {
     // console.log(stay.location)
     const loc = { lat: stay.location.lat, lng: stay.location.lng }
+    const key = data.getKey()
     return (
         <section className='map-container bd' id="staymap">
             <div className="h2-general"><h2>Where you'll be</h2></div>
             <div>
-                <LoadScript googleMapsApiKey='AIzaSyDRSjfskUcII98LZQXzMblQX_hnBhcX26k'>
+                <LoadScript googleMapsApiKey={key}>
                     <GoogleMap mapContainerStyle={containerStyle} center={loc} zoom={16}>
                         <Marker name={'Current location'} position={loc} />
                         <InfoWindow position={loc}>

@@ -4,6 +4,17 @@
 
 // State: stay (crudl) , trip.
 
+export const data = {
+  getKey
+  
+}
+
+const mapKey = 'AIzaSyCMhLmMWfzgCyUI_3rMBhBKF0tq1C8KrXU'
+
+function getKey() {
+  return mapKey
+}
+
 const db = {
   "stay": [
     {
@@ -50,7 +61,7 @@ const db = {
           }
         }
       ],
-      "likedByUsers" : ['mini-user'] // for user-wishlist : use $in
+      "likedByUsers": ['mini-user'] // for user-wishlist : use $in
     }
   ],
   "order": [
@@ -75,7 +86,7 @@ const db = {
         "price": 80.00
       },
       "status": "pending"
-    }    
+    }
   ],
   "user": [
     {
@@ -83,18 +94,18 @@ const db = {
       "fullname": "User 1",
       "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
-      "username" : "user1",
-      "password" : "secret"
+      "username": "user1",
+      "password": "secret"
     },
     {
       "_id": "u102",
       "fullname": "User 2",
       "imgUrl": "/img/img2.jpg",
       "isAdmin": false,
-      "username" : "user2",
-      "password" : "secret"
+      "username": "user2",
+      "password": "secret"
     }
-  ]  
+  ]
 }
 
 
@@ -108,7 +119,7 @@ const stays = [{}, {}]
 // HomePage
 //  list of stays with link to stay-details
 //  CSS Infra, Master CSS
-// UserDetails 
+// UserDetails
 //  basic info
 //  visitedStays => orderService.query({userId: 'u101'})
 //  myStayOrders => orderService.query({hostId: 'u101'})
