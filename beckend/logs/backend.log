@@ -63214,3 +63214,6 @@
 1.3.2022, 14:09:50 - INFO - Req!!!
 =======
 >>>>>>> c4458f730867dbf408afb35664f9d2b0e3a453e5
+1.3.2022, 15:25:59 - INFO - Req!!!
+1.3.2022, 15:25:59 - DEBUG - auth.service - login with username: lbiton
+1.3.2022, 15:26:01 - DEBUG - Setting (_vFnmV7mshbgxizaAAAb) socket.userId = 61f1a100b3f0d3ee18481142
