@@ -77,15 +77,20 @@ class _StayReserve extends React.Component {
     }
     onSubmitOrder = async (ev) => {
         ev.preventDefault()
-        if(this.state.order.buyer_fullname === 'Guest') {
+        const user = userService.getLoggedinUser();
+        console.log(user)
+        if(!user) {
             console.log('im in')
             return showErrorMsg('Please sign in first.')
+        } else{
+            await this.props.addOrder(this.state.order)
+            socketService.emit('new order', this.state.order);
+            this.props.setNewOrder()
+            document.querySelector(".btn1").classList.add("hidden")
+            document.querySelector(".btn3").classList.remove("hidden")
         }
         // console.log('order state', this.state.order)
-        await this.props.addOrder(this.state.order)
-        socketService.emit('new order', this.state.order);
         // console.log('sockect emit ')
-        this.props.setNewOrder()
         // this.closeModal()
     }
     onChangeAdults = (adultsNum) => {
@@ -241,8 +246,8 @@ class _StayReserve extends React.Component {
                             </div>
                             <button className="reserve-submit gradient btn1 hidden" type="submit">Reserve</button>
                         </form>
-                        <button className="reserve-submit btn2 gradient" type="button" onClick={() => this.onAvailablity()}>Check Availability</button>
-                        {/* <button className="reserve-submit btn3 hidden" type="button">Reserved successfully</button> */}
+                        <button className="reserve-submit btn2 gradient" type="button" onClick={() => this.onAvailablity()}>Check availability</button>
+                        <button className="reserve-submit btn3 hidden" type="button">Reserved successfully</button>
                         <div className="order-preview hidden">
                             <small>You won't be charged yet</small>
                             <div>

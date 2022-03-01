@@ -1,5 +1,5 @@
 import { imageListClasses } from "@mui/material";
-import { isThisSecond } from "date-fns";
+import { isThisSecond, set } from "date-fns";
 import { eventBusService } from "../../services/event-bus.service";
 
 import { ReactComponent as Kitchen } from '../../assets/svg/amenities/kitchen.svg'
@@ -18,11 +18,22 @@ import { ReactComponent as Balcony } from '../../assets/svg/amenities/balcony.sv
 import { ReactComponent as Backyard } from '../../assets/svg/amenities/backyard.svg'
 import { ReactComponent as AC } from '../../assets/svg/amenities/ac.svg'
 import { ReactComponent as Refrigerator } from '../../assets/svg/amenities/refrigerator.svg'
+import { ReactComponent as Essentials } from '../../assets/svg/amenities/essentials.svg'
+import { ReactComponent as Hangers } from '../../assets/svg/amenities/hangers.svg'
+import { ReactComponent as Heater } from '../../assets/svg/amenities/heater.svg'
+import { ReactComponent as Microwave } from '../../assets/svg/amenities/microwave.svg'
+import { ReactComponent as Utensils } from '../../assets/svg/amenities/utensils.svg'
+import { ReactComponent as SelfCheckIn } from '../../assets/svg/amenities/selfcheck.svg'
+import { ReactComponent as LongTermStay } from '../../assets/svg/amenities/longterm.svg'
+import { ReactComponent as Closet } from '../../assets/svg/amenities/closet.svg'
+import { ReactComponent as SmokeAlarm } from '../../assets/svg/amenities/smokealarm.svg'
+import { ReactComponent as BedLinens } from '../../assets/svg/amenities/bedlinens.svg'
+import { ReactComponent as CleaningProducts } from '../../assets/svg/amenities/cleaning.svg'
 
 
 export function StayAmenities({stay}) {
     const { amenities } = stay;
-    const showAmenities = amenities.slice(0, 5);
+    const showAmenities = amenities.slice(0, 8);
 
 
     const setAmenity = (amenity) => {
@@ -77,8 +88,52 @@ export function StayAmenities({stay}) {
             case "Refrigerator":
                 logo = <Refrigerator/>;
                 break;
+            case "Essentials":
+                logo = <Essentials/>;
+                break;
+            case "Hangers":
+                logo = <Hangers/>;
+                break;
+            case "Heater":
+                logo = <Heater/>;
+                break;
+            case "Microwave":
+                logo = <Microwave/>;
+                break;
+            case "Utensils":
+                logo = <Utensils/>;
+                break;
+            case "Self check-in":
+                logo = <SelfCheckIn/>;
+                break;
+            case "Long term stay":
+                logo = <LongTermStay/>;
+                break;
+            case "Closet":
+                logo = <Closet/>;
+                break;
+            case "Smoke alarm":
+                logo = <SmokeAlarm/>;
+                break;
+            case "Bed linens":
+                logo = <BedLinens/>;
+                break;
+            case "Cleaning products":
+                logo = <CleaningProducts/>;
+                break;
         }
         return (<div>{logo}</div>)
+    }
+
+    const onAddEvent = (action) =>{
+        if(action === 'add'){
+            document.addEventListener("click", function(ev){
+                if(ev.target.matches(".modal-btn") ||
+                   !ev.target.closest(".amenities-modal")) {
+                       amenityModal(false)
+                   }
+            }, false)
+        } 
     }
 
     
@@ -88,6 +143,9 @@ export function StayAmenities({stay}) {
         if(isOpen){
             document.querySelector(".amenities-modal").classList.remove("hidden");
             document.querySelector("body").classList.add("modal-open");
+            // setTimeout(() => {onAddEvent('add')}, 1500)
+            
+        
             
         } else if(!isOpen){
             document.querySelector(".amenities-modal").classList.add("hidden");
@@ -118,11 +176,11 @@ export function StayAmenities({stay}) {
             </section>
             <section>
                 <div className="amenities-modal hidden">
-                    <div className="modal-btn fl">
+                    <div className="modal-btn">
                         <button  onClick={() => amenityModal(false)}>X</button>
                     </div>
                     <div>
-                        <h2>What this place offer</h2>
+                        <h2 className="bd">What this place offer</h2>
                         <div className="modal-area">
                         {amenities.map((amenity, idx) => (
                             <div className="amenity fl" key={idx}>

@@ -6,7 +6,11 @@
 }
 
 .summary-info {
+<<<<<<< HEAD
     width: 100%;
+=======
+    width: 55%;
+>>>>>>> c4458f730867dbf408afb35664f9d2b0e3a453e5
 }
 
 .top-info {
@@ -103,7 +107,11 @@
     padding: rem(35px) 0px;
 }
 
-
+.amenities{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+}
 
 .amenity{
     align-items: center;
@@ -146,9 +154,11 @@
     transform: translate(-50%, -50%);
     height: 400px;
     width: 400px;
-    z-index: 1;
+    z-index: 40;
     margin: 8px 0px 0px;
 }
+
+
 
 .modal-btn {
     display: inline-block;
@@ -163,7 +173,7 @@
 }
 
 .modal-area {
-    height: 320px;
+    height: 300px;
     overflow-y: auto;
     padding: 10px 10px 10px;
 }
@@ -172,7 +182,7 @@
     font-size: 22px;
     display: flex;
     margin: 0;
-    padding: 0px 16px 0px;
+    padding: 0px 16px 16px;
 }
 
 body.modal-open {

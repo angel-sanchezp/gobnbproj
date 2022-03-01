@@ -109,7 +109,7 @@ class _HomePage extends React.Component {
             alt="house"
             style={{ width: "100%" }}
           />
-          <div className="mobile-pic" style={{"display": "hidden;"}}></div>
+          <div className="mobile-pic" style={{"display": "hidden"}}></div>
           <div className="header-txt-on-banner">
             Not sure where to go? Perfect.
           </div>
