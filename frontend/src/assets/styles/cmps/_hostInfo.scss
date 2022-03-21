@@ -1,0 +1,48 @@
+.host-info-container{
+    padding: 368px 0px 0px;
+}
+
+.host{
+    margin-bottom: 24px;
+    align-items: center;
+    display:flex;
+    flex-direction: row;
+}
+
+.host img {
+    margin-right: 16px;
+    position: relative;
+}
+
+.host-general{
+    padding: 0px;
+    line-height: 26px;
+}
+
+ol{
+    margin: 0px;
+    padding: 0px;
+    color: #717171;
+}
+
+.host-info-container li{
+    list-style-type: none;
+    font-size: 14px;
+    font-family: CerealLight;
+    color: #717171;
+}
+
+.host-summery{
+    width: 100%;
+}
+
+
+@media screen and (min-width: 800px) {
+   .host-summery{
+       width: 30%;
+   }
+
+   .host-info-container {
+    padding: 48px 0px 0px;
+}
+}

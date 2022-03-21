@@ -1,0 +1,262 @@
+.home-header-expanded {
+    display: grid;
+    z-index: 99;
+    transition: background-color 0.5s ease-out, height 0.4s ease-out, box-shadow 0.3s ease-out;
+    // box-shadow: 0 1px 1px rgb(0 0 0 / 8%);
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    grid-template-columns: 80px auto 80px;
+    grid-template-rows: 80px 100px;
+
+    .main-nav {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        transition: 0.5s;
+        -o-object-fit: contain;
+        object-fit: contain;
+        cursor: pointer;
+        width: 123px;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
+    }
+
+    .secondary-search-bar {
+        cursor: pointer;
+        grid-row: 2;
+        margin-top: 45px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        box-shadow: 0 0 0.1em 0.04em rgb(46 47 48 / 27%), 0 0.25em 1em rgb(90 125 188 / 5%);
+        border-radius: 45px;
+        background-color: #fff;
+    }
+
+    .right-nav {
+        display: flex;
+        align-items: center;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
+
+        .host-options {
+            display: flex;
+            cursor: pointer;
+        }
+
+        .host-options .become {
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+            letter-spacing: 0.1px;
+            -webkit-margin-end: 30px;
+            margin-inline-end: 30px;
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+            font-size: 14px;
+        }
+
+        // .user-options {
+        //     background-color: #fff;
+        //     cursor: pointer;
+        //     position: relative;
+        //     box-shadow: 0 0 0.1em 0.04em rgb(46 47 48 / 27%), 0 0.25em 1em rgb(90 125 188 / 5%);
+        //     width: 80px;
+        //     height: 42px;
+        //     border-radius: 40px;
+        //     display: flex;
+        //     flex-direction: row;
+        //     justify-content: space-around;
+            // .burger{
+            //     font-size: 18px;
+            //     margin-top: 10px;
+            //     margin-left: 10px;
+            //     font-weight: 400;
+            // }
+        //     .user-avatar{
+        //         margin-top: 2px;
+        //     }
+        // }
+    }
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    // background-color: black;
+    // color: $clr6;
+    // height: 10vh;
+    // padding: 0 2rem;
+    // margin-bottom: 2rem;
+    // margin: 0px;
+
+    .main-nav a {
+        text-decoration: none;
+        color: white;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
+    }
+    .main-nav > *:not(:last-child) {
+        margin-inline-end: 1rem;
+    }
+}
+
+
+.explor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    // color: $clr6;
+    color: rgb(246, 56, 92);
+    height: 10vh;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    margin: 0px;
+
+    .main-nav a {
+        text-decoration: none;
+        color: black;
+    }
+    .main-nav > *:not(:last-child) {
+        margin-inline-end: 1rem;
+    }
+}
+
+.details-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(231, 180, 85);
+    color: $clr6;
+    height: 10vh;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    margin: 0px;
+
+    .main-nav a {
+        text-decoration: none;
+        color: black;
+    }
+    .main-nav > *:not(:last-child) {
+        margin-inline-end: 1rem;
+    }
+}
+
+//APP HEADER 
+.app-header {
+    display: grid;
+    z-index: 200;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+    grid-template-columns: 80px auto 80px;
+    grid-template-rows: 88px 8px;
+    transition: background-color .5s ease-out,height .4s ease-out,box-shadow .3s ease-out;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 8%);
+    background-color: white;
+    position: fixed;
+    width: 100%;
+
+    .main-nav {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-nav a {
+        text-decoration: none;
+        color: black;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
+    }
+    .main-nav > *:not(:last-child) {
+        margin-inline-end: 1rem;
+    }
+
+    .logo {
+        transition: 0.5s;
+        -o-object-fit: contain;
+        object-fit: contain;
+        cursor: pointer;
+        width: 123px;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+        color:$clr1;
+        h1{
+            padding: 0px;
+            margin: 9px 0px 0px 0px;
+        }
+    }
+
+    .right-nav {
+        display: flex;
+        align-items: center;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+
+
+        .host-options {
+            display: flex;
+            cursor: pointer;
+        }
+
+        .host-options .become {
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+            letter-spacing: 0.1px;
+            -webkit-margin-end: 30px;
+            margin-inline-end: 30px;
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+            font-size: 14px;
+            font-weight: 500;
+            
+        }
+
+        .user-options {
+            background-color: #fff;
+            cursor: pointer;
+            position: relative;
+            // box-shadow: 0 0 0.1em 0.04em rgb(46 47 48 / 27%), 0 0.25em 1em rgb(90 125 188 / 5%);
+            width: 80px;
+            height: 42px;
+            border-radius: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .burger{
+                font-size: 18px;
+                margin: auto;
+                font-weight: 400;
+            }
+            .user-avatar{
+                margin-top: 2px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 650px)  {
+
+   
+    .home-header-expanded{
+        display: block;
+        padding: 0px 20px;
+        width: 100%;
+        .secondary-search-bar{
+            display: none;
+        }
+        .main-nav > *:not(:last-child) {
+            margin: 0px;
+        }
+        .right-nav{
+            width: 80%;
+            .host-options .become{
+                font-size: 12px;
+                margin-inline-end: 10px;
+            }
+        }
+        
+    }
+
+}

@@ -1,0 +1,38 @@
+// SETUPS
+
+@import '../assets/styles/setup/functions.scss';
+@import '../assets/styles/setup/mixins.scss';
+@import '../assets/styles/setup/typography.scss';
+@import '../assets/styles/setup/variables.scss';
+
+//HELPERS
+@import '../assets/styles/basics/helpers.scss';
+
+// BASIC
+@import '../assets/styles/basics/base.scss';
+@import '../assets/styles/basics/buttons.scss';
+@import '../assets/styles/basics/layout.scss';
+
+//CMPS
+@import '../assets/styles/cmps/_appHeader.scss';
+@import '../assets/styles/cmps/expHeader.scss';
+@import '../assets/styles/cmps/generalHeader.scss';
+@import '../assets/styles/cmps/homeFilter.scss';
+@import '../assets/styles/cmps/_reserveBox.scss';
+@import '../assets/styles/cmps/_stayDetailsInfo.scss';
+@import '../assets/styles/cmps/appFooter.scss';
+@import '../assets/styles/cmps/_stayReview.scss';
+@import '../assets/styles/cmps/_hostInfo.scss';
+@import '../assets/styles/cmps/_loginModal.scss';
+@import '../assets/styles/cmps/_dropdownMenu.scss';
+@import '../assets/styles/cmps/_user-msg.scss';
+
+//PAGES
+@import '../assets/styles/pages/home.scss';
+@import '../assets/styles/pages/explore.scss';
+@import '../assets/styles/pages/_dashboard.scss';
+@import "../assets/styles/pages/stayDetails.scss";
+@import "../assets/styles/pages/trips.scss";
+
+
+

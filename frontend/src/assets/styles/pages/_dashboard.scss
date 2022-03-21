@@ -1,0 +1,107 @@
+
+
+.dashboard-page{
+    margin: 20px 20px 40px 20px;
+    font-size: 15px;
+    h1{
+    font-family: 'CerealBook';
+    font-size: 28px;
+    margin: 17px 0px;
+    }
+    h2{
+        font-family: 'CerealLight';
+        font-size: 20px;
+        font-weight: 300;
+    }
+    ul{
+        padding: 0px;
+    }
+    li{
+        list-style-type: none;
+
+    }
+    .dashboard-card{
+        border: 0.5px solid #ddddddba;
+        border-radius: 20px;
+        margin: 20px 0px;
+    
+        .order-details{
+            padding: 20px 20px 10px 20px;
+        
+            .status{
+                color: #f5375d;
+                font-family: 'CerealMedium';
+                font-size: 16px;
+            }
+            .silver{
+                color: #a5a4a4;
+                font-family: 'CerealLight';
+
+            }
+            .second-row{
+                margin: 10px 0px 0px 0px;
+                display: flex;
+                justify-content: space-between;
+                font-family: "CerealBook";
+                font-size: 18px;
+                border-top: 1px solid;
+                border-color: #ddddddba;
+                padding: 10px 0;
+            }
+            .left{
+                margin-right: 20px;
+            }
+            .buyer-txt{
+                margin: 3px 0px;
+                font-family: "CerealLight";
+                font-size: 17px;
+                font-weight: 300;
+            }
+            .buyer-pic{
+                height: 40px;
+                border-radius: 20px;
+            }
+            
+        }
+    }
+        .buttons{
+            border-top: 0.5px solid #ddddddba;
+            padding-top: 10px;
+            height: 45px;
+            .first-dashboard-btn{
+                font-family: 'CerealMedium';
+                font-size: 15px;
+                border-right: 0.5px solid #ddddddba;
+                width: 50%;
+
+            }
+            .dashboard-btn{
+                font-family: 'CerealMedium';
+                font-size: 15px;
+                width: 50%;
+            }
+        }
+  
+}
+
+@media only screen and (min-width: 650px)  {
+    .dashboard-page{
+        margin: 20px 70px 40px 70px;
+
+        .trips-container{
+            width: 42%;
+        }
+        .desktop-host-container{
+            display: block;
+            width: 100%;
+            border: 0.5px solid #ddddddba;
+            border-radius: 20px;
+            margin: 33px 0px 30px 60px;
+        }
+    }
+    .desktop-container{
+        display: flex;
+        
+    }
+
+}

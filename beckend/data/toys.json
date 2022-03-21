@@ -1,0 +1,231 @@
+[
+  {
+    "_id": "s0001",
+    "name": "Reversible Destiny Lofts/for4people",
+    "type": "loft",
+    "imgUrls": [
+        "https://res.cloudinary.com/kitsunex3/image/upload/v1642653313/Airbnb%20clone/03047561_original_jbznlz.jpg",
+        "https://res.cloudinary.com/kitsunex3/image/upload/v1642653312/Airbnb%20clone/e4ce1422_original_zuuvaw.jpg",
+        "https://res.cloudinary.com/kitsunex3/image/upload/v1642653312/Airbnb%20clone/d0ba9942_original_sf6ejg.jpg",
+        "https://res.cloudinary.com/kitsunex3/image/upload/v1642653440/Airbnb%20clone/fc1c2486_original_iiaxx7.jpg",
+        "https://res.cloudinary.com/kitsunex3/image/upload/v1642653312/Airbnb%20clone/eabb5c24_original_mppu83.jpg"
+    ],
+    "price": 192,
+    "summery": "The “Reversible Destiny Lofts MITAKA -In Memory of Helen Keller-“, built by architects/artists Shusaku Arakawa + Madeline Gins, are the first residential units designed “to not to die.”",
+    "capacity": 4,
+    "bedrooms": 2,
+    "beds": 4,
+    "bathrooms": 1,
+    "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642653312/Airbnb%20clone/e3c77364_original_ryeibc.jpg"],
+    "amenities": ["Kitchen", "Parking" , "Washing machine", "Air conditioning", "Wifi", "Elevator", "Dryer", "Indoor fireplace", "Stove"],
+    "host": {
+        "_id": "h0001",
+        "fullname": "Matsuda",
+        "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+    },
+    "location": {
+        "country": "Japan",
+        "countryCode": "JPN",
+        "address": "Reversible Destiny Lofts",
+        "lat":35.680984, 
+        "lng":139.538030
+    },
+    "reviews": [{
+        "id": "r0001",
+        "created": 1616501399,
+        "txt": "This place is amazing. You feel refreshed just being in your room! It's so unique and gorgeous. ",
+        "rate": 5,
+        "by": {
+            "_id": "u0001",
+            "fullname": "Kerolyne",
+            "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+        }
+    }],
+    "likedByUsers" : ["mini-user"],
+    "isPopular": "true"
+
+},
+{
+  "_id": "s0002",
+  "name": "Spacious! Shibuya House w/Garden",
+  "type": "room",
+  "imgUrls": [
+      "https://res.cloudinary.com/kitsunex3/image/upload/v1642654286/Airbnb%20clone/fce859b4-e6f6-42e2-9a0b-268898c99084_oeb4xg.jpg",
+      "https://res.cloudinary.com/kitsunex3/image/upload/v1642654285/Airbnb%20clone/ab56185c-8273-410a-b6d3-4f1202781b8a_ibuupc.jpg",
+      "https://res.cloudinary.com/kitsunex3/image/upload/v1642654285/Airbnb%20clone/5b3cb703-c09a-4f3a-a86a-c1d93aa835a6_b6cnod.jpg",
+      "https://res.cloudinary.com/kitsunex3/image/upload/v1642654286/Airbnb%20clone/29b80ca9-76c8-4859-92ae-23a1f7b68cca_lkvixc.jpg",
+      "https://res.cloudinary.com/kitsunex3/image/upload/v1642654285/Airbnb%20clone/a5a8ec32-3179-410f-b9bd-609763bfa7f9_jl4s2w.jpg"
+  ],
+  "price": 236,
+  "summery": "Our comfortable, bright, clean and warm house surrounded by green is located close to Shibuya, Harajuku, Omotesando and Shinjuku! We provide you with info on best restaurants, areas, history and entertainments that only locals know in Tokyo.",
+  "capacity": 3,
+  "bedrooms": 1,
+  "beds": 4,
+  "bathrooms": 2,
+  "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642654286/Airbnb%20clone/5b2e7a69_original_tywgk8.jpg"],
+  "amenities": ["Kitchen", "TV" , "Dryer", "Backyard", "Wifi", "Washing machine", "Air conditioning", "Indoor fireplace"],
+  "host": {
+      "_id": "h0002",
+      "fullname": "Kako & Keiko",
+      "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+  },
+  "location": {
+      "country": "Japan",
+      "countryCode": "JPN",
+      "address": "Shibuya, Tokyo",
+      "lat": 35.671625, 
+      "lng":139.683750
+  },
+  "reviews": [{
+      "id": "r0002",
+      "txt": "Great room in a perfect location! Keiko was the perfect host giving us wonderful tips and insider info.",
+      "rate": 4,
+      "by": {
+          "_id": "u0002",
+          "fullname": "Lisa",
+          "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+      }
+  }],
+  "likedByUsers" : ["mini-user"],
+  "isPopular": "true"
+
+},
+{
+  "_id": "s0003",
+  "name": "[Explore hub] The only temple stay in Central TKO",
+  "type": "house",
+  "imgUrls": [
+      "https://res.cloudinary.com/kitsunex3/image/upload/v1642655146/Airbnb%20clone/5e2c4b7e-8b35-45ac-af8d-8d7e1f62b669_v8d4f0.jpg",
+      "https://res.cloudinary.com/kitsunex3/image/upload/v1642655146/Airbnb%20clone/973d0e05-0a48-44fe-96d6-b23c04f48c44_owcftk.jpg",
+      "https://res.cloudinary.com/kitsunex3/image/upload/v1642655146/Airbnb%20clone/bcf8877a-dd0f-4fb1-b898-25cc8b8032ae_ballbj.jpg",
+      "https://res.cloudinary.com/kitsunex3/image/upload/v1642655147/Airbnb%20clone/4a2e42f0-796d-435e-80b4-fab18744856b_ltulqd.jpg",
+      "https://res.cloudinary.com/kitsunex3/image/upload/v1642655146/Airbnb%20clone/4cfd9b39-2807-4810-bfd3-2d2567ec29b1_ezqh7d.jpg"
+  ],
+  "price": 126,
+  "summery": "Enjoy staying in the newly built residence building, which is located in the Shiba Shoden-ji Temple, a Nichiren sect temple with a history of about 400 years. Shoden-ji Temple was built in 1602 and has been replaced several times since then. The accommodation will be on the first floor of a separate building on the side of the main hall.",
+  "capacity": 6,
+  "bedrooms": 1,
+  "beds": 2,
+  "bathrooms": 1,
+  "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642655147/Airbnb%20clone/f4b99146-5efe-4138-b9a3-ba3895c6e949_za5tlt.jpg"],
+  "amenities": ["Kitchen", "Washing machine" , "Air conditioning", "Refrigerator", "Wifi", "Dryer"],
+  "amenities": ["Backyard", "Parking", "Beach access", "Wifi", "Bath"],
+  "host": {
+      "_id": "h0003",
+      "fullname": "Otera",
+      "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+  },
+  "location": {
+      "country": "Japan",
+      "countryCode": "JPN",
+      "address": "TEMPLE HOTEL SHODENJI",
+      "lat": 35.650278, 
+      "lng":139.754737
+  },
+  "reviews": [{
+      "id": "r0003",
+      "txt": "I wish Airbnb had ten stars for reviews.. this place was quite special for japan. The space was larger than expected. Very clean and everything one needs for the perfect stay. The staff were quick to respond and I simply had the best stay in years in Tokyo here!",
+      "rate": 5,
+      "by": {
+          "_id": "u0003",
+          "fullname": "Osunlade",
+          "imgUrl": "https://source.unsplash.com/random/100x100/?face"
+      }
+  }],
+  "likedByUsers" : ["mini-user"],
+  "isPopular": "false"
+
+},
+{
+    "_id": "s0015",
+    "name": "Sleeping under the stars in a dome!",
+    "type": "House",
+    "imgUrls": [
+        "https://res.cloudinary.com/kitsunex3/image/upload/v1642936160/Airbnb%20clone/262dfbe5-385a-465f-9ef2-903cd986b51f_vghoa1.jpg",
+        "https://res.cloudinary.com/kitsunex3/image/upload/v1642936161/Airbnb%20clone/62243417-6dfa-4eb8-ab94-97fed1f91267_hx0oes.jpg",
+        "https://res.cloudinary.com/kitsunex3/image/upload/v1642936160/Airbnb%20clone/91e9fd99-c85e-4375-b623-cc49b54054d4_ga5oxo.jpg",
+        "https://res.cloudinary.com/kitsunex3/image/upload/v1642936160/Airbnb%20clone/e724ee18-852e-4cca-8fb6-c7e97c19416d_t5ek7q.jpg",
+        "https://res.cloudinary.com/kitsunex3/image/upload/v1642936160/Airbnb%20clone/dc3551fd-e1dd-4c2e-a033-f10acf18b686_xympzz.jpg"
+    ],
+    "price": 268,
+    "summery": "We would love you to come and stay in one of our Frameless geodesic domes set in the heart of the Cornish countryside! This unique stay is like no other glamping experience. Each dome has its own ensuite and outdoor bath situated with 5 other domes in a 3.5 acre summer wildflower meadow.",
+    "capacity": 2,
+    "bedrooms": 1,
+    "beds": 1,
+    "bathrooms": 1,
+    "sleep": ["https://res.cloudinary.com/kitsunex3/image/upload/v1642936159/Airbnb%20clone/49a855d5-0793-481e-a118-2da7efceb7d5_r3hvea.jpg"],
+    "amenities": ["Backyard", "Parking", "Beach access", "Wifi", "Bath"],
+    "host": {
+        "_id": "h0015",
+        "fullname": "Veluvana",
+        "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/18_na5npr.jpg"
+    },
+    "location": {
+        "country": "England",
+        "countryCode": "UK",
+        "city": "Underlane",
+        "address": "Underlane, England, United Kingdom",
+        "lat": 50.159203,
+        "lng": -5.193978
+    },
+    "reviews": [
+        {
+            "id": "r0015",
+            "created":"june-2019",
+            "txt": "Wonderful place with an amazing view. Comfortable, romantic, and beautiful. Great staff as well. Thanks for the amazing stay!",
+            "rate": 5,
+            "by": {
+                "_id": "u0015",
+                "fullname": "Ryan",
+                "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/15_liaeqo.jpg"
+            }
+        },
+        {
+            "id": "r00151",
+            "created": "jun-2019",
+            "txt": "I enjoyed everything about this Bamboo House! Perfect 1-2 night stay connecting with nature.",
+            "rate": 4.5,
+            "by": {
+                "_id": "u00151",
+                "fullname": "Katya",
+                "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/12_zmmmfq.jpg"
+            }
+        },
+        {
+            "id": "r00152",
+            "created":"june-209",
+            "txt": "Will stay again",
+            "rate": 3.5,
+            "by": {
+                "_id": "u00152",
+                "fullname": "Galina",
+                "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/10_wd9gc9.jpg"
+            }
+        },
+        {
+            "id": "r00153",
+            "created": "june-2019",
+            "txt": "In the middle of nowhere",
+            "rate": 3.5,
+            "by": {
+                "_id": "u00153",
+                "fullname": "Michelle",
+                "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922845/Airbnb%20clone/Users/4_tkbgjo.jpg"
+            }
+        },
+        {
+            "id": "r00154",
+            "created": 1616502526000,
+            "txt": "Too pricey!",
+            "rate": 3.5,
+            "by": {
+                "_id": "u00154",
+                "fullname": "Josh",
+                "imgUrl": "https://res.cloudinary.com/kitsunex3/image/upload/v1642922846/Airbnb%20clone/Users/13_fsg2vd.jpg"
+            }
+        }
+    ],
+    "likedByUsers": ["mini-user"],
+    "isPopular": "false"
+}
+]
